@@ -4,5 +4,400 @@
     "theme_name": "Horton",
     "theme_version": "0.1.0",
     "theme_author": "Booqable"
+  },
+  {
+    "name": "Animation",
+    "settings": [
+      {
+        "type": "number",
+        "id": "animation_duration",
+        "label": "Duration",
+        "min": 0,
+        "max": 10,
+        "default": 0.2,
+        "info": "Unit is seconds. Leave blank to use default duration of 0.2s. Min: 0, max: 10"
+      }
+    ]
+  },
+  {
+    "name": "Color Schemes",
+    "type": "color_scheme_group",
+    "settings": [
+      {
+        "type": "color_scheme_group",
+        "id": "color_schemes",
+        "definition": [
+          {
+            "type": "color",
+            "id": "background",
+            "label": "Background color",
+            "default": "#FFFFFF"
+          },
+          {
+            "type": "color",
+            "id": "color_primary",
+            "label": "Primary text",
+            "default": "#1A3333"
+          },
+          {
+            "type": "color",
+            "id": "color_secondary",
+            "label": "Secondary text",
+            "default": "#768585"
+          },
+          {
+            "type": "color",
+            "id": "background_accent",
+            "label": "Accent background",
+            "default": "#53C787"
+          },
+          {
+            "type": "color",
+            "id": "color_accent",
+            "label": "Accent text",
+            "default": "#1A3333"
+          },
+          {
+            "type": "color",
+            "id": "color_accent_outline",
+            "label": "Accent outline",
+            "default": "#53C787"
+          }
+        ],
+        "role": {
+          "background": "background",
+          "label": "color_primary"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Cookie notice",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "cookie_notice_activated",
+        "label": "Show cookie notice"
+      },
+      {
+        "type": "color_scheme",
+        "id": "cookie_notice_color_palette",
+        "label": "Color scheme",
+        "default": "set-1"
+      },
+      {
+        "type": "header",
+        "content": "Consent popup"
+      },
+      {
+        "type": "text",
+        "id": "cookie_notice_consent_modal_title",
+        "label": "Title",
+        "default": "This website uses cookies"
+      },
+      {
+        "type": "text",
+        "id": "cookie_notice_consent_modal_description",
+        "label": "Description",
+        "default": "This website collects cookies to deliver you the best possible user experience."
+      },
+      {
+        "type": "text",
+        "id": "cookie_notice_consent_modal_accept_all",
+        "label": "All cookies button label",
+        "default": "Accept all"
+      },
+      {
+        "type": "text",
+        "id": "cookie_notice_consent_modal_accept_essential",
+        "label": "Essential cookies button label",
+        "default": "Accept only essential"
+      },
+      {
+        "type": "text",
+        "id": "cookie_notice_consent_modal_manage_preferences",
+        "label": "Cookie preferences button label",
+        "default": "Manage preferences"
+      },
+      {
+        "type": "header",
+        "content": "Preferences popup"
+      },
+      {
+        "type": "text",
+        "id": "cookie_notice_preferences_modal_title",
+        "label": "Title",
+        "default": "Manage your cookie preferences"
+      },
+      {
+        "type": "text",
+        "id": "cookie_notice_preferences_modal_accept_all",
+        "label": "All cookies button label",
+        "default": "Accept all"
+      },
+      {
+        "type": "text",
+        "id": "cookie_notice_preferences_modal_accept_essential",
+        "label": "Essential cookies button label",
+        "default": "Accept only essential"
+      },
+      {
+        "type": "text",
+        "id": "cookie_notice_preferences_modal_save_preferences",
+        "label": "Save preferences button label",
+        "default": "Save preferences"
+      },
+      {
+        "type": "text",
+        "id": "cookie_notice_preferences_modal_essential_cookies_title",
+        "label": "Essential cookies title",
+        "default": "Strictly Necessary cookies"
+      },
+      {
+        "type": "text",
+        "id": "cookie_notice_preferences_modal_essential_cookies_description",
+        "label": "Essential cookies description",
+        "default": "These cookies are essential for the proper functioning of the website and cannot be disabled."
+      },
+      {
+        "type": "text",
+        "id": "cookie_notice_preferences_modal_tracking_cookies_title",
+        "label": "Tracking cookies title",
+        "default": "Performance and Analytics"
+      },
+      {
+        "type": "text",
+        "id": "cookie_notice_preferences_modal_tracking_cookies_description",
+        "label": "Tracking cookies description",
+        "default": "These cookies collect information about how you use our website. All of the data is anonymized and cannot be used to identify you."
+      }
+    ]
+  },
+  {
+    "name": "Images",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "use_focal_images",
+        "label": "Use focal images",
+        "default": true,
+        "info": "Display point focused images for products instead of full sized"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_placeholder",
+        "label": "Image placeholder",
+        "info": "This image displays on products and collections if they don't have any images"
+      }
+    ]
+  },
+  {
+    "name": "Social media",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Sizes"
+      },
+      {
+        "type": "select",
+        "id": "social_size",
+        "label": "Size",
+        "options": [
+          {
+            "value": "sm",
+            "label": "Small"
+          },
+          {
+            "value": "md",
+            "label": "Medium"
+          },
+          {
+            "value": "lg",
+            "label": "Large"
+          }
+        ],
+        "default": "md"
+      },
+      {
+        "type": "select",
+        "id": "social_spacing",
+        "label": "Spacing",
+        "options": [
+          {
+            "value": "sm",
+            "label": "Small"
+          },
+          {
+            "value": "md",
+            "label": "Medium"
+          },
+          {
+            "value": "lg",
+            "label": "Large"
+          }
+        ],
+        "default": "md"
+      },
+      {
+        "type": "header",
+        "content": "Links"
+      },
+      {
+        "type": "paragraph",
+        "content": "Note: Leave the field blank if you don't want to use the social network"
+      },
+      {
+        "type": "text",
+        "id": "social_facebook_link",
+        "label": "Facebook",
+        "default": "https://",
+        "info": "Example: https://facebook.com/booqable"
+      },
+      {
+        "type": "text",
+        "id": "social_instagram_link",
+        "label": "Instagram",
+        "default": "https://",
+        "info": "Example: https://instagram.com/booqable"
+      },
+      {
+        "type": "text",
+        "id": "social_twitter_link",
+        "label": "Twitter",
+        "default": "https://",
+        "info": "Example: https://twitter.com/booqable"
+      },
+      {
+        "type": "text",
+        "id": "social_linkedin_link",
+        "label": "Linkedin",
+        "default": "https://",
+        "info": "Example: https://www.linkedin.com/company/booqable"
+      },
+      {
+        "type": "text",
+        "id": "social_pinterest_link",
+        "label": "Pinterest",
+        "info": "Example: https://pinterest.com/booqable"
+      },
+      {
+        "type": "text",
+        "id": "social_tiktok_link",
+        "label": "TikTok",
+        "info": "Example: https://tiktok.com/@booqable"
+      },
+      {
+        "type": "text",
+        "id": "social_tumblr_link",
+        "label": "Tumblr",
+        "info": "Example: https://booqable.tumblr.com"
+      },
+      {
+        "type": "text",
+        "id": "social_snapchat_link",
+        "label": "Snapchat",
+        "info": "Example: https://snapchat.com/add/booqable"
+      },
+      {
+        "type": "text",
+        "id": "social_youtube_link",
+        "label": "YouTube",
+        "info": "Example: https://youtube.com/booqable"
+      },
+      {
+        "type": "text",
+        "id": "social_vimeo_link",
+        "label": "Vimeo",
+        "info": "Example: https://vimeo.com/booqable"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Font family"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_heading",
+        "label": "Heading",
+        "info": "Font used for headings",
+        "default": "Marcellus"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_body",
+        "label": "Body",
+        "info": "Font used for texts",
+        "default": "Montserrat"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_tagline",
+        "label": "Tagline",
+        "info": "Font used for taglines",
+        "default": "Montserrat"
+      },
+      {
+        "type": "header",
+        "content": "Font sizes"
+      },
+      {
+        "type": "number",
+        "id": "font_size_h1",
+        "label": "Heading 1",
+        "min": 40,
+        "max": 80,
+        "default": 56,
+        "info": "Min: 40, max: 80"
+      },
+      {
+        "type": "number",
+        "id": "font_size_h2",
+        "label": "Heading 2",
+        "min": 30,
+        "max": 70,
+        "default": 48,
+        "info": "Min: 30, max: 70"
+      },
+      {
+        "type": "number",
+        "id": "font_size_h3",
+        "label": "Heading 3",
+        "min": 25,
+        "max": 65,
+        "default": 40,
+        "info": "Min: 25, max: 65"
+      },
+      {
+        "type": "number",
+        "id": "font_size_tagline",
+        "label": "Tagline",
+        "min": 16,
+        "max": 32,
+        "default": 18,
+        "info": "Min: 16, max: 32"
+      },
+      {
+        "type": "number",
+        "id": "font_size_large",
+        "label": "Large text",
+        "min": 14,
+        "max": 32,
+        "default": 18,
+        "info": "Min: 14, max: 32"
+      },
+      {
+        "type": "number",
+        "id": "font_size_regular",
+        "label": "Regular text",
+        "min": 14,
+        "max": 24,
+        "default": 16,
+        "info": "Min: 14, max: 24"
+      }
+    ]
   }
 ]

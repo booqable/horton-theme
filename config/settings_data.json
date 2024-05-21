@@ -1,4 +1,64 @@
 {
   "current": {
+    "animation_duration": 0.2,
+    "color_schemes": {
+      "set-1": {
+        "type": "color_scheme",
+        "settings": {
+          "background_accent": "#D39A80",
+          "background": "#FFFFFF",
+          "color_accent": "#FFFFFF",
+          "color_accent_outline": "#D39A80",
+          "color_primary": "#0E0702",
+          "color_secondary": "#868C8D"
+        }
+      },
+      "set-2": {
+        "type": "color_scheme",
+        "settings": {
+          "background_accent": "#FFFFFF",
+          "background": "#2F4044",
+          "color_accent": "#2F4044",
+          "color_accent_outline": "#FFFFFF",
+          "color_primary": "#FFFFFF",
+          "color_secondary": "#BCC6C9"
+        }
+      },
+      "set-3": {
+        "type": "color_scheme",
+        "settings": {
+          "background_accent": "#2F4044",
+          "background": "#FFFFFF",
+          "color_accent": "#FFFFFF",
+          "color_accent_outline": "#D39A80",
+          "color_primary": "#2F4044",
+          "color_secondary": "#BCC6C9"
+        }
+      },
+      "set-4": {
+        "type": "color_scheme",
+        "settings": {
+          "background_accent": "#FFFFFF",
+          "background": "#D39A80",
+          "color_accent": "#2F4044",
+          "color_accent_outline": "#2F4044",
+          "color_primary": "#2F4044",
+          "color_secondary": "#EBEBEB"
+        }
+      }
+    },
+    "font_body": "Montserrat",
+    "font_heading": "Marcellus",
+    "font_size_h1": "80px",
+    "font_size_h2": "64px",
+    "font_size_h3": "56px",
+    "font_size_large": "18px",
+    "font_size_regular": "16px",
+    "font_size_tagline": "18px",
+    "font_tagline": "Montserrat",
+    "image_placeholder": "",
+    "social_size": "sm",
+    "social_spacing": "md",
+    "use_focal_images": true
   }
 }
