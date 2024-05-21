@@ -1,0 +1,80 @@
+<style>
+  {%- for scheme in settings.color_schemes -%}
+    {%- assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id -%}
+
+    {% if forloop.first %}
+      :root,
+    {% endif %}
+    .color-{{ scheme.id }} {
+      --background-accent:         {{ scheme.settings.background_accent }};
+      --background-primary:        {{ scheme.settings.background }};
+      --color-accent:              {{ scheme.settings.color_accent }};
+      --color-primary:             {{ scheme.settings.color_primary }};
+      --color-secondary:           {{ scheme.settings.color_secondary }};
+      --color-outline:             {{ scheme.settings.color_accent_outline }};
+    }
+  {%- endfor -%}
+
+  :root {
+    --animation-duration: {{ settings.animation_duration | append: "s" | default: "0.2s" }};
+    --font-body:          "{{ settings.font_body.family | default: Montserrat }}", {{ settings.font_body.fallback_families | default: sans-serif }};
+    --font-heading:       "{{ settings.font_heading.family | default: Marcellus }}", {{ settings.font_heading.fallback_families | default: sans-serif }};
+    --font-tagline:       "{{ settings.font_tagline.family | default: Montserrat }}", {{ settings.font_tagline.fallback_families | default: sans-serif }};
+    --font-size-h1:       {{ settings.font_size_h1 | append: "px" | default: "80px" }};
+    --font-size-h2:       {{ settings.font_size_h2 | append: "px" | default: "64px" }};
+    --font-size-h3:       {{ settings.font_size_h3 | append: "px" | default: "56px" }};
+    --font-size-large:    {{ settings.font_size_large | append: "px" | default: "18px" }};
+    --font-size-regular:  {{ settings.font_size_regular | append: "px" | default: "16px" }};
+    --font-size-tagline:  {{ settings.font_size_tagline | append: "px" | default: "18px" }};
+
+    {% case settings.social_size %}
+      {%- when 'sm' -%}
+        --social-size: 14px;
+      {%- when 'md' -%}
+        --social-size: 17px;
+      {%- when 'lg' -%}
+        --social-size: 20px;
+    {% endcase %}
+
+    {% case settings.social_spacing %}
+      {%- when 'sm' -%}
+        --social-spacing: 5px;
+      {%- when 'md' -%}
+        --social-spacing: 7px;
+      {%- when 'lg' -%}
+        --social-spacing: 9px;
+    {%- endcase -%}
+  }
+
+  #cc-main {
+    --cc-font-family: var(--font-body);
+
+    --cc-bg: var(--background-primary);
+    --cc-primary-color: var(--color-primary);
+    --cc-secondary-color: var(--color-primary);
+
+    --cc-btn-primary-bg: var(--background-accent);
+    --cc-btn-primary-color: var(--color-accent);
+    --cc-btn-primary-border-color: transparent;
+    --cc-btn-primary-hover-bg: var(--background-accent-hover);
+    --cc-btn-primary-hover-border-color: var(--background-accent-hover);
+
+    --cc-btn-secondary-bg: transparent;
+    --cc-btn-secondary-color: var(--color-primary);
+    --cc-btn-secondary-border-color: var(--background-accent);
+    --cc-btn-secondary-hover-bg: var(--background-accent-secondary-hover);
+    --cc-btn-secondary-hover-border-color: var(--background-accent-secondary-hover);
+    --cc-btn-secondary-hover-color: var(--color-primary);
+
+    --cc-cookie-category-block-bg: transparent;
+    --cc-cookie-category-block-hover-bg: transparent;
+
+    --cc-toggle-readonly-bg: var(--background-accent-hover);
+    --cc-toggle-readonly-knob-icon-color: var(--background-accent-hover);
+    --cc-toggle-on-bg: var(--background-accent);
+
+    .pm__section-arrow {
+      background: none !important;
+    }
+  }
+</style>
