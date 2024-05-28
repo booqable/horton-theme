@@ -1,0 +1,387 @@
+{%- assign show_bar = section.settings.show_bar -%}
+
+{%- if show_bar -%}
+  {{ "top-bar.css" | asset_url | stylesheet_tag }}
+
+  {%- assign bar_message                = section.settings.bar_message -%}
+  {%- assign bar_message_icon_style     = section.settings.bar_message_icon_style -%}
+  {%- assign bar_message_secondary      = section.settings.bar_message_secondary -%}
+  {%- assign bar_message_secondary_icon = section.settings.bar_message_secondary_icon -%}
+  {%- assign bar_message_third          = section.settings.bar_message_third -%}
+  {%- assign bar_message_third_icon     = section.settings.bar_message_third_icon -%}
+  {%- assign color_scheme               = section.settings.color_scheme -%}
+  {%- assign padding_bottom             = section.settings.padding_bottom -%}
+  {%- assign padding_bottom_mobile      = section.settings.padding_bottom_mobile -%}
+  {%- assign padding_top                = section.settings.padding_top -%}
+  {%- assign padding_top_mobile         = section.settings.padding_top_mobile -%}
+  {%- assign link_facebook              = settings.social_facebook_link -%}
+  {%- assign link_instagram             = settings.social_instagram_link -%}
+  {%- assign link_linkedin              = settings.social_linkedin_link -%}
+  {%- assign link_pinterest             = settings.social_pinterest_link -%}
+  {%- assign link_snapchat              = settings.social_snapchat_link -%}
+  {%- assign link_tiktok                = settings.social_tiktok_link -%}
+  {%- assign link_tumblr                = settings.social_tumblr_link -%}
+  {%- assign link_twitter               = settings.social_twitter_link -%}
+  {%- assign link_vimeo                 = settings.social_vimeo_link -%}
+  {%- assign link_youtube               = settings.social_youtube_link -%}
+
+  {% comment %} CSS variables start {% endcomment %}
+  {%- capture variables -%}
+    {%- case padding_top -%}
+      {%- when 'small' -%}
+        --padding-top: 4px;
+      {%- when 'medium' -%}
+        --padding-top: 9px;
+      {%- when 'large' -%}
+        --padding-top: 14px;
+    {%- endcase -%}
+
+    {%- case padding_bottom -%}
+      {%- when 'small' -%}
+        --padding-bottom: 4px;
+      {%- when 'medium' -%}
+        --padding-bottom: 9px;
+      {%- when 'large' -%}
+        --padding-bottom: 14px;
+    {%- endcase -%}
+
+    {%- case padding_top_mobile -%}
+      {%- when 'small' -%}
+        --padding-top-mobile: 4px;
+      {%- when 'medium' -%}
+        --padding-top-mobile: 9px;
+      {%- when 'large' -%}
+        --padding-top-mobile: 14px;
+    {%- endcase -%}
+
+    {%- case padding_bottom_mobile -%}
+      {%- when 'small' -%}
+        --padding-bottom-mobile: 4px;
+      {%- when 'medium' -%}
+        --padding-bottom-mobile: 9px;
+      {%- when 'large' -%}
+        --padding-bottom-mobile: 14px;
+    {%- endcase -%}
+  {%- endcapture -%}
+  {% comment %} CSS variables end {% endcomment %}
+
+  <div
+    class="top-bar__wrapper color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} top-bar__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} top-bar__wrapper--padding-bottom{%- endif -%}"
+    style="{{- variables | escape -}}"
+  >
+    <div class="top-bar__container container{% if bar_message != blank %} top-bar__container--with-main-message{% endif %}{% if bar_message_secondary != blank or bar_message_third != blank %} top-bar__container--with-secondary-message{% endif %}{% if link_facebook != blank or link_instagram != blank or link_twitter != blank or link_linkedin != blank or link_pinterest != blank or link_tiktok != blank or link_tumblr != blank or link_snapchat != blank or link_youtube != blank or link_vimeo != blank %} top-bar__container--with-socials{%- endif -%}">
+      {%- if bar_message != blank -%}
+        <div class="top-bar__main-message bq-content rx-content">
+          {{- bar_message -}}
+        </div>
+      {%- endif -%}
+
+      {%- if bar_message_secondary != blank or bar_message_third != blank -%}
+        <div class="top-bar__info">
+          {%- if bar_message_secondary != blank -%}
+            <div class="top-bar__info-item">
+              {%- render 'icon', icon: bar_message_secondary_icon, style: bar_message_icon_style -%}
+
+              <span class="top-bar__info-message bq-content rx-content">
+                {{- bar_message_secondary -}}
+              </span>
+            </div>
+          {%- endif -%}
+
+          {%- if bar_message_third != blank -%}
+            <div class="top-bar__info-item">
+              {%- render 'icon', icon: bar_message_third_icon, style: bar_message_icon_style -%}
+
+              <span class="top-bar__info-message bq-content rx-content">
+                {{- bar_message_third -}}
+              </span>
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- if link_facebook != blank or link_instagram != blank or link_twitter != blank or link_linkedin != blank or link_pinterest != blank or link_tiktok != blank or link_tumblr != blank or link_snapchat != blank or link_youtube != blank or link_vimeo != blank -%}
+        <div class="top-bar__socials">
+          {%- render 'socials', settings: settings -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Top bar",
+    "tag": "section",
+    "class": "top-bar",
+    "templates": [],
+    "settings": [
+      {
+        "type": "header",
+        "content": "General settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_bar",
+        "default": true,
+        "label": "Show top bar"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "set-5"
+      },
+      {
+        "type": "contentEditor",
+        "id": "bar_message",
+        "label": "Main message",
+        "default": "Get 15% off with code <b>WEDDING</b> at checkout"
+      },
+      {
+        "type": "header",
+        "content": "Desktop settings"
+      },
+      {
+        "type": "contentEditor",
+        "id": "bar_message_secondary",
+        "label": "Secondary message",
+        "default": "Call Us 24/7 <a href=\"+1 755 302 8549\">+1 755 302 8549</a>"
+      },
+      {
+        "type": "select",
+        "id": "bar_message_secondary_icon",
+        "label": "Secondary message icon",
+        "options": [
+          {
+            "value": "empty",
+            "label": "No icon"
+          },
+          {
+            "value": "address-card",
+            "label": "Address card"
+          },
+          {
+            "value": "calendar",
+            "label": "Calendar"
+          },
+          {
+            "value": "clock",
+            "label": "Clock"
+          },
+          {
+            "value": "comments",
+            "label": "Comments"
+          },
+          {
+            "value": "credit-card-alt",
+            "label": "Credit card"
+          },
+          {
+            "value": "envelope",
+            "label": "Envelope"
+          },
+          {
+            "value": "exclamation",
+            "label": "Exclamation"
+          },
+          {
+            "value": "fax",
+            "label": "Fax"
+          },
+          {
+            "value": "globe",
+            "label": "Globe"
+          },
+          {
+            "value": "info",
+            "label": "Info"
+          },
+          {
+            "value": "phone",
+            "label": "Phone"
+          },
+          {
+            "value": "tag",
+            "label": "Tag"
+          },
+          {
+            "value": "warning",
+            "label": "Warning"
+          }
+        ],
+        "default": "phone"
+      },
+      {
+        "type": "contentEditor",
+        "id": "bar_message_third",
+        "label": "Third message",
+        "default": "Mon - Fri: 10:00 - 18:00"
+      },
+      {
+        "type": "select",
+        "id": "bar_message_third_icon",
+        "label": "Third message icon",
+        "options": [
+          {
+            "value": "empty",
+            "label": "No icon"
+          },
+          {
+            "value": "address-card",
+            "label": "Address card"
+          },
+          {
+            "value": "calendar",
+            "label": "Calendar"
+          },
+          {
+            "value": "clock",
+            "label": "Clock"
+          },
+          {
+            "value": "comments",
+            "label": "Comments"
+          },
+          {
+            "value": "credit-card-alt",
+            "label": "Credit card"
+          },
+          {
+            "value": "envelope",
+            "label": "Envelope"
+          },
+          {
+            "value": "exclamation",
+            "label": "Exclamation"
+          },
+          {
+            "value": "fax",
+            "label": "Fax"
+          },
+          {
+            "value": "globe",
+            "label": "Globe"
+          },
+          {
+            "value": "info",
+            "label": "Info"
+          },
+          {
+            "value": "phone",
+            "label": "Phone"
+          },
+          {
+            "value": "tag",
+            "label": "Tag"
+          },
+          {
+            "value": "warning",
+            "label": "Warning"
+          }
+        ],
+        "default": "clock"
+      },
+      {
+        "type": "select",
+        "id": "bar_message_icon_style",
+        "label": "Icon style",
+        "options": [
+          {
+            "value": "filled",
+            "label": "Filled"
+          },
+          {
+            "value": "outline",
+            "label": "Outlined"
+          }
+        ],
+        "default": "outline"
+      },
+      {
+        "type": "select",
+        "id": "padding_top",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "header",
+        "content": "Mobile settings"
+      },
+      {
+        "type": "select",
+        "id": "padding_top_mobile",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom_mobile",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      }
+    ]
+  }
+{% endschema %}

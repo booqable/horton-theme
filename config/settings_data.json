@@ -45,6 +45,17 @@
           "color_primary": "#2F4044",
           "color_secondary": "#EBEBEB"
         }
+      },
+      "set-5": {
+        "type": "color_scheme",
+        "settings": {
+          "background_accent": "#2F4044",
+          "background": "#FCF1EC",
+          "color_accent": "#FFFFFF",
+          "color_accent_outline": "#D39A80",
+          "color_primary": "#2F4044",
+          "color_secondary": "#D39A80"
+        }
       }
     },
     "font_body": "Montserrat",
@@ -56,8 +67,51 @@
     "font_size_regular": "16px",
     "font_size_tagline": "18px",
     "font_tagline": "Montserrat",
-    "image_placeholder": "",
-    "social_size": "sm",
+    "image_placeholder": "booqable://assets/image-placeholder.png",
+    "sections": {
+      "top-bar": {
+        "type": "top-bar",
+        "blocks": {},
+        "block_order": [],
+        "settings": {
+          "bar_message": "Get 15% off with code <b>WEDDING</b> at checkout",
+          "bar_message_icon_style": "outline",
+          "bar_message_secondary": "Call Us 24/7 <a href=\"tel:+15553028549\">+1 555 302 8549</a>",
+          "bar_message_secondary_icon": "phone",
+          "bar_message_third": "Mon - Fri: 10:00 - 18:00",
+          "bar_message_third_icon": "clock",
+          "color_scheme": "set-5",
+          "padding_bottom": "large",
+          "padding_bottom_mobile": "small",
+          "padding_top": "large",
+          "padding_top_mobile": "small",
+          "show_bar": true
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {},
+        "block_order": [],
+        "settings": {
+          "color_scheme": "set-1",
+          "custom_title": "{{ shop.name }}",
+          "logo": "booqable://assets/image-store-logo.png",
+          "menu_main": "main-menu",
+          "menu_additional": "additional-menu",
+          "menu_opener_label": "Collections",
+          "menu_opener_mobile": "right",
+          "padding_bottom": "large",
+          "padding_bottom_mobile": "small",
+          "padding_top": "large",
+          "padding_top_mobile": "small",
+          "search_placeholder": "What are you looking for?",
+          "show_search": true,
+          "sticky_header": true
+        },
+        "disabled": null
+      }
+    },
+    "social_size": "lg",
     "social_spacing": "md",
     "use_focal_images": true
   }

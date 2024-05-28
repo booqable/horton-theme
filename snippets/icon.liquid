@@ -1,0 +1,22 @@
+{% comment %}
+
+  This snippet is used for rendering the icons
+  The style of the icon could be filled or outlined
+
+  icon - "string" *required,
+  style - "string" optional
+
+  Usage:
+
+  {%- render 'icon',
+      icon: your_id,
+      style: your_id
+  -%}
+
+{% endcomment %}
+
+{% unless icon == "empty" %}
+  <span class="icon">
+    <i class="{% if style == "outline" %}far{% else %}fa{% endif %} fa-{{- icon -}}" aria-hidden="true"></i>
+  </span>
+{% endunless %}
