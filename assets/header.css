@@ -137,7 +137,7 @@
 }
 
 .header__search-input::placeholder {
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }
 
 .header__search-input:-webkit-autofill,
@@ -550,5 +550,20 @@ header:has(.app-mobile) .header__app:has(.app-desktop) {
 
   .header__search-input {
     background: var(--color-border);
+    padding-left: 11px;
+  }
+
+  .header__search-input-wrapper.filled .header__search-input {
+    padding-right: 85px;
+  }
+
+  .header__search-submit {
+    left: auto;
+    right: 2px;
+  }
+
+  .header__search-reset {
+    right: 50px;
+    width: 20px;
   }
 }
