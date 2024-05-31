@@ -349,7 +349,7 @@ img {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1700px) {
   div[data-tippy-root]:has([data-tid="Mini cart"]) {
     margin: var(--header-height) 0 !important;
     transform: translate(-19%, 0) !important;
