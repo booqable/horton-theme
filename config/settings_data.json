@@ -45,19 +45,135 @@
           "color_primary": "#2F4044",
           "color_secondary": "#EBEBEB"
         }
+      },
+      "set-5": {
+        "type": "color_scheme",
+        "settings": {
+          "background_accent": "#2F4044",
+          "background": "#FCF1EC",
+          "color_accent": "#FFFFFF",
+          "color_accent_outline": "#D39A80",
+          "color_primary": "#2F4044",
+          "color_secondary": "#D39A80"
+        }
       }
     },
     "font_body": "Montserrat",
     "font_heading": "Marcellus",
-    "font_size_h1": "80px",
-    "font_size_h2": "64px",
-    "font_size_h3": "56px",
-    "font_size_large": "18px",
-    "font_size_regular": "16px",
-    "font_size_tagline": "18px",
+    "font_size_h1": 80,
+    "font_size_h2": 64,
+    "font_size_h3": 56,
+    "font_size_large": 18,
+    "font_size_regular": 16,
+    "font_size_tagline": 18,
     "font_tagline": "Montserrat",
-    "image_placeholder": "",
-    "social_size": "sm",
+    "image_placeholder": "booqable://assets/image-placeholder.png",
+    "sections": {
+      "top-bar": {
+        "type": "top-bar",
+        "blocks": {},
+        "block_order": [],
+        "settings": {
+          "bar_message": "Get 15% off with code <b>WEDDING</b> at checkout",
+          "bar_message_icon_style": "outline",
+          "bar_message_secondary": "Call Us 24/7 <a href=\"tel:+15553028549\">+1 555 302 8549</a>",
+          "bar_message_secondary_icon": "phone",
+          "bar_message_third": "Mon - Fri: 10:00 - 18:00",
+          "bar_message_third_icon": "clock",
+          "color_scheme": "set-5",
+          "padding_bottom": "large",
+          "padding_bottom_mobile": "small",
+          "padding_top": "large",
+          "padding_top_mobile": "small",
+          "show_bar": true
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {},
+        "block_order": [],
+        "settings": {
+          "color_scheme": "set-1",
+          "custom_title": "{{ shop.name }}",
+          "logo": "booqable://assets/image-store-logo.png",
+          "menu_main": "main-menu",
+          "menu_additional": "additional-menu",
+          "menu_opener_label": "Collections",
+          "menu_opener_mobile": "right",
+          "padding_bottom": "large",
+          "padding_bottom_mobile": "small",
+          "padding_top": "large",
+          "padding_top_mobile": "small",
+          "search_placeholder": "What are you looking for?",
+          "show_search": true,
+          "sticky_header": true
+        },
+        "disabled": null
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "menu_789455": {
+            "type": "menu",
+            "settings": {
+              "heading": "Column One",
+              "menu": "main-menu",
+              "menu_align": "left"
+            },
+            "disabled": null
+          },
+          "menu_789456": {
+            "type": "menu",
+            "settings": {
+              "heading": "Column Two",
+              "menu": "main-menu",
+              "menu_align": "left"
+            },
+            "disabled": null
+          },
+          "menu_789457": {
+            "type": "menu",
+            "settings": {
+              "heading": "Column Three",
+              "menu": "main-menu",
+              "menu_align": "left"
+            },
+            "disabled": null
+          },
+          "menu_789458": {
+            "type": "menu",
+            "settings": {
+              "heading": "Column Four",
+              "menu": "main-menu",
+              "menu_align": "left"
+            },
+            "disabled": null
+          }
+        },
+        "block_order": [
+          "menu_789455",
+          "menu_789456",
+          "menu_789457",
+          "menu_789458"
+        ],
+        "settings": {
+          "additional_info": "Lorem ipsum dolor sit amet consectetur. Aliquet vel turpis tortor sapien. Pulvinar id eget vitae ac enim. Odio in tellus semper eget interdum a lectus. Commodo enim interdum tincidunt dictum fermentum consectetur nisi.",
+          "bottom_menu": "bottom-menu",
+          "bottom_text": "{{ \"now\" | date: \"%Y\" }} {{ shop.name }}. All right reserved.",
+          "color_scheme": "set-1",
+          "custom_title": "{{ shop.name }}",
+          "logo": "booqable://assets/image-store-logo.png",
+          "padding_bottom": "small",
+          "padding_bottom_mobile": "small",
+          "padding_top": "large",
+          "padding_top_mobile": "small",
+          "privacy_policy_label": "Privacy policy",
+          "show_payments": true
+        },
+        "disabled": null
+      }
+    },
+    "social_size": "lg",
     "social_spacing": "md",
     "use_focal_images": true
   }

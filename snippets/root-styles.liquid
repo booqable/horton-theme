@@ -7,11 +7,14 @@
     {% endif %}
     .color-{{ scheme.id }} {
       --background-accent:         {{ scheme.settings.background_accent }};
+      --background-accent-hover:   {{ scheme.settings.background_accent | append: 'CC' }};
       --background-primary:        {{ scheme.settings.background }};
+      --background-primary-60:     {{ scheme.settings.background |  append: '99' }};
       --color-accent:              {{ scheme.settings.color_accent }};
+      --color-border:              {{ scheme.settings.color_primary | append: '26' }};
+      --color-outline:             {{ scheme.settings.color_accent_outline }};
       --color-primary:             {{ scheme.settings.color_primary }};
       --color-secondary:           {{ scheme.settings.color_secondary }};
-      --color-outline:             {{ scheme.settings.color_accent_outline }};
     }
   {%- endfor -%}
 
