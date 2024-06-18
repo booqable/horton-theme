@@ -1,0 +1,104 @@
+.logos__wrapper {
+  background: var(--background-primary);
+  border-radius: var(--border-radius-lg);
+}
+
+.logos__wrapper--border {
+  border: 1px solid var(--color-border);
+}
+
+.logos__wrapper--padding-top {
+  padding-top: var(--padding-top-mobile);
+}
+
+.logos__wrapper--padding-bottom {
+  padding-bottom: var(--padding-bottom-mobile);
+}
+
+.logos__title {
+  margin-bottom: 32px;
+  text-align: center;
+  color: var(--color-primary);
+  font-size: var(--font-size-tagline);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--font-height-sm);
+  letter-spacing: var(--font-spacing-xl);
+  display: none;
+}
+
+.logos__title--mobile {
+  display: block;
+}
+
+.logos__container .logos__wrapper .logos__title,
+.logos__container .logos__wrapper .logos__images {
+  padding-left: var(--horizontal-padding-mobile);
+  padding-right: var(--horizontal-padding-mobile);
+}
+
+.logos__images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.logos__image-wrapper img {
+  max-height: 100px;
+  max-width: 150px;
+  margin: 0 auto;
+}
+
+.logos__image-wrapper.no-image {
+  width: 100%;
+  position: relative;
+}
+
+.logos__image-wrapper.no-image:after {
+  content: "";
+  display: block;
+  height: 64px;
+  background: var(--color-image-placeholder);
+}
+
+@media (min-width: 992px) {
+  .logos__wrapper--padding-top {
+    padding-top: var(--padding-top);
+  }
+
+  .logos__wrapper--padding-bottom {
+    padding-bottom: var(--padding-bottom);
+  }
+
+  .logos__title {
+    margin-bottom: 50px;
+  }
+
+  .logos__title--mobile {
+    display: none;
+  }
+
+  .logos__title--desktop {
+    display: block;
+  }
+
+  .logos__container .logos__wrapper .logos__title,
+  .logos__container .logos__wrapper .logos__images {
+    padding-left: var(--horizontal-padding);
+    padding-right: var(--horizontal-padding);
+  }
+
+  .logos__images {
+    gap: 52px;
+  }
+
+  .logos__image-wrapper {
+    padding: 0;
+  }
+
+  .logos__image-wrapper img {
+    max-height: 150px;
+    max-width: 100%;
+  }
+}

@@ -1,5 +1,76 @@
 {
   "name": "Home",
-  "sections": {},
-  "order": []
+  "sections": {
+    "logos": {
+      "type": "logos",
+      "blocks": {
+        "logo_964617": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-1-black.png"
+          },
+          "disabled": null
+        },
+        "logo_964618": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-2-black.png"
+          },
+          "disabled": null
+        },
+        "logo_964619": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-3-black.png"
+          },
+          "disabled": null
+        },
+        "logo_964620": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-1-black.png"
+          },
+          "disabled": null
+        },
+        "logo_964621": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-2-black.png"
+          },
+          "disabled": null
+        },
+        "logo_964622": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-3-black.png"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "logo_964617",
+        "logo_964618",
+        "logo_964619",
+        "logo_964620",
+        "logo_964621",
+        "logo_964622"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "full_width": true,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_border": false,
+        "show_title": false,
+        "show_title_mobile": true,
+        "title": "TRUSTED BY:"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "logos"
+  ]
 }
