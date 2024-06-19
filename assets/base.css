@@ -4,16 +4,19 @@
   --safe-area-right: env(safe-area-inset-right);
   --safe-area-bottom: env(safe-area-inset-bottom);
   --safe-area-left: env(safe-area-inset-left);
+  --padding-x-landscape: 48px;
 
   /* Sizes */
   --max-width: 1700px;
   --border-radius: 4px;
   --button-margin-bottom: 16px;
+  --header-gap-sm: 8px;
+  --header-gap-md: 16px;
+  --header-gap-lg: 23px;
   --header-icon-width: 40px;
   --header-icon-height: 40px;
   --horizontal-padding: 30px;
   --horizontal-padding-mobile: 16px;
-  --gap-small: 8px;
 
   /* Font weights */
   --font-weight-light: 300;
@@ -73,6 +76,10 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 body {
   background: var(--background-primary);
   color: var(--color-primary);
@@ -109,6 +116,10 @@ body > * {
   flex-grow: 1;
 }
 
+.header-sticky ~ #main {
+  padding-top: calc(var(--header-height) - 1px);
+}
+
 .fa, .far {
   color: var(--color-primary);
 }
@@ -121,17 +132,13 @@ a {
   transition: all var(--animation-duration) var(--transition-function-ease-in-out);
 }
 
-a:hover {
-  color: var(--color-outline);
-}
-
 ul,
 ol {
   padding: 0;
   margin: 0;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
@@ -252,29 +259,13 @@ img {
   border-color: var(--background-accent);
 }
 
-.button--primary:hover {
-  color: var(--color-accent);
-  background: var(--background-accent-hover);
-  border-color: var(--background-accent-hover);
-}
-
 .button--secondary {
   color: var(--color-outline);
   font-weight: var(--font-weight-semibold);
 }
 
-.button--secondary:hover {
-  text-shadow: 0.5px 0 var(--color-outline);
-}
-
 .button--outlined {
   color: currentColor;
-  border-color: var(--background-accent);
-}
-
-.button--outlined:hover {
-  color: var(--color-accent);
-  background: var(--background-accent);
   border-color: var(--background-accent);
 }
 
@@ -293,8 +284,8 @@ img {
 }
 
 .touch[data-orientation='landscape'] .container {
-  padding-left: calc(48px + var(--horizontal-padding-mobile));
-  padding-right: calc(48px + var(--horizontal-padding-mobile));
+  padding-left: calc(var(--padding-x-landscape) + var(--horizontal-padding-mobile));
+  padding-right: calc(var(--padding-x-landscape) + var(--horizontal-padding-mobile));
 }
 
 @media (min-width: 1200px) {
@@ -362,5 +353,27 @@ img {
 
   body:has(.header-sticky) div[data-tippy-root]:has([data-tid="Mini cart"]) {
     right: calc(50% - var(--max-width) / 2 + var(--horizontal-padding)) !important;
+  }
+}
+
+@media (hover: hover) {
+  a:hover {
+    color: var(--color-outline);
+  }
+
+  .button--primary:hover {
+    color: var(--color-accent);
+    background: var(--background-accent-hover);
+    border-color: var(--background-accent-hover);
+  }
+
+  .button--secondary:hover {
+    text-shadow: 0.5px 0 var(--color-outline);
+  }
+
+  .button--outlined:hover {
+    color: var(--color-accent);
+    background: var(--background-accent);
+    border-color: var(--background-accent);
   }
 }
