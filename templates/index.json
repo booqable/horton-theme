@@ -1,5 +1,45 @@
 {
   "name": "Home",
-  "sections": {},
-  "order": []
+  "sections": {
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "badge_background": "#FF0000",
+            "badge_color": "#FFFFFF",
+            "badge_label": "NEW!",
+            "collection_button_label": "SHOP NOW"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "collection"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "button_url": "booqable://collections",
+        "color_scheme": "set-4",
+        "grid": "three",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 100,
+        "padding_bottom": "none",
+        "padding_bottom_mobile": "none",
+        "padding_top": "none",
+        "padding_top_mobile": "none",
+        "show_borders": true,
+        "show_overlay": true,
+        "spacing": "none",
+        "spacing_mobile": "none",
+        "title": "Collections"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "collections"
+  ]
 }

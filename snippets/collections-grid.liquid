@@ -1,0 +1,70 @@
+{% comment %}
+
+  This snippet is used for rendering the list of collections
+
+  items - { object } *required
+  items_type - "string" *required,
+  placeholder - image optional
+
+  Usage:
+
+  {%- render 'collections-grid',
+      items: your_id,
+      items_type: "your_string",
+      placeholder: your_id
+  -%}
+
+{% endcomment %}
+
+<ul class="collections__list">
+  {%- for item in items -%}
+    {%- case items_type -%}
+      {%- when "blocks" -%}
+        {%- assign collection = item.settings.collection -%}
+      {%- when "collections" -%}
+        {%- assign collection = item -%}
+    {%- endcase -%}
+
+    {%- assign id = item.id -%}
+    {%- assign url = "" -%}
+    {%- assign name = "" -%}
+    {%- assign image = "" -%}
+
+    {%- if collection != blank -%}
+      {%- assign url = collection.url -%}
+      {%- assign name = collection.name -%}
+      {%- assign first_product = collection.products | first -%}
+      {%- assign counter = collection.items_count -%}
+
+      {%- if collection.image -%}
+        {%- assign image = collection.image -%}
+      {%- elsif first_product and first_product.images.first != empty -%}
+        {%- assign image = first_product.images.first -%}
+      {%- endif -%}
+    {%- else -%}
+      {%- assign image = placeholder -%}
+    {%- endif -%}
+
+    <li class="collections__item" id="{{- id -}}">
+      <span class="collections__image-item">
+        {%- render 'image',
+          image: image,
+          loading: 'lazy',
+          class: 'collections__image',
+          size: 'm'
+        -%}
+      </span>
+
+      <span class="collections__bottom">
+        <span class="collections__text-area">
+          <h3 class="collections__heading">
+            {{- name | default: "Collection" -}}
+          </h3>
+        </span>
+      </span>
+      {%- if collection != blank -%}
+        <a class="collections__link" href="{{ url }}"></a>
+      {%- endif -%}
+    </li>
+  {%- endfor -%}
+</ul>
