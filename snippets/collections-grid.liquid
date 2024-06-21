@@ -25,16 +25,22 @@
         {%- assign collection = item -%}
     {%- endcase -%}
 
-    {%- assign id = item.id -%}
-    {%- assign url = "" -%}
-    {%- assign name = "" -%}
-    {%- assign image = "" -%}
+    {%- assign badge_background = item.settings.badge_background -%}
+    {%- assign badge_color      = item.settings.badge_color -%}
+    {%- assign badge_label      = item.settings.badge_label -%}
+    {%- assign button_label     = item.settings.collection_button_label -%}
+    {%- assign button_url       = "" -%}
+    {%- assign description      = "" -%}
+    {%- assign id               = item.id -%}
+    {%- assign image            = "" -%}
+    {%- assign name             = "" -%}
+    {%- assign show_description = item.settings.show_collection_description -%}
 
     {%- if collection != blank -%}
-      {%- assign url = collection.url -%}
-      {%- assign name = collection.name -%}
-      {%- assign first_product = collection.products | first -%}
-      {%- assign counter = collection.items_count -%}
+      {%- assign button_url     = collection.url -%}
+      {%- assign description    = collection.description | truncatewords: 6, " ..." -%}
+      {%- assign first_product  = collection.products | first -%}
+      {%- assign name           = collection.name -%}
 
       {%- if collection.image -%}
         {%- assign image = collection.image -%}
@@ -45,26 +51,48 @@
       {%- assign image = placeholder -%}
     {%- endif -%}
 
-    <li class="collections__item" id="{{- id -}}">
-      <span class="collections__image-item">
+    {% comment %} CSS variables start {% endcomment %}
+    {%- if badge_label != blank -%}
+      {%- capture variables -%}
+        --badge-background: {{- badge_background -}};
+        --badge-color: {{- badge_color -}};
+      {%- endcapture -%}
+    {%- endif -%}
+    {% comment %} CSS variables end {% endcomment %}
+
+    <li class="collections__item" id="{{- id -}}"{% if badge_label != blank %} style="{{ variables | escape }}"{%- endif -%}>
+      <div class="collections__content">
+        {%- if badge_label != blank -%}
+          <span class="collections__badge">{{- badge_label -}}</span>
+        {%- endif -%}
+
+        <div class="collections__text-area">
+          <h4 class="collections__heading">
+            {{- name | default: "Collection" -}}
+          </h4>
+
+          {%- if show_description -%}
+            <div class="collections__description">
+              {{- description | default: "Discover brand" -}}
+            </div>
+          {%- endif -%}
+
+          <div class="collections__buttons">
+            <a class="collections__button button button--primary button--large" href="{{ button_url }}">
+              {{- button_label |  default: "SEE MORE" -}}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="collections__image-wrapper">
         {%- render 'image',
           image: image,
           loading: 'lazy',
           class: 'collections__image',
-          size: 'm'
+          size: 'flexible'
         -%}
-      </span>
-
-      <span class="collections__bottom">
-        <span class="collections__text-area">
-          <h3 class="collections__heading">
-            {{- name | default: "Collection" -}}
-          </h3>
-        </span>
-      </span>
-      {%- if collection != blank -%}
-        <a class="collections__link" href="{{ url }}"></a>
-      {%- endif -%}
+      </div>
     </li>
   {%- endfor -%}
 </ul>

@@ -400,7 +400,7 @@
     overflow-y: inherit;
     overflow-x: inherit;
     transform: translate(0, -100%);
-    transition-duration: calc(var(--animation-duration) * 3);
+    transition-duration: calc(var(--animation-duration) * 1.5);
     transition-timing-function: var(--transition-function-ease-in-out);
     transition-property: transform;
   }
@@ -464,7 +464,7 @@
     background: none;
     overflow-y: auto;
     overflow-x: hidden;
-    transition-duration: calc(var(--animation-duration) * 4);
+    transition-duration: calc(var(--animation-duration) * 2);
     transition-timing-function: var(--transition-function-ease-in-out);
     transition-property: max-width;
     z-index: -1;
@@ -476,7 +476,7 @@
     width: 100%;
     padding: 0;
     position: static;
-    transition-duration: calc(var(--animation-duration) * 2);
+    transition-duration: var(--animation-duration);
     transition-timing-function: var(--transition-function-ease-in-out);
     transition-property: transform;
     background: none;
@@ -543,7 +543,7 @@
 
   #mobile-menu-opener:checked ~ .menu__nav .menu__container {
     transform: translate(0, 0);
-    transition-duration: calc(var(--animation-duration) * 2);
+    transition-duration: var(--animation-duration);
     transition-timing-function: var(--transition-function-ease-in-out);
     transition-property: transform;
   }
@@ -566,7 +566,7 @@
 
   .menu:has(.menu__item.active) .menu__nav .menu__container,
   .menu:has(.menu__item.active) .menu__nav .menu__container {
-    transition-delay: calc(var(--animation-duration) * 2);
+    transition-delay: var(--animation-duration);
   }
 
   .menu__item > .menu__dropdown > .menu__dropdown-wrapper > .menu__dropdown-list {

@@ -1,23 +1,25 @@
 {%- if section.blocks.size > 0 -%}
   {{ "collections.css" | asset_url | stylesheet_tag }}
 
-  {%- assign color_scheme           = section.settings.color_scheme -%}
-  {%- assign button_label           = section.settings.button_label -%}
-  {%- assign button_url             = section.settings.button_url -%}
-  {%- assign grid                   = section.settings.grid -%}
-  {%- assign image_placeholder      = settings.image_placeholder -%}
-  {%- assign overlay_background     = section.settings.overlay_background -%}
-  {%- assign overlay_color          = section.settings.overlay_color -%}
-  {%- assign overlay_opacity        = section.settings.overlay_opacity -%}
-  {%- assign padding_top            = section.settings.padding_top -%}
-  {%- assign padding_bottom         = section.settings.padding_bottom -%}
-  {%- assign padding_top_mobile     = section.settings.padding_top_mobile -%}
-  {%- assign padding_bottom_mobile  = section.settings.padding_bottom_mobile -%}
-  {%- assign show_borders           = section.settings.show_borders -%}
-  {%- assign show_overlay           = section.settings.show_overlay -%}
-  {%- assign spacing                = section.settings.spacing -%}
-  {%- assign spacing_mobile         = section.settings.spacing_mobile -%}
-  {%- assign title                  = section.settings.title -%}
+  {%- assign button_label             = section.settings.button_label -%}
+  {%- assign button_url               = section.settings.button_url -%}
+  {%- assign color_scheme             = section.settings.color_scheme -%}
+  {%- assign grid                     = section.settings.grid -%}
+  {%- assign image_placeholder        = settings.image_placeholder -%}
+  {%- assign overlay_background       = section.settings.overlay_background -%}
+  {%- assign overlay_color            = section.settings.overlay_color -%}
+  {%- assign overlay_opacity          = section.settings.overlay_opacity -%}
+  {%- assign padding_bottom           = section.settings.padding_bottom -%}
+  {%- assign padding_bottom_mobile    = section.settings.padding_bottom_mobile -%}
+  {%- assign padding_top              = section.settings.padding_top -%}
+  {%- assign padding_top_mobile       = section.settings.padding_top_mobile -%}
+  {%- assign show_borders             = section.settings.show_borders -%}
+  {%- assign show_overlay             = section.settings.show_overlay -%}
+  {%- assign spacing                  = section.settings.spacing -%}
+  {%- assign spacing_mobile           = section.settings.spacing_mobile -%}
+  {%- assign text_position_horizontal = section.settings.text_position_horizontal -%}
+  {%- assign text_position_vertical   = section.settings.text_position_vertical -%}
+  {%- assign title                    = section.settings.title -%}
 
   {% comment %} CSS variables start {% endcomment %}
   {%- capture variables -%}
@@ -32,7 +34,7 @@
       {%- when 'small' -%}
         --padding-top: 24px;
       {%- when 'medium' -%}
-        --padding-top: 68px;
+        --padding-top: 56px;
       {%- when 'large' -%}
         --padding-top: 112px;
     {%- endcase -%}
@@ -41,27 +43,27 @@
       {%- when 'small' -%}
         --padding-bottom: 24px;
       {%- when 'medium' -%}
-        --padding-bottom: 68px;
+        --padding-bottom: 56px;
       {%- when 'large' -%}
         --padding-bottom: 112px;
     {%- endcase -%}
 
     {%- case padding_top_mobile -%}
       {%- when 'small' -%}
-        --padding-top-mobile: 18px;
+        --padding-top-mobile: 16px;
       {%- when 'medium' -%}
-        --padding-top-mobile: 40px;
+        --padding-top-mobile: 32px;
       {%- when 'large' -%}
-        --padding-top-mobile: 60px;
+        --padding-top-mobile: 64px;
     {%- endcase -%}
 
     {%- case padding_bottom_mobile -%}
       {%- when 'small' -%}
-        --padding-bottom-mobile: 18px;
+        --padding-bottom-mobile: 16px;
       {%- when 'medium' -%}
-        --padding-bottom-mobile: 40px;
+        --padding-bottom-mobile: 32px;
       {%- when 'large' -%}
-        --padding-bottom-mobile: 60px;
+        --padding-bottom-mobile: 64px;
     {%- endcase -%}
 
     {%- case grid -%}
@@ -69,10 +71,33 @@
         --template-columns: 2;
       {%- when 'three' -%}
         --template-columns: 3;
-      {%- when 'four' -%}
-        --template-columns: 4;
-      {%- when 'five' -%}
-        --template-columns: 5;
+    {%- endcase -%}
+
+    {%- case text_position_horizontal -%}
+      {%- when 'left' -%}
+        --align-items: flex-start;
+        --text-align: left;
+      {%- when 'center' -%}
+        --align-items: center;
+        --text-align: center;
+      {%- when 'right' -%}
+        --align-items: flex-end;
+        --text-align: right;
+    {%- endcase -%}
+
+    {%- case text_position_vertical -%}
+      {%- when 'top' -%}
+        --justify-content: flex-start;
+        --description-padding: 40px;
+      {%- when 'middle' -%}
+        --justify-content: center;
+        --description-padding: 40px;
+      {%- when 'bottom' -%}
+        --justify-content: flex-end;
+        --description-padding: 40px;
+      {%- when 'stretch' -%}
+        --justify-content: space-between;
+        --description-padding: 80px;
     {%- endcase -%}
 
     {%- case spacing -%}
@@ -100,30 +125,38 @@
   {% comment %} CSS variables end {% endcomment %}
 
   <div
-    class="collections__wrapper collections__wrapper-{{ grid }} color-{{ color_scheme.id }}{% if show_borders %} collection__wrapper--with-border{% endif %}{% if show_overlay %} collection__wrapper--with-overlay{% endif %}{% if padding_top != blank or padding_top_mobile != blank %} collections__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} collections__wrapper--padding-bottom{%- endif -%}"
+    class="collections__wrapper color-{{ color_scheme.id }}{% if show_borders %} collection__wrapper--with-border{% endif %}{% if show_overlay %} collection__wrapper--with-overlay{% endif %}{% if padding_top != blank or padding_top_mobile != blank %} collections__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} collections__wrapper--padding-bottom{%- endif -%}"
     style="{{- variables | escape -}}"
   >
-      <div class="collections__container container">
-        {%- if title != blank or button_label != blank and button_url != blank -%}
-          <div class="collections__top">
-            {%- if title != blank -%}
-              <h2 class="collections__title">{{ title }}</h2>
-            {%- endif -%}
+    <div class="collections__container container">
+      {%- if title != blank or button_label != blank and button_url != blank -%}
+        <div class="collections__top">
+          {%- if title != blank -%}
+            <h2 class="collections__title">{{- title -}}</h2>
+          {%- endif -%}
 
-            {%- if button_label != blank and button_url != blank -%}
-              <a href="{{ button_url }}" class="collections__button button button--outlined">
-                {{- button_label -}}
-              </a>
-            {%- endif -%}
-          </div>
-        {%- endif -%}
+          {%- if button_label != blank and button_url != blank -%}
+            <a href="{{ button_url }}" class="collections__button button button--outlined button--large">
+              {{- button_label -}}
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
 
-        {%- render 'collections-grid',
-            items: section.blocks,
-            items_type: "blocks",
-            placeholder: image_placeholder,
-        -%}
-      </div>
+      {%- render 'collections-grid',
+          items: section.blocks,
+          items_type: "blocks",
+          placeholder: image_placeholder,
+      -%}
+
+      {%- if button_label != blank and button_url != blank -%}
+        <div class="collections__buttons">
+          <a href="{{ button_url }}" class="collections__button button button--outlined button--large">
+            {{- button_label -}}
+          </a>
+        </div>
+      {%- endif -%}
+    </div>
   </div>
 {%- endif -%}
 
@@ -163,6 +196,50 @@
         "id": "color_scheme",
         "label": "Color scheme",
         "default": "set-4"
+      },
+      {
+        "type": "select",
+        "id": "text_position_vertical",
+        "label": "Vertical content position",
+        "options": [
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "middle",
+            "label": "Middle"
+          },
+          {
+            "value": "bottom",
+            "label": "Bottom"
+          },
+          {
+            "value": "stretch",
+            "label": "Stretch"
+          }
+        ],
+        "default": "middle"
+      },
+      {
+        "type": "select",
+        "id": "text_position_horizontal",
+        "label": "Horizontal content position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "center"
       },
       {
         "type": "checkbox",
@@ -216,14 +293,6 @@
           {
             "value": "three",
             "label": "3 columns"
-          },
-          {
-            "value": "four",
-            "label": "4 columns"
-          },
-          {
-            "value": "five",
-            "label": "5 columns"
           }
         ],
         "default": "three"
@@ -392,8 +461,14 @@
             "type": "text",
             "id": "collection_button_label",
             "label": "Button label",
-            "default": "SHOP NOW",
-            "info": "Leave blank to hide the button"
+            "default": "SEE MORE"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_collection_description",
+            "label": "Show description excerpt",
+            "default": true,
+            "info": "Shows the first 6 words of the collection description"
           },
           {
             "type": "header",
@@ -404,7 +479,7 @@
             "id": "badge_label",
             "label": "Label",
             "default": "NEW!",
-            "info": "Leave blank to hide the budge"
+            "info": "Leave blank to hide the badge"
           },
           {
             "type": "color",

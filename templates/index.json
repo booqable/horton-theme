@@ -4,36 +4,63 @@
     "collections": {
       "type": "collections",
       "blocks": {
-        "collection": {
+        "collection_517830": {
           "type": "collection",
           "settings": {
             "badge_background": "#FF0000",
             "badge_color": "#FFFFFF",
-            "badge_label": "NEW!",
-            "collection_button_label": "SHOP NOW"
+            "badge_label": "",
+            "collection_button_label": "",
+            "show_collection_description": false
+          },
+          "disabled": null
+        },
+        "collection_517831": {
+          "type": "collection",
+          "settings": {
+            "badge_background": "#FF0000",
+            "badge_color": "#FFFFFF",
+            "badge_label": "",
+            "collection_button_label": "",
+            "show_collection_description": false
+          },
+          "disabled": null
+        },
+        "collection_517832": {
+          "type": "collection",
+          "settings": {
+            "badge_background": "#FF0000",
+            "badge_color": "#FFFFFF",
+            "badge_label": "",
+            "collection_button_label": "",
+            "show_collection_description": false
           },
           "disabled": null
         }
       },
       "block_order": [
-        "collection"
+        "collection_517830",
+        "collection_517831",
+        "collection_517832"
       ],
       "settings": {
         "button_label": "SEE ALL",
         "button_url": "booqable://collections",
-        "color_scheme": "set-4",
+        "color_scheme": "set-1",
         "grid": "three",
         "overlay_background": "#000000",
         "overlay_color": "#FFFFFF",
         "overlay_opacity": 100,
-        "padding_bottom": "none",
-        "padding_bottom_mobile": "none",
-        "padding_top": "none",
-        "padding_top_mobile": "none",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
         "show_borders": true,
-        "show_overlay": true,
-        "spacing": "none",
-        "spacing_mobile": "none",
+        "show_overlay": false,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "text_position_horizontal": "center",
+        "text_position_vertical": "middle",
         "title": "Collections"
       },
       "disabled": null
