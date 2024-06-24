@@ -4,7 +4,6 @@
 
   {%- assign color_scheme          = section.settings.color_scheme -%}
   {%- assign full_width            = section.settings.full_width -%}
-  {%- assign image_placeholder     = settings.image_placeholder -%}
   {%- assign padding_bottom        = section.settings.padding_bottom -%}
   {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
   {%- assign padding_top           = section.settings.padding_top -%}
@@ -74,22 +73,14 @@
               {%- for block in section.blocks -%}
                 {%- assign image = block.settings.image -%}
 
-                {%- if image != blank -%}
-                  {%- assign image = image -%}
-                {%- elsif image_placeholder != blank -%}
-                  {%- assign image = image_placeholder -%}
-                {%- else -%}
-                  {%- assign image = blank -%}
-                {%- endif -%}
-
-                <div class="logos__image-wrapper{% if image == blank %} no-image{% endif %}" id="{{- block.id -}}">
+                <div class="logos__image-wrapper" id="{{- block.id -}}">
                   {%- if image.url != blank -%}
                     {%- render 'image',
                       image: image,
                       loading: 'lazy',
                       class: 'logos__image',
-                      custom_width: '250',
-                      custom_size: '250px'
+                      custom_width: '750',
+                      custom_size: '750px'
                     -%}
                   {%- endif -%}
                 </div>
@@ -145,7 +136,8 @@
       {
         "type": "checkbox",
         "id": "show_title",
-        "label": "Show title"
+        "label": "Show title",
+        "default": true
       },
       {
         "type": "select",
@@ -194,7 +186,8 @@
       {
         "type": "checkbox",
         "id": "show_title_mobile",
-        "label": "Show title"
+        "label": "Show title",
+        "default": true
       },
       {
         "type": "select",
@@ -246,7 +239,8 @@
           {
             "type": "image_picker",
             "id": "image",
-            "label": "Image"
+            "label": "Image",
+            "default": "booqable://assets/image-partner-logo-preview-black.png"
           }
         ]
       }
