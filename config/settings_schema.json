@@ -313,6 +313,35 @@
     ]
   },
   {
+    "name": "Styling",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Corners"
+      },
+      {
+        "type": "select",
+        "id": "corner_radius",
+        "label": "Corner radius",
+        "options": [
+          {
+            "value": "square",
+            "label": "Square"
+          },
+          {
+            "value": "rounded",
+            "label": "Rounded"
+          },
+          {
+            "value": "fully_round",
+            "label": "Fully round"
+          }
+        ],
+        "default": "fully_round"
+      }
+    ]
+  },
+  {
     "name": "Typography",
     "settings": [
       {

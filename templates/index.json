@@ -1,5 +1,40 @@
 {
   "name": "Home",
-  "sections": {},
-  "order": []
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "",
+        "button_primary_url": "booqable://products/",
+        "button_outline_label": "",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-4",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Suspendisse varius enim in eros elementum tristique.",
+        "full_width": true,
+        "height": "medium",
+        "height_mobile": "full",
+        "image": "booqable://assets/image-hero.jpg",
+        "image_mobile": "booqable://assets/image-hero-mobile.jpeg",
+        "overlay_background": "#F5FAFA",
+        "overlay_color": "#2F4044",
+        "overlay_opacity": 100,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "small",
+        "show_datepicker": true,
+        "show_overlay": true,
+        "text_position": "middle-left",
+        "text_position_mobile": "bottom-center",
+        "title": "Everything for <br>your day!",
+        "video_url": ""
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "hero"
+  ]
 }

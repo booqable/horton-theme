@@ -6,7 +6,7 @@
 .top-bar__wrapper {
   font-size: 14px;
   font-weight: var(--font-weight-medium);
-  line-height: var(--line-height-xs);
+  line-height: var(--font-height-xs);
   color: var(--color-primary);
   background: var(--background-primary);
 }
