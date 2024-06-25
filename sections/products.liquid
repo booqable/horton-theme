@@ -1,0 +1,400 @@
+{%- assign product    = false -%}
+{%- assign products   = [] -%}
+{%- assign collection = section.settings.collection -%}
+
+{%- for block in section.blocks -%}
+  {%- assign product  = block.settings.product -%}
+
+  {%- if product != blank -%}
+    {%- assign products = products | append: product -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if collection != blank -%}
+  {%- assign product = collection.products | first -%}
+{%- elsif products.size > 0 -%}
+  {%- assign product = products | first -%}
+{%- else -%}
+  {%- assign product = false -%}
+{%- endif -%}
+
+{%- if product -%}
+  {{ "products.css" | asset_url | stylesheet_tag }}
+
+  {%- assign button_label             = section.settings.button_label -%}
+  {%- assign button_url               = section.settings.button_url -%}
+  {%- assign color_scheme             = section.settings.color_scheme -%}
+  {%- assign heading                  = section.settings.heading -%}
+  {%- assign image                    = section.settings.image -%}
+  {%- assign image_placeholder        = settings.image_placeholder -%}
+  {%- assign padding_bottom           = section.settings.padding_bottom -%}
+  {%- assign padding_bottom_mobile    = section.settings.padding_bottom_mobile -%}
+  {%- assign padding_top              = section.settings.padding_top -%}
+  {%- assign padding_top_mobile       = section.settings.padding_top_mobile -%}
+  {%- assign show_borders             = section.settings.show_borders -%}
+  {%- assign show_excerpt             = section.settings.show_excerpt -%}
+  {%- assign show_navigation          = section.settings.show_navigation -%}
+  {%- assign show_pagination          = section.settings.show_pagination -%}
+  {%- assign spacing                  = section.settings.spacing -%}
+  {%- assign spacing_mobile           = section.settings.spacing_mobile -%}
+  {%- assign tag                      = section.settings.tag -%}
+  {%- assign timer                    = section.settings.timer -%}
+  {%- assign title                    = section.settings.title -%}
+
+  {% comment %} CSS variables start {% endcomment %}
+  {%- capture variables -%}
+    {%- case padding_top -%}
+      {%- when 'small' -%}
+        --padding-top: 24px;
+      {%- when 'medium' -%}
+        --padding-top: 56px;
+      {%- when 'large' -%}
+        --padding-top: 112px;
+    {%- endcase -%}
+
+    {%- case padding_bottom -%}
+      {%- when 'small' -%}
+        --padding-bottom: 24px;
+      {%- when 'medium' -%}
+        --padding-bottom: 56px;
+      {%- when 'large' -%}
+        --padding-bottom: 112px;
+    {%- endcase -%}
+
+    {%- case padding_top_mobile -%}
+      {%- when 'small' -%}
+        --padding-top-mobile: 16px;
+      {%- when 'medium' -%}
+        --padding-top-mobile: 32px;
+      {%- when 'large' -%}
+        --padding-top-mobile: 64px;
+    {%- endcase -%}
+
+    {%- case padding_bottom_mobile -%}
+      {%- when 'small' -%}
+        --padding-bottom-mobile: 16px;
+      {%- when 'medium' -%}
+        --padding-bottom-mobile: 32px;
+      {%- when 'large' -%}
+        --padding-bottom-mobile: 64px;
+    {%- endcase -%}
+
+    {%- case spacing -%}
+      {%- when 'none' -%}
+        --grid-gap: 0;
+      {%- when 'small' -%}
+        --grid-gap: 4px;
+      {%- when 'medium' -%}
+        --grid-gap: 16px;
+      {%- when 'large' -%}
+        --grid-gap: 32px;
+    {%- endcase -%}
+
+    {%- case spacing_mobile -%}
+      {%- when 'none' -%}
+        --grid-gap-mobile: 0;
+      {%- when 'small' -%}
+        --grid-gap-mobile: 4px;
+      {%- when 'medium' -%}
+        --grid-gap-mobile: 16px;
+      {%- when 'large' -%}
+        --grid-gap-mobile: 32px;
+    {%- endcase -%}
+  {%- endcapture -%}
+  {% comment %} CSS variables end {% endcomment %}
+
+  <div
+    class="products__wrapper color-{{ color_scheme.id }}{% if show_borders %} products__wrapper--with-border{% endif %}{% if padding_top != blank or padding_top_mobile != blank %} products__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} products__wrapper--padding-bottom{%- endif -%}"
+    style="{{- variables | escape -}}"
+  >
+    <div class="products__container container">
+      {%- if title != blank or button_label != blank and button_url != blank -%}
+        <div class="products__top">
+          {%- if title != blank -%}
+            <h2 class="products__title">{{- title -}}</h2>
+          {%- endif -%}
+
+          {%- if button_label != blank and button_url != blank -%}
+            <a href="{{ button_url }}" class="products__button button button--outlined button--large">
+              {{- button_label -}}
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+
+      {%- if button_label != blank and button_url != blank -%}
+        <div class="products__buttons">
+          <a href="{{ button_url }}" class="products__button button button--outlined button--large">
+            {{- button_label -}}
+          </a>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Products",
+    "description": "Display individual products or items from a collection in a grid or sliding carousel",
+    "tag": "section",
+    "class": "products",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General settings"
+      },
+      {
+        "type": "text",
+        "id": "tag",
+        "label": "Tagline",
+        "default": "This week",
+        "info": "Leave blank to hide the tagline"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Popular products",
+        "info": "Leave blank to hide the title"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "set-1"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_excerpt",
+        "default": true,
+        "label": "Show product description excerpt"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_borders",
+        "label": "Show borders",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Collection (optional)"
+      },
+      {
+        "type": "paragraph",
+        "content": "When you select a collection, any product blocks will be ignored"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      },
+      {
+        "type": "header",
+        "content": "Highlighted block settings"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Block title",
+        "default": "Product category highlight",
+        "info": "Leave blank to hide the title"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button label",
+        "default": "SEE ALL",
+        "info": "Leave blank to hide the button"
+      },
+      {
+        "type": "url",
+        "id": "button_url",
+        "label": "Button url",
+        "default": "booqable://products"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Background image",
+        "default": "booqable://assets/image-placeholder.png"
+      },
+      {
+        "type": "header",
+        "content": "Carousel settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_navigation",
+        "default": true,
+        "label": "Show navigation buttons"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_pagination",
+        "default": true,
+        "label": "Show page bullets"
+      },
+      {
+        "type": "number",
+        "id": "timer",
+        "label": "Rotation time",
+        "min": 0,
+        "max": 100,
+        "default": 5,
+        "info": "In seconds. Set to 0 to disable auto rotation"
+      },
+      {
+        "type": "header",
+        "content": "Desktop settings"
+      },
+      {
+        "type": "select",
+        "id": "spacing",
+        "label": "Spacing between columns",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "large"
+      },
+      {
+        "type": "select",
+        "id": "padding_top",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "header",
+        "content": "Mobile settings"
+      },
+      {
+        "type": "select",
+        "id": "spacing_mobile",
+        "label": "Spacing between columns",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "select",
+        "id": "padding_top_mobile",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom_mobile",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      }
+    ],
+    "max_blocks": 10,
+    "blocks": [
+      {
+        "type": "product",
+        "name": "Product",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
