@@ -8,6 +8,7 @@
     .color-{{ scheme.id }} {
       --background-accent:         {{ scheme.settings.background_accent }};
       --background-accent-hover:   {{ scheme.settings.background_accent | append: 'CC' }};
+      --background-accent-hover-2: {{ scheme.settings.background_accent | append: "1A" }};
       --background-primary:        {{ scheme.settings.background }};
       --background-primary-60:     {{ scheme.settings.background |  append: '99' }};
       --color-accent:              {{ scheme.settings.color_accent }};
@@ -19,7 +20,7 @@
   {%- endfor -%}
 
   :root {
-    --animation-duration:     {{ settings.animation_duration | append: "s" | default: "0.2s" }};
+    --animation-duration:     {{ settings.animation_duration | append: "s" | default: "0.4s" }};
     --font-body:              "{{ settings.font_body.family | default: Montserrat }}", {{ settings.font_body.fallback_families | default: sans-serif }};
     --font-heading:           "{{ settings.font_heading.family | default: Marcellus }}", {{ settings.font_heading.fallback_families | default: sans-serif }};
     --font-tagline:           "{{ settings.font_tagline.family | default: Montserrat }}", {{ settings.font_tagline.fallback_families | default: sans-serif }};
@@ -59,16 +60,25 @@
         --border-radius-md: 0;
         --border-radius-lg: 0;
         --border-radius-xl: 0;
+        --border-radius-badge: 0;
+        --border-radius-block: 0;
+        --border-radius-button: 0;
       {%- when 'rounded' -%}
         --border-radius-sm: 8px;
         --border-radius-md: 16px;
         --border-radius-lg: 8px;
         --border-radius-xl: 24px;
+        --border-radius-badge: 8px;
+        --border-radius-block: 16px;
+        --border-radius-button: 8px;
       {%- when 'fully_round' -%}
         --border-radius-sm: 8px;
         --border-radius-md: 16px;
         --border-radius-lg: 24px;
         --border-radius-xl: 50px;
+        --border-radius-badge: 8px;
+        --border-radius-block: 24px;
+        --border-radius-button: 50px;
     {% endcase %}
 
     {% case settings.social_size %}
