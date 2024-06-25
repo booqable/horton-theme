@@ -1,0 +1,98 @@
+{% comment %}
+
+  This snippet is used for rendering the list of collections
+
+  items - { object } *required
+  items_type - "string" *required,
+  placeholder - image optional
+
+  Usage:
+
+  {%- render 'collections-grid',
+      items: your_id,
+      items_type: "your_string",
+      placeholder: your_id
+  -%}
+
+{% endcomment %}
+
+<ul class="collections__list">
+  {%- for item in items -%}
+    {%- case items_type -%}
+      {%- when "blocks" -%}
+        {%- assign collection = item.settings.collection -%}
+      {%- when "collections" -%}
+        {%- assign collection = item -%}
+    {%- endcase -%}
+
+    {%- assign badge_background = item.settings.badge_background -%}
+    {%- assign badge_color      = item.settings.badge_color -%}
+    {%- assign badge_label      = item.settings.badge_label -%}
+    {%- assign button_label     = item.settings.collection_button_label -%}
+    {%- assign button_url       = "" -%}
+    {%- assign description      = "" -%}
+    {%- assign id               = item.id -%}
+    {%- assign image            = "" -%}
+    {%- assign name             = "" -%}
+    {%- assign show_description = item.settings.show_collection_description -%}
+
+    {%- if collection != blank -%}
+      {%- assign button_url     = collection.url -%}
+      {%- assign description    = collection.description | truncatewords: 6, " ..." -%}
+      {%- assign first_product  = collection.products | first -%}
+      {%- assign name           = collection.name -%}
+
+      {%- if collection.image -%}
+        {%- assign image = collection.image -%}
+      {%- elsif first_product and first_product.images.first != empty -%}
+        {%- assign image = first_product.images.first -%}
+      {%- endif -%}
+    {%- else -%}
+      {%- assign image = placeholder -%}
+    {%- endif -%}
+
+    {% comment %} CSS variables start {% endcomment %}
+    {%- if badge_label != blank -%}
+      {%- capture variables -%}
+        --badge-background: {{- badge_background -}};
+        --badge-color: {{- badge_color -}};
+      {%- endcapture -%}
+    {%- endif -%}
+    {% comment %} CSS variables end {% endcomment %}
+
+    <li class="collections__item" id="{{- id -}}"{% if badge_label != blank %} style="{{ variables | escape }}"{%- endif -%}>
+      <div class="collections__content">
+        {%- if badge_label != blank -%}
+          <span class="collections__badge">{{- badge_label -}}</span>
+        {%- endif -%}
+
+        <div class="collections__text-area">
+          <h4 class="collections__heading">
+            {{- name | default: "Collection" -}}
+          </h4>
+
+          {%- if show_description -%}
+            <div class="collections__description">
+              {{- description | default: "Discover brand" -}}
+            </div>
+          {%- endif -%}
+
+          <div class="collections__buttons">
+            <a class="collections__button button button--primary button--large" href="{{ button_url }}">
+              {{- button_label |  default: "SEE MORE" -}}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="collections__image-wrapper">
+        {%- render 'image',
+          image: image,
+          loading: 'lazy',
+          class: 'collections__image',
+          size: 'flexible'
+        -%}
+      </div>
+    </li>
+  {%- endfor -%}
+</ul>

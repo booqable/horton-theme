@@ -76,6 +76,7 @@ body {
   min-height: 100%;
   width: 100%;
   overflow-x: clip;
+  word-break: break-word;
 }
 
 body > * {
@@ -277,7 +278,7 @@ img {
   line-height: var(--font-height-sm);
   color: currentColor;
   border: 1px solid transparent;
-  border-radius: var(--border-radius-lg);
+  border-radius: var(--border-radius-button);
   background: none;
   cursor: pointer;
   margin-bottom: var(--button-margin-bottom);
@@ -295,7 +296,7 @@ img {
 
 .button--primary {
   color: var(--color-accent);
-  background: var(--background-accent);
+  background: var(--background-accent) radial-gradient(circle, transparent 1%, var(--background-accent) 1%) center/100%;
   border-color: var(--background-accent);
 }
 
@@ -306,6 +307,7 @@ img {
 
 .button--outlined {
   color: currentColor;
+  background: radial-gradient(circle, var(--background-accent-hover-2) 1%, transparent 1%) center/100%;
   border-color: var(--background-accent);
 }
 
@@ -319,6 +321,7 @@ img {
 
 .container {
   max-width: var(--max-width);
+  width: 100%;
   margin: 0 auto;
   padding: 0 var(--horizontal-padding-mobile);
 }
@@ -403,7 +406,7 @@ img {
 
   .button--primary:hover {
     color: var(--color-accent);
-    background: var(--background-accent-hover);
+    background: var(--background-accent-hover) radial-gradient(circle, transparent 1%, var(--background-accent) 1%) center/15000%;
     border-color: var(--background-accent-hover);
   }
 
@@ -412,8 +415,8 @@ img {
   }
 
   .button--outlined:hover {
-    color: var(--color-accent);
-    background: var(--background-accent);
+    color: var(--background-accent);
+    background: radial-gradient(circle, var(--background-accent-hover-2) 1%, transparent 1%) center/15000%;
     border-color: var(--background-accent);
   }
 }

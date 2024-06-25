@@ -32,9 +32,143 @@
         "video_url": ""
       },
       "disabled": null
+    },
+    "logos": {
+      "type": "logos",
+      "blocks": {
+        "logo_964617": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-1-black.png"
+          },
+          "disabled": null
+        },
+        "logo_964618": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-2-black.png"
+          },
+          "disabled": null
+        },
+        "logo_964619": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-3-black.png"
+          },
+          "disabled": null
+        },
+        "logo_964620": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-1-black.png"
+          },
+          "disabled": null
+        },
+        "logo_964621": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-2-black.png"
+          },
+          "disabled": null
+        },
+        "logo_964622": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-3-black.png"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "logo_964617",
+        "logo_964618",
+        "logo_964619",
+        "logo_964620",
+        "logo_964621",
+        "logo_964622"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "full_width": true,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_border": false,
+        "show_title": false,
+        "show_title_mobile": true,
+        "title": "TRUSTED BY:"
+      },
+      "disabled": null
+    },
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection_517830": {
+          "type": "collection",
+          "settings": {
+            "badge_background": "#FF0000",
+            "badge_color": "#FFFFFF",
+            "badge_label": "",
+            "collection_button_label": "",
+            "show_collection_description": false
+          },
+          "disabled": null
+        },
+        "collection_517831": {
+          "type": "collection",
+          "settings": {
+            "badge_background": "#FF0000",
+            "badge_color": "#FFFFFF",
+            "badge_label": "",
+            "collection_button_label": "",
+            "show_collection_description": false
+          },
+          "disabled": null
+        },
+        "collection_517832": {
+          "type": "collection",
+          "settings": {
+            "badge_background": "#FF0000",
+            "badge_color": "#FFFFFF",
+            "badge_label": "",
+            "collection_button_label": "",
+            "show_collection_description": false
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "collection_517830",
+        "collection_517831",
+        "collection_517832"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "button_url": "booqable://collections",
+        "color_scheme": "set-1",
+        "grid": "three",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 100,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": false,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "text_position_horizontal": "center",
+        "text_position_vertical": "middle",
+        "title": "Collections"
+      },
+      "disabled": null
     }
   },
   "order": [
-    "hero"
+    "hero",
+    "logos",
+    "collections"
   ]
 }
