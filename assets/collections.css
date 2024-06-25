@@ -123,16 +123,16 @@
   margin-bottom: calc(-1 * var(--button-margin-bottom));
 }
 
-.collection__wrapper--with-border .collections__item {
+.collections__wrapper--with-border .collections__item {
   border: 1px solid var(--color-border);
 }
 
-.collection__wrapper--with-overlay .collections__image-wrapper:after {
+.collections__wrapper--with-overlay .collections__image-wrapper:after {
   background: linear-gradient(1deg, var(--background-overlay) 0%, var(--background-overlay-00) 80%);
 }
 
-.collection__wrapper--with-overlay .collections__heading,
-.collection__wrapper--with-overlay .collections__description {
+.collections__wrapper--with-overlay .collections__heading,
+.collections__wrapper--with-overlay .collections__description {
   color: var(--color-overlay);
 }
 
