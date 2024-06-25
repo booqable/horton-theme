@@ -31,10 +31,9 @@
 
 .footer__logo-text {
   font-size: 24px;
-  line-height: var(--line-height-md);
+  line-height: var(--font-height-md);
   font-weight: var(--font-weight-semibold);
   margin: 0;
-  word-break: break-word;
   color: var(--color-primary);
 }
 
@@ -45,7 +44,7 @@
   font-weight: var(--font-weight-semibold);
   text-align: var(--footer-menu-align);
   color: var(--color-outline);
-  letter-spacing: 0.1em;
+  letter-spacing: var(--font-spacing-lg);
 }
 
 .footer__menu-list {
@@ -111,7 +110,7 @@
 }
 
 #section-footer .footer__app .weglot-widget__wrapper {
-  border-radius: 0;
+  border-radius: var(--border-radius-sm);
   transition: all var(--animation-duration) var(--transition-function-ease-in-out);
 }
 
@@ -131,7 +130,7 @@
   left: 50%;
   transform: translate(-50%, 0);
   border: 1px solid var(--color-border);
-  border-radius: 0;
+  border-radius: var(--border-radius-sm);
   box-shadow: 0 0 8px var(--color-border);
   transition: all var(--animation-duration) var(--transition-function-ease-in-out);
 }
@@ -225,7 +224,7 @@
     max-width: 17vw;
     font-size: calc(var(--font-size-regular) - 4px);
     color: var(--color-secondary);
-    line-height: var(--line-height-lg);
+    line-height: var(--font-height-lg);
     padding-top: 16px;
   }
 

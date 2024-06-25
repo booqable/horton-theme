@@ -1,21 +1,25 @@
 {{ "header.css" | asset_url | stylesheet_tag }}
 {{ "menu.css" | asset_url | stylesheet_tag }}
 
-{%- assign app                   = section.blocks | where: "type", "app" | first -%}
-{%- assign color_scheme          = section.settings.color_scheme -%}
-{%- assign custom_title          = section.settings.custom_title -%}
-{%- assign logo                  = section.settings.logo -%}
-{%- assign menu_main             = section.settings.menu_main -%}
-{%- assign menu_additional       = section.settings.menu_additional -%}
-{%- assign menu_opener_label     = section.settings.menu_opener_label -%}
-{%- assign menu_opener_mobile    = section.settings.menu_opener_mobile -%}
-{%- assign padding_bottom        = section.settings.padding_bottom -%}
-{%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
-{%- assign padding_top           = section.settings.padding_top -%}
-{%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
-{%- assign search_placeholder    = section.settings.search_placeholder -%}
-{%- assign show_search           = section.settings.show_search -%}
-{%- assign sticky_header         = section.settings.sticky_header -%}
+{%- assign app                            = section.blocks | where: "type", "app" | first -%}
+{%- assign color_scheme                   = section.settings.color_scheme -%}
+{%- assign custom_title                   = section.settings.custom_title -%}
+{%- assign logo                           = section.settings.logo -%}
+{%- assign menu_main                      = section.settings.menu_main -%}
+{%- assign menu_additional                = section.settings.menu_additional -%}
+{%- assign menu_back_mobile               = section.settings.menu_back_mobile -%}
+{%- assign menu_message_mobile            = section.settings.menu_message_mobile -%}
+{%- assign menu_message_mobile_icon       = section.settings.menu_message_mobile_icon -%}
+{%- assign menu_message_mobile_icon_style = section.settings.menu_message_mobile_icon_style -%}
+{%- assign menu_opener_label              = section.settings.menu_opener_label -%}
+{%- assign menu_opener_mobile             = section.settings.menu_opener_mobile -%}
+{%- assign padding_bottom                 = section.settings.padding_bottom -%}
+{%- assign padding_bottom_mobile          = section.settings.padding_bottom_mobile -%}
+{%- assign padding_top                    = section.settings.padding_top -%}
+{%- assign padding_top_mobile             = section.settings.padding_top_mobile -%}
+{%- assign search_placeholder             = section.settings.search_placeholder -%}
+{%- assign show_search                    = section.settings.show_search -%}
+{%- assign sticky_header                  = section.settings.sticky_header -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
@@ -81,7 +85,7 @@
 
 {%- if menu_additional != blank -%}
   {%- capture header_menu_small -%}
-    <nav class="header__extra-menu extra-menu header__extra-menu--mobile-hidden">
+    <nav class="header__extra-menu extra-menu">
       <ul class="extra-menu__list">
         {%- for link in menu_additional.items -%}
           {%- if link != blank -%}
@@ -109,6 +113,127 @@
           <b>{{- menu_opener_label -}}</b>
         {%- endif -%}
       </label>
+
+      <div class="header__nav menu__nav" style="display: none;">
+        <div class="menu__container container">
+          <nav class="menu__wrapper">
+            <ul class="menu__list">
+              {%- for link in menu_main.items -%}
+                {%- assign link_index = forloop.index -%}
+
+                {%- if link != blank -%}
+                  <li class="menu__item{% if link.items_count > 0 %} has-dropdown{%- endif -%}">
+
+                    {%- if link.items_count > 0 -%}
+                      <input type="checkbox" id="dropdown-menu-trigger-{{- link_index -}}" style="display: none;">
+                      <label for="dropdown-menu-trigger-{{- link_index -}}" class="menu__dropdown-opener">
+                        <i class="menu__item-icon">
+                          {%- render 'icon-arrow-down' -%}
+                        </i>
+                      </label>
+                    {%- endif -%}
+
+                    <a href="{{ link.url }}" class="menu__link">
+                      {{- link.title -}}
+                    </a>
+
+                    {%- if link.items_count > 0 -%}
+                      <div class="menu__dropdown" style="display: none;">
+                        <div class="menu__dropdown-wrapper">
+                          <label for="dropdown-menu-trigger-{{- link_index -}}" class="menu__dropdown-opener menu__dropdown-back">
+                            <i class="menu__item-icon">
+                              {%- render 'icon-arrow-down' -%}
+                            </i>
+
+                            {{- menu_back_mobile -}}
+                          </label>
+
+                          <div class="menu__dropdown-title">
+                            {{- link.title -}}
+                          </div>
+
+                          <ul class="menu__dropdown-list">
+                            {%- for childlink in link.items -%}
+                              {%- assign childlink_index = forloop.index -%}
+
+                              {%- if childlink != blank -%}
+                                <li class="menu__dropdown-item">
+                                  {%- if childlink.items_count > 0 -%}
+                                    <input type="checkbox" id="dropdown-childmenu-trigger-{{- link_index -}}-{{- childlink_index -}}" style="display: none;">
+                                    <label for="dropdown-childmenu-trigger-{{- link_index -}}-{{- childlink_index -}}" class="menu__dropdown-opener">
+                                      <i class="menu__item-icon">
+                                        {%- render 'icon-arrow-down' -%}
+                                      </i>
+                                    </label>
+                                  {%- endif -%}
+
+                                  <a href="{{ childlink.url }}" class="menu__dropdown-link">
+                                    {{- childlink.title -}}
+                                  </a>
+
+                                  {%- if childlink.items_count > 0 -%}
+                                    <div class="menu__dropdown">
+                                      <div class="menu__dropdown-wrapper">
+
+                                        <label for="dropdown-childmenu-trigger-{{- link_index -}}-{{- childlink_index -}}" class="menu__dropdown-opener menu__dropdown-back">
+                                          <i class="menu__item-icon">
+                                            {%- render 'icon-arrow-down' -%}
+                                          </i>
+
+                                          {{- menu_back_mobile -}}
+                                        </label>
+
+                                        <div class="menu__dropdown-title">
+                                          {{- childlink.title -}}
+                                        </div>
+
+                                        <ul class="menu__dropdown-list">
+                                          {%- for grandchildlink in childlink.items -%}
+                                            {%- if grandchildlink != blank -%}
+                                              <li class="menu__dropdown-item">
+                                                <a href="{{ grandchildlink.url }}" class="menu__dropdown-link">
+                                                  {{- grandchildlink.title -}}
+                                                </a>
+                                              </li>
+                                            {%- endif -%}
+                                          {%- endfor -%}
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  {%- endif -%}
+
+                                </li>
+                              {%- endif -%}
+
+                            {%- endfor -%}
+                          </ul>
+                        </div>
+                        <label for="mobile-menu-opener" class="menu__opener menu__closer"></label>
+                      </div>
+                    {%- endif -%}
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          </nav>
+
+          {{- header_menu_small -}}
+
+          {%- if app -%}
+            <div class="header__app">
+              {% render 'app', block: app, section: section, size: "mobile" %}
+            </div>
+          {%- endif -%}
+
+          {%- if menu_message_mobile != blank -%}
+            <div class="menu__message">
+              {%- render 'icon', icon: menu_message_mobile_icon, style: menu_message_mobile_icon_style -%}
+
+              <div class="menu__message-text">{{- menu_message_mobile -}}</div>
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
     </div>
   {%- endcapture -%}
 {%- endif -%}
@@ -185,7 +310,6 @@
     header.classList.add('header-sticky')
   {% endif %}
 </script>
-
 
 {% schema %}
   {
@@ -300,7 +424,7 @@
       {
         "type": "select",
         "id": "menu_opener_mobile",
-        "label": "Menu icon position",
+        "label": "Menu opener position",
         "options": [
           {
             "value": "left",
@@ -312,6 +436,96 @@
           }
         ],
         "default": "left"
+      },
+      {
+        "type": "text",
+        "id": "menu_back_mobile",
+        "label": "Menu 'Back' button label"
+      },
+      {
+        "type": "contentEditor",
+        "id": "menu_message_mobile",
+        "label": "Menu bottom message"
+      },
+      {
+        "type": "select",
+        "id": "menu_message_mobile_icon",
+        "label": "Menu bottom message icon",
+        "options": [
+          {
+            "value": "empty",
+            "label": "No icon"
+          },
+          {
+            "value": "address-card",
+            "label": "Address card"
+          },
+          {
+            "value": "calendar",
+            "label": "Calendar"
+          },
+          {
+            "value": "clock",
+            "label": "Clock"
+          },
+          {
+            "value": "comments",
+            "label": "Comments"
+          },
+          {
+            "value": "credit-card-alt",
+            "label": "Credit card"
+          },
+          {
+            "value": "envelope",
+            "label": "Envelope"
+          },
+          {
+            "value": "exclamation",
+            "label": "Exclamation"
+          },
+          {
+            "value": "fax",
+            "label": "Fax"
+          },
+          {
+            "value": "globe",
+            "label": "Globe"
+          },
+          {
+            "value": "info",
+            "label": "Info"
+          },
+          {
+            "value": "phone",
+            "label": "Phone"
+          },
+          {
+            "value": "tag",
+            "label": "Tag"
+          },
+          {
+            "value": "warning",
+            "label": "Warning"
+          }
+        ],
+        "default": "clock"
+      },
+      {
+        "type": "select",
+        "id": "menu_message_mobile_icon_style",
+        "label": "Icon style",
+        "options": [
+          {
+            "value": "filled",
+            "label": "Filled"
+          },
+          {
+            "value": "outline",
+            "label": "Outlined"
+          }
+        ],
+        "default": "outline"
       },
       {
         "type": "select",
