@@ -1,0 +1,48 @@
+{% comment %}
+
+  This snippet is used for rendering the Date picker
+
+  key: section id *required,
+  background: "string" *required
+
+  Usage:
+
+  {%- render 'date-picker',
+      key: section.key
+  -%}
+
+{% endcomment %}
+
+{%- style -%}
+  #section-{{ key }} bq-date-picker {
+    /* Colors */
+    --date-picker-icon-color: var(--color-accent);
+    --date-picker-background-color: var(--background-accent);
+    --date-picker-text-color: var(--color-accent);
+    --date-picker-border-color: var(--color-border);
+
+    /* Sizes */
+    --date-picker-wrapper-padding: 12px 24px;
+    --date-picker-text-size: 14px;
+    --date-picker-text-weight: var(--font-weight-semibold);
+    --date-picker-text-line-height: var(--font-height-lg);
+    --date-picker-border-radius: var(--border-radius-sm);
+  }
+
+  #section-{{ key }} .date-picker__component {
+    display: flex;
+    justify-content: var(--text-justify-content-mobile);
+  }
+
+  @media (min-width: 992px) {
+    #section-{{ key }} .date-picker__component {
+      justify-content: var(--text-justify-content);
+    }
+  }
+{%- endstyle -%}
+
+<div class="date-picker__instance">
+  <div class="date-picker__component">
+    <bq-date-picker version="next"></bq-date-picker>
+  </div>
+</div>

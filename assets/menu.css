@@ -8,7 +8,7 @@
   border-style: solid;
   border-width: 1px;
   transition: all var(--animation-duration) var(--transition-function-ease-in-out);
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-sm);
   text-transform: uppercase;
 }
 
@@ -329,7 +329,7 @@
 @media (min-width: 992px) {
   .menu__opener {
     position: static;
-    border-radius: 0;
+    border-radius: var(--border-radius-lg);
     padding: 11px 20px;
     height: 48px;
     width: auto;

@@ -20,16 +20,39 @@
   {%- endfor -%}
 
   :root {
-    --animation-duration: {{ settings.animation_duration | append: "s" | default: "0.4s" }};
-    --font-body:          "{{ settings.font_body.family | default: Montserrat }}", {{ settings.font_body.fallback_families | default: sans-serif }};
-    --font-heading:       "{{ settings.font_heading.family | default: Marcellus }}", {{ settings.font_heading.fallback_families | default: sans-serif }};
-    --font-tagline:       "{{ settings.font_tagline.family | default: Montserrat }}", {{ settings.font_tagline.fallback_families | default: sans-serif }};
-    --font-size-h1:       {{ settings.font_size_h1 | append: "px" | default: "80px" }};
-    --font-size-h2:       {{ settings.font_size_h2 | append: "px" | default: "64px" }};
-    --font-size-h3:       {{ settings.font_size_h3 | append: "px" | default: "56px" }};
-    --font-size-large:    {{ settings.font_size_large | append: "px" | default: "18px" }};
-    --font-size-regular:  {{ settings.font_size_regular | append: "px" | default: "16px" }};
-    --font-size-tagline:  {{ settings.font_size_tagline | append: "px" | default: "18px" }};
+    --animation-duration:     {{ settings.animation_duration | append: "s" | default: "0.4s" }};
+    --font-body:              "{{ settings.font_body.family | default: Montserrat }}", {{ settings.font_body.fallback_families | default: sans-serif }};
+    --font-heading:           "{{ settings.font_heading.family | default: Marcellus }}", {{ settings.font_heading.fallback_families | default: sans-serif }};
+    --font-tagline:           "{{ settings.font_tagline.family | default: Montserrat }}", {{ settings.font_tagline.fallback_families | default: sans-serif }};
+    --font-height-xs:         {{ settings.font_height_xs | default: "1" }};
+    --font-height-sm:         {{ settings.font_height_sm | default: "1.2" }};
+    --font-height-md:         {{ settings.font_height_md | default: "1.3333" }};
+    --font-height-lg:         {{ settings.font_height_lg | default: "1.4" }};
+    --font-height-xl:         {{ settings.font_height_xl | default: "1.5" }};
+    --font-size-h1:           {{ settings.font_size_h1 | append: "px" | default: "80px" }};
+    --font-size-h2:           {{ settings.font_size_h2 | append: "px" | default: "64px" }};
+    --font-size-h3:           {{ settings.font_size_h3 | append: "px" | default: "56px" }};
+    --font-size-h4:           {{ settings.font_size_h4 | append: "px" | default: "32px" }};
+    --font-size-h5:           {{ settings.font_size_h5 | append: "px" | default: "24px" }};
+    --font-size-h6:           {{ settings.font_size_h6 | append: "px" | default: "20px" }};
+    --font-size-large:        {{ settings.font_size_large | append: "px" | default: "18px" }};
+    --font-size-regular:      {{ settings.font_size_regular | append: "px" | default: "16px" }};
+    --font-size-tagline:      {{ settings.font_size_tagline | append: "px" | default: "18px" }};
+    --font-spacing-xs:        {{ settings.font_spacing_xs | append: 'em' | default: "-0.04em" }};
+    --font-spacing-sm:        {{ settings.font_spacing_sm | append: 'em' | default: "-0.03em" }};
+    --font-spacing-md:        {{ settings.font_spacing_md | append: 'em' | default: "-0.02em" }};
+    --font-spacing-lg:        {{ settings.font_spacing_lg | append: 'em' | default: "0.07em" }};
+    --font-spacing-xl:        {{ settings.font_spacing_xl | append: 'em' | default: "0.1em" }};
+    --font-weight-h1:         {{ settings.font_weight_h1 | default: "400" }};
+    --font-weight-h2:         {{ settings.font_weight_h2 | default: "400" }};
+    --font-weight-h3:         {{ settings.font_weight_h3 | default: "400" }};
+    --font-weight-header:     {{ settings.font_weight_header | default: "400" }};
+    --font-weight-light:      {{ settings.font_weight_light | default: "300" }};
+    --font-weight-regular:    {{ settings.font_weight_regular | default: "400" }};
+    --font-weight-medium:     {{ settings.font_weight_medium | default: "500" }};
+    --font-weight-semibold:   {{ settings.font_weight_semibold | default: "600" }};
+    --font-weight-bold:       {{ settings.font_weight_bold | default: "700" }};
+    --font-weight-extrabold:  {{ settings.font_weight_extrabold | default: "800" }};
 
     {% case settings.corner_radius %}
       {%- when 'square' -%}
@@ -40,7 +63,7 @@
         --border-radius-badge: 0;
         --border-radius-block: 0;
         --border-radius-button: 0;
-        {%- when 'rounded' -%}
+      {%- when 'rounded' -%}
         --border-radius-sm: 8px;
         --border-radius-md: 16px;
         --border-radius-lg: 8px;
@@ -48,7 +71,7 @@
         --border-radius-badge: 8px;
         --border-radius-block: 16px;
         --border-radius-button: 8px;
-        {%- when 'fully_round' -%}
+      {%- when 'fully_round' -%}
         --border-radius-sm: 8px;
         --border-radius-md: 16px;
         --border-radius-lg: 24px;

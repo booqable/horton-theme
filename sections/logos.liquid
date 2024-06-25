@@ -1,0 +1,249 @@
+{%- unless section.blocks.size == 0 -%}
+
+  {{ "logos.css" | asset_url | stylesheet_tag }}
+
+  {%- assign color_scheme          = section.settings.color_scheme -%}
+  {%- assign full_width            = section.settings.full_width -%}
+  {%- assign padding_bottom        = section.settings.padding_bottom -%}
+  {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+  {%- assign padding_top           = section.settings.padding_top -%}
+  {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
+  {%- assign show_border           = section.settings.show_border -%}
+  {%- assign show_title            = section.settings.show_title -%}
+  {%- assign show_title_mobile     = section.settings.show_title_mobile -%}
+  {%- assign title                 = section.settings.title -%}
+
+  {% comment %} CSS variables start {% endcomment %}
+  {%- capture variables -%}
+    {%- case padding_top -%}
+      {%- when 'small' -%}
+        --padding-top: 40px;
+      {%- when 'medium' -%}
+        --padding-top: 84px;
+      {%- when 'large' -%}
+        --padding-top: 128px;
+    {%- endcase -%}
+
+    {%- case padding_bottom -%}
+      {%- when 'small' -%}
+        --padding-bottom: 40px;
+      {%- when 'medium' -%}
+        --padding-bottom: 84px;
+      {%- when 'large' -%}
+        --padding-bottom: 128px;
+    {%- endcase -%}
+
+    {%- case padding_top_mobile -%}
+      {%- when 'small' -%}
+        --padding-top-mobile: 40px;
+      {%- when 'medium' -%}
+        --padding-top-mobile: 70px;
+      {%- when 'large' -%}
+        --padding-top-mobile: 100px;
+    {%- endcase -%}
+
+    {%- case padding_bottom_mobile -%}
+      {%- when 'small' -%}
+        --padding-bottom-mobile: 40px;
+      {%- when 'medium' -%}
+        --padding-bottom-mobile: 70px;
+      {%- when 'large' -%}
+        --padding-bottom-mobile: 100px;
+    {%- endcase -%}
+  {%- endcapture -%}
+  {% comment %} CSS variables end {% endcomment %}
+
+  {%- unless full_width -%}
+    <div class="logos__container container">
+  {%- endunless -%}
+      <div
+        class="logos__wrapper color-{{ color_scheme.id }}{% if show_border %} logos__wrapper--border{% endif %}{% if padding_top != blank or padding_top_mobile != blank %} logos__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} logos__wrapper--padding-bottom{%- endif -%}"
+        style="{{- variables | escape -}}"
+      >
+        {%- if full_width -%}
+          <div class="logos__container container">
+        {%- endif -%}
+            {%- if title != blank -%}
+              <h2 class="logos__title{% if show_title_mobile %} logos__title--mobile{% endif %}{% if show_title %} logos__title--desktop{%- endif -%}">
+                {{- title -}}
+              </h2>
+            {%- endif -%}
+
+            <div class="logos__images">
+              {%- for block in section.blocks -%}
+                {%- assign image = block.settings.image -%}
+
+                <div class="logos__image-wrapper" id="{{- block.id -}}">
+                  {%- if image.url != blank -%}
+                    {%- render 'image',
+                      image: image,
+                      loading: 'lazy',
+                      class: 'logos__image',
+                      custom_width: '750',
+                      custom_size: '750px'
+                    -%}
+                  {%- endif -%}
+                </div>
+              {%- endfor -%}
+            </div>
+        {%- if full_width -%}
+          </div>
+        {%- endif -%}
+      </div>
+  {%- unless full_width -%}
+    </div>
+  {%- endunless -%}
+{%- endunless -%}
+
+{% schema %}
+  {
+    "name": "Logos",
+    "description": "Show logos of your partners or brands you cary",
+    "tag": "section",
+    "class": "logos",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General settings"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Trusted by:"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "set-1"
+      },
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Full-width background",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_border",
+        "label": "Show border"
+      },
+      {
+        "type": "header",
+        "content": "Desktop settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_title",
+        "label": "Show title",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "padding_top",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "large"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "large"
+      },
+      {
+        "type": "header",
+        "content": "Mobile settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_title_mobile",
+        "label": "Show title",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "padding_top_mobile",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom_mobile",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      }
+    ],
+    "max_blocks": 16,
+    "blocks": [
+      {
+        "type": "logo",
+        "name": "Logo",
+        "settings":[
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "default": "booqable://assets/image-partner-logo-preview-black.png"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

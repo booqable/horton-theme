@@ -8,7 +8,6 @@
 
   /* Sizes */
   --max-width: 1700px;
-  --border-radius: 4px;
   --button-margin-bottom: 16px;
   --header-gap-sm: 8px;
   --header-gap-md: 16px;
@@ -17,20 +16,6 @@
   --header-icon-height: 40px;
   --horizontal-padding: 30px;
   --horizontal-padding-mobile: 16px;
-
-  /* Font weights */
-  --font-weight-light: 300;
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  --font-weight-extrabold: 800;
-
-  /* Line heights */
-  --line-height-xs: 1;
-  --line-height-sm: 1.2;
-  --line-height-md: 1.3333;
-  --line-height-lg: 1.5;
 
   /* Transitions */
   --transition-function-ease-in-out: ease-in-out;
@@ -85,12 +70,13 @@ body {
   color: var(--color-primary);
   font-size: var(--font-size-regular);
   font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-lg);
+  line-height: var(--font-height-lg);
   display: flex;
   flex-direction: column;
   min-height: 100%;
   width: 100%;
   overflow-x: clip;
+  word-break: break-word;
 }
 
 body > * {
@@ -124,6 +110,60 @@ body > * {
   color: var(--color-primary);
 }
 
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-header);
+  line-height: var(--font-height-md);
+  letter-spacing: var(--font-spacing-md);
+  margin-bottom: 1.2625rem;
+  color: var(--color-primary);
+}
+
+h1, .h1 {
+  font-size: clamp(40px, calc(var(--font-size-h1) / 2 + 2px), 80px);
+  font-weight: var(--font-weight-h1);
+  line-height: var(--font-height-xs);
+}
+
+h2, .h2 {
+  font-size: clamp(30px, calc(var(--font-size-h2) / 1.45), 70px);
+  font-weight: var(--font-weight-h2);
+  line-height: var(--font-height-sm);
+  letter-spacing: var(--font-spacing-sm);
+}
+
+h3, .h3 {
+  font-size: clamp(25px, var(--font-size-h3), 65px);
+  font-weight: var(--font-weight-h3);
+  line-height: var(--font-height-sm);
+  letter-spacing: var(--font-spacing-sm);
+}
+
+h4, .h4 {
+  font-size: clamp(24px, var(--font-size-h4), 40px);
+}
+
+h5, .h5 {
+  font-size: clamp(24px, var(--font-size-h5), 32px);
+  line-height: var(--font-height-lg);
+  letter-spacing: var(--font-spacing-xs);
+}
+
+h6, .h6 {
+  font-size: clamp(20px, var(--font-size-h6), 24px);
+  line-height: var(--font-height-lg);
+}
+
+@media (min-width: 992px) {
+  h1, .h1 {
+    font-size: clamp(40px, var(--font-size-h1), 80px);
+  }
+
+  h2, .h2 {
+    font-size: clamp(30px, var(--font-size-h2), 70px);
+  }
+}
+
 a {
   display: inline-block;
   vertical-align: top;
@@ -145,7 +185,7 @@ ul {
 input,
 textarea {
   font-family: var(--font-body);
-  border-radius: 0;
+  border-radius: var(--border-radius-md);
 }
 
 input:-webkit-autofill,
@@ -167,31 +207,32 @@ img {
   display: block;
   height: auto;
   max-width: 100%;
+  box-sizing: inherit;
 }
 
 .text-large {
   font-size: 1.25rem;
-  line-height: var(--line-height-lg);
+  line-height: var(--font-height-lg);
 }
 
 .text-medium {
   font-size: 1.125rem;
-  line-height: var(--line-height-lg);
+  line-height: var(--font-height-lg);
 }
 
 .text-regular {
   font-size: 1rem;
-  line-height: var(--line-height-lg);
+  line-height: var(--font-height-lg);
 }
 
 .text-small {
   font-size: 0.875rem;
-  line-height: var(--line-height-lg);
+  line-height: var(--font-height-lg);
 }
 
 .text-tiny {
   font-size: 0.75rem;
-  line-height: var(--line-height-lg);
+  line-height: var(--font-height-lg);
 }
 
 .text-center {
@@ -232,9 +273,9 @@ img {
   align-items: center;
   font-family: var(--font-body);
   font-size: 16px;
-  letter-spacing: -0.01em;
+  letter-spacing: var(--font-spacing-lg);
   font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-sm);
+  line-height: var(--font-height-sm);
   color: currentColor;
   border: 1px solid transparent;
   border-radius: var(--border-radius-button);
@@ -280,6 +321,7 @@ img {
 
 .container {
   max-width: var(--max-width);
+  width: 100%;
   margin: 0 auto;
   padding: 0 var(--horizontal-padding-mobile);
 }
@@ -311,7 +353,7 @@ img {
 
 .tippy-box *:not(label),
 .bq-modal *:not(label) {
-  border-radius: 0 !important;
+  border-radius: var(--border-radius-md) !important;
 }
 
 @media (min-width: 576px) {
