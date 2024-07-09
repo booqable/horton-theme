@@ -6,6 +6,7 @@
 {%- assign description           = section.settings.description -%}
 {%- assign full_width            = section.settings.full_width -%}
 {%- assign image                 = section.settings.image -%}
+{%- assign layout                = section.settings.layout -%}
 {%- assign overlay_background    = section.settings.overlay_background -%}
 {%- assign overlay_color         = section.settings.overlay_color -%}
 {%- assign overlay_opacity       = section.settings.overlay_opacity -%}
@@ -22,6 +23,7 @@
 {%- capture variables -%}
   {%- if show_overlay -%}
     --background-overlay: {{- overlay_background -}};
+    --background-overlay-00: {{- overlay_background | append: '00' -}};
     --color-overlay: {{- overlay_color -}};
     --opacity-overlay: {{ overlay_opacity | append: "%"}};
   {%- endif -%}
@@ -67,7 +69,7 @@
 {%- unless full_width -%}
   <div class="cta__container container">
 {%- endunless -%}
-    <div class="cta__wrapper{% if show_overlay %} cta__wrapper--with-overlay{% endif %}{% if show_borders %} cta__wrapper--with-border{% endif %}{% if padding_top != blank or padding_top_mobile != blank %} cta__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} cta__wrapper--padding-bottom{% endif %} color-{{- color_scheme.id -}}" style="{{- variables | escape -}}">
+    <div class="cta__wrapper cta__wrapper-{{ layout }}{% if show_overlay %} cta__wrapper--with-overlay{% endif %}{% if show_borders %} cta__wrapper--with-border{% endif %}{% if padding_top != blank or padding_top_mobile != blank %} cta__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} cta__wrapper--padding-bottom{% endif %} color-{{- color_scheme.id -}}" style="{{- variables | escape -}}">
       {%- if full_width -%}
         <div class="cta__container container">
       {%- endif -%}
@@ -87,15 +89,15 @@
                     {{- description -}}
                   </div>
                 {%- endif -%}
-
-                {%- if button_label != blank and button_url != blank -%}
-                  <div class="cta__buttons">
-                    <a class="cta__button button button--primary button--large" href="{{ button_url }}">
-                      {{- button_label -}}
-                    </a>
-                  </div>
-                {%- endif -%}
               </div>
+
+              {%- if button_label != blank and button_url != blank -%}
+                <div class="cta__buttons">
+                  <a class="cta__button button button--primary button--large" href="{{ button_url }}">
+                    {{- button_label -}}
+                  </a>
+                </div>
+              {%- endif -%}
             {%- endif -%}
           </div>
       {%- if full_width -%}
@@ -217,6 +219,23 @@
       {
         "type": "header",
         "content": "Desktop settings"
+      },
+      {
+        "type": "select",
+        "id": "layout",
+        "label": "Layout",
+        "options": [
+          {
+            "value": "row",
+            "label": "Row"
+          },
+          {
+            "value": "column",
+            "label": "Column"
+          }
+        ],
+        "default": "column",
+        "info": "'Row' could be used for short content"
       },
       {
         "type": "select",
