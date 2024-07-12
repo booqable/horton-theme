@@ -164,11 +164,57 @@
         "title": "Collections"
       },
       "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "category_981245": {
+          "type": "category",
+          "settings": {
+            "button_label": "SEE ALL",
+            "button_url": "booqable://products",
+            "heading": "Product category highlight",
+            "image": "",
+            "overlay_background": "#000000",
+            "overlay_color": "#FFFFFF",
+            "overlay_opacity": 40,
+            "show_overlay": false
+          },
+          "disabled": null
+        },
+        "product_481051": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "category_981245",
+        "product_481051"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "image_fit": "cover",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": false,
+        "show_excerpt": true,
+        "show_navigation": true,
+        "spacing": "none",
+        "spacing_mobile": "medium",
+        "tag": "THIS WEEK",
+        "timer": 5,
+        "title": "Popular products"
+      },
+      "disabled": null
     }
   },
   "order": [
     "hero",
     "logos",
-    "collections"
+    "collections",
+    "products"
   ]
 }
