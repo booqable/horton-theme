@@ -164,11 +164,48 @@
         "title": "Collections"
       },
       "disabled": null
+    },
+    "about-us": {
+      "type": "about-us",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "background_image": "booqable://assets/image-about-us-background.png",
+        "button_label": "MORE ABOUT US",
+        "button_url": "booqable://root",
+        "color_scheme": "set-3",
+        "description": "Our passion for producing amazing wedding experiences has taken us on a fantastic path, where we have perfected the art of translating treasured fantasies into a reality of elegance. element symbolises the pinnacle of luxury, where love and beauty are harmoniously intertwined.",
+        "full_width": true,
+        "image": "booqable://assets/image-about-us.png",
+        "image_circle": true,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_borders": false,
+        "tag": "MEET OUR TEAM",
+        "title": "Our story"
+      },
+      "disabled": null
+    },
+    "spacer": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-1",
+        "image": "booqable://assets/image-waved-line-decor.png",
+        "size": "medium",
+        "size_mobile": "medium"
+      },
+      "disabled": null
     }
   },
   "order": [
     "hero",
     "logos",
-    "collections"
+    "collections",
+    "spacer",
+    "about-us"
   ]
 }

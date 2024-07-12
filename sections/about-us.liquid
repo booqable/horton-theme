@@ -1,0 +1,402 @@
+{{ "about-us.css" | asset_url | stylesheet_tag }}
+
+{%- assign background_image      = section.settings.background_image -%}
+{%- assign blocks                = false -%}
+{%- assign button_label          = section.settings.button_label -%}
+{%- assign button_url            = section.settings.button_url -%}
+{%- assign color_scheme          = section.settings.color_scheme -%}
+{%- assign description           = section.settings.description -%}
+{%- assign full_width            = section.settings.full_width -%}
+{%- assign image                 = section.settings.image -%}
+{%- assign image_circle          = section.settings.image_circle -%}
+{%- assign padding_bottom        = section.settings.padding_bottom -%}
+{%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+{%- assign padding_top           = section.settings.padding_top -%}
+{%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
+{%- assign show_borders          = section.settings.show_borders -%}
+{%- assign tag                   = section.settings.tag -%}
+{%- assign title                 = section.settings.title -%}
+
+{%- for block in section.blocks -%}
+  {%- assign blocks = true -%}
+{%- endfor -%}
+
+{% comment %} CSS variables start {% endcomment %}
+{%- capture variables -%}
+  {%- case padding_top -%}
+    {%- when 'small' -%}
+      --padding-top: 60px;
+    {%- when 'medium' -%}
+      --padding-top: 120px;
+    {%- when 'large' -%}
+      --padding-top: 200px;
+  {%- endcase -%}
+
+  {%- case padding_bottom -%}
+    {%- when 'small' -%}
+      --padding-bottom: 60px;
+    {%- when 'medium' -%}
+      --padding-bottom: 120px;
+    {%- when 'large' -%}
+      --padding-bottom: 200px;
+  {%- endcase -%}
+
+  {%- case padding_top_mobile -%}
+    {%- when 'small' -%}
+      --padding-top-mobile: 24px;
+    {%- when 'medium' -%}
+      --padding-top-mobile: 50px;
+    {%- when 'large' -%}
+      --padding-top-mobile: 80px;
+  {%- endcase -%}
+
+  {%- case padding_bottom_mobile -%}
+    {%- when 'small' -%}
+      --padding-bottom-mobile: 24px;
+    {%- when 'medium' -%}
+      --padding-bottom-mobile: 50px;
+    {%- when 'large' -%}
+      --padding-bottom-mobile: 80px;
+  {%- endcase -%}
+{%- endcapture -%}
+{% comment %} CSS variables end {% endcomment %}
+
+{%- unless full_width -%}
+  <div class="about-us__container container">
+{%- endunless -%}
+    <div class="about-us__wrapper{% if show_borders %} about-us__wrapper--with-border{% endif %}{% if padding_top != blank or padding_top_mobile != blank %} about-us__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} about-us__wrapper--padding-bottom{% endif %} color-{{- color_scheme.id -}}" style="{{- variables | escape -}}">
+      {%- if full_width -%}
+        <div class="about-us__container container">
+      {%- endif -%}
+          <div class="about-us__content">
+            {%- if image != blank -%}
+              <div class="about-us__media">
+                <div class="about-us__image-wrapper{% if image_circle %} about-us__image-wrapper--circle{%- endif -%}">
+                  {%- render 'image',
+                      image: image,
+                      loading: 'lazy',
+                      class: 'about-us__image',
+                      size: 'flexible'
+                  -%}
+                </div>
+              </div>
+            {%- endif -%}
+
+            {%- if tag != blank or title != blank or button_label != blank and button_url != blank -%}
+              <div class="about-us__text-area">
+                {%- if tag != blank -%}
+                  <span class="about-us__tag tagline">{{- tag -}}</span>
+                {%- endif -%}
+
+                {%- if title != blank -%}
+                  <h2 class="about-us__title">{{- title -}}</h2>
+                {%- endif -%}
+
+                {%- if description != blank -%}
+                  <div class="about-us__description bq-content rx-content text-medium">
+                    {{- description -}}
+                  </div>
+                {%- endif -%}
+
+                {%- if button_label != blank and button_url != blank -%}
+                  <div class="about-us__buttons">
+                    <a class="about-us__button button button--primary button--large" href="{{ button_url }}">
+                      {{- button_label -}}
+                    </a>
+                  </div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+
+            {%- if blocks -%}
+              <div class="about-us__blocks">
+                {%- for block in section.blocks -%}
+                  {%- assign text       = block.settings.text -%}
+                  {%- assign icon       = block.settings.icon -%}
+                  {%- assign icon_style = settings.icon_style -%}
+
+                  {%- if text != blank or icon != "empty" -%}
+                    <div class="about-us__block">
+                      {%- if icon != "empty" -%}
+                        <div class="about-us__block-icon">
+                          {%- render 'icon', icon: icon, style: icon_style -%}
+                        </div>
+                      {%- endif -%}
+
+                      {%- if text != blank -%}
+                        <div class="about-us__block-text">
+                          {{- text -}}
+                        </div>
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
+          </div>
+      {%- if full_width -%}
+        </div>
+      {%- endif -%}
+
+      {%- if background_image != blank -%}
+        <div class="about-us__background-wrapper">
+          {%- render 'image',
+              image: background_image,
+              loading: 'lazy',
+              class: 'about-us__background',
+              size: 'xxl'
+          -%}
+        </div>
+      {%- endif -%}
+    </div>
+{%- unless full_width -%}
+  </div>
+{%- endunless -%}
+
+{% schema %}
+  {
+    "name": "About us",
+    "tag": "section",
+    "class": "about-us",
+    "description": "Tell your customers about your brand and what makes you unique.",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General settings"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "set-3"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image (optional)",
+        "default": "booqable://assets/image-placeholder.png"
+      },
+      {
+        "type": "checkbox",
+        "id": "image_circle",
+        "label": "Show image in a circle",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "tag",
+        "label": "Tagline",
+        "default": "TAGLINE",
+        "info": "Leave blank to hide tagline"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Our story"
+      },
+      {
+        "type": "contentEditor",
+        "id": "description",
+        "label": "Description",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button label",
+        "default": "MORE ABOUT US"
+      },
+      {
+        "type": "url",
+        "id": "button_url",
+        "label": "Button URL",
+        "default": "booqable://root"
+      },
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Full-width background",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_borders",
+        "label": "Show borders",
+        "default": false
+      },
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Image (optional)"
+      },
+      {
+        "type": "header",
+        "content": "Desktop settings"
+      },
+      {
+        "type": "select",
+        "id": "padding_top",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "header",
+        "content": "Mobile settings"
+      },
+      {
+        "type": "select",
+        "id": "padding_top_mobile",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom_mobile",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      }
+    ],
+    "max_blocks": 8,
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Text",
+        "settings": [
+          {
+            "type": "select",
+            "id": "icon",
+            "label": "Icon",
+            "options": [
+              {
+                "value": "empty",
+                "label": "No icon"
+              },
+              {
+                "value": "address-card",
+                "label": "Address card"
+              },
+              {
+                "value": "calendar",
+                "label": "Calendar"
+              },
+              {
+                "value": "clock",
+                "label": "Clock"
+              },
+              {
+                "value": "comments",
+                "label": "Comments"
+              },
+              {
+                "value": "credit-card-alt",
+                "label": "Credit card"
+              },
+              {
+                "value": "envelope",
+                "label": "Envelope"
+              },
+              {
+                "value": "exclamation",
+                "label": "Exclamation"
+              },
+              {
+                "value": "fax",
+                "label": "Fax"
+              },
+              {
+                "value": "globe",
+                "label": "Globe"
+              },
+              {
+                "value": "info",
+                "label": "Info"
+              },
+              {
+                "value": "phone",
+                "label": "Phone"
+              },
+              {
+                "value": "tag",
+                "label": "Tag"
+              },
+              {
+                "value": "warning",
+                "label": "Warning"
+              }
+            ],
+            "default": "calendar"
+          },
+          {
+            "type": "contentEditor",
+            "id": "text",
+            "label": "Text",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

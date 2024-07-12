@@ -319,6 +319,28 @@ img {
   padding: 14px 24px;
 }
 
+.fa, .far {
+  color: inherit;
+}
+
+.tagline {
+  font-family: var(--font-body);
+  font-size: var(--font-size-large);
+  line-height: var(--font-height-sm);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--font-spacing-xl);
+  color: var(--color-outline);
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 4px;
+}
+
+@media (min-width: 992px) {
+  .tagline {
+    margin: 0 0 8px;
+  }
+}
+
 .container {
   max-width: var(--max-width);
   width: 100%;
