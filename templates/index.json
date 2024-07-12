@@ -186,11 +186,29 @@
           "type": "product",
           "settings": {},
           "disabled": null
+        },
+        "product_481052": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_481053": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_481054": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
         }
       },
       "block_order": [
         "category_981245",
-        "product_481051"
+        "product_481051",
+        "product_481052",
+        "product_481053",
+        "product_481054"
       ],
       "settings": {
         "color_scheme": "set-1",
@@ -257,11 +275,35 @@
           "type": "product",
           "settings": {},
           "disabled": null
+        },
+        "product_481012": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_481013": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_481014": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_481015": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
         }
       },
       "block_order": [
         "category_981241",
-        "product_481011"
+        "product_481011",
+        "product_481012",
+        "product_481013",
+        "product_481014",
+        "product_481015"
       ],
       "settings": {
         "color_scheme": "set-1",
