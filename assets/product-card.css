@@ -1,4 +1,6 @@
 .product-card {
+  --aspect-ratio: 1 / 1.2;
+
   display: grid;
   grid-template-rows: max-content 1fr;
   position: relative;
@@ -31,7 +33,7 @@
 .product-card__vision:after {
   content: "";
   display: block;
-  aspect-ratio: 1 / 1.2;
+  aspect-ratio: var(--aspect-ratio);
 }
 
 .product-card__image {
@@ -110,7 +112,7 @@ bq-product-availability[visible="true"] {
 }
 
 @media (min-width: 992px) {
-  .product-card__vision:after {
-    aspect-ratio: 1 / 1.3;
+  .product-card {
+    --aspect-ratio: 1 / 1.3;
   }
 }

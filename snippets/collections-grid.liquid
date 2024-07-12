@@ -85,14 +85,18 @@
         </div>
       </div>
 
-      <div class="collections__image-wrapper">
-        {%- render 'image',
-          image: image,
-          loading: 'lazy',
-          class: 'collections__image',
-          size: 'flexible'
-        -%}
-      </div>
+      {%- if image != blank -%}
+        <div class="collections__image-wrapper">
+          {%- render 'image',
+            image: image,
+            loading: 'lazy',
+            class: 'collections__image',
+            size: 'flexible'
+          -%}
+        </div>
+      {%- else -%}
+        {%- render 'image-placeholder', dimension: "530x320" -%}
+      {%- endif -%}
     </li>
   {%- endfor -%}
 </ul>
