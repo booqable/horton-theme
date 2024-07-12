@@ -165,6 +165,134 @@
       },
       "disabled": null
     },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "category_981245": {
+          "type": "category",
+          "settings": {
+            "button_label": "SEE ALL",
+            "button_url": "booqable://products",
+            "heading": "Product category highlight",
+            "image": "booqable://assets/image-placeholder.png",
+            "overlay_background": "#000000",
+            "overlay_color": "#FFFFFF",
+            "overlay_opacity": 40,
+            "show_overlay": false
+          },
+          "disabled": null
+        },
+        "product_481051": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "category_981245",
+        "product_481051"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "image_fit": "cover",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": false,
+        "show_excerpt": true,
+        "show_navigation": true,
+        "spacing": "none",
+        "spacing_mobile": "medium",
+        "tag": "THIS WEEK",
+        "timer": 5,
+        "title": "Popular products"
+      },
+      "disabled": null
+    },
+    "call-to-action": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_label": "GET IN TOUCH",
+        "button_url": "booqable://root",
+        "color_scheme": "set-3",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        "full_width": false,
+        "image": "booqable://assets/image-cta-1.jpg",
+        "layout": "column",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": false,
+        "tag": "UNIQUE & PERFECT",
+        "title": "Your vision made real"
+      },
+      "disabled": null
+    },
+    "products_967435": {
+      "type": "products",
+      "blocks": {
+        "category_981241": {
+          "type": "category",
+          "settings": {
+            "button_label": "SEE ALL",
+            "button_url": "booqable://products",
+            "heading": "Product category highlight",
+            "image": "booqable://assets/image-productss-category-block-background.jpeg",
+            "overlay_background": "#000000",
+            "overlay_color": "#FFFFFF",
+            "overlay_opacity": 40,
+            "show_overlay": true
+          },
+          "disabled": null
+        },
+        "product_481011": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "category_981241",
+        "product_481011"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "image_fit": "cover",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": false,
+        "show_excerpt": true,
+        "show_navigation": true,
+        "spacing": "none",
+        "spacing_mobile": "medium",
+        "tag": "THIS WEEK",
+        "timer": 5,
+        "title": "New products"
+      },
+      "disabled": null
+    },
+    "spacer": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-1",
+        "image": "booqable://assets/image-waved-line-decor.png",
+        "size": "medium",
+        "size_mobile": "medium"
+      },
+      "disabled": null
+    },
     "about-us": {
       "type": "about-us",
       "blocks": {},
@@ -188,15 +316,29 @@
       },
       "disabled": null
     },
-    "spacer": {
-      "type": "spacer",
+    "call-to-action_975014": {
+      "type": "call-to-action",
       "blocks": {},
       "block_order": [],
       "settings": {
-        "color_scheme": "set-1",
-        "image": "booqable://assets/image-waved-line-decor.png",
-        "size": "medium",
-        "size_mobile": "medium"
+        "button_label": "GET IN TOUCH",
+        "button_url": "booqable://root",
+        "color_scheme": "set-3",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Free Delivery For Orders Starts From $50",
+        "full_width": false,
+        "image": "booqable://assets/image-cta-2.jpg",
+        "layout": "column",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": false,
+        "tag": "",
+        "title": "We serve your day"
       },
       "disabled": null
     }
@@ -205,7 +347,11 @@
     "hero",
     "logos",
     "collections",
+    "products",
+    "call-to-action",
+    "products_967435",
     "spacer",
-    "about-us"
+    "about-us",
+    "call-to-action_975014"
   ]
 }
