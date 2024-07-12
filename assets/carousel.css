@@ -1,0 +1,124 @@
+.carousel {
+  --button-width: 48px;
+  --button-height: 48px;
+  --button-gap: 8px;
+  --buttons-indent: 70px;
+
+  max-width: 100%;
+  position: relative;
+}
+
+.carousel *::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.carousel *::-webkit-scrollbar-track,
+.carousel *::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.carousel__list {
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--border-radius-block);
+  border: 1px solid var(--color-border);
+}
+
+.carousel__wrapper {
+  height: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-snap-stop: always;
+  scroll-padding: 0;
+  scroll-behavior: smooth !important;
+  -ms-overflow-style: none;
+  display: flex;
+  align-items: stretch;
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+}
+
+.carousel.controls {
+  margin-bottom: var(--buttons-indent);
+}
+
+.carousel__inner {
+  height: 100%;
+}
+
+.carousel__item {
+  position: relative;
+  min-width: var(--slide-width-mobile);
+  max-width: var(--slide-width-mobile);
+  padding: 0;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.carousel__navigation {
+  position: absolute;
+  top: calc(100% + (var(--buttons-indent) - var(--button-width)));
+  left: 50%;
+  display: flex;
+  transform: translateX(-50%);
+  margin: 0 calc(-1 * var(--button-gap));
+  z-index: 2;
+}
+
+.carousel__navigation.hidden {
+  display: none;
+}
+
+.carousel__btn {
+  width: var(--button-width);
+  height: var(--button-height);
+  border: 1px solid var(--background-accent);
+  border-radius: var(--border-radius-button);
+  background: var(--background-accent) radial-gradient(circle, transparent 1%, var(--background-accent) 1%) center/100%;
+  margin: 0 var(--button-gap);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-indent: -9999px;
+  transition: all var(--animation-duration) var(--transition-function-ease-in-out);
+}
+
+.carousel__btn svg {
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+
+.carousel__btn.prev svg {
+  transform: rotate(180deg);
+}
+
+.carousel__btn path {
+  transition: all var(--animation-duration) var(--transition-function-ease-in-out);
+  fill: var(--color-accent);
+}
+
+.carousel .product-card {
+  height: 100%;
+}
+
+@media (min-width: 992px) {
+  .carousel__item {
+    min-width: var(--slide-width);
+    max-width: var(--slide-width);
+  }
+}
+
+@media (hover: hover) {
+  .carousel__btn:hover {
+    background: var(--background-accent-hover) radial-gradient(circle, transparent 1%, var(--background-accent) 1%) center/15000%;
+    border-color: var(--background-accent-hover);
+  }
+
+  .carousel__btn:hover path {
+    fill: var(--color-accent);
+  }
+}

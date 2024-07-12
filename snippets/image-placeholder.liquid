@@ -1,0 +1,19 @@
+{% comment %}
+
+  This snippet is used for rendering the image placeholder
+
+  dimension - string *required
+
+  Usage:
+
+  {%- render 'image-placeholder',
+      dimension: "500x550"
+  -%}
+
+{% endcomment %}
+
+{%- if dimension != blank -%}
+  <div class="blank-image-placeholder">
+    {{- dimension -}}
+  </div>
+{%- endif -%}
