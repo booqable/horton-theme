@@ -209,12 +209,66 @@
         "title": "Popular products"
       },
       "disabled": null
+    },
+    "call-to-action": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_label": "GET IN TOUCH",
+        "button_url": "booqable://root",
+        "color_scheme": "set-3",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        "full_width": false,
+        "image": "booqable://assets/image-cta-1.jpg",
+        "layout": "column",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": false,
+        "tag": "UNIQUE & PERFECT",
+        "title": "Your vision made real"
+      },
+      "disabled": null
+    },
+    "call-to-action_975014": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_label": "GET IN TOUCH",
+        "button_url": "booqable://root",
+        "color_scheme": "set-3",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Free Delivery For Orders Starts From $50",
+        "full_width": false,
+        "image": "booqable://assets/image-cta-2.jpg",
+        "layout": "column",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": false,
+        "tag": "",
+        "title": "We serve your day"
+      },
+      "disabled": null
     }
   },
   "order": [
     "hero",
     "logos",
     "collections",
-    "products"
+    "products",
+    "call-to-action",
+    "call-to-action_975014"
   ]
 }
