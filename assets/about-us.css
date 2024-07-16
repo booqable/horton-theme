@@ -52,6 +52,8 @@
   border-radius: var(--border-radius-circle);
   aspect-ratio: 1 / 1;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .about-us__text-area {
@@ -135,10 +137,6 @@
 @media (min-width: 768px) {
   .about-us__wrapper {
     --blocks-min-width: 320px;
-  }
-
-  .about-us__image-wrapper--circle .about-us__image {
-    width: auto;
   }
 }
 
