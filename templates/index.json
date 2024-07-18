@@ -236,6 +236,86 @@
       },
       "disabled": null
     },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_023494": {
+          "type": "testimonial",
+          "settings": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "name": "Name Surname",
+            "position": "Position, Company name",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_023495": {
+          "type": "testimonial",
+          "settings": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "name": "Name Surname",
+            "position": "Position, Company name",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_023496": {
+          "type": "testimonial",
+          "settings": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "name": "Name Surname",
+            "position": "Position, Company name",
+            "stars": "4"
+          },
+          "disabled": null
+        },
+        "testimonial_023497": {
+          "type": "testimonial",
+          "settings": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "name": "Name Surname",
+            "position": "Position, Company name",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_023498": {
+          "type": "testimonial",
+          "settings": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "name": "Name Surname",
+            "position": "Position, Company name",
+            "stars": "4"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial_023494",
+        "testimonial_023495",
+        "testimonial_023496",
+        "testimonial_023497",
+        "testimonial_023498"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "button_url": "booqable://root",
+        "color_scheme": "set-1",
+        "full_width": false,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_button_on_bottom": false,
+        "show_carousel": true,
+        "show_navigation": true,
+        "show_stars": "below",
+        "tag": "REWIEWS",
+        "timer": 5,
+        "title": "What our customers say"
+      },
+      "disabled": null
+    },
     "call-to-action_975014": {
       "type": "call-to-action",
       "blocks": {},
@@ -269,6 +349,7 @@
     "collections",
     "products",
     "call-to-action",
+    "testimonials",
     "call-to-action_975014"
   ]
 }

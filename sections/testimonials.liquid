@@ -1,0 +1,436 @@
+{%- assign blocks = section.blocks -%}
+
+{%- if blocks.size > 0 -%}
+  {{ "testimonials.css" | asset_url | stylesheet_tag }}
+
+  {%- assign button_label          = section.settings.button_label -%}
+  {%- assign button_url            = section.settings.button_url -%}
+  {%- assign carousel              = false -%}
+  {%- assign color_scheme          = section.settings.color_scheme -%}
+  {%- assign full_width            = section.settings.full_width -%}
+  {%- assign padding_bottom        = section.settings.padding_bottom -%}
+  {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+  {%- assign padding_top           = section.settings.padding_top -%}
+  {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
+  {%- assign show_button_on_bottom = section.settings.show_button_on_bottom -%}
+  {%- assign show_carousel         = section.settings.show_carousel -%}
+  {%- assign show_navigation       = section.settings.show_navigation -%}
+  {%- assign show_stars            = section.settings.show_stars -%}
+  {%- assign tag                   = section.settings.tag -%}
+  {%- assign timer                 = section.settings.timer -%}
+  {%- assign title                 = section.settings.title -%}
+
+  {%- if blocks.size > 1 and show_carousel -%}
+    {{ "carousel.css" | asset_url | stylesheet_tag }}
+
+    {%- assign carousel = true -%}
+  {%- endif -%}
+
+  {% comment %} CSS variables start {% endcomment %}
+  {%- capture variables -%}
+    {%- case padding_top -%}
+      {%- when 'small' -%}
+        --padding-top: 40px;
+      {%- when 'medium' -%}
+        --padding-top: 80px;
+      {%- when 'large' -%}
+        --padding-top: 120px;
+    {%- endcase -%}
+
+    {%- case padding_bottom -%}
+      {%- when 'small' -%}
+        --padding-bottom: 40px;
+      {%- when 'medium' -%}
+        --padding-bottom: 80px;
+      {%- when 'large' -%}
+        --padding-bottom: 120px;
+    {%- endcase -%}
+
+    {%- case padding_top_mobile -%}
+      {%- when 'small' -%}
+        --padding-top-mobile: 32px;
+      {%- when 'medium' -%}
+        --padding-top-mobile: 64px;
+      {%- when 'large' -%}
+        --padding-top-mobile: 96px;
+    {%- endcase -%}
+
+    {%- case padding_bottom_mobile -%}
+      {%- when 'small' -%}
+        --padding-bottom-mobile: 32px;
+      {%- when 'medium' -%}
+        --padding-bottom-mobile: 64px;
+      {%- when 'large' -%}
+        --padding-bottom-mobile: 96px;
+    {%- endcase -%}
+  {%- endcapture -%}
+  {% comment %} CSS variables end {% endcomment %}
+
+  <div class="testimonials__wrapper color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} testimonials__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} testimonials__wrapper--padding-bottom{%- endif -%}" style="{{- variables | escape -}}">
+    <div class="testimonials__container container">
+      {%- if tag != blank or title != blank -%}
+        <div class="testimonials__top">
+          {%- if tag != blank -%}
+            <strong class="testimonials__tag tagline">{{- tag -}}</strong>
+          {%- endif -%}
+
+          {%- if title != blank -%}
+            <h2 class="testimonials__title">{{- title -}}</h2>
+          {%- endif -%}
+
+          {%- unless show_button_on_bottom -%}
+            {%- if button_label != blank and button_url != blank -%}
+              <div class="testimonials__buttons{% unless show_button_on_bottom %} testimonials__buttons--mobile-hidden{%- endunless -%}">
+                <a href="{{ button_url }}" class="testimonials__button button button--outlined button--large">
+                  {{- button_label -}}
+                </a>
+              </div>
+            {%- endif -%}
+          {%- endunless -%}
+        </div>
+      {%- endif -%}
+
+      <div class="testimonials__list{% if carousel %} carousel carousel__pause{%- endif -%}"{% if carousel %} aria-role="Gallery"{%- endif -%}>
+        {%- if carousel -%}
+          <input class="carousel__timer" type="hidden" name="hidden" value="{{- timer -}}" aria-hidden="true">
+          <div class="carousel__list">
+            <div class="carousel__wrapper{% if full_width %} carousel__wrapper--full-width{% endif %}">
+        {%- endif -%}
+
+        {%- for block in section.blocks -%}
+          {%- assign description = block.settings.description -%}
+          {%- assign name        = block.settings.name -%}
+          {%- assign position    = block.settings.position -%}
+          {%- assign stars       = block.settings.stars -%}
+
+          {%- capture stars_rendering -%}
+            {%- assign stars_full = stars -%}
+            {%- assign stars_empty = stars | plus: 1 -%}
+
+            <div class="testimonials__stars">
+              {%- for i in (1..stars_full) -%}
+                <span class="testimonials__star">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                </span>
+              {%- endfor -%}
+              {%- for i in (stars_empty..5) -%}
+                <span class="testimonials__star">
+                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                </span>
+              {%- endfor -%}
+            </div>
+          {%- endcapture -%}
+
+          {%- if carousel -%}
+            <div class="carousel__item">
+              <div class="carousel__inner">
+          {%- endif -%}
+
+          {%- if description != blank -%}
+            <blockquote class="testimonials__blockquote text-large">
+              {%- if show_stars == "above" -%}
+                {{- stars_rendering -}}
+              {%- endif -%}
+
+              <q class="testimonials__quote bq-content rx-content text-weight--medium">
+                {{- description -}}
+              </q>
+
+              {%- if show_stars == "below" -%}
+                {{- stars_rendering -}}
+              {%- endif -%}
+
+              {%- if name != blank or position != blank -%}
+                <cite class="testimonials__cite">
+                  {%- if name != blank -%}
+                    {{- name -}}
+                  {%- endif -%}
+                  {%- if position != blank -%}
+                    <small class="testimonials__small text-regular">
+                      {{- position -}}
+                    </small>
+                  {%- endif -%}
+                </cite>
+              {%- endif -%}
+            </blockquote>
+          {%- endif -%}
+
+          {%- if carousel -%}
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+
+        {%- if carousel -%}
+            </div>
+          </div>
+
+          {%- if show_navigation -%}
+            <div class="carousel__navigation hidden" aria-role="Carousel navigation">
+              <span class="carousel__btn prev" aria-label="Prev slide">
+                Previous slide
+                {%- render 'icon-arrow-right-full' -%}
+              </span>
+              <span class="carousel__btn next" aria-label="Next slide">
+                Next slide
+                {%- render 'icon-arrow-right-full' -%}
+              </span>
+            </div>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+
+      {%- if button_label != blank and button_url != blank -%}
+        <div class="testimonials__buttons{% unless show_button_on_bottom %} testimonials__buttons--desktop-hidden{%- endunless -%}">
+          <a href="{{ button_url }}" class="testimonials__button button button--outlined button--large">
+            {{- button_label -}}
+          </a>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Testimonials",
+    "description": "Show testimonials from individual customers in a sliding carousel",
+    "tag": "section",
+    "class": "testimonials",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General settings"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "set-1"
+      },
+      {
+        "type": "text",
+        "id": "tag",
+        "label": "Tagline",
+        "default": "Tagline",
+        "info": "Leave blank to hide tagline"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "What our customers say"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button label",
+        "default": "SEE ALL",
+        "info": "Leave blank to hide the button"
+      },
+      {
+        "type": "url",
+        "id": "button_url",
+        "label": "Button link",
+        "default": "booqable://root"
+      },
+      {
+        "type": "select",
+        "id": "show_stars",
+        "label": "Stars placement",
+        "options": [
+          {
+            "value": "above",
+            "label": "Above quote"
+          },
+          {
+            "value": "below",
+            "label": "Below quote"
+          }
+        ],
+        "default": "below"
+      },
+      {
+        "type": "header",
+        "content": "Carousel settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_carousel",
+        "default": true,
+        "label": "Show items as carousel",
+        "info": "If it's not checked, bellow settings will be ignored"
+      },
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "default": false,
+        "label": "Stretch slides to edges of the screen"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_navigation",
+        "default": true,
+        "label": "Show navigation buttons"
+      },
+      {
+        "type": "number",
+        "id": "timer",
+        "label": "Rotation time",
+        "min": 0,
+        "max": 100,
+        "default": 5,
+        "info": "In seconds. Set to 0 to disable auto rotation"
+      },
+      {
+        "type": "header",
+        "content": "Desktop settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_button_on_bottom",
+        "label": "Show button below testimonials",
+        "default": false
+      },
+      {
+        "type": "select",
+        "id": "padding_top",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "header",
+        "content": "Mobile settings"
+      },
+      {
+        "type": "select",
+        "id": "padding_top_mobile",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom_mobile",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      }
+    ],
+    "max_blocks": 8,
+    "blocks": [
+      {
+        "type": "testimonial",
+        "name": "Testimonial",
+        "settings": [
+          {
+            "type": "contentEditor",
+            "id": "description",
+            "label": "Content",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."
+          },
+          {
+            "type": "text",
+            "id": "name",
+            "label": "Name",
+            "default": "Name Surname"
+          },
+          {
+            "type": "text",
+            "id": "position",
+            "label": "Position",
+            "default": "Position, Company name"
+          },
+          {
+            "type": "select",
+            "id": "stars",
+            "label": "Stars",
+            "options": [
+              {
+                "value": "1",
+                "label": "1 star"
+              },
+              {
+                "value": "2",
+                "label": "2 stars"
+              },
+              {
+                "value": "3",
+                "label": "3 stars"
+              },
+              {
+                "value": "4",
+                "label": "4 stars"
+              },
+              {
+                "value": "5",
+                "label": "5 stars"
+              }
+            ],
+            "default": "5"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
