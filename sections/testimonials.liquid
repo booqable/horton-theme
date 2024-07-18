@@ -402,32 +402,14 @@
             "default": "Position, Company name"
           },
           {
-            "type": "select",
+            "type": "range",
             "id": "stars",
             "label": "Stars",
-            "options": [
-              {
-                "value": "1",
-                "label": "1 star"
-              },
-              {
-                "value": "2",
-                "label": "2 stars"
-              },
-              {
-                "value": "3",
-                "label": "3 stars"
-              },
-              {
-                "value": "4",
-                "label": "4 stars"
-              },
-              {
-                "value": "5",
-                "label": "5 stars"
-              }
-            ],
-            "default": "5"
+            "min": 1,
+            "max": 5,
+            "step": 1,
+            "unit": "",
+            "default": 5
           }
         ]
       }
