@@ -338,6 +338,10 @@ img {
   top: 0;
 }
 
+.fa, .far {
+  color: inherit;
+}
+
 .tagline {
   font-family: var(--font-body);
   font-size: var(--font-size-large);

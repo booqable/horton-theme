@@ -1,0 +1,118 @@
+{{ "spacer.css" | asset_url | stylesheet_tag }}
+
+{%- assign color_scheme = section.settings.color_scheme -%}
+{%- assign image        = section.settings.image -%}
+{%- assign size         = section.settings.size -%}
+{%- assign size_mobile  = section.settings.size_mobile -%}
+
+{% comment %} CSS variables start {% endcomment %}
+{%- capture variables -%}
+  {%- case size -%}
+    {%- when 'small' -%}
+      --height: 32px;
+    {%- when 'medium' -%}
+      --height: 64px;
+    {%- when 'large' -%}
+      --height: 128px;
+  {%- endcase -%}
+
+  {%- case size_mobile -%}
+    {%- when 'small' -%}
+      --height-mobile: 32px;
+    {%- when 'medium' -%}
+      --height-mobile: 64px;
+    {%- when 'large' -%}
+      --height-mobile: 128px;
+  {%- endcase -%}
+{%- endcapture -%}
+{% comment %} CSS variables end {% endcomment %}
+
+<div class="spacer__wrapper{% if section_preview %} spacer__wrapper--preview{% endif %} color-{{ color_scheme.id }}"{% unless image.url != blank %} style="{{- variables | escape -}}"{% endunless %}>
+  {%- if image.url != blank -%}
+    <div class="spacer__image-wrapper">
+      {%- render 'image',
+          image: image,
+          loading: 'lazy',
+          class: 'spacer__image',
+          size: 'xxl'
+      -%}
+    </div>
+  {%- endif -%}
+  {% if section_preview %}
+    <span>This section will render an empty space</span>
+  {% endif %}
+</div>
+
+{% schema %}
+  {
+    "name": "Spacer",
+    "description": "Insert blank space or an image as a transition between sections on your page",
+    "tag": "section",
+    "class": "spacer",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General settings"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "set-1"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "header",
+        "content": "Desktop settings"
+      },
+      {
+        "type": "select",
+        "id": "size",
+        "label": "Size",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "header",
+        "content": "Mobile settings"
+      },
+      {
+        "type": "select",
+        "id": "size_mobile",
+        "label": "Size",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      }
+    ]
+  }
+{% endschema %}

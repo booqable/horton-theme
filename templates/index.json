@@ -174,7 +174,7 @@
             "button_label": "SEE ALL",
             "button_url": "booqable://products",
             "heading": "Product category highlight",
-            "image": "",
+            "image": "booqable://assets/image-placeholder.png",
             "overlay_background": "#000000",
             "overlay_color": "#FFFFFF",
             "overlay_opacity": 40,
@@ -186,11 +186,29 @@
           "type": "product",
           "settings": {},
           "disabled": null
+        },
+        "product_481052": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_481053": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_481054": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
         }
       },
       "block_order": [
         "category_981245",
-        "product_481051"
+        "product_481051",
+        "product_481052",
+        "product_481053",
+        "product_481054"
       ],
       "settings": {
         "color_scheme": "set-1",
@@ -236,6 +254,110 @@
       },
       "disabled": null
     },
+    "products_967435": {
+      "type": "products",
+      "blocks": {
+        "category_981241": {
+          "type": "category",
+          "settings": {
+            "button_label": "SEE ALL",
+            "button_url": "booqable://products",
+            "heading": "Product category highlight",
+            "image": "booqable://assets/image-productss-category-block-background.jpeg",
+            "overlay_background": "#000000",
+            "overlay_color": "#FFFFFF",
+            "overlay_opacity": 40,
+            "show_overlay": true
+          },
+          "disabled": null
+        },
+        "product_481011": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_481012": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_481013": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_481014": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_481015": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "category_981241",
+        "product_481011",
+        "product_481012",
+        "product_481013",
+        "product_481014",
+        "product_481015"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "image_fit": "cover",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": false,
+        "show_excerpt": true,
+        "show_navigation": true,
+        "spacing": "none",
+        "spacing_mobile": "medium",
+        "tag": "THIS WEEK",
+        "timer": 5,
+        "title": "New products"
+      },
+      "disabled": null
+    },
+    "spacer": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-1",
+        "image": "booqable://assets/image-waved-line-decor.png",
+        "size": "medium",
+        "size_mobile": "medium"
+      },
+      "disabled": null
+    },
+    "about-us": {
+      "type": "about-us",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "background_image": "booqable://assets/image-about-us-background.png",
+        "button_label": "MORE ABOUT US",
+        "button_url": "booqable://root",
+        "color_scheme": "set-3",
+        "description": "Our passion for producing amazing wedding experiences has taken us on a fantastic path, where we have perfected the art of translating treasured fantasies into a reality of elegance. element symbolises the pinnacle of luxury, where love and beauty are harmoniously intertwined.",
+        "full_width": true,
+        "image": "booqable://assets/image-about-us.png",
+        "image_circle": true,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_borders": false,
+        "tag": "MEET OUR TEAM",
+        "title": "Our story"
+      },
+      "disabled": null
+    },
     "call-to-action_975014": {
       "type": "call-to-action",
       "blocks": {},
@@ -269,6 +391,9 @@
     "collections",
     "products",
     "call-to-action",
+    "products_967435",
+    "spacer",
+    "about-us",
     "call-to-action_975014"
   ]
 }
