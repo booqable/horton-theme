@@ -1,3 +1,193 @@
+{%- assign blocks = section.blocks -%}
+
+{%- if blocks.size > 0 -%}
+  {{ "columns.css" | asset_url | stylesheet_tag }}
+
+  {%- assign color_scheme          = section.settings.color_scheme -%}
+  {%- assign icon_style            = settings.icon_style -%}
+  {%- assign image_placeholder     = settings.image_placeholder -%}
+  {%- assign overlay_background    = section.settings.overlay_background -%}
+  {%- assign overlay_color         = section.settings.overlay_color -%}
+  {%- assign overlay_opacity       = section.settings.overlay_opacity -%}
+  {%- assign padding_bottom        = section.settings.padding_bottom -%}
+  {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+  {%- assign padding_top           = section.settings.padding_top -%}
+  {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
+  {%- assign show_borders          = section.settings.show_borders -%}
+  {%- assign show_overlay          = section.settings.show_overlay -%}
+  {%- assign spacing               = section.settings.spacing -%}
+  {%- assign spacing_mobile        = section.settings.spacing_mobile -%}
+  {%- assign text_position         = section.settings.text_position -%}
+
+  {% comment %} CSS variables start {% endcomment %}
+  {%- capture variables -%}
+    {%- if show_overlay -%}
+      --color-overlay: {{- overlay_color -}};
+      --background-overlay: {{- overlay_background -}};
+      --background-overlay-00: {{- overlay_background | append: "00" -}};
+      --opacity-overlay: {{ overlay_opacity | append: "%"}};
+    {%- endif -%}
+
+    {%- case spacing -%}
+      {%- when 'small' -%}
+        --gap: 8px;
+      {%- when 'medium' -%}
+        --gap: 16px;
+      {%- when 'large' -%}
+        --gap: 32px;
+    {%- endcase -%}
+
+    {%- case spacing_mobile -%}
+      {%- when 'small' -%}
+        --gap-mobile: 8px;
+      {%- when 'medium' -%}
+        --gap-mobile: 16px;
+      {%- when 'large' -%}
+        --gap-mobile: 32px;
+    {%- endcase -%}
+
+    {%- case padding_top -%}
+      {%- when 'small' -%}
+        --padding-top: 40px;
+      {%- when 'medium' -%}
+        --padding-top: 80px;
+      {%- when 'large' -%}
+        --padding-top: 120px;
+    {%- endcase -%}
+
+    {%- case padding_bottom -%}
+      {%- when 'small' -%}
+        --padding-bottom: 40px;
+      {%- when 'medium' -%}
+        --padding-bottom: 80px;
+      {%- when 'large' -%}
+        --padding-bottom: 120px;
+    {%- endcase -%}
+
+    {%- case padding_top_mobile -%}
+      {%- when 'small' -%}
+        --padding-top-mobile: 16px;
+      {%- when 'medium' -%}
+        --padding-top-mobile: 32px;
+      {%- when 'large' -%}
+        --padding-top-mobile: 64px;
+    {%- endcase -%}
+
+    {%- case padding_bottom_mobile -%}
+      {%- when 'small' -%}
+        --padding-bottom-mobile: 16px;
+      {%- when 'medium' -%}
+        --padding-bottom-mobile: 32px;
+      {%- when 'large' -%}
+        --padding-bottom-mobile: 64px;
+    {%- endcase -%}
+
+    {%- case text_position -%}
+      {%- when 'left' -%}
+        --text-align: left;
+      {%- when 'center' -%}
+        --text-align: center;
+      {%- when 'right' -%}
+        --text-align: right;
+    {%- endcase -%}
+  {%- endcapture -%}
+  {% comment %} CSS variables end {% endcomment %}
+
+  <div class="columns__wrapper color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} columns__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} columns__wrapper--padding-bottom{%- endif -%}" style="{{- variables | escape -}}">
+    <div class="columns__container container">
+      <div class="columns__grid">
+        {%- for block in blocks -%}
+          {%- assign button_label = "" -%}
+          {%- assign button_url   = "" -%}
+          {%- assign card         = false -%}
+          {%- assign deco         = false -%}
+          {%- assign description  = "" -%}
+          {%- assign icon         = "empty" -%}
+          {%- assign image        = "" -%}
+          {%- assign title        = "" -%}
+          {%- assign type         = block.type -%}
+
+          {%- case type -%}
+            {%- when 'card' -%}
+              {%- assign description  = block.settings.description_card -%}
+              {%- assign card         = true -%}
+              {%- assign icon         = block.settings.icon -%}
+              {%- assign title        = block.settings.title_card -%}
+
+            {%- when 'deco' -%}
+              {%- assign button_label = block.settings.button_label -%}
+              {%- assign button_url   = block.settings.button_url -%}
+              {%- assign deco         = true -%}
+              {%- assign description  = block.settings.description_deco -%}
+              {%- assign image        = block.settings.image -%}
+              {%- assign title        = block.settings.title_deco -%}
+
+              {%- if image != blank -%}
+                {%- assign image = image -%}
+              {%- elsif image_placeholder != blank -%}
+                {%- assign image = image_placeholder -%}
+              {%- else -%}
+                {%- assign image = blank -%}
+              {%- endif -%}
+          {%- endcase -%}
+
+          <div class="columns__item columns__item--{{ type }}{% if show_borders %} columns__item--with-border{% endif %}{% if show_overlay and deco %} columns__item--with-overlay{%- endif -%}">
+            <div class="columns__text-area">
+              {%- if icon != "empty" -%}
+                <div class="columns__icon-wrapper">
+                  {%- render 'icon', icon: icon, style: icon_style -%}
+                </div>
+              {%- endif -%}
+
+              {%- if title != blank -%}
+                {%- if card -%}
+                  <h5 class="columns__title">
+                    {{- title -}}
+                  </h5>
+                {%- elsif deco -%}
+                  <h4 class="columns__title">
+                    {{- title -}}
+                  </h4>
+                {%- endif -%}
+
+              {%- endif -%}
+
+              {%- if description != blank -%}
+                <div class="columns__description bq-content rx-content text-medium">
+                  {{- description -}}
+                </div>
+              {%- endif -%}
+
+              {%- if button_label != blank and button_url != blank -%}
+                <div class="columns__buttons">
+                  <a class="columns__button button button--primary button--large" href="{{ button_url }}">
+                    {{- button_label -}}
+                  </a>
+                </div>
+              {%- endif -%}
+            </div>
+
+            {%- if image != blank -%}
+              <div class="columns__image-wrapper">
+                {%- render 'image',
+                    image: image,
+                    loading: 'lazy',
+                    class: 'columns__image',
+                    size: 'flexible'
+                -%}
+              </div>
+            {%- else -%}
+              {%- if deco -%}
+                {%- render 'image-placeholder', dimension: '530x320' -%}
+              {%- endif -%}
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
 {% schema %}
   {
     "name": "Columns",
@@ -17,7 +207,7 @@
       },
       {
         "type": "select",
-        "id": "text_position_horizontal",
+        "id": "text_position",
         "label": "Horizontal content position",
         "options": [
           {
@@ -46,10 +236,14 @@
         "content": "Overlay"
       },
       {
+        "type": "paragraph",
+        "content": "Applies to 'Decorative' blocks only"
+      },
+      {
         "type": "checkbox",
         "id": "show_overlay",
         "label": "Show overlay",
-        "default": false
+        "default": true
       },
       {
         "type": "color",
@@ -69,7 +263,7 @@
         "label": "Background percentage",
         "min": 0,
         "max": 100,
-        "default": 100
+        "default": 40
       },
       {
         "type": "header",
@@ -78,12 +272,8 @@
       {
         "type": "select",
         "id": "spacing",
-        "label": "Spacing between columns",
+        "label": "Spacing between items",
         "options": [
-          {
-            "value": "none",
-            "label": "None"
-          },
           {
             "value": "small",
             "label": "Small"
@@ -146,12 +336,8 @@
       {
         "type": "select",
         "id": "spacing_mobile",
-        "label": "Spacing between columns",
+        "label": "Spacing between items",
         "options": [
-          {
-            "value": "none",
-            "label": "None"
-          },
           {
             "value": "small",
             "label": "Small"
@@ -211,9 +397,22 @@
     "max_blocks": 8,
     "blocks": [
       {
-        "type": "column",
-        "name": "Column",
+        "type": "card",
+        "name": "Card",
         "settings": [
+          {
+            "type": "text",
+            "id": "title_card",
+            "label": "Title",
+            "default": "Medium size title here",
+            "info": "Leave blank to hide the title"
+          },
+          {
+            "type": "text",
+            "id": "description_card",
+            "label": "Description",
+            "default": "Lorem ipsum dolor sit amet"
+          },
           {
             "type": "select",
             "id": "icon",
@@ -292,59 +491,44 @@
                 "label": "Warning"
               }
             ],
-            "default": "clock"
-          },
-          {
-            "type": "text",
-            "id": "title",
-            "label": "Title",
-            "default": "Medium size title here",
-            "info": "Leave blank to hide the title"
-          },
-          {
-            "type": "text",
-            "id": "description",
-            "label": "Description",
-            "default": "Lorem ipsum dolor sit amet"
+            "default": "tag"
           }
         ]
       },
       {
-        "type": "card",
-        "name": "Card",
+        "type": "deco",
+        "name": "Decorative",
         "settings": [
           {
             "type": "text",
-            "id": "title",
+            "id": "title_deco",
             "label": "Title",
-            "default": "columns",
+            "default": "Title here",
             "info": "Leave blank to hide the title"
+          },
+          {
+            "type": "text",
+            "id": "description_deco",
+            "label": "Description",
+            "default": "Lorem ipsum dolor sit amet"
           },
           {
             "type": "text",
             "id": "button_label",
             "label": "Button label",
-            "default": "SEE ALL",
+            "default": "SEE MORE",
             "info": "Leave blank to hide the button"
           },
           {
             "type": "url",
             "id": "button_url",
             "label": "Button url",
-            "default": "booqable://columns"
+            "default": "booqable://root"
           },
           {
-            "type": "text",
-            "id": "collection_button_label",
-            "label": "Button label",
-            "default": "SEE MORE"
-          },
-          {
-            "type": "checkbox",
-            "id": "show_collection_description",
-            "label": "Show description excerpt",
-            "default": true,
-            "info": "Shows the first 6 words of the collection description"
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
           }
         ]
       }

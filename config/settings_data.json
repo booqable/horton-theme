@@ -85,6 +85,7 @@
     "font_weight_h2": 400,
     "font_weight_h3": 400,
     "font_weight_header": 400,
+    "icon_style": "outline",
     "image_placeholder": "booqable://assets/image-placeholder.png",
     "sections": {
       "top-bar": {

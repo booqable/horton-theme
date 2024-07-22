@@ -187,7 +187,7 @@
         "type": "image_picker",
         "id": "image_placeholder",
         "label": "Image placeholder",
-        "info": "This image displays on products and collections if they don't have any images"
+        "info": "This image will be displayed in areas where an image is required but hasn't been uploaded through the designated sections. Examples include product and collection displays, sections with backgrounds, and similar areas"
       }
     ]
   },
@@ -338,6 +338,23 @@
           }
         ],
         "default": "fully_round"
+      },
+      {
+        "type": "select",
+        "id": "icon_style",
+        "label": "Icons style",
+        "options": [
+          {
+            "value": "filled",
+            "label": "Filled"
+          },
+          {
+            "value": "outline",
+            "label": "Outlined"
+          }
+        ],
+        "default": "outline",
+        "info": "The icons' style used throughout the theme (e.g., 'Phone' and 'Clock' in the Top bar section)"
       }
     ]
   },
