@@ -6,6 +6,7 @@
   {%- assign color_scheme          = section.settings.color_scheme -%}
   {%- assign icon_style            = settings.icon_style -%}
   {%- assign image_placeholder     = settings.image_placeholder -%}
+  {%- assign icon_position         = section.settings.icon_position -%}
   {%- assign overlay_background    = section.settings.overlay_background -%}
   {%- assign overlay_color         = section.settings.overlay_color -%}
   {%- assign overlay_opacity       = section.settings.overlay_opacity -%}
@@ -109,10 +110,10 @@
 
           {%- case type -%}
             {%- when 'card' -%}
-              {%- assign description  = block.settings.description_card -%}
-              {%- assign card         = true -%}
-              {%- assign icon         = block.settings.icon -%}
-              {%- assign title        = block.settings.title_card -%}
+              {%- assign description   = block.settings.description_card -%}
+              {%- assign card          = true -%}
+              {%- assign icon          = block.settings.icon -%}
+              {%- assign title         = block.settings.title_card -%}
 
             {%- when 'deco' -%}
               {%- assign button_label = block.settings.button_label -%}
@@ -132,38 +133,46 @@
           {%- endcase -%}
 
           <div class="columns__item columns__item--{{ type }}{% if show_borders %} columns__item--with-border{% endif %}{% if show_overlay and deco %} columns__item--with-overlay{%- endif -%}">
-            <div class="columns__text-area">
+            <div class="columns__content{% if icon != "empty" %} columns__content--icon-{{ icon_position }}{%- endif -%}">
               {%- if icon != "empty" -%}
                 <div class="columns__icon-wrapper">
                   {%- render 'icon', icon: icon, style: icon_style -%}
                 </div>
-              {%- endif -%}
 
-              {%- if title != blank -%}
-                {%- if card -%}
-                  <h5 class="columns__title">
-                    {{- title -}}
-                  </h5>
-                {%- elsif deco -%}
-                  <h4 class="columns__title">
-                    {{- title -}}
-                  </h4>
+                {%- if icon_position == "left" -%}
+                  <div class="columns__text-area">
                 {%- endif -%}
-
               {%- endif -%}
+                  {%- if title != blank -%}
+                    {%- if card -%}
+                      <h5 class="columns__title">
+                        {{- title -}}
+                      </h5>
+                    {%- elsif deco -%}
+                      <h4 class="columns__title">
+                        {{- title -}}
+                      </h4>
+                    {%- endif -%}
 
-              {%- if description != blank -%}
-                <div class="columns__description bq-content rx-content text-medium">
-                  {{- description -}}
-                </div>
-              {%- endif -%}
+                  {%- endif -%}
 
-              {%- if button_label != blank and button_url != blank -%}
-                <div class="columns__buttons">
-                  <a class="columns__button button button--primary button--large" href="{{ button_url }}">
-                    {{- button_label -}}
-                  </a>
-                </div>
+                  {%- if description != blank -%}
+                    <div class="columns__description bq-content rx-content text-medium">
+                      {{- description -}}
+                    </div>
+                  {%- endif -%}
+
+                  {%- if button_label != blank and button_url != blank -%}
+                    <div class="columns__buttons">
+                      <a class="columns__button button button--primary button--large" href="{{ button_url }}">
+                        {{- button_label -}}
+                      </a>
+                    </div>
+                  {%- endif -%}
+              {%- if icon != "empty" -%}
+                {%- if icon_position == "left" -%}
+                  </div>
+                {%- endif -%}
               {%- endif -%}
             </div>
 
@@ -208,7 +217,7 @@
       {
         "type": "select",
         "id": "text_position",
-        "label": "Horizontal content position",
+        "label": "Content position",
         "options": [
           {
             "value": "left",
@@ -233,11 +242,7 @@
       },
       {
         "type": "header",
-        "content": "Overlay"
-      },
-      {
-        "type": "paragraph",
-        "content": "Applies to 'Decorative' blocks only"
+        "content": "Decorative blocks settings"
       },
       {
         "type": "checkbox",
@@ -248,22 +253,42 @@
       {
         "type": "color",
         "id": "overlay_color",
-        "label": "Color",
+        "label": "Overlay color",
         "default": "#FFFFFF"
       },
       {
         "type": "color",
         "id": "overlay_background",
-        "label": "Background color",
+        "label": "Overlay background color",
         "default": "#000000"
       },
       {
         "type": "number",
         "id": "overlay_opacity",
-        "label": "Background percentage",
+        "label": "Overlay background percentage",
         "min": 0,
         "max": 100,
         "default": 40
+      },
+      {
+        "type": "header",
+        "content": "Card blocks settings"
+      },
+      {
+        "type": "select",
+        "id": "icon_position",
+        "label": "Icon position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "top",
+            "label": "Top"
+          }
+        ],
+        "default": "top"
       },
       {
         "type": "header",

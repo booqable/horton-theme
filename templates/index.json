@@ -369,6 +369,7 @@
       ],
       "settings": {
         "color_scheme": "set-1",
+        "icon_position": "top",
         "overlay_background": "#000000",
         "overlay_color": "#FFFFFF",
         "overlay_opacity": 40,
