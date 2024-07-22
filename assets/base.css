@@ -19,7 +19,7 @@
 
   /* Carousel */
   --slide-width: 328px;
-  --slide-width-mobile: 100%;
+  --slide-width-mobile: 280px;
 
   /* Transitions */
   --transition-function-ease-in-out: ease-in-out;

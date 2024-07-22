@@ -195,6 +195,7 @@
     left: calc(100% + var(--grid-gap) + var(--block-padding-inner));
     bottom: var(--block-padding-inner);
     transform: translate(0);
+    margin: 0 calc(-1 * var(--button-gap));
   }
 
   .products__content .products__list.controls + .products__category-block {
