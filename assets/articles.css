@@ -29,6 +29,10 @@
   justify-content: center;
 }
 
+.articles__description {
+  color: var(--color-secondary);
+}
+
 .articles__buttons {
   text-align: var(--content-align);
   padding-top: var(--indent-xl);
@@ -66,6 +70,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  color: var(--color-secondary);
 }
 
 .article__tag {
