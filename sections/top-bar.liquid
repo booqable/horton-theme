@@ -4,7 +4,7 @@
   {{ "top-bar.css" | asset_url | stylesheet_tag }}
 
   {%- assign bar_message                = section.settings.bar_message -%}
-  {%- assign bar_message_icon_style     = section.settings.bar_message_icon_style -%}
+  {%- assign bar_message_icon_style     = settings.icon_style -%}
   {%- assign bar_message_secondary      = section.settings.bar_message_secondary -%}
   {%- assign bar_message_secondary_icon = section.settings.bar_message_secondary_icon -%}
   {%- assign bar_message_third          = section.settings.bar_message_third -%}
@@ -281,22 +281,6 @@
           }
         ],
         "default": "clock"
-      },
-      {
-        "type": "select",
-        "id": "bar_message_icon_style",
-        "label": "Icon style",
-        "options": [
-          {
-            "value": "filled",
-            "label": "Filled"
-          },
-          {
-            "value": "outline",
-            "label": "Outlined"
-          }
-        ],
-        "default": "outline"
       },
       {
         "type": "select",
