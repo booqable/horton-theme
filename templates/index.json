@@ -254,6 +254,65 @@
       },
       "disabled": null
     },
+    "columns_653474": {
+      "type": "columns",
+      "blocks": {
+        "deco_401203": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description_deco": "",
+            "image": "booqable://assets/image-columns-1.png",
+            "title_deco": "Extra card"
+          },
+          "disabled": null
+        },
+        "deco_401204": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description_deco": "",
+            "image": "booqable://assets/image-columns-2.png",
+            "title_deco": "Extra card"
+          },
+          "disabled": null
+        },
+        "deco_401205": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description_deco": "",
+            "image": "booqable://assets/image-columns-3.png",
+            "title_deco": "Extra card"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "deco_401203",
+        "deco_401204",
+        "deco_401205"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": true,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "text_position": "center"
+      },
+      "disabled": null
+    },
     "products_967435": {
       "type": "products",
       "blocks": {
@@ -524,6 +583,70 @@
         "title": "We serve your day"
       },
       "disabled": null
+    },
+    "columns_872621": {
+      "type": "columns",
+      "blocks": {
+        "card_401203": {
+          "type": "card",
+          "settings": {
+            "icon": "truck-fast",
+            "description_card": "Free delivery for all orders above $100",
+            "title_card": "Free delivery"
+          },
+          "disabled": null
+        },
+        "card_401204": {
+          "type": "card",
+          "settings": {
+            "icon": "comment",
+            "description_card": "Chat with us if you’ve any questions",
+            "title_card": "Top-Notch support"
+          },
+          "disabled": null
+        },
+        "card_401205": {
+          "type": "card",
+          "settings": {
+            "icon": "handshake",
+            "description_card": "Free delivery for all orders above $100",
+            "title_card": "100% Satisfaction Guarantee!"
+          },
+          "disabled": null
+        },
+        "card_401206": {
+          "type": "card",
+          "settings": {
+            "icon": "exclamation",
+            "description_card": "We know how to do it",
+            "title_card": "20 years of experience"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "card_401203",
+        "card_401204",
+        "card_401205",
+        "card_401206"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "icon_position": "top",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_borders": false,
+        "show_overlay": true,
+        "spacing": "medium",
+        "spacing_mobile": "medium",
+        "text_position": "center"
+      },
+      "disabled": null
     }
   },
   "order": [
@@ -532,11 +655,13 @@
     "collections",
     "products",
     "call-to-action",
+    "columns_653474",
     "products_967435",
     "spacer",
     "about-us",
     "testimonials",
     "articles",
-    "call-to-action_975014"
+    "call-to-action_975014",
+    "columns_872621"
   ]
 }
