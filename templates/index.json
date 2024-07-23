@@ -497,6 +497,67 @@
       },
       "disabled": null
     },
+    "articles": {
+      "type": "articles",
+      "blocks": {
+        "article_234987": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "heading": "A Guide On The Maid Of Honor’s Duties",
+            "image": "booqable://assets/image-article-1.jpg",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+          },
+          "disabled": null
+        },
+        "article_234988": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "heading": "The Wedding Favor Ideas Guide",
+            "image": "booqable://assets/image-article-2.jpg",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+          },
+          "disabled": null
+        },
+        "article_234989": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "heading": "The Wedding Order Of Events Guide",
+            "image": "booqable://assets/image-article-3.jpg",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "article_234987",
+        "article_234988",
+        "article_234989"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "button_url": "booqable://root",
+        "color_scheme": "set-1",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "grid": "three",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "small",
+        "show_button_on_bottom": true,
+        "tag": "NEWS",
+        "title": "What’s going on"
+      },
+      "disabled": null
+    },
     "call-to-action_975014": {
       "type": "call-to-action",
       "blocks": {},
@@ -599,6 +660,7 @@
     "spacer",
     "about-us",
     "testimonials",
+    "articles",
     "call-to-action_975014",
     "columns_872621"
   ]

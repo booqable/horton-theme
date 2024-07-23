@@ -271,6 +271,27 @@ img {
   z-index: 1002 !important;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateX(0);
+  }
+  3% {
+    transform: translateX(8px);
+  }
+  6% {
+    transform: translateX(3px);
+  }
+  9% {
+    transform: translateX(8px);
+  }
+  12% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .button {
   display: inline-flex;
   justify-content: center;
@@ -291,6 +312,12 @@ img {
 
 .button svg {
   margin-left: 16px;
+  transform: translateX(0);
+  animation: bounce 5s var(--transition-function-ease-in-out) infinite;
+}
+
+.button:hover svg {
+  animation-play-state: paused;
 }
 
 .button path {

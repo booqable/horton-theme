@@ -1,0 +1,387 @@
+{%- assign blocks = section.blocks -%}
+
+{%- if blocks.size > 0 -%}
+  {{ "articles.css" | asset_url | stylesheet_tag }}
+
+  {%- assign button_label          = section.settings.button_label -%}
+  {%- assign button_url            = section.settings.button_url -%}
+  {%- assign color_scheme          = section.settings.color_scheme -%}
+  {%- assign description           = section.settings.description -%}
+  {%- assign grid                  = section.settings.grid -%}
+  {%- assign image_placeholder     = settings.image_placeholder -%}
+  {%- assign padding_bottom        = section.settings.padding_bottom -%}
+  {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+  {%- assign padding_top           = section.settings.padding_top -%}
+  {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
+  {%- assign show_button_on_bottom = section.settings.show_button_on_bottom -%}
+  {%- assign tag                   = section.settings.tag -%}
+  {%- assign title                 = section.settings.title -%}
+
+  {% comment %} CSS variables start {% endcomment %}
+  {%- capture variables -%}
+    {%- case padding_top -%}
+      {%- when 'small' -%}
+        --padding-top: 40px;
+      {%- when 'medium' -%}
+        --padding-top: 80px;
+      {%- when 'large' -%}
+        --padding-top: 120px;
+    {%- endcase -%}
+
+    {%- case padding_bottom -%}
+      {%- when 'small' -%}
+        --padding-bottom: 40px;
+      {%- when 'medium' -%}
+        --padding-bottom: 80px;
+      {%- when 'large' -%}
+        --padding-bottom: 120px;
+    {%- endcase -%}
+
+    {%- case padding_top_mobile -%}
+      {%- when 'small' -%}
+        --padding-top-mobile: 32px;
+      {%- when 'medium' -%}
+        --padding-top-mobile: 64px;
+      {%- when 'large' -%}
+        --padding-top-mobile: 96px;
+    {%- endcase -%}
+
+    {%- case padding_bottom_mobile -%}
+      {%- when 'small' -%}
+        --padding-bottom-mobile: 32px;
+      {%- when 'medium' -%}
+        --padding-bottom-mobile: 64px;
+      {%- when 'large' -%}
+        --padding-bottom-mobile: 96px;
+    {%- endcase -%}
+
+    {%- case grid -%}
+      {%- when 'two' -%}
+        --grid-element: 2;
+        --item-min-width: 310px;
+      {%- when 'three' -%}
+        --grid-element: 3;
+        --item-min-width: 210px;
+      {%- when 'four' -%}
+        --grid-element: 4;
+        --item-min-width: 160px;
+    {%- endcase -%}
+  {%- endcapture -%}
+  {% comment %} CSS variables end {% endcomment %}
+
+  <div class="articles__wrapper color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} articles__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} articles__wrapper--padding-bottom{%- endif -%}" style="{{- variables | escape -}}">
+    <div class="articles__container container">
+      {%- if tag != blank or title != blank -%}
+        <div class="articles__top">
+          {%- if tag != blank -%}
+            <strong class="articles__tag tagline">{{- tag -}}</strong>
+          {%- endif -%}
+
+          {%- if title != blank -%}
+            <h2 class="articles__title">{{- title -}}</h2>
+          {%- endif -%}
+
+          {%- unless show_button_on_bottom -%}
+            {%- if button_label != blank and button_url != blank -%}
+              <div class="articles__buttons{% unless show_button_on_bottom %} articles__buttons--mobile-hidden{%- endunless -%}">
+                <a href="{{ button_url }}" class="articles__button button button--outlined button--large">
+                  {{- button_label -}}
+                </a>
+              </div>
+            {%- endif -%}
+          {%- endunless -%}
+
+          {%- if description != blank -%}
+            <div class="articles__description bq-content rx-content text-medium">
+              {{- description -}}
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      <div class="articles__grid">
+        {%- for block in blocks -%}
+          {%- assign article_btn     = block.settings.article_btn -%}
+          {%- assign article_btn_url = block.settings.article_btn_url -%}
+          {%- assign article_tag     = block.settings.article_tag -%}
+          {%- assign heading         = block.settings.heading -%}
+          {%- assign image           = block.settings.image -%}
+          {%- assign text            = block.settings.text -%}
+
+          {%- if image != blank -%}
+            {%- assign image = image -%}
+          {%- elsif image_placeholder != blank -%}
+            {%- assign image = image_placeholder -%}
+          {%- else -%}
+            {%- assign image = blank -%}
+          {%- endif -%}
+
+          <div class="articles__item article">
+            <div class="article__image-wrapper">
+              {%- if image.url != blank -%}
+                {%- render 'image',
+                  image: image,
+                  loading: 'lazy',
+                  class: 'article__image',
+                  size: 'flexible'
+                -%}
+              {%- else -%}
+                {%- render 'image-placeholder', dimension: "525x300" -%}
+              {%- endif -%}
+            </div>
+
+            {%- if article_tag != blank or heading != blank or text != blank or article_btn != blank and article_btn_url != blank -%}
+              <div class="article__text-area">
+                {%- if article_tag != blank -%}
+                  <strong class="article__tag tagline">{{- article_tag -}}</strong>
+                {%- endif -%}
+
+                {%- if heading != blank -%}
+                  <h3 class="article__heading h5">{{- heading -}}</h3>
+                {%- endif -%}
+
+                {%- if text != blank -%}
+                  <div class="article__text bq-content rx-content">{{- text -}}</div>
+                {%- endif -%}
+
+                {%- if article_btn != blank and article_btn_url != blank -%}
+                  <div class="article__buttons">
+                    <a href="{{ article_btn_url }}" class="article__button button button--secondary">
+                      {{- article_btn -}}
+                      {%- render 'icon-arrow-right' -%}
+                    </a>
+                  </div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+
+      {%- if button_label != blank and button_url != blank -%}
+        <div class="articles__buttons{% unless show_button_on_bottom %} articles__buttons--desktop-hidden{%- endunless -%}">
+          <a href="{{ button_url }}" class="articles__button button button--outlined button--large">
+            {{- button_label -}}
+          </a>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Articles",
+    "description": "Add text with images in various layouts",
+    "tag": "section",
+    "class": "articles",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General settings"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "set-1"
+      },
+      {
+        "type": "text",
+        "id": "tag",
+        "label": "Tagline",
+        "default": "Tagline",
+        "info": "Leave blank to hide tagline"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "What's going on"
+      },
+      {
+        "type": "contentEditor",
+        "id": "description",
+        "label": "Description",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button label",
+        "default": "See all",
+        "info": "Leave blank to hide the button"
+      },
+      {
+        "type": "url",
+        "id": "button_url",
+        "label": "Button link",
+        "default": "booqable://root"
+      },
+      {
+        "type": "header",
+        "content": "Desktop settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_button_on_bottom",
+        "label": "Show button below articles",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "grid",
+        "label": "Layout",
+        "options": [
+          {
+            "value": "two",
+            "label": "2 columns"
+          },
+          {
+            "value": "three",
+            "label": "3 columns"
+          },
+          {
+            "value": "four",
+            "label": "4 columns"
+          }
+        ],
+        "default": "three"
+      },
+      {
+        "type": "select",
+        "id": "padding_top",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "header",
+        "content": "Mobile settings"
+      },
+      {
+        "type": "select",
+        "id": "padding_top_mobile",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "small"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom_mobile",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "small"
+      }
+    ],
+    "max_blocks": 8,
+    "blocks": [
+      {
+        "type": "article",
+        "name": "Article",
+        "settings": [
+          {
+            "type": "header",
+            "content": "General settings"
+          },
+          {
+            "type": "text",
+            "id": "article_tag",
+            "label": "Tagline",
+            "default": "Article tagline",
+            "info": "Leave blank to hide tagline"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Title",
+            "default": "Medium length section heading goes here"
+          },
+          {
+            "type": "contentEditor",
+            "id": "text",
+            "label": "Description",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "article_btn",
+            "label": "Button label",
+            "info": "Leave blank to hide the button",
+            "default": "Read more"
+          },
+          {
+            "type": "url",
+            "id": "article_btn_url",
+            "label": "Button link",
+            "default": "booqable://root"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
