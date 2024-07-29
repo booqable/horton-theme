@@ -1,0 +1,113 @@
+.title:has(.title__wrapper .title__date-picker-wrapper:last-child) {
+  z-index: 1;
+}
+
+.title__wrapper {
+  --date-picker-translate: 50%;
+  --date-picker-positioning: absolute;
+
+  position: relative;
+  background: var(--background-primary);
+  color: var(--color-primary);
+}
+
+.title__wrapper--padding-top {
+  padding-top: var(--padding-top-mobile);
+}
+
+.title__wrapper--padding-bottom {
+  padding-bottom: var(--padding-bottom-mobile);
+}
+
+.title__wrapper .title__container {
+  position: relative;
+  z-index: 1;
+}
+
+.title__content {
+  text-align: center;
+  padding: 0 36px;
+}
+
+.title__content--color {
+  color: var(--color-overlay);
+}
+
+.title__content--color .title__heading {
+  color: inherit;
+}
+
+.title__background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title__background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, 0);
+  overflow: hidden;
+}
+
+.title__background--overlay {
+  background: var(--background-overlay);
+}
+
+.title__background--overlay .title__background-image {
+  opacity: calc(100% - var(--opacity-overlay));
+}
+
+.title__wrapper:has(.title__date-picker-wrapper) .title__description {
+  margin-bottom: 30px;
+}
+
+.title__wrapper .title__date-picker-wrapper {
+  --date-picker-alignment-mobile: center;
+
+  position: var(--date-picker-positioning);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: translate(0, var(--date-picker-translate));
+}
+
+.title__content .title__date-picker-wrapper {
+  --date-picker-translate: 0;
+  --date-picker-positioning: static;
+}
+
+.title__container .title__wrapper,
+.title__container .title__wrapper .title__background {
+  border-radius: var(--border-radius-block);
+}
+
+.title__container .title__wrapper--border {
+  border: 1px solid var(--color-border);
+}
+
+.title__container .title__wrapper .title__content {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 992px) {
+  .title__date-picker-wrapper {
+    --date-picker-alignment: center;
+  }
+
+  .title__wrapper--padding-top {
+    padding-top: var(--padding-top);
+  }
+
+  .title__wrapper--padding-bottom {
+    padding-bottom: var(--padding-bottom);
+  }
+
+  .title__wrapper:has(> .title__date-picker-wrapper) .title__heading {
+    margin-top: 20px;
+  }
+}

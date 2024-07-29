@@ -1,0 +1,319 @@
+{{ "title.css" | asset_url | stylesheet_tag }}
+
+{%- assign color_scheme            = section.settings.color_scheme -%}
+{%- assign custom_description      = section.settings.custom_description -%}
+{%- assign custom_title            = section.settings.custom_title -%}
+{%- assign datepicker_position     = section.settings.datepicker_position -%}
+{%- assign full_width              = section.settings.full_width -%}
+{%- assign image                   = section.settings.image -%}
+{%- assign overlay_background      = section.settings.overlay_background -%}
+{%- assign overlay_color           = section.settings.overlay_color -%}
+{%- assign overlay_opacity         = section.settings.overlay_opacity -%}
+{%- assign padding_bottom          = section.settings.padding_bottom -%}
+{%- assign padding_bottom_mobile   = section.settings.padding_bottom_mobile -%}
+{%- assign padding_top             = section.settings.padding_top -%}
+{%- assign padding_top_mobile      = section.settings.padding_top_mobile -%}
+{%- assign page_title              = page_title | split: " | " | first | remove: ":"-%}
+{%- assign show_border             = section.settings.show_border -%}
+{%- assign show_datepicker         = section.settings.show_datepicker -%}
+{%- assign show_overlay            = section.settings.show_overlay -%}
+
+{% comment %} CSS variables start {% endcomment %}
+{%- capture variables -%}
+  {%- case padding_top -%}
+    {%- when 'small' -%}
+      --padding-top: 24px;
+    {%- when 'medium' -%}
+      --padding-top: 50px;
+    {%- when 'large' -%}
+      --padding-top: 100px;
+  {%- endcase -%}
+
+  {%- case padding_bottom -%}
+    {%- when 'small' -%}
+      --padding-bottom: 24px;
+    {%- when 'medium' -%}
+      --padding-bottom: 50px;
+    {%- when 'large' -%}
+      --padding-bottom: 100px;
+  {%- endcase -%}
+
+  {%- case padding_top_mobile -%}
+    {%- when 'small' -%}
+      --padding-top-mobile: 16px;
+    {%- when 'medium' -%}
+      --padding-top-mobile: 32px;
+    {%- when 'large' -%}
+      --padding-top-mobile: 64px;
+  {%- endcase -%}
+
+  {%- case padding_bottom_mobile -%}
+    {%- when 'small' -%}
+      --padding-bottom-mobile: 16px;
+    {%- when 'medium' -%}
+      --padding-bottom-mobile: 32px;
+    {%- when 'large' -%}
+      --padding-bottom-mobile: 64px;
+  {%- endcase -%}
+
+  {%- if show_overlay -%}
+    --color-overlay: {{- overlay_color -}};
+    --background-overlay: {{- overlay_background -}};
+    --opacity-overlay: {{ overlay_opacity | append: "%"}};
+  {%- endif -%}
+{%- endcapture -%}
+{% comment %} CSS variables end {% endcomment %}
+
+{%- if show_datepicker -%}
+  {%- capture date_picker -%}
+    <div class="title__date-picker-wrapper">
+      <div class="title__container container">
+        {%- render 'date-picker', key: section.key -%}
+      </div>
+    </div>
+  {%- endcapture -%}
+{%- endif -%}
+
+{%- unless full_width -%}
+  <div class="title__container container">
+{%- endunless -%}
+    <div class="title__wrapper{% if show_border %} title__wrapper--border{% endif %}{% if padding_top != blank or padding_top_mobile != blank %} title__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} title__wrapper--padding-bottom{% endif %} color-{{- color_scheme.id -}}" style="{{- variables | escape -}}">
+      {%- if full_width -%}
+        <div class="title__container container">
+      {%- endif -%}
+          <div class="title__content{% if show_overlay %} title__content--color{%- endif -%}">
+            <div class="title__text-area">
+              <h2 class="title__heading">
+                {{- custom_title | default: collection.title | default: page_title -}}
+              </h2>
+
+              <div class="title__description text-medium bq-content rx-content">
+                {{- custom_description | default: collection.description | default: page_description -}}
+              </div>
+
+              {%- if datepicker_position == "in_text" -%}
+                {{- date_picker -}}
+              {%- endif -%}
+            </div>
+          </div>
+      {%- if full_width -%}
+        </div>
+      {%- endif -%}
+
+      {%- if image.url != blank -%}
+        <div class="title__background{% if show_overlay %} title__background--overlay{%- endif -%}">
+          {%- render 'image',
+            image: image,
+            loading: 'lazy',
+            class: 'title__background-image',
+            size: 'xxl'
+          -%}
+        </div>
+      {%- endif -%}
+
+      {%- if datepicker_position == "bottom" -%}
+        {{- date_picker -}}
+      {%- endif -%}
+    </div>
+{% unless full_width %}
+  </div>
+{%- endunless -%}
+
+{% schema %}
+  {
+    "name": "Title",
+    "tag": "section",
+    "class": "title",
+    "description": "Engage visitors by giving great first impression",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General settings"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "set-1"
+      },
+      {
+        "type": "text",
+        "id": "custom_title",
+        "label": "Custom title",
+        "default": "Page title",
+        "info": "For breaking lines use <br> tag"
+      },
+      {
+        "type": "contentEditor",
+        "id": "custom_description",
+        "label": "Custom description",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Suspendisse varius enim in eros elementum tristique."
+      },
+      {
+        "type": "header",
+        "content": "Period picker settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_datepicker",
+        "default": true,
+        "label": "Show period picker"
+      },
+      {
+        "type": "select",
+        "id": "datepicker_position",
+        "options": [
+          {
+            "value": "in_text",
+            "label": "In CTA section"
+          },
+          {
+            "value": "bottom",
+            "label": "Bottom"
+          }
+        ],
+        "default": "bottom",
+        "label": "Position"
+      },
+      {
+        "type": "header",
+        "content": "Background settings"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "default": "booqable://assets/image-title-background.png"
+      },
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Full-width background",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_border",
+        "label": "Show border"
+      },
+      {
+        "type": "header",
+        "content": "Overlay"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_overlay",
+        "label": "Show overlay",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "overlay_background",
+        "label": "Background color",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "color",
+        "id": "overlay_color",
+        "label": "Text color",
+        "default": "#2F4044"
+      },
+      {
+        "type": "number",
+        "id": "overlay_opacity",
+        "label": "Percentage",
+        "min": 0,
+        "max": 100,
+        "default": 72
+      },
+      {
+        "type": "header",
+        "content": "Desktop settings"
+      },
+      {
+        "type": "select",
+        "id": "padding_top",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "header",
+        "content": "Mobile settings"
+      },
+      {
+        "type": "select",
+        "id": "padding_top_mobile",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "small"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom_mobile",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "small"
+      }
+    ]
+  }
+{% endschema %}

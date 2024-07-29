@@ -109,7 +109,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: var(--overlay-opacity);
+  opacity: var(--opacity-overlay);
   background: var(--linear-gradient-mobile);
 }
 
