@@ -1,6 +1,9 @@
 .logos__wrapper {
   background: var(--background-primary);
-  border-radius: var(--border-radius-lg);
+}
+
+.logos__container .logos__wrapper {
+  border-radius: var(--border-radius-block);
 }
 
 .logos__wrapper--border {
