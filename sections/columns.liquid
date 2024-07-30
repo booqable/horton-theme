@@ -4,6 +4,7 @@
   {{ "columns.css" | asset_url | stylesheet_tag }}
 
   {%- assign color_scheme          = section.settings.color_scheme -%}
+  {%- assign grid                  = section.settings.grid -%}
   {%- assign icon_style            = settings.icon_style -%}
   {%- assign image_placeholder     = settings.image_placeholder -%}
   {%- assign icon_position         = section.settings.icon_position -%}
@@ -28,6 +29,18 @@
       --background-overlay-00: {{- overlay_background | append: "00" -}};
       --opacity-overlay: {{ overlay_opacity | append: "%"}};
     {%- endif -%}
+
+    {%- case grid -%}
+      {%- when 'two' -%}
+        --grid-element: 2;
+        --grid-item-min-width: 310px;
+      {%- when 'three' -%}
+        --grid-element: 3;
+        --grid-item-min-width: 210px;
+      {%- when 'four' -%}
+        --grid-element: 4;
+        --grid-item-min-width: 160px;
+    {%- endcase -%}
 
     {%- case spacing -%}
       {%- when 'small' -%}
@@ -293,6 +306,26 @@
       {
         "type": "header",
         "content": "Desktop settings"
+      },
+      {
+        "type": "select",
+        "id": "grid",
+        "label": "Layout",
+        "options": [
+          {
+            "value": "two",
+            "label": "2 columns"
+          },
+          {
+            "value": "three",
+            "label": "3 columns"
+          },
+          {
+            "value": "four",
+            "label": "4 columns"
+          }
+        ],
+        "default": "three"
       },
       {
         "type": "select",

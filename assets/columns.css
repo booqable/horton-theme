@@ -175,4 +175,8 @@
     --item-content-gap: 24px;
     --items-gap: var(--gap);
   }
+
+  .columns__grid {
+    grid-template-columns: repeat(var(--grid-element), minmax(var(--grid-item-min-width), 1fr));
+  }
 }

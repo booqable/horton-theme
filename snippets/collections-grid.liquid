@@ -16,7 +16,7 @@
 
 {% endcomment %}
 
-<ul class="collections__list">
+<ul class="collections__list collection">
   {%- for item in items -%}
     {%- case items_type -%}
       {%- when "blocks" -%}
@@ -60,25 +60,25 @@
     {%- endif -%}
     {% comment %} CSS variables end {% endcomment %}
 
-    <li class="collections__item" id="{{- id -}}"{% if badge_label != blank %} style="{{ variables | escape }}"{%- endif -%}>
-      <div class="collections__content">
+    <li class="collection__item" id="{{- id -}}"{% if badge_label != blank %} style="{{ variables | escape }}"{%- endif -%}>
+      <div class="collection__content">
         {%- if badge_label != blank -%}
-          <span class="collections__badge">{{- badge_label -}}</span>
+          <span class="collection__badge">{{- badge_label -}}</span>
         {%- endif -%}
 
-        <div class="collections__text-area">
-          <h4 class="collections__heading">
+        <div class="collection__text-area">
+          <h4 class="collection__heading">
             {{- name | default: "Collection" -}}
           </h4>
 
           {%- if show_description -%}
-            <div class="collections__description">
+            <div class="collection__description">
               {{- description | default: "Discover brand" -}}
             </div>
           {%- endif -%}
 
-          <div class="collections__buttons">
-            <a class="collections__button button button--primary button--large" href="{{ button_url }}">
+          <div class="collection__buttons">
+            <a class="collection__button button button--primary button--large" href="{{ button_url }}">
               {{- button_label |  default: "SEE MORE" -}}
             </a>
           </div>
@@ -86,11 +86,11 @@
       </div>
 
       {%- if image != blank -%}
-        <div class="collections__image-wrapper">
+        <div class="collection__image-wrapper">
           {%- render 'image',
             image: image,
             loading: 'lazy',
-            class: 'collections__image',
+            class: 'collection__image',
             size: 'flexible'
           -%}
         </div>
