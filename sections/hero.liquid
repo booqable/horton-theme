@@ -83,54 +83,63 @@
 
   {%- case text_position -%}
     {%- when 'top-left' -%}
+      --date-picker-alignment: flex-start;
       --text-justify-content: flex-start;
       --text-align-items: flex-start;
       --text-align: left;
       --margin-right: auto;
       --margin-left: 0;
     {%- when 'top-center' -%}
+      --date-picker-alignment: center;
       --text-justify-content: center;
       --text-align-items: flex-start;
       --text-align: center;
       --margin-right: auto;
       --margin-left: auto;
     {%- when 'top-right' -%}
+      --date-picker-alignment: flex-end;
       --text-justify-content: flex-end;
       --text-align-items: flex-start;
       --text-align: right;
       --margin-right: 0;
       --margin-left: auto;
     {%- when 'middle-left' -%}
+      --date-picker-alignment: flex-start;
       --text-justify-content: flex-start;
       --text-align-items: center;
       --text-align: left;
       --margin-right: auto;
       --margin-left: 0;
     {%- when 'center' -%}
+      --date-picker-alignment: center;
       --text-justify-content: center;
       --text-align-items: center;
       --text-align: center;
       --margin-right: auto;
       --margin-left: auto;
     {%- when 'middle-right' -%}
+      --date-picker-alignment: flex-end;
       --text-justify-content: flex-end;
       --text-align-items: center;
       --text-align: right;
       --margin-right: 0;
       --margin-left: auto;
     {%- when 'bottom-left' -%}
+      --date-picker-alignment: flex-start;
       --text-justify-content: flex-start;
       --text-align-items: flex-end;
       --text-align: left;
       --margin-right: auto;
       --margin-left: 0;
     {%- when 'bottom-center' -%}
+      --date-picker-alignment: center;
       --text-justify-content: center;
       --text-align-items: flex-end;
       --text-align: center;
       --margin-right: auto;
       --margin-left: auto;
     {%- when 'bottom-right' -%}
+      --date-picker-alignment: flex-end;
       --text-justify-content: flex-end;
       --text-align-items: flex-end;
       --text-align: right;
@@ -140,54 +149,63 @@
 
   {%- case text_position_mobile -%}
     {%- when 'top-left' -%}
+      --date-picker-alignment-mobile: flex-start;
       --text-justify-content-mobile: flex-start;
       --text-align-items-mobile: flex-start;
       --text-align-mobile: left;
       --margin-right-mobile: auto;
       --margin-left-mobile: 0;
     {%- when 'top-center' -%}
+      --date-picker-alignment-mobile: center;
       --text-justify-content-mobile: center;
       --text-align-items-mobile: flex-start;
       --text-align-mobile: center;
       --margin-right-mobile: auto;
       --margin-left-mobile: auto;
     {%- when 'top-right' -%}
+      --date-picker-alignment-mobile: flex-end;
       --text-justify-content-mobile: flex-end;
       --text-align-items-mobile: flex-start;
       --text-align-mobile: right;
       --margin-right-mobile: 0;
       --margin-left-mobile: auto;
     {%- when 'middle-left' -%}
+      --date-picker-alignment-mobile: flex-start;
       --text-justify-content-mobile: flex-start;
       --text-align-items-mobile: center;
       --text-align-mobile: left;
       --margin-right-mobile: auto;
       --margin-left-mobile: 0;
     {%- when 'center' -%}
+      --date-picker-alignment-mobile: center;
       --text-justify-content-mobile: center;
       --text-align-items-mobile: center;
       --text-align-mobile: center;
       --margin-right-mobile: auto;
       --margin-left-mobile: auto;
     {%- when 'middle-right' -%}
+      --date-picker-alignment-mobile: flex-end;
       --text-justify-content-mobile: flex-end;
       --text-align-items-mobile: center;
       --text-align-mobile: right;
       --margin-right-mobile: 0;
       --margin-left-mobile: auto;
     {%- when 'bottom-left' -%}
+      --date-picker-alignment-mobile: flex-start;
       --text-justify-content-mobile: flex-start;
       --text-align-items-mobile: flex-end;
       --text-align-mobile: left;
       --margin-right-mobile: auto;
       --margin-left-mobile: 0;
     {%- when 'bottom-center' -%}
+      --date-picker-alignment-mobile: center;
       --text-justify-content-mobile: center;
       --text-align-items-mobile: flex-end;
       --text-align-mobile: center;
       --margin-right-mobile: auto;
       --margin-left-mobile: auto;
     {%- when 'bottom-right' -%}
+      --date-picker-alignment-mobile: flex-end;
       --text-justify-content-mobile: flex-end;
       --text-align-items-mobile: flex-end;
       --text-align-mobile: right;
@@ -199,7 +217,7 @@
     --color-overlay: {{- overlay_color -}};
     --background-overlay: {{- overlay_background -}};
     --background-overlay-00: {{- overlay_background | append: "00" -}};
-    --overlay-opacity: {{ overlay_opacity | append: "%"}};
+    --opacity-overlay: {{ overlay_opacity | append: "%"}};
 
     {%- case text_position -%}
       {%- when 'top-left' -%}
@@ -347,7 +365,6 @@
         {%- elsif image.url != blank or image_mobile.url != blank -%}
           {%- if image.url != blank -%}
             <div class="hero__vision-wrapper{% if image_mobile != blank %} hero__vision-wrapper--desktop{% endif %}{% if show_overlay %} hero__vision-wrapper--overlay{%- endif -%}">
-              {{- image.url -}}
               {%- render 'image',
                 image: image,
                 loading: 'lazy',

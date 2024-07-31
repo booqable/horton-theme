@@ -1,0 +1,331 @@
+{{ "collections.css" | asset_url | stylesheet_tag }}
+
+{%- assign color_scheme          = section.settings.color_scheme -%}
+{%- assign grid                  = section.settings.grid -%}
+{%- assign image_placeholder     = settings.image_placeholder -%}
+{%- assign limit                 = section.settings.limit -%}
+{%- assign overlay_background    = section.settings.overlay_background -%}
+{%- assign overlay_color         = section.settings.overlay_color -%}
+{%- assign overlay_opacity       = section.settings.overlay_opacity -%}
+{%- assign padding_bottom        = section.settings.padding_bottom -%}
+{%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+{%- assign padding_top           = section.settings.padding_top -%}
+{%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
+{%- assign show_borders          = section.settings.show_borders -%}
+{%- assign show_overlay          = section.settings.show_overlay -%}
+{%- assign spacing               = section.settings.spacing -%}
+{%- assign spacing_mobile        = section.settings.spacing_mobile -%}
+
+{% comment %} CSS variables start {% endcomment %}
+{%- capture variables -%}
+  {%- if show_overlay -%}
+    --color-overlay: {{- overlay_color -}};
+    --background-overlay: {{- overlay_background -}};
+    --background-overlay-00: {{- overlay_background | append: "00" -}};
+    --opacity-overlay: {{ overlay_opacity | append: "%"}};
+  {%- endif -%}
+
+  {%- case grid -%}
+    {%- when 'two' -%}
+      --grid-element: 2;
+      --grid-item-min-width: 310px;
+    {%- when 'three' -%}
+      --grid-element: 3;
+      --grid-item-min-width: 210px;
+    {%- when 'four' -%}
+      --grid-element: 4;
+      --grid-item-min-width: 160px;
+  {%- endcase -%}
+
+  {%- case padding_top -%}
+    {%- when 'small' -%}
+      --padding-top: 32px;
+    {%- when 'medium' -%}
+      --padding-top: 62px;
+    {%- when 'large' -%}
+      --padding-top: 112px;
+  {%- endcase -%}
+
+  {%- case padding_bottom -%}
+    {%- when 'small' -%}
+      --padding-bottom: 32px;
+    {%- when 'medium' -%}
+      --padding-bottom: 62px;
+    {%- when 'large' -%}
+      --padding-bottom: 112px;
+  {%- endcase -%}
+
+  {%- case padding_top_mobile -%}
+    {%- when 'small' -%}
+      --padding-top-mobile: 18px;
+    {%- when 'medium' -%}
+      --padding-top-mobile: 40px;
+    {%- when 'large' -%}
+      --padding-top-mobile: 70px;
+  {%- endcase -%}
+
+  {%- case padding_bottom_mobile -%}
+    {%- when 'small' -%}
+      --padding-bottom-mobile: 18px;
+    {%- when 'medium' -%}
+      --padding-bottom-mobile: 40px;
+    {%- when 'large' -%}
+      --padding-bottom-mobile: 70px;
+  {%- endcase -%}
+
+  {%- case spacing -%}
+    {%- when 'small' -%}
+      --grid-gap: 8px;
+    {%- when 'medium' -%}
+      --grid-gap: 16px;
+    {%- when 'large' -%}
+      --grid-gap: 32px;
+  {%- endcase -%}
+
+  {%- case spacing_mobile -%}
+    {%- when 'small' -%}
+      --grid-gap-mobile: 8px;
+    {%- when 'medium' -%}
+      --grid-gap-mobile: 16px;
+    {%- when 'large' -%}
+      --grid-gap-mobile: 32px;
+  {%- endcase -%}
+{%- endcapture -%}
+{% comment %} CSS variables end {% endcomment %}
+
+<div
+  class="collections__wrapper color-{{ color_scheme.id }}{% if show_borders %} collections__wrapper--with-border{% endif %}{% if show_overlay %} collections__wrapper--with-overlay{% endif %}{% if padding_top != blank or padding_top_mobile != blank %} collections__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} collections__wrapper--padding-bottom{%- endif -%}"
+  style="{{- variables | escape -}}"
+>
+  <div class="collections__container container">
+    <div class="collections__inner">
+      {%- paginate collections by limit -%}
+        {%- if collections.size > 0 -%}
+          {%- render 'collections-grid',
+              items: collections,
+              items_type: "collections",
+              placeholder: image_placeholder
+          -%}
+
+          {%- if paginate.pages > 1 -%}
+            {%- render 'pagination', paginate: paginate -%}
+          {%- endif -%}
+        {%- endif -%}
+      {%- endpaginate -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Collections",
+    "tag": "section",
+    "class": "collections",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General settings"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "set-1"
+      },
+      {
+        "type": "number",
+        "id": "limit",
+        "label": "Pagination limit",
+        "min": 4,
+        "max": 24,
+        "default": 8
+      },
+      {
+        "type": "checkbox",
+        "id": "show_borders",
+        "label": "Show borders",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Overlay settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_overlay",
+        "label": "Show overlay",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "overlay_color",
+        "label": "Color",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "color",
+        "id": "overlay_background",
+        "label": "Background color",
+        "default": "#000000"
+      },
+      {
+        "type": "number",
+        "id": "overlay_opacity",
+        "label": "Background percentage",
+        "min": 0,
+        "max": 100,
+        "default": 100
+      },
+      {
+        "type": "header",
+        "content": "Desktop settings"
+      },
+      {
+        "type": "select",
+        "id": "grid",
+        "label": "Layout",
+        "options": [
+          {
+            "value": "two",
+            "label": "2 columns"
+          },
+          {
+            "value": "three",
+            "label": "3 columns"
+          },
+          {
+            "value": "four",
+            "label": "4 columns"
+          }
+        ],
+        "default": "three"
+      },
+      {
+        "type": "select",
+        "id": "spacing",
+        "label": "Spacing between columns",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "none"
+      },
+      {
+        "type": "select",
+        "id": "padding_top",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "small"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "large"
+      },
+      {
+        "type": "header",
+        "content": "Mobile settings"
+      },
+      {
+        "type": "select",
+        "id": "spacing_mobile",
+        "label": "Spacing between columns",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "none"
+      },
+      {
+        "type": "select",
+        "id": "padding_top_mobile",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "small"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom_mobile",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "large"
+      }
+    ],
+    "templates": ["list-collections"],
+    "unique": true
+  }
+{% endschema %}

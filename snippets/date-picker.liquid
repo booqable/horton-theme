@@ -26,17 +26,17 @@
     --date-picker-text-size: 14px;
     --date-picker-text-weight: var(--font-weight-semibold);
     --date-picker-text-line-height: var(--font-height-lg);
-    --date-picker-border-radius: var(--border-radius-sm);
+    --date-picker-border-radius: var(--border-radius-button);
   }
 
   #section-{{ key }} .date-picker__component {
     display: flex;
-    justify-content: var(--text-justify-content-mobile);
+    justify-content: var(--date-picker-alignment-mobile);
   }
 
   @media (min-width: 992px) {
     #section-{{ key }} .date-picker__component {
-      justify-content: var(--text-justify-content);
+      justify-content: var(--date-picker-alignment);
     }
   }
 {%- endstyle -%}
