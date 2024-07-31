@@ -14,6 +14,7 @@
   {%- assign padding_top              = section.settings.padding_top -%}
   {%- assign padding_top_mobile       = section.settings.padding_top_mobile -%}
   {%- assign show_borders             = section.settings.show_borders -%}
+  {%- assign show_button_on_bottom    = section.settings.show_button_on_bottom -%}
   {%- assign show_overlay             = section.settings.show_overlay -%}
   {%- assign spacing                  = section.settings.spacing -%}
   {%- assign spacing_mobile           = section.settings.spacing_mobile -%}
@@ -68,9 +69,14 @@
 
     {%- case grid -%}
       {%- when 'two' -%}
-        --template-columns: 2;
+        --grid-element: 2;
+        --grid-item-min-width: 310px;
       {%- when 'three' -%}
-        --template-columns: 3;
+        --grid-element: 3;
+        --grid-item-min-width: 210px;
+      {%- when 'four' -%}
+        --grid-element: 4;
+        --grid-item-min-width: 160px;
     {%- endcase -%}
 
     {%- case text_position_horizontal -%}
@@ -101,10 +107,8 @@
     {%- endcase -%}
 
     {%- case spacing -%}
-      {%- when 'none' -%}
-        --grid-gap: 0;
       {%- when 'small' -%}
-        --grid-gap: 4px;
+        --grid-gap: 8px;
       {%- when 'medium' -%}
         --grid-gap: 16px;
       {%- when 'large' -%}
@@ -112,10 +116,8 @@
     {%- endcase -%}
 
     {%- case spacing_mobile -%}
-      {%- when 'none' -%}
-        --grid-gap-mobile: 0;
       {%- when 'small' -%}
-        --grid-gap-mobile: 4px;
+        --grid-gap-mobile: 8px;
       {%- when 'medium' -%}
         --grid-gap-mobile: 16px;
       {%- when 'large' -%}
@@ -135,11 +137,15 @@
             <h2 class="collections__title">{{- title -}}</h2>
           {%- endif -%}
 
-          {%- if button_label != blank and button_url != blank -%}
-            <a href="{{ button_url }}" class="collections__button button button--outlined button--large">
-              {{- button_label -}}
-            </a>
-          {%- endif -%}
+          {%- unless show_button_on_bottom -%}
+            {%- if button_label != blank and button_url != blank -%}
+              <div class="collections__buttons{% unless show_button_on_bottom %} collections__buttons--mobile-hidden{%- endunless -%}">
+                <a href="{{ button_url }}" class="collections__button button button--outlined button--large">
+                  {{- button_label -}}
+                </a>
+              </div>
+            {%- endif -%}
+          {%- endunless -%}
         </div>
       {%- endif -%}
 
@@ -150,7 +156,7 @@
       -%}
 
       {%- if button_label != blank and button_url != blank -%}
-        <div class="collections__buttons">
+        <div class="collections__buttons{% unless show_button_on_bottom %} collections__buttons--desktop-hidden{%- endunless -%}">
           <a href="{{ button_url }}" class="collections__button button button--outlined button--large">
             {{- button_label -}}
           </a>
@@ -249,7 +255,7 @@
       },
       {
         "type": "header",
-        "content": "Overlay"
+        "content": "Overlay settings"
       },
       {
         "type": "checkbox",
@@ -275,7 +281,7 @@
         "label": "Background percentage",
         "min": 0,
         "max": 100,
-        "default": 100
+        "default": 40
       },
       {
         "type": "header",
@@ -293,6 +299,10 @@
           {
             "value": "three",
             "label": "3 columns"
+          },
+          {
+            "value": "four",
+            "label": "4 columns"
           }
         ],
         "default": "three"
@@ -302,10 +312,6 @@
         "id": "spacing",
         "label": "Spacing between columns",
         "options": [
-          {
-            "value": "none",
-            "label": "None"
-          },
           {
             "value": "small",
             "label": "Small"
@@ -327,10 +333,6 @@
         "label": "Padding top",
         "options": [
           {
-            "value": "none",
-            "label": "None"
-          },
-          {
             "value": "small",
             "label": "Small"
           },
@@ -351,10 +353,6 @@
         "label": "Padding bottom",
         "options": [
           {
-            "value": "none",
-            "label": "None"
-          },
-          {
             "value": "small",
             "label": "Small"
           },
@@ -370,6 +368,12 @@
         "default": "medium"
       },
       {
+        "type": "checkbox",
+        "id": "show_button_on_bottom",
+        "label": "Show the Button below collections",
+        "default": true
+      },
+      {
         "type": "header",
         "content": "Mobile settings"
       },
@@ -378,10 +382,6 @@
         "id": "spacing_mobile",
         "label": "Spacing between columns",
         "options": [
-          {
-            "value": "none",
-            "label": "None"
-          },
           {
             "value": "small",
             "label": "Small"
@@ -403,10 +403,6 @@
         "label": "Padding top",
         "options": [
           {
-            "value": "none",
-            "label": "None"
-          },
-          {
             "value": "small",
             "label": "Small"
           },
@@ -426,10 +422,6 @@
         "id": "padding_bottom_mobile",
         "label": "Padding bottom",
         "options": [
-          {
-            "value": "none",
-            "label": "None"
-          },
           {
             "value": "small",
             "label": "Small"

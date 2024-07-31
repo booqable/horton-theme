@@ -80,7 +80,7 @@ body {
   min-height: 100%;
   width: 100%;
   overflow-x: clip;
-  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 body > * {
@@ -189,7 +189,7 @@ ul {
 input,
 textarea {
   font-family: var(--font-body);
-  border-radius: var(--border-radius-md);
+  border-radius: var(--border-radius-block);
 }
 
 input:-webkit-autofill,
@@ -421,7 +421,7 @@ img {
 
 .tippy-box *:not(label),
 .bq-modal *:not(label) {
-  border-radius: var(--border-radius-md) !important;
+  border-radius: var(--border-radius-block) !important;
 }
 
 @media (min-width: 576px) {
