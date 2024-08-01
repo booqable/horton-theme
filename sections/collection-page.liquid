@@ -1,0 +1,433 @@
+{{ "collection-page.css" | asset_url | stylesheet_tag }}
+{{ "product-card.css" | asset_url | stylesheet_tag }}
+
+{%- assign color_scheme          = section.settings.color_scheme -%}
+{%- assign grid                  = section.settings.grid -%}
+{%- assign image_fit             = section.settings.image_fit -%}
+{%- assign image_placeholder     = settings.image_placeholder -%}
+{%- assign is_focal              = false -%}
+{%- assign limit                 = section.settings.limit -%}
+{%- assign menu                  = false -%}
+{%- assign message               = section.settings.message -%}
+{%- assign mobile_toggler        = section.settings.mobile_toggler -%}
+{%- assign padding_bottom        = section.settings.padding_bottom -%}
+{%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+{%- assign padding_top           = section.settings.padding_top -%}
+{%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
+{%- assign show_borders          = section.settings.show_borders -%}
+{%- assign show_excerpt          = section.settings.show_excerpt -%}
+{%- assign spacing               = section.settings.spacing -%}
+{%- assign spacing_mobile        = section.settings.spacing_mobile -%}
+{%- assign sticky_sidebar        = section.settings.sticky_sidebar -%}
+
+{%- if settings.use_focal_images and image_fit == 'cover' -%}
+  {%- assign is_focal = true -%}
+{%- endif -%}
+
+{%- for block in section.blocks -%}
+  {%- assign menu = block.settings.menu -%}
+
+  {%- if menu != blank -%}
+    {%- assign menu = true -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{% comment %} CSS variables start {% endcomment %}
+{%- capture variables -%}
+  {%- case grid -%}
+    {%- when 'three' -%}
+      --grid-element: 3;
+      --grid-item-min-width: 280px;
+    {%- when 'four' -%}
+      --grid-element: 4;
+      --grid-item-min-width: 210px;
+    {%- when 'five' -%}
+      --grid-element: 5;
+      --grid-item-min-width: 170px;
+  {%- endcase -%}
+
+  {%- case padding_top -%}
+    {%- when 'small' -%}
+      --padding-top: 40px;
+    {%- when 'medium' -%}
+      --padding-top: 90px;
+    {%- when 'large' -%}
+      --padding-top: 130px;
+  {%- endcase -%}
+
+  {%- case padding_bottom -%}
+    {%- when 'small' -%}
+      --padding-bottom: 40px;
+    {%- when 'medium' -%}
+      --padding-bottom: 90px;
+    {%- when 'large' -%}
+      --padding-bottom: 130px;
+  {%- endcase -%}
+
+  {%- case padding_top_mobile -%}
+    {%- when 'small' -%}
+      --padding-top-mobile: 24px;
+    {%- when 'medium' -%}
+      --padding-top-mobile: 50px;
+    {%- when 'large' -%}
+      --padding-top-mobile: 90px;
+  {%- endcase -%}
+
+  {%- case padding_bottom_mobile -%}
+    {%- when 'small' -%}
+      --padding-bottom-mobile: 24px;
+    {%- when 'medium' -%}
+      --padding-bottom-mobile: 50px;
+    {%- when 'large' -%}
+      --padding-bottom-mobile: 90px;
+  {%- endcase -%}
+
+  {%- case image_fit -%}
+    {%- when 'cover' -%}
+      --object-fit: cover;
+    {%- when 'contain' -%}
+      --object-fit: contain;
+  {%- endcase -%}
+
+  {%- case spacing -%}
+    {%- when 'none' -%}
+      --grid-gap: 0px;
+    {%- when 'small' -%}
+      --grid-gap: 4px;
+    {%- when 'medium' -%}
+      --grid-gap: 16px;
+    {%- when 'large' -%}
+      --grid-gap: 32px;
+  {%- endcase -%}
+
+  {%- case spacing_mobile -%}
+    {%- when 'none' -%}
+      --grid-gap-mobile: 0px;
+    {%- when 'small' -%}
+      --grid-gap-mobile: 8px;
+    {%- when 'medium' -%}
+      --grid-gap-mobile: 16px;
+    {%- when 'large' -%}
+      --grid-gap-mobile: 32px;
+  {%- endcase -%}
+{%- endcapture -%}
+{% comment %} CSS variables end {% endcomment %}
+
+<div
+  class="collection-page__wrapper collection-page__wrapper-{{ grid }} color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} collection-page__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} collection-page__wrapper--padding-bottom{%- endif -%}"
+  style="{{- variables | escape -}}"
+>
+  <div class="collection-page__container container">
+    {%- if menu -%}
+      <div class="collection-page__grid">
+        <div class="collection-page__sidebar sidebar">
+          {%- render 'sidebar',
+              items: section.blocks,
+              toggler: mobile_toggler,
+              sticky: sticky_sidebar
+          -%}
+        </div>
+    {%- endif -%}
+
+        {%- if collection.products_count > 0 -%}
+          {%- assign products = collection.products -%}
+
+          {%- paginate products by limit -%}
+            <div class="collection-page__products">
+              {%- for product in products -%}
+                {%- if spacing == "none" or spacing_mobile == "none" -%}
+                  <div class="{%- if spacing == "none" -%}collection-page__product{% endif %}{% if spacing_mobile == "none" %} collection-page__product--mobile{%- endif -%}">
+                {%- endif -%}
+                  {%- render 'product-card',
+                      product: product,
+                      placeholder: image_placeholder,
+                      border: show_borders,
+                      focal: is_focal,
+                      show_excerpt: show_excerpt
+                  -%}
+                {%- if spacing == "none" or spacing_mobile == "none" -%}
+                  </div>
+                {%- endif -%}
+
+              {%- endfor -%}
+            </div>
+
+            {%- if paginate.pages > 1 -%}
+              <div class="collection-page__pagination">
+                {%- render 'pagination', paginate: paginate -%}
+              </div>
+            {%- endif -%}
+          {%- endpaginate -%}
+
+        {%- else -%}
+          <p>{{- message -}}</p>
+        {%- endif -%}
+
+    {%- if menu -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Product list",
+    "tag": "section",
+    "class": "collection-page",
+    "templates": ["collection"],
+    "settings": [
+      {
+        "type": "header",
+        "content": "General settings"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "set-1"
+      },
+      {
+        "type": "select",
+        "id": "image_fit",
+        "label": "Image fit",
+        "options": [
+          {
+            "value": "cover",
+            "label": "Cover"
+          },
+          {
+            "value": "contain",
+            "label": "Contain"
+          }
+        ],
+        "default": "cover"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_excerpt",
+        "default": true,
+        "label": "Show product description excerpt"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_borders",
+        "label": "Show image borders",
+        "default": true
+      },
+      {
+        "type": "number",
+        "id": "limit",
+        "label": "Pagination limit",
+        "min": 6,
+        "max": 24,
+        "default": 6
+      },
+      {
+        "type": "text",
+        "id": "message",
+        "label": "Message",
+        "default": "Sorry, there are no products in this collection yet",
+        "info": "This message appears when the collection exist, but doesn't have any products"
+      },
+      {
+        "type": "header",
+        "content": "Sidebar settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "sticky_sidebar",
+        "default": true,
+        "label": "Sticky sidebar"
+      },
+      {
+        "type": "text",
+        "id": "mobile_toggler",
+        "label": "Menu toggle label",
+        "default": "Menu"
+      },
+      {
+        "type": "header",
+        "content": "Desktop settings"
+      },
+      {
+        "type": "select",
+        "id": "grid",
+        "label": "Layout",
+        "options": [
+          {
+            "value": "three",
+            "label": "3 products"
+          },
+          {
+            "value": "four",
+            "label": "4 products"
+          },
+          {
+            "value": "five",
+            "label": "5 products"
+          }
+        ],
+        "default": "five"
+      },
+      {
+        "type": "select",
+        "id": "spacing",
+        "label": "Spacing between columns",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "none"
+      },
+      {
+        "type": "select",
+        "id": "padding_top",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "small"
+      },
+      {
+        "type": "header",
+        "content": "Mobile settings"
+      },
+      {
+        "type": "select",
+        "id": "spacing_mobile",
+        "label": "Spacing between columns",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "none"
+      },
+      {
+        "type": "select",
+        "id": "padding_top_mobile",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "small"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom_mobile",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "small"
+      }
+    ],
+    "max_blocks": 16,
+    "blocks": [
+      {
+        "type": "menu",
+        "name": "Menu",
+        "settings": [
+          {
+            "type": "header",
+            "content": "General settings"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Title",
+            "default": "Collections"
+          },
+          {
+            "type": "menu",
+            "id": "menu",
+            "label": "Menu"
+          }
+        ]
+      }
+    ],
+    "important": true,
+    "unique": true
+  }
+{% endschema %}
