@@ -1,0 +1,311 @@
+{{ "product-page.css" | asset_url | stylesheet_tag }}
+
+{%- assign availability                  = product | product_availability -%}
+{%- assign availability_calendar         = product | availability_calendar -%}
+{%- assign breadcrumbs_collections_label = section.settings.breadcrumbs_collections_label -%}
+{%- assign breadcrumbs_root_label        = section.settings.breadcrumbs_root_label -%}
+{%- assign breadcrumbs_root_url          = section.settings.breadcrumbs_root_url -%}
+{%- assign bundle_items                  = product | bundle_items -%}
+{%- assign color_scheme                  = section.settings.color_scheme -%}
+{%- assign description                   = product.description -%}
+{%- assign infinity_scroll               = section.settings.infinity_scroll -%}
+{%- assign message_label                 = section.settings.message_label -%}
+{%- assign padding_bottom                = section.settings.padding_bottom -%}
+{%- assign padding_bottom_mobile         = section.settings.padding_bottom_mobile -%}
+{%- assign padding_top                   = section.settings.padding_top -%}
+{%- assign padding_top_mobile            = section.settings.padding_top_mobile -%}
+{%- assign price                         = product | product_price -%}
+{%- assign quantity                      = product | product_button -%}
+{%- assign show_breadcrumbs              = section.settings.show_breadcrumbs -%}
+{%- assign show_controls                 = section.settings.show_controls -%}
+{%- assign show_thumbnails               = section.settings.show_thumbnails -%}
+{%- assign title                         = product.name -%}
+{%- assign variants                      = product.variants -%}
+{%- assign variant_label                 = section.settings.variant_label -%}
+{%- assign variant_selector              = product | product_variations_select -%}
+
+{% comment %} CSS variables start {% endcomment %}
+{%- capture variables -%}
+  {%- case padding_top -%}
+    {%- when 'small' -%}
+      --padding-top: 24px;
+    {%- when 'medium' -%}
+      --padding-top: 40px;
+    {%- when 'large' -%}
+      --padding-top: 60px;
+  {%- endcase -%}
+
+  {%- case padding_bottom -%}
+    {%- when 'small' -%}
+      --padding-bottom: 24px;
+    {%- when 'medium' -%}
+      --padding-bottom: 40px;
+    {%- when 'large' -%}
+      --padding-bottom: 60px;
+  {%- endcase -%}
+
+  {%- case padding_top_mobile -%}
+    {%- when 'small' -%}
+      --padding-top-mobile: 24px;
+    {%- when 'medium' -%}
+      --padding-top-mobile: 36px;
+    {%- when 'large' -%}
+      --padding-top-mobile: 48px;
+  {%- endcase -%}
+
+  {%- case padding_bottom_mobile -%}
+    {%- when 'small' -%}
+      --padding-bottom-mobile: 24px;
+    {%- when 'medium' -%}
+      --padding-bottom-mobile: 36px;
+    {%- when 'large' -%}
+      --padding-bottom-mobile: 48px;
+  {%- endcase -%}
+{%- endcapture -%}
+
+{%- render 'variables-product-availability' -%}
+{%- render 'variables-product-gallery' -%}
+{%- render 'variables-product-quantity' -%}
+{%- render 'variables-product-variations' -%}
+{% comment %} CSS variables end {% endcomment %}
+
+<div class="product-main__wrapper color-{{ color_scheme.id }}" style="{{- variables | escape -}}">
+  <div class="product-main__container container{% if padding_top != blank or padding_top_mobile != blank %} product-main__container--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} product-main__container--padding-bottom{%- endif -%}">
+    {%- render 'breadcrumbs',
+        product: product,
+        show: show_breadcrumbs,
+        routes: routes,
+        root_label: breadcrumbs_root_label,
+        root_url: breadcrumbs_root_url,
+        collections_label: breadcrumbs_collections_label
+    -%}
+
+    <div class="product-main__grid">
+      <div class="product-main__gallery">
+        {{ product | product_gallery:
+          enable_thumbnails: show_thumbnails,
+          enable_controls: show_controls,
+          infinite_scroll: infinity_scroll
+        }}
+      </div>
+
+      <div class="product-main__info">
+        <h1 class="product-main__title">{{- title -}}</h1>
+        <div class="product-main__price">{{- price -}}</div>
+
+        {%- if description != blank -%}
+          <div class="product-main__description bq-content rx-content">{{- description -}}</div>
+        {%- endif -%}
+
+        <div class="product-main__variant">
+          {%- if variants.size > 1 -%}
+            <div class="product-main__variant-label">{{- variant_label -}}</div>
+
+            <div class="product-main__variant-selector">{{- variant_selector -}}</div>
+          {%- endif -%}
+
+          {{- bundle_items -}}
+        </div>
+
+        <div class="product-main__availability">
+          {{- availability -}}
+          {{- availability_calendar -}}
+        </div>
+
+        <div class="product-main__quantity">{{- quantity -}}</div>
+
+        {%- if message_label != blank -%}
+          <div class="product-main__message">
+            <span class="product-main__message-label">{{- message_label -}}</span>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Product information",
+    "tag": "section",
+    "class": "product-main",
+    "templates": ["product"],
+    "settings": [
+      {
+        "type": "header",
+        "content": "General settings"
+      },
+      {
+        "type": "text",
+        "id": "variant_label",
+        "label": "Variations label",
+        "default": "Variation"
+      },
+      {
+        "type": "text",
+        "id": "message_label",
+        "label": "Message label"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "set-1"
+      },
+      {
+        "type": "header",
+        "content": "Breadcrumbs settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_breadcrumbs",
+        "default": true,
+        "label": "Show breadcrumbs"
+      },
+      {
+        "type": "text",
+        "id": "breadcrumbs_root_label",
+        "label": "Breadcrumbs root label",
+        "info": "Leave blank to use the default label"
+      },
+      {
+        "type": "select",
+        "id": "breadcrumbs_root_url",
+        "label": "Breadcrumbs root link",
+        "options": [
+          {
+            "value": "home",
+            "label": "Home"
+          },
+          {
+            "value": "collections",
+            "label": "Collections"
+          },
+          {
+            "value": "products",
+            "label": "All products"
+          }
+        ],
+        "default": "collections"
+      },
+      {
+        "type": "text",
+        "id": "breadcrumbs_collections_label",
+        "label": "Breadcrumbs 'Collections' label",
+        "info": "Visible only if 'Home' option of the root link is chosen. Leave blank to use the default label"
+      },
+      {
+        "type": "header",
+        "content": "Carousel settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_controls",
+        "default": true,
+        "label": "Show navigation buttons"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_thumbnails",
+        "default": true,
+        "label": "Show thumbnails"
+      },
+      {
+        "type": "checkbox",
+        "id": "infinity_scroll",
+        "default": true,
+        "label": "Infinity scroll"
+      },
+      {
+        "type": "header",
+        "content": "Desktop settings"
+      },
+      {
+        "type": "select",
+        "id": "padding_top",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "header",
+        "content": "Mobile settings"
+      },
+      {
+        "type": "select",
+        "id": "padding_top_mobile",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom_mobile",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      }
+    ],
+    "important": true,
+    "unique": true
+  }
+{% endschema %}
