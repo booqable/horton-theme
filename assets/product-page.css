@@ -15,7 +15,6 @@
 }
 
 .product-main__grid {
-  display: grid;
   position: relative;
   font-size: var(--font-size-regular);
   line-height: var(--font-height-lg);
@@ -98,6 +97,7 @@
   }
 
   .product-main__grid {
+    display: grid;
     grid-template-columns: var(--grid-left) var(--grid-right);
   }
 }
