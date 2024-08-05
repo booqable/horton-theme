@@ -1,4 +1,7 @@
 .cart__wrapper {
+  --grid-gap: 16px;
+  --grid-template: 1fr;
+
   color: var(--color-secondary);
   background: var(--background-primary);
 }
@@ -17,14 +20,14 @@
 
 .cart .cart__footer {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 16px;
+  grid-template-columns: var(--grid-template);
+  grid-gap: var(--grid-gap);
 }
 
 @media screen and (min-width: 667px) {
-  .cart .cart__footer {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 32px;
+  .cart__wrapper {
+    --grid-gap: 32px;
+    --grid-template: repeat(2, 1fr);
   }
 }
 
