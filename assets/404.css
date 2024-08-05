@@ -27,7 +27,7 @@
 }
 
 .error-404__title {
-  font-size: clamp(72px, 12.5vw, 148px);
+  font-size: clamp(72px, 7vw, 148px);
   font-weight: var(--font-weight-light);
   line-height: var(--font-height-sm);
   text-align: center;
