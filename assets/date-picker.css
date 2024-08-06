@@ -1,0 +1,26 @@
+.date-picker__wrapper {
+  --date-picker-alignment: center;
+  --date-picker-alignment-mobile: center;
+
+  width: 100%;
+  background: var(--background-primary);
+  color: var(--color-primary);
+}
+
+.date-picker-section .date-picker__container--padding-top {
+  padding-top: var(--padding-top-mobile);
+}
+
+.date-picker-section .date-picker__container--padding-bottom {
+  padding-bottom: var(--padding-bottom-mobile);
+}
+
+@media (min-width: 992px) {
+  .date-picker-section .date-picker__container--padding-top {
+    padding-top: var(--padding-top);
+  }
+
+  .date-picker-section .date-picker__container--padding-bottom {
+    padding-bottom: var(--padding-bottom);
+  }
+}

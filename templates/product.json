@@ -1,0 +1,99 @@
+{
+  "name": "Product",
+  "sections": {
+    "date-picker": {
+      "type": "date-picker",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-1",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium"
+      },
+      "disabled": null
+    },
+    "product-page": {
+      "type": "product-page",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "breadcrumbs_collections_label": "",
+        "breadcrumbs_root_label": "",
+        "breadcrumbs_root_url": "collections",
+        "color_scheme": "set-1",
+        "infinity_scroll": true,
+        "message_label": "Free shipping from $50",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "small",
+        "show_breadcrumbs": true,
+        "show_controls": true,
+        "show_thumbnails": true,
+        "variation_label": "Variant"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123455": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123456": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123457": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_123452": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product",
+        "product_123455",
+        "product_123456",
+        "product_123457",
+        "product_123452"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "image_fit": "cover",
+        "padding_bottom": "large",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": false,
+        "show_excerpt": true,
+        "show_navigation": true,
+        "spacing": "none",
+        "spacing_mobile": "medium",
+        "tag": "",
+        "timer": 5,
+        "title": "Related products"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "date-picker",
+    "product-page",
+    "products"
+  ]
+}

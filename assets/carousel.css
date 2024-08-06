@@ -27,6 +27,7 @@
 
 .carousel__wrapper {
   height: 100%;
+  width: calc(100% + 2px);
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
