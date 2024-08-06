@@ -117,7 +117,7 @@
   flex-direction: column;
   justify-content: space-between;
   font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-lg);
+  line-height: var(--font-height-lg);
 }
 
 .menu__list {
