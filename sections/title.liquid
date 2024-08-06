@@ -85,6 +85,10 @@
             <div class="title__text-area">
               <h2 class="title__heading">
                 {{- custom_title | default: collection.title | default: page_title -}}
+                {%- if custom_title != blank and template == "search" and query != blank -%}
+                  : {{ query }}
+                {%- endif -%}
+
               </h2>
 
               <div class="title__description text-medium bq-content rx-content">
