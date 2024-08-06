@@ -1,0 +1,166 @@
+{{ "date-picker.css" | asset_url | stylesheet_tag }}
+
+{%- assign color_scheme          = section.settings.color_scheme -%}
+{%- assign padding_top           = section.settings.padding_top -%}
+{%- assign padding_bottom        = section.settings.padding_bottom -%}
+{%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
+{%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+
+{% comment %} CSS variables start {% endcomment %}
+{%- capture variables -%}
+  {%- case padding_top -%}
+    {%- when 'small' -%}
+      --padding-top: 8px;
+    {%- when 'medium' -%}
+      --padding-top: 16px;
+    {%- when 'large' -%}
+      --padding-top: 24px;
+  {%- endcase -%}
+
+  {%- case padding_bottom -%}
+    {%- when 'small' -%}
+      --padding-bottom: 8px;
+    {%- when 'medium' -%}
+      --padding-bottom: 16px;
+    {%- when 'large' -%}
+      --padding-bottom: 24px;
+  {%- endcase -%}
+
+  {%- case padding_top_mobile -%}
+    {%- when 'small' -%}
+      --padding-top-mobile: 8px;
+    {%- when 'medium' -%}
+      --padding-top-mobile: 16px;
+    {%- when 'large' -%}
+      --padding-top-mobile: 24px;
+  {%- endcase -%}
+
+  {%- case padding_bottom_mobile -%}
+    {%- when 'small' -%}
+      --padding-bottom-mobile: 8px;
+    {%- when 'medium' -%}
+      --padding-bottom-mobile: 16px;
+    {%- when 'large' -%}
+      --padding-bottom-mobile: 24px;
+  {%- endcase -%}
+{%- endcapture -%}
+{% comment %} CSS variables end {% endcomment %}
+
+<div class="date-picker__wrapper color-{{ color_scheme.id }}" style="{{- variables | escape -}}">
+  <div class="date-picker__container container{% if padding_top != blank or padding_top_mobile != blank %} date-picker__container--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} date-picker__container--padding-bottom{%- endif -%}">
+    <div class="date-picker__inner date-picker">
+      {%- render 'date-picker',
+          key: section.key
+      -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Date picker",
+    "description": "Let your visitors select a rental period",
+    "tag": "section",
+    "class": "date-picker-section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General settings"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "set-1"
+      },
+      {
+        "type": "header",
+        "content": "Desktop settings"
+      },
+      {
+        "type": "select",
+        "id": "padding_top",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "header",
+        "content": "Mobile settings"
+      },
+      {
+        "type": "select",
+        "id": "padding_top_mobile",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom_mobile",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      }
+    ]
+  }
+{% endschema %}
