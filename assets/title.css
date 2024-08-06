@@ -1,5 +1,9 @@
-.title:has(.title__wrapper .title__date-picker-wrapper:last-child) {
-  z-index: 1;
+.title:has(.title__wrapper > .title__date-picker-wrapper:last-child) .section-insert-frame .section-insert-frame__button--after {
+  bottom: -23px;
+}
+
+.title:has(.title__wrapper > .title__date-picker-wrapper:last-child) ~ section .section-insert-frame .section-insert-frame__button--before {
+  top: 23px;
 }
 
 .title__wrapper {
@@ -74,6 +78,7 @@
   left: 0;
   width: 100%;
   transform: translate(0, var(--date-picker-translate));
+  z-index: 1;
 }
 
 .title__content .title__date-picker-wrapper {

@@ -64,6 +64,7 @@
         --border-radius-badge: 0;
         --border-radius-block: 0;
         --border-radius-button: 0;
+        --border-radius-gradually: 0;
       {%- when 'rounded' -%}
         --border-radius-sm: 8px;
         --border-radius-md: 16px;
@@ -72,7 +73,8 @@
         --border-radius-badge: 8px;
         --border-radius-block: 16px;
         --border-radius-button: 8px;
-      {%- when 'fully_round' -%}
+        --border-radius-gradually: 8px;
+        {%- when 'fully_round' -%}
         --border-radius-sm: 8px;
         --border-radius-md: 16px;
         --border-radius-lg: 24px;
@@ -80,6 +82,7 @@
         --border-radius-badge: 8px;
         --border-radius-block: 24px;
         --border-radius-button: 50px;
+        --border-radius-gradually: 16px;
     {% endcase %}
 
     {% case settings.social_size %}

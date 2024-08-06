@@ -20,6 +20,12 @@
   /* Carousel */
   --slide-width: 328px;
   --slide-width-mobile: 280px;
+  --thumbnail-size: 100px;
+
+  /* Colors */
+  --color-green: #51C234;
+  --color-red: #C23434;
+  --color-white: #FFFFFF;
 
   /* Transitions */
   --transition-function-ease-in-out: ease-in-out;

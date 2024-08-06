@@ -27,6 +27,7 @@
 
 .carousel__wrapper {
   height: 100%;
+  width: calc(100% + 2px);
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
@@ -102,7 +103,15 @@
 
 .carousel .product-card {
   height: 100%;
+  border: none;
+  border-radius: 0;
 }
+
+.carousel .product-card__vision,
+.carousel .product-card__meta {
+  border-right: 1px solid var(--color-border);
+}
+
 
 @media (min-width: 992px) {
   .carousel__item {
