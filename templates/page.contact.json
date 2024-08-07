@@ -1,0 +1,94 @@
+{
+  "name": "Contact",
+  "sections": {
+    "contact-form": {
+      "type": "contact-form",
+      "blocks": {
+        "details_398265": {
+          "type": "details",
+          "settings": {
+            "block_button_primary_label": "hello@info.com",
+            "block_button_primary_url": "mailto:hello@info.com",
+            "block_button_secondary_label": "",
+            "block_button_secondary_url": "",
+            "block_button_third_label": "",
+            "block_button_third_url": "",
+            "block_icon_primary": "envelope",
+            "block_icon_secondary": "empty",
+            "block_icon_third": "empty",
+            "heading": "Email",
+            "text": ""
+          },
+          "disabled": null
+        },
+        "details_398266": {
+          "type": "details",
+          "settings": {
+            "block_button_primary_label": "+1 (555) 000-0000",
+            "block_button_primary_url": "tel:+15550000000",
+            "block_button_secondary_label": "+1 (555) 000-0000",
+            "block_button_secondary_url": "tel:+15550000000",
+            "block_button_third_label": "",
+            "block_button_third_url": "",
+            "block_icon_primary": "phone",
+            "block_icon_secondary": "phone",
+            "block_icon_third": "empty",
+            "heading": "Phone",
+            "text": ""
+          },
+          "disabled": null
+        },
+        "details_398267": {
+          "type": "details",
+          "settings": {
+            "block_button_primary_label": "123 Sample St,  London ENG 2000 UK",
+            "block_button_primary_url": "https://osm.org/go/euuvRFR-?m=",
+            "block_button_secondary_label": "",
+            "block_button_secondary_url": "",
+            "block_button_third_label": "",
+            "block_button_third_url": "",
+            "block_icon_primary": "globe",
+            "block_icon_secondary": "empty",
+            "block_icon_third": "empty",
+            "heading": "Office",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero."
+          },
+          "disabled": null
+        },
+        "socials": {
+          "type": "socials",
+          "settings": {
+            "heading": "Follow us"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "details_398265",
+        "details_398266",
+        "details_398267",
+        "socials"
+      ],
+      "settings": {
+        "button_primary_label": "",
+        "color_scheme": "set-1",
+        "description": "",
+        "email": "",
+        "error_message": "",
+        "message": "",
+        "name": "",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "small",
+        "show_border": true,
+        "success_message": "",
+        "title": ""
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "contact-form"
+  ]
+}

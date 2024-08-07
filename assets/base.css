@@ -23,8 +23,11 @@
   --thumbnail-size: 100px;
 
   /* Colors */
+  --color-azureish-white: #D7E2FF;
+  --color-black: #2F4044;
   --color-green: #51C234;
   --color-red: #C23434;
+  --color-red-light: #F5CFCF;
   --color-white: #FFFFFF;
 
   /* Transitions */
@@ -195,7 +198,7 @@ ul {
 input,
 textarea {
   font-family: var(--font-body);
-  border-radius: var(--border-radius-block);
+  border-radius: var(--border-radius-gradually);
 }
 
 input:-webkit-autofill,
@@ -320,10 +323,6 @@ img {
   margin-left: 16px;
   transform: translateX(0);
   animation: bounce 5s var(--transition-function-ease-in-out) infinite;
-}
-
-.button:hover svg {
-  animation-play-state: paused;
 }
 
 .button path {
@@ -476,6 +475,10 @@ img {
 @media (hover: hover) {
   a:hover {
     color: var(--color-outline);
+  }
+
+  .button:hover svg {
+    animation-play-state: paused;
   }
 
   .button--primary:hover {

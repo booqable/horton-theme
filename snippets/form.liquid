@@ -1,0 +1,124 @@
+{% comment %}
+
+  This snippet is using for rendering the contact form
+
+  id - id
+  title - "string" optional,
+  description - "string" optional,
+  name - "string" optional,
+  email - "string" optional,
+  message - "string" optional,
+  success_message - "string" optional,
+  error_message - "string" optional,
+  button_label - "string" optional
+
+  Usage:
+
+  {%- render 'form',
+      id: your_id,
+      title: your_id,
+      description: your_id,
+      name: your_id,
+      email: your_id,
+      message: your_id,
+      success_message: your_id,
+      error_message: your_id,
+      button_label: your_id
+  -%}
+
+{% endcomment %}
+
+{{ "form.css" | asset_url | stylesheet_tag }}
+
+<div id="{{- id -}}" class="form__inner">
+  <h2 class="form__title h4">{{- title | default: "Contact us"-}}</h2>
+
+  <div class="form__text text-large bq-content rx-content">
+    {{- description | default: "Tell something about your company, describe what you do and what makes you unique." -}}
+  </div>
+
+  {%- form 'contact' -%}
+    <div class="form__block form__block--divider-small{% if form.errors.author %} form__block--error{%- endif -%}">
+      <label class="form__label" for="author">
+        {{- name | default: "Name" -}}
+      </label>
+
+      <input
+        value="{{- form.author -}}"
+        placeholder="{{- name | default: "Name" -}}"
+        class="form__input"
+        autocomplete="author"
+        type="text"
+        name="form[author]"
+        id="author"
+        title="(e.g. Jon Doe)"
+      >
+
+      <div class="form__error-message">
+        {{- form.errors.author -}}
+      </div>
+    </div>
+
+    <div class="form__block form__block--divider-small{% if form.errors.email %} form__block--error{%- endif -%}">
+      <label class="form__label" for="email">
+        {{- email | default: "Email" -}}
+      </label>
+
+      <input
+        value="{{- form.email -}}"
+        placeholder="{{- email | default: "Email" -}}"
+        class="form__input"
+        autocomplete="email"
+        type="email"
+        name="form[email]"
+        id="email"
+        title="(e.g. mail@domain.com)"
+      >
+
+      <div class="form__error-message">
+        {{- form.errors.email -}}
+      </div>
+    </div>
+
+    <div class="form__block form__message{% if form.errors.body %} form__block--error{%- endif -%}">
+      <label class="form__label" for="body">
+        {{- message | default: "Message" -}}
+      </label>
+
+      <textarea
+        value=" "
+        placeholder="{{- message | default: "Message" -}}..."
+        class="form__textarea"
+        name="form[body]"
+        id="body"
+        title="Describe what you want in more detail"
+      >
+        {%- if form.posted_successfully -%}{{- form.body | strip -}}{%- endif -%}
+      </textarea>
+
+      <div class="form__error-message">
+        {{- form.errors.body | strip -}}
+      </div>
+    </div>
+
+    <div class="form__info">
+      {%- if form.posted_successfully -%}
+        <p class="success">
+          <i class="fa-solid fa-circle-check"></i> {{- success_message | default: "Thanks for your message! We'll get back to you shortly" -}}
+        </p>
+      {%- endif -%}
+
+      {%- if form.errors != blank -%}
+        <p class="error">
+          <i class="fa-solid fa-circle-exclamation"></i> {{- error_message | default: "Oops, something went wrong. Please fix the errors and try again" -}}
+        </p>
+      {%- endif -%}
+    </div>
+
+    <div class="form__submit">
+      <button class="button button--large button--primary">
+        {{- button_label | default: "Send message" -}}
+      </button>
+    </div>
+  {%- endform -%}
+</div>
