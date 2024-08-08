@@ -57,27 +57,18 @@
 
     {% case settings.corner_radius %}
       {%- when 'square' -%}
-        --border-radius-sm: 0;
-        --border-radius-md: 0;
-        --border-radius-lg: 0;
         --border-radius-checkbox: 0;
         --border-radius-badge: 0;
         --border-radius-block: 0;
         --border-radius-button: 0;
         --border-radius-gradually: 0;
       {%- when 'rounded' -%}
-        --border-radius-sm: 8px;
-        --border-radius-md: 16px;
-        --border-radius-lg: 8px;
         --border-radius-checkbox: 4px;
         --border-radius-badge: 8px;
         --border-radius-block: 16px;
         --border-radius-button: 8px;
         --border-radius-gradually: 8px;
         {%- when 'fully_round' -%}
-        --border-radius-sm: 8px;
-        --border-radius-md: 16px;
-        --border-radius-lg: 24px;
         --border-radius-checkbox: 4px;
         --border-radius-badge: 8px;
         --border-radius-block: 24px;
@@ -106,6 +97,8 @@
 
   #cc-main {
     --cc-font-family: var(--font-body);
+    --cc-btn-border-radius: var(--border-radius-button);
+    --cc-modal-border-radius: var(--border-radius-block);
 
     --cc-bg: var(--background-primary);
     --cc-primary-color: var(--color-primary);
@@ -116,12 +109,13 @@
     --cc-btn-primary-border-color: transparent;
     --cc-btn-primary-hover-bg: var(--background-accent-hover);
     --cc-btn-primary-hover-border-color: var(--background-accent-hover);
+    --cc-btn-primary-hover-color: var(--color-accent);
 
     --cc-btn-secondary-bg: transparent;
     --cc-btn-secondary-color: var(--color-primary);
     --cc-btn-secondary-border-color: var(--background-accent);
-    --cc-btn-secondary-hover-bg: var(--background-accent-secondary-hover);
-    --cc-btn-secondary-hover-border-color: var(--background-accent-secondary-hover);
+    --cc-btn-secondary-hover-bg: var(--background-accent-hover-2);
+    --cc-btn-secondary-hover-border-color: var(--background-accent-hover-2);
     --cc-btn-secondary-hover-color: var(--color-primary);
 
     --cc-cookie-category-block-bg: transparent;

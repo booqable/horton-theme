@@ -170,52 +170,52 @@
 
     {%- else -%}
       <div class="search__products">
-      <div class="search__message bq-content rx-content">
-        {%- if message != blank -%}
-          {{- message -}}
-        {%- else -%}
-          <span class="search__message-placeholder">No results found</span>
-          {%- if collection != blank -%}
-            <span class="search__message-placeholder">. Maybe these will interest you...</span>
-          {%- endif -%}
-        {%- endif -%}
-      </div>
-
-      {%- if collection != blank -%}
-        <div class="search__carousel carousel carousel__pause" aria-role="Gallery">
-          <input class="carousel__timer" type="hidden" name="hidden" value="{{- timer -}}" aria-hidden="true">
-          <div class="carousel__list">
-            <div class="carousel__wrapper">
-              {%- for item in items -%}
-                <div class="carousel__item">
-                  <div class="carousel__inner">
-                    {%- render 'product-card',
-                        product: item,
-                        placeholder: image_placeholder,
-                        border: show_borders,
-                        focal: is_focal,
-                        show_excerpt: show_excerpt
-                    -%}
-                  </div>
-                </div>
-              {%- endfor -%}
-            </div>
-          </div>
-
-          {%- if show_navigation -%}
-            <div class="carousel__navigation hidden" aria-role="Carousel navigation">
-              <span class="carousel__btn prev" aria-label="Prev slide">
-                Previous slide
-                {%- render 'icon-arrow-right-full' -%}
-              </span>
-              <span class="carousel__btn next" aria-label="Next slide">
-                Next slide
-                {%- render 'icon-arrow-right-full' -%}
-              </span>
-            </div>
+        <div class="search__message bq-content rx-content">
+          {%- if message != blank -%}
+            {{- message -}}
+          {%- else -%}
+            <span class="search__message-placeholder">No results found</span>
+            {%- if collection != blank -%}
+              <span class="search__message-placeholder">. Maybe these will interest you...</span>
+            {%- endif -%}
           {%- endif -%}
         </div>
-      {%- endif -%}
+
+        {%- if collection != blank -%}
+          <div class="search__carousel carousel carousel__pause" aria-role="Gallery">
+            <input class="carousel__timer" type="hidden" name="hidden" value="{{- timer -}}" aria-hidden="true">
+            <div class="carousel__list">
+              <div class="carousel__wrapper">
+                {%- for item in items -%}
+                  <div class="carousel__item">
+                    <div class="carousel__inner">
+                      {%- render 'product-card',
+                          product: item,
+                          placeholder: image_placeholder,
+                          border: show_borders,
+                          focal: is_focal,
+                          show_excerpt: show_excerpt
+                      -%}
+                    </div>
+                  </div>
+                {%- endfor -%}
+              </div>
+            </div>
+
+            {%- if show_navigation -%}
+              <div class="carousel__navigation hidden" aria-role="Carousel navigation">
+                <span class="carousel__btn prev" aria-label="Prev slide">
+                  Previous slide
+                  {%- render 'icon-arrow-right-full' -%}
+                </span>
+                <span class="carousel__btn next" aria-label="Next slide">
+                  Next slide
+                  {%- render 'icon-arrow-right-full' -%}
+                </span>
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
       </div>
     {%- endif -%}
 
@@ -282,11 +282,12 @@
         "type": "text",
         "id": "message",
         "label": "Message",
-        "default": "Sorry, there are no products for your request"
+        "default": "Sorry, there are no products for your request",
+        "info": "Shown when no results are found"
       },
       {
         "type": "header",
-        "content": "Sidebar settings"
+        "content": "Sidebar"
       },
       {
         "type": "checkbox",
@@ -298,11 +299,12 @@
         "type": "text",
         "id": "mobile_toggler",
         "label": "Menu toggle label",
-        "default": "Menu"
+        "default": "Menu",
+        "info": "Shown on mobile only"
       },
       {
         "type": "header",
-        "content": "Carousel settings"
+        "content": "Carousel"
       },
       {
         "type": "collection",
@@ -495,7 +497,8 @@
             "type": "text",
             "id": "heading",
             "label": "Title",
-            "default": "Collections"
+            "default": "Collections",
+            "info": "Leave blank to hide"
           },
           {
             "type": "menu",

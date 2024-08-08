@@ -288,7 +288,7 @@
 .bq-content.rx-content samp,
 .bq-content.rx-content kbd,
 .bq-content.rx-content code {
-  border-radius: var(--border-radius-sm);
+  border-radius: var(--border-radius-badge);
 }
 
 .bq-content.rx-content kbd {

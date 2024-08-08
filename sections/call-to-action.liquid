@@ -74,7 +74,7 @@
         <div class="cta__container container">
       {%- endif -%}
           <div class="cta__content">
-            {%- if tag != blank or title != blank or button_label != blank and button_url != blank -%}
+            {%- if tag != blank or title != blank or description != blank or button_label != blank and button_url != blank -%}
               <div class="cta__text-area">
                 {%- if tag != blank -%}
                   <span class="cta__tag tagline">{{- tag -}}</span>
@@ -142,25 +142,28 @@
         "id": "tag",
         "label": "Tagline",
         "default": "UNIQUE & PERFECT",
-        "info": "Leave blank to hide tagline"
+        "info": "Leave blank to hide"
       },
       {
         "type": "text",
         "id": "title",
         "label": "Title",
-        "default": "Ready to get started?"
+        "default": "Ready to get started?",
+        "info": "Use <br> for breaking lines. Leave blank to hide"
       },
       {
         "type": "contentEditor",
         "id": "description",
         "label": "Description",
-        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        "info": "Leave blank to hide"
       },
       {
         "type": "text",
         "id": "button_label",
         "label": "Button label",
-        "default": "GET IN TOUCH"
+        "default": "GET IN TOUCH",
+        "info": "Leave blank to hide"
       },
       {
         "type": "url",
