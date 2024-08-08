@@ -4,6 +4,7 @@
   --grid-gap: 40px 0 0;
   --grid-template-columns: 1fr;
   --grid-template-rows: max-content max-content;
+  --max-width: 1452px;
   --social-button-size: 40px;
 
   line-height: var(--font-height-lg);
