@@ -71,7 +71,7 @@
 
   <div class="articles__wrapper color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} articles__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} articles__wrapper--padding-bottom{%- endif -%}" style="{{- variables | escape -}}">
     <div class="articles__container container">
-      {%- if tag != blank or title != blank -%}
+      {%- if tag != blank or description != blank or title != blank -%}
         <div class="articles__top">
           {%- if tag != blank -%}
             <strong class="articles__tag tagline">{{- tag -}}</strong>
@@ -191,26 +191,28 @@
         "id": "tag",
         "label": "Tagline",
         "default": "Tagline",
-        "info": "Leave blank to hide tagline"
+        "info": "Leave blank to hide"
       },
       {
         "type": "text",
         "id": "title",
         "label": "Title",
-        "default": "What's going on"
+        "default": "What's going on",
+        "info": "Use <br> for breaking lines. Leave blank to hide"
       },
       {
         "type": "contentEditor",
         "id": "description",
         "label": "Description",
-        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "info": "Leave blank to hide"
       },
       {
         "type": "text",
         "id": "button_label",
         "label": "Button label",
         "default": "See all",
-        "info": "Leave blank to hide the button"
+        "info": "Leave blank to hide"
       },
       {
         "type": "url",
@@ -225,7 +227,7 @@
       {
         "type": "checkbox",
         "id": "show_button_on_bottom",
-        "label": "Show button below articles",
+        "label": "Show the Button below articles",
         "default": true
       },
       {
@@ -340,27 +342,25 @@
         "name": "Article",
         "settings": [
           {
-            "type": "header",
-            "content": "General settings"
-          },
-          {
             "type": "text",
             "id": "article_tag",
             "label": "Tagline",
             "default": "Article tagline",
-            "info": "Leave blank to hide tagline"
+            "info": "Leave blank to hide"
           },
           {
             "type": "text",
             "id": "heading",
             "label": "Title",
-            "default": "Medium length section heading goes here"
+            "default": "Medium length section heading goes here",
+            "info": "Use <br> for breaking lines. Leave blank to hide"
           },
           {
             "type": "contentEditor",
             "id": "text",
             "label": "Description",
-            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
+            "info": "Leave blank to hide"
           },
           {
             "type": "image_picker",
@@ -371,7 +371,7 @@
             "type": "text",
             "id": "article_btn",
             "label": "Button label",
-            "info": "Leave blank to hide the button",
+            "info": "Leave blank to hide",
             "default": "Read more"
           },
           {

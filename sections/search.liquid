@@ -1,11 +1,13 @@
-{{ "collection-page.css" | asset_url | stylesheet_tag }}
+{{ "search.css" | asset_url | stylesheet_tag }}
 {{ "product-card.css" | asset_url | stylesheet_tag }}
 
+{%- assign collection            = section.settings.collection -%}
 {%- assign color_scheme          = section.settings.color_scheme -%}
 {%- assign grid                  = section.settings.grid -%}
 {%- assign image_fit             = section.settings.image_fit -%}
 {%- assign image_placeholder     = settings.image_placeholder -%}
 {%- assign is_focal              = false -%}
+{%- assign items                 = false -%}
 {%- assign limit                 = section.settings.limit -%}
 {%- assign menu                  = false -%}
 {%- assign message               = section.settings.message -%}
@@ -16,9 +18,11 @@
 {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
 {%- assign show_borders          = section.settings.show_borders -%}
 {%- assign show_excerpt          = section.settings.show_excerpt -%}
+{%- assign show_navigation       = section.settings.show_navigation -%}
 {%- assign spacing               = section.settings.spacing -%}
 {%- assign spacing_mobile        = section.settings.spacing_mobile -%}
 {%- assign sticky_sidebar        = section.settings.sticky_sidebar -%}
+{%- assign timer                 = section.settings.timer -%}
 
 {%- if settings.use_focal_images and image_fit == 'cover' -%}
   {%- assign is_focal = true -%}
@@ -32,6 +36,12 @@
     {%- break -%}
   {%- endif -%}
 {%- endfor -%}
+
+{%- if collection != blank -%}
+  {{ "carousel.css" | asset_url | stylesheet_tag }}
+
+  {%- assign items = collection.items -%}
+{%- endif -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
@@ -115,13 +125,13 @@
 {% comment %} CSS variables end {% endcomment %}
 
 <div
-  class="collection-page__wrapper collection-page__wrapper-{{ grid }} color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} collection-page__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} collection-page__wrapper--padding-bottom{%- endif -%}"
+  class="search__wrapper search__wrapper-{{ grid }} color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} search__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} search__wrapper--padding-bottom{%- endif -%}"
   style="{{- variables | escape -}}"
 >
-  <div class="collection-page__container container">
+  <div class="search__container container">
     {%- if menu -%}
-      <div class="collection-page__grid">
-        <div class="collection-page__sidebar sidebar">
+      <div class="search__grid">
+        <div class="search__sidebar sidebar">
           {%- render 'sidebar',
               items: section.blocks,
               toggler: mobile_toggler,
@@ -130,39 +140,84 @@
         </div>
     {%- endif -%}
 
-        {%- if collection.products_count > 0 -%}
-          {%- assign products = collection.products -%}
-
-          {%- paginate products by limit -%}
-            <div class="collection-page__products">
-              {%- for product in products -%}
-                {%- if spacing == "none" or spacing_mobile == "none" -%}
-                  <div class="{%- if spacing == "none" -%}collection-page__product{% endif %}{% if spacing_mobile == "none" %} collection-page__product--mobile{%- endif -%}">
-                {%- endif -%}
-                  {%- render 'product-card',
-                      product: product,
-                      placeholder: image_placeholder,
-                      border: show_borders,
-                      focal: is_focal,
-                      show_excerpt: show_excerpt
-                  -%}
-                {%- if spacing == "none" or spacing_mobile == "none" -%}
-                  </div>
-                {%- endif -%}
-
-              {%- endfor -%}
-            </div>
-
-            {%- if paginate.pages > 1 -%}
-              <div class="collection-page__pagination">
-                {%- render 'pagination', paginate: paginate -%}
+    {%- if results_count > 0 -%}
+      {%- paginate results by limit -%}
+        <div class="search__products">
+          {%- for result in results -%}
+            {%- if spacing == "none" or spacing_mobile == "none" -%}
+              <div class="{%- if spacing == "none" -%}search__product{% endif %}{% if spacing_mobile == "none" %} search__product--mobile{%- endif -%}">
+            {%- endif -%}
+              {%- render 'product-card',
+                  product: result,
+                  placeholder: image_placeholder,
+                  border: show_borders,
+                  focal: is_focal,
+                  show_excerpt: show_excerpt
+              -%}
+            {%- if spacing == "none" or spacing_mobile == "none" -%}
               </div>
             {%- endif -%}
-          {%- endpaginate -%}
 
-        {%- else -%}
-          <p>{{- message -}}</p>
+          {%- endfor -%}
+        </div>
+
+        {%- if paginate.pages > 1 -%}
+          <div class="search__pagination">
+            {%- render 'pagination', paginate: paginate -%}
+          </div>
         {%- endif -%}
+      {%- endpaginate -%}
+
+    {%- else -%}
+      <div class="search__products">
+        <div class="search__message bq-content rx-content">
+          {%- if message != blank -%}
+            {{- message -}}
+          {%- else -%}
+            <span class="search__message-placeholder">No results found</span>
+            {%- if collection != blank -%}
+              <span class="search__message-placeholder">. Maybe these will interest you...</span>
+            {%- endif -%}
+          {%- endif -%}
+        </div>
+
+        {%- if collection != blank -%}
+          <div class="search__carousel carousel carousel__pause" aria-role="Gallery">
+            <input class="carousel__timer" type="hidden" name="hidden" value="{{- timer -}}" aria-hidden="true">
+            <div class="carousel__list">
+              <div class="carousel__wrapper">
+                {%- for item in items -%}
+                  <div class="carousel__item">
+                    <div class="carousel__inner">
+                      {%- render 'product-card',
+                          product: item,
+                          placeholder: image_placeholder,
+                          border: show_borders,
+                          focal: is_focal,
+                          show_excerpt: show_excerpt
+                      -%}
+                    </div>
+                  </div>
+                {%- endfor -%}
+              </div>
+            </div>
+
+            {%- if show_navigation -%}
+              <div class="carousel__navigation hidden" aria-role="Carousel navigation">
+                <span class="carousel__btn prev" aria-label="Prev slide">
+                  Previous slide
+                  {%- render 'icon-arrow-right-full' -%}
+                </span>
+                <span class="carousel__btn next" aria-label="Next slide">
+                  Next slide
+                  {%- render 'icon-arrow-right-full' -%}
+                </span>
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
 
     {%- if menu -%}
       </div>
@@ -172,10 +227,10 @@
 
 {% schema %}
   {
-    "name": "Product list",
+    "name": "Results",
     "tag": "section",
-    "class": "collection-page",
-    "templates": ["collection"],
+    "class": "search",
+    "templates": ["search"],
     "settings": [
       {
         "type": "header",
@@ -227,8 +282,8 @@
         "type": "text",
         "id": "message",
         "label": "Message",
-        "default": "Sorry, there are no products in this collection yet",
-        "info": "This message appears when the collection exist, but doesn't have any products"
+        "default": "Sorry, there are no products for your request",
+        "info": "Shown when no results are found"
       },
       {
         "type": "header",
@@ -244,7 +299,32 @@
         "type": "text",
         "id": "mobile_toggler",
         "label": "Menu toggle label",
-        "default": "Menu"
+        "default": "Menu",
+        "info": "Shown on mobile only"
+      },
+      {
+        "type": "header",
+        "content": "Carousel"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_navigation",
+        "default": true,
+        "label": "Show navigation buttons"
+      },
+      {
+        "type": "number",
+        "id": "timer",
+        "label": "Rotation time",
+        "min": 0,
+        "max": 100,
+        "default": 5,
+        "info": "In seconds. Set to 0 to disable auto rotation"
       },
       {
         "type": "header",
@@ -409,6 +489,10 @@
         "type": "menu",
         "name": "Menu",
         "settings": [
+          {
+            "type": "header",
+            "content": "General settings"
+          },
           {
             "type": "text",
             "id": "heading",
