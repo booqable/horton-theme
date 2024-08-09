@@ -1,0 +1,536 @@
+.account {
+  --form-field-padding-y: 11px;
+  --form-field-padding-x: 16px;
+
+  flex-grow: 1;
+  height: 100%;
+  color: var(--color-primary);
+  background: var(--background-primary);
+  display: flex;
+  align-items: center;
+}
+
+.account--padding-top {
+  padding-top: var(--padding-top-mobile);
+}
+
+.account--padding-bottom {
+  padding-bottom: var(--padding-bottom-mobile);
+}
+
+/* .account__container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+} */
+
+.account__inner {
+  max-width: 530px;
+  margin: 0 auto;
+  padding: 24px;
+  /* background: var(--background-primary); */
+  border-radius: var(--border-radius-block);
+}
+
+.account__inner--border {
+  border: 1px solid var(--color-border);
+}
+
+.account__title {
+  /* font-size: 40px;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--font-height-md); */
+}
+
+.account__description {
+  font-size: var(--font-size-regular);
+  line-height: var(--font-height-lg);
+  margin-bottom: 24px;
+}
+
+.account__top {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.account__button {
+  /* text-align: center; */
+  /* text-decoration: none; */
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.account__button--minimal {
+  margin-top: 12px;
+  font-weight: var(--font-weight-regular);
+  text-decoration: none;
+  transition: all var(--animation-duration) var(--transition-function-ease-out);
+  color: var(--color-primary);
+}
+
+.account__button--minimal:hover {
+  text-shadow: 0.5px 0 var(--color-primary);
+}
+
+.account__top .button {
+  border-radius: var(--border-radius-gradually);
+}
+
+.account__top .button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.account__top .button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.account-fieldset__block {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.account-fieldset__label {
+  padding-bottom: 8px;
+  display: block;
+  color: var(--color-secondary);
+}
+
+.account-fieldset__static-label,
+.account-fieldset__radio-label {
+  line-height: var(--font-height-lg);
+  margin: 0 2px;
+}
+
+.account-fieldset__input {
+  /* border-radius: var(--border-radius-gradually); */
+  border: 1px solid var(--color-border);
+  font-size: var(--font-size-regular);
+  line-height: var(--font-height-xl);
+  padding: var(--form-field-padding-y) var(--form-field-padding-x);
+  width: 100%;
+  background: var(--background-primary);
+  color: var(--color-primary);
+}
+
+.account-fieldset__input:focus {
+  border-color: var(--background-accent-hover);
+  border-width: 2px;
+  padding: calc(var(--form-field-padding-y) - 1px) calc(var(--form-field-padding-x) - 1px);
+  outline: none;
+}
+
+.account-fieldset__input::placeholder {
+  opacity: 0.6;
+}
+
+.account-fieldset__radio-label {
+  display: flex;
+  align-items: center;
+  position: relative;
+  line-height: var(--font-height-xs);
+}
+
+.account-fieldset__radio-label span {
+  margin-left: 24px;
+}
+
+.account-fieldset__radio-label:before {
+  content:'';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  appearance: none;
+  border: 1px solid var(--color-border);
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: var(--background-primary);
+}
+
+[id^='user_legal_type']:checked + .account-fieldset__radio-label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  transform: translate(0, -50%);
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--background-primary);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+[id^='user_legal_type']:checked + .account-fieldset__radio-label:before {
+  border-color: var(--background-accent);
+  background: var(--background-accent);
+}
+
+.account__type-options--first-option .account-fieldset__radio-label {
+  margin-left: 0;
+}
+
+.account__link {
+  text-decoration: none;
+  color: var(--color-outline);
+}
+
+.account__link:hover,
+.account__agreement-opener:hover {
+  color: var(--color-outline-hover);
+}
+
+.account__agreement-opener {
+  color: var(--color-outline);
+  cursor: pointer;
+  transition: all var(--animation-duration) var(--transition-function-ease-out);
+}
+
+.account-checkbox__label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  line-height: var(--font-height-xs);
+  margin-bottom: 10px;
+  color: var(--color-primary);
+}
+
+.account-checkbox__label .account__link,
+.account-checkbox__label .account__agreement-opener {
+  margin-left: 4px;
+}
+
+.account-checkbox__label > span {
+  margin-left: 24px;
+}
+
+.account-checkbox__label + .account__error-message {
+  margin-bottom: 40px;
+}
+
+.account-checkbox__label:before {
+  content:'';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  appearance: none;
+  border: 1px solid var(--color-border);
+  padding: 8px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: bottom;
+  background: var(--background-primary);
+}
+
+[id^='user_agreement_accepted']:checked + .account-checkbox__label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  width: 6px;
+  height: 12px;
+  border: solid var(--background-primary);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) translate(-100%, -45%);
+}
+
+[id^='user_agreement_accepted']:checked + .account-checkbox__label:before {
+  border-color: var(--background-accent);
+  background: var(--background-accent);
+}
+
+.account-checkbox__label--error:has(+ .account__error-message:not(:empty)) {
+  color: var(--color-red);
+}
+
+.account-checkbox__label--error:has(+ .account__error-message:not(:empty)):before {
+  border-color: var(--color-red);
+  background: var(--color-red-light);
+}
+
+.account-checkbox__label--error:has(+ .account__error-message:not(:empty)):after {
+  border-color: var(--color-red);
+}
+
+.account-checkbox__label--error:has(+ .account__error-message:not(:empty)) .account__agreement-inner  {
+  color: var(--color-primary);
+}
+
+.account__agreement:after {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-primary-67);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.account__agreement:has([id^='user_agreement_opener']:checked):after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.account__agreement-modal {
+  display: block !important;
+  position: fixed;
+  top: calc(var(--header-height, 200px) + var(--header-transform, 0px));
+  left: 0;
+  width: 100%;
+  height: calc(100vh - var(--header-height, 200px) - var(--header-transform, 0px));
+  transition: all var(--animation-duration) var(--transition-function-ease-out);
+  padding: 10px;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+}
+
+.account__agreement-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: calc(var(--max-width-narrow) + 60px);
+  padding: 20px;
+  margin: 0 auto;
+  display: block;
+}
+
+.header-with-date-picker ~ #main .account__agreement-modal {
+  display: flex !important;
+  align-items: flex-end;
+}
+
+.header-with-date-picker ~ #main .account__agreement-content {
+  height: calc(100% - var(--date-picker-height-mobile) - 8px);
+}
+
+.account__agreement-inner {
+  border: 1px solid var(--color-border);
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  border-radius: var(--border-radius-rounded-blocks);
+  background: var(--background-primary);
+  color: var(--color-primary);
+}
+
+.account__agreement-text {
+  display: block;
+  padding: 24px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.account__agreement-closer.button {
+  position: absolute;
+  top: 0;
+  right: 6px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--animation-duration) var(--transition-function-ease-out);
+}
+
+.account__agreement-closer:after,
+.account__agreement-closer:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  height: 2px;
+  width: 20px;
+  background: var(--color-accent);
+}
+
+.account__agreement-closer:after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.account__agreement-buttons {
+  padding-top: 16px;
+  margin: 0 0 calc(-1 * var(--button-margin-bottom));
+  display: block;
+  text-align: center;
+}
+
+[id^='user_agreement_opener']:checked ~ .account__agreement-modal {
+  visibility: visible;
+  opacity: 1;
+}
+
+.account__separator {
+  border: none;
+  padding-bottom: 24px;
+}
+
+.account__divider {
+  margin-bottom: 24px;
+}
+
+.account__divider--small {
+  margin-bottom: 16px;
+}
+
+.account__divider:last-child {
+  margin-bottom: 0;
+}
+
+.account__alert {
+  border-radius: var(--border-radius-rounded);
+  margin-top: -5px;
+  margin-bottom: 30px;
+  padding: 8px 16px;
+  line-height: var(--font-height-sm);
+}
+
+.account__alert--info {
+  background: var(--color-azureish-white);
+  color: var(--color-black);
+  border: 1px solid var(--color-border);
+}
+
+.account__alert--danger {
+  background:  var(--color-red-light);
+  border: 1px solid var(--color-red);
+  color: var(--color-red);
+}
+
+.account__alert + .account__separator {
+  display: none;
+}
+
+.account-fieldset--error .account-fieldset__label {
+  color: var(--color-red);
+}
+
+.account-fieldset--error .account__error-message {
+  margin-top: 5px;
+  padding: 8px 16px;
+  background:  var(--color-red-light);
+  color: var(--color-red);
+  border: 1px solid var(--color-red);
+  border-radius: var(--border-radius-rounded);
+  pointer-events: none;
+  line-height: var(--font-height-sm);
+}
+
+.account-fieldset--error .account-fieldset__static-label {
+  color: var(--color-red);
+}
+
+.account-fieldset--error .account-fieldset__input,
+.account-fieldset--error .account-fieldset__input:focus {
+  border-color: var(--color-red);
+}
+
+.account__type .account__error-message:not(:empty) {
+  margin-top: 5px;
+  padding: 8px 16px;
+  background:  var(--color-red-light);
+  color: var(--color-red);
+  border: 1px solid var(--color-red);
+  border-radius: var(--border-radius-rounded);
+  pointer-events: none;
+  line-height: var(--font-height-sm);
+}
+
+.account__type-options {
+  display: flex;
+  padding-top: 10px;
+}
+
+.account__type-options--first-option {
+  margin-right: 24px;
+}
+
+.account__breadcrumbs {
+  align-items: baseline;
+  display: flex;
+  margin-bottom: 16px;
+  text-decoration: none;
+  line-height: var(--font-height-xs);
+  color: var(--color-primary);
+}
+
+.account__breadcrumbs:hover {
+  opacity: 0.8;
+}
+
+.account__breadcrumbs-chevron {
+  margin-right: 8px;
+  font-size: calc(var(--font-size-regular) - 2px);
+}
+
+.account__background-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.account__background-image {
+  height: 100%;
+  width: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+
+:is(body):has(.footer > .footer__wrapper) .account {
+  position: relative;
+}
+
+:is(body):has(.footer > .footer__wrapper) .account__background-wrapper {
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .account__agreement-modal {
+    padding: 20px 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .account--padding-top {
+    padding-top: var(--padding-top);
+  }
+
+  .account--padding-bottom {
+    padding-bottom: var(--padding-bottom);
+  }
+
+  /* .account__title {
+    font-size: var(--font-size-h3);
+  } */
+
+  .account__agreement-closer {
+    right: 1px;
+  }
+
+  .header-with-date-picker ~ #main .account__agreement-modal {
+    display: block !important;
+  }
+
+  .header-with-date-picker ~ #main .account__agreement-content {
+    height: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .account__agreement-modal {
+    padding: 50px;
+  }
+}
