@@ -201,6 +201,11 @@ textarea {
   border-radius: var(--border-radius-gradually);
 }
 
+input::placeholder,
+textarea::placeholder {
+  opacity: 0.6;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus
