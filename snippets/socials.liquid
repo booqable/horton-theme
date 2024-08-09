@@ -20,13 +20,15 @@
     margin: 0 var(--social-spacing) var(--social-spacing);
   }
 
-  .social-networks__link:hover {
-    color: var(--color-outline);
-  }
-
   @media (min-width: 992px) {
     .social-networks {
       justify-content: flex-end;
+    }
+  }
+
+  @media (hover: hover) {
+    .social-networks__link:hover {
+      color: var(--color-outline);
     }
   }
 {% endstyle %}
