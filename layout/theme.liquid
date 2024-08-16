@@ -14,6 +14,13 @@
 
     {% render 'fonts', settings: settings %}
     {% render 'root-styles', settings: settings %}
+
+    {% render 'page-metadata',
+      page_title: page_title,
+      page_description: page_description,
+      product: product,
+      shop: shop
+    %}
   </head>
   <body>
     <header class="header" id="header">
