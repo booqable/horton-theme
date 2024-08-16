@@ -1,0 +1,455 @@
+.account {
+  --button-width: 100%;
+  --button-agreement-closer-position-right: 6px;
+  --form-field-padding-y: 11px;
+  --form-field-padding-x: 16px;
+  --indent-xs: 8px;
+  --indent-sm: 16px;
+  --indent-md: 24px;
+  --indent-lg: 32px;
+  --indent-xl: 40px;
+  --max-width: 600px;
+  --modal-inner-padding: 10px;
+
+  flex-grow: 1;
+  height: 100%;
+  color: var(--color-primary);
+  background: var(--background-primary);
+  display: flex;
+  align-items: center;
+}
+
+.account--padding-top {
+  padding-top: var(--padding-top-mobile);
+}
+
+.account--padding-bottom {
+  padding-bottom: var(--padding-bottom-mobile);
+}
+
+.account__inner {
+  border-radius: var(--border-radius-block);
+}
+
+.account__inner--border {
+  padding: var(--indent-md);
+  border: 1px solid var(--color-border);
+}
+
+.account__description {
+  margin-bottom: var(--indent-md);
+}
+
+.account__top {
+  display: flex;
+  margin-bottom: var(--indent-md);
+}
+
+.account__button {
+  margin-bottom: 0;
+  width: var(--button-width);
+}
+
+.account__button--minimal {
+  --button-width: auto;
+  margin-top: calc(var(--indent-md) / 2);
+}
+
+.account__top .button {
+  border-radius: var(--border-radius-gradually);
+}
+
+.account__top .button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.account__top .button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.account-fieldset__block {
+  margin-bottom: var(--indent-lg);
+}
+
+.account-fieldset__label {
+  padding-bottom: 5px;
+  display: block;
+  color: var(--color-secondary);
+}
+
+.account-fieldset__static-label,
+.account-fieldset__radio-label {
+  margin: 0 2px;
+}
+
+.account-fieldset__input {
+  border: 1px solid var(--color-border);
+  font-size: var(--font-size-regular);
+  line-height: var(--font-height-xl);
+  padding: var(--form-field-padding-y) var(--form-field-padding-x);
+  width: 100%;
+  background: var(--background-primary);
+  color: var(--color-primary);
+}
+
+.account-fieldset__input:focus {
+  border-width: 2px;
+  border-color: var(--background-accent-hover);
+  padding: calc(var(--form-field-padding-y) - 1px) calc(var(--form-field-padding-x) - 1px);
+  outline: none;
+}
+
+.account-fieldset__radio-label {
+  display: flex;
+  align-items: center;
+  position: relative;
+  line-height: var(--font-height-xs);
+}
+
+.account-fieldset__radio-label span {
+  margin-left: var(--indent-md);
+}
+
+.account-fieldset__radio-label:before {
+  content:'';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  appearance: none;
+  border: 1px solid var(--color-border);
+  padding: var(--indent-xs);
+  cursor: pointer;
+  border-radius: 50%;
+  background: var(--background-primary);
+}
+
+[id^='user_legal_type']:checked + .account-fieldset__radio-label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  transform: translate(0, -50%);
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--background-primary);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+[id^='user_legal_type']:checked + .account-fieldset__radio-label:before {
+  border-color: var(--background-accent);
+  background: var(--background-accent);
+}
+
+.account__type-options--first-option .account-fieldset__radio-label {
+  margin-left: 0;
+}
+
+.account__link {
+  text-decoration: none;
+  color: var(--color-outline);
+}
+
+.account__link:hover,
+.account__agreement-opener:hover {
+  color: var(--color-outline-hover);
+}
+
+.account__agreement-opener {
+  color: var(--color-outline);
+  cursor: pointer;
+  transition: all var(--animation-duration) var(--transition-function-ease-in-out);
+}
+
+.account-checkbox__label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  line-height: var(--font-height-xs);
+  margin-bottom: calc(var(--indent-xs) + 2px);
+  color: var(--color-primary);
+}
+
+.account-checkbox__label .account__link,
+.account-checkbox__label .account__agreement-opener {
+  margin-left: 4px;
+}
+
+.account-checkbox__label > span {
+  margin-left: var(--indent-md);
+}
+
+.account-checkbox__label + .account__error-message {
+  margin-bottom: var(--indent-xl);
+}
+
+.account-checkbox__label:before {
+  content:'';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  appearance: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-checkbox);
+  padding: 8px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: bottom;
+  background: var(--background-primary);
+}
+
+[id^='user_agreement_accepted']:checked + .account-checkbox__label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  width: 6px;
+  height: 12px;
+  border: solid var(--background-primary);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) translate(-100%, -45%);
+}
+
+[id^='user_agreement_accepted']:checked + .account-checkbox__label:before {
+  border-color: var(--background-accent);
+  background: var(--background-accent);
+}
+
+.account-checkbox__label--error:has(+ .account__error-message:not(:empty)) {
+  color: var(--color-red);
+}
+
+.account-checkbox__label--error:has(+ .account__error-message:not(:empty)):before {
+  border-color: var(--color-red);
+  background: var(--color-red-light);
+}
+
+.account-checkbox__label--error:has(+ .account__error-message:not(:empty)):after {
+  border-color: var(--color-red);
+}
+
+.account-checkbox__label--error:has(+ .account__error-message:not(:empty)) .account__agreement-inner  {
+  color: var(--color-primary);
+}
+
+.account__agreement:after {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--background-primary-70);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.account__agreement:has([id^='user_agreement_opener']:checked):after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.account__agreement-modal {
+  display: block !important;
+  position: fixed;
+  top: calc(var(--header-height) + var(--header-transform, 0px));
+  left: 0;
+  width: 100%;
+  height: calc(100vh - var(--header-height) - var(--header-transform, 0px));
+  transition: all var(--animation-duration) var(--transition-function-ease-in-out);
+  padding: var(--modal-inner-padding);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+}
+
+.account__agreement-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: calc(var(--max-width) + 200px);
+  padding: calc(var(--indent-sm) + 4px);
+  margin: 0 auto;
+  display: block;
+}
+
+.account__agreement-inner {
+  border: 1px solid var(--color-border);
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  border-radius: var(--border-radius-block);
+  background: var(--background-primary);
+  color: var(--color-primary);
+}
+
+.account__agreement-text {
+  display: block;
+  padding: var(--indent-md);
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.account__agreement-closer.button {
+  position: absolute;
+  top: 0;
+  right: var(--button-agreement-closer-position-right);
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--animation-duration) var(--transition-function-ease-in-out);
+}
+
+.account__agreement-closer:after,
+.account__agreement-closer:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  height: 2px;
+  width: 20px;
+  background: var(--color-accent);
+}
+
+.account__agreement-closer:after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.account__agreement-buttons {
+  padding-top: var(--indent-sm);
+  margin: 0 0 calc(-1 * var(--button-margin-bottom));
+  display: block;
+  text-align: center;
+}
+
+[id^='user_agreement_opener']:checked ~ .account__agreement-modal {
+  visibility: visible;
+  opacity: 1;
+}
+
+.account__separator {
+  border: none;
+  padding-bottom: var(--indent-md);
+}
+
+.account__divider {
+  margin-bottom: var(--indent-md);
+}
+
+.account__divider--small {
+  margin-bottom: var(--indent-sm);
+}
+
+.account__divider:last-child {
+  margin-bottom: 0;
+}
+
+.account__alert {
+  border-radius: var(--border-radius-gradually);
+  margin-top: -5px;
+  margin-bottom: var(--indent-lg);
+  padding: calc(var(--form-field-padding-y) - 3px) var(--form-field-padding-x);
+  line-height: var(--font-height-sm);
+}
+
+.account__alert--info {
+  background: var(--color-azureish-white);
+  color: var(--color-black);
+  border: 1px solid var(--color-border);
+}
+
+.account__alert--danger {
+  background:  var(--color-red-light);
+  border: 1px solid var(--color-red);
+  color: var(--color-red);
+}
+
+.account__alert + .account__separator {
+  display: none;
+}
+
+.account-fieldset--error .account-fieldset__label {
+  color: var(--color-red);
+}
+
+.account-fieldset--error .account-fieldset__static-label {
+  color: var(--color-red);
+}
+
+.account-fieldset--error .account-fieldset__input,
+.account-fieldset--error .account-fieldset__input:focus {
+  border-color: var(--color-red);
+}
+
+.account-fieldset--error .account__error-message,
+.account__type .account__error-message:not(:empty) {
+  margin-top: 5px;
+  padding: calc(var(--form-field-padding-y) - 3px) var(--form-field-padding-x);
+  background:  var(--color-red-light);
+  color: var(--color-red);
+  border: 1px solid var(--color-red);
+  border-radius: var(--border-radius-gradually);
+  pointer-events: none;
+  line-height: var(--font-height-sm);
+}
+
+.account__type-options {
+  display: flex;
+  padding-top: 10px;
+}
+
+.account__type-options--first-option {
+  margin-right: var(--indent-md);
+}
+
+.account__breadcrumbs {
+  align-items: baseline;
+  display: flex;
+  margin-bottom: var(--indent-sm);
+  text-decoration: none;
+  line-height: var(--font-height-xs);
+  color: var(--color-primary);
+}
+
+.account__breadcrumbs-chevron {
+  margin-right: var(--indent-xs);
+  font-size: calc(var(--font-size-regular) - 2px);
+}
+
+@media (min-width: 768px) {
+  .account {
+    --modal-inner-padding: 20px 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .account {
+    --button-agreement-closer-position-right: 1px;
+  }
+
+  .account--padding-top {
+    padding-top: var(--padding-top);
+  }
+
+  .account--padding-bottom {
+    padding-bottom: var(--padding-bottom);
+  }
+}
+
+@media (min-width: 1200px) {
+  .account {
+    --modal-inner-padding: 50px;
+  }
+}
