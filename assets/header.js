@@ -9,10 +9,6 @@ class Header {
       inner: ".header__inner"
     }
 
-    this.classes = {
-      sticky: "header-sticky"
-    }
-
     this.modifier = {
       scrollDown: "scrolled-down",
       scrolled: "page-scrolled"
@@ -42,7 +38,6 @@ class Header {
     this.preview = document.querySelector(this.selector.view);
     this.bar = this.header.querySelector(this.selector.bar);
     this.inner = this.header.querySelector(this.selector.inner);
-    this.isSticky = this.header.classList.contains(this.classes.sticky);
   }
 
   events() {
@@ -69,7 +64,7 @@ class Header {
     if (this.preview) {
       viewHeight = this.preview.getBoundingClientRect().height;
 
-      if (this.isSticky) height += viewHeight;
+      height += viewHeight;
 
       this.setCssVar(this.cssVar.viewHeight, Math.floor(viewHeight));
     }
