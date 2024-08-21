@@ -1,5 +1,5 @@
 {
-  "name": "Collections",
+  "name": "Search",
   "sections": {
     "title": {
       "type": "title",
@@ -7,11 +7,11 @@
       "block_order": [],
       "settings": {
         "color_scheme": "set-1",
-        "custom_description": "Lorem ipsum dolor sit amet.",
-        "custom_title": "Collections",
+        "custom_description": "",
+        "custom_title": "",
         "datepicker_position": "bottom",
         "full_width": true,
-        "image": "",
+        "image": "booqable://assets/image-title-background.png",
         "overlay_background": "#000000",
         "overlay_color": "#FFFFFF",
         "overlay_opacity": 40,
@@ -25,31 +25,46 @@
       },
       "disabled": null
     },
-    "list-collections": {
-      "type": "list-collections",
-      "blocks": {},
-      "block_order": [],
+    "search": {
+      "type": "search",
+      "blocks": {
+        "menu": {
+          "type": "menu",
+          "settings": {
+            "heading": "Collections",
+            "menu": "main-menu"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "menu"
+      ],
       "settings": {
+        "collection": "all-products",
         "color_scheme": "set-5",
-        "grid": "three",
-        "limit": 6,
-        "overlay_background": "#000000",
-        "overlay_color": "#FFFFFF",
-        "overlay_opacity": 60,
+        "grid": "five",
+        "image_fit": "cover",
+        "limit": 20,
+        "message": "",
+        "mobile_toggler": "Menu",
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
         "padding_top": "medium",
         "padding_top_mobile": "medium",
         "show_borders": true,
-        "show_overlay": true,
-        "spacing": "large",
-        "spacing_mobile": "medium"
+        "show_excerpt": true,
+        "show_navigation": true,
+        "spacing": "none",
+        "spacing_mobile": "none",
+        "sticky_sidebar": true,
+        "timer": 5
       },
       "disabled": null
     }
   },
   "order": [
     "title",
-    "list-collections"
+    "search"
   ]
 }

@@ -40,7 +40,7 @@
   {%- form 'contact' -%}
     <div class="form__block form__block--divider-small{% if form.errors.author %} form__block--error{%- endif -%}">
       <label class="form__label" for="author">
-        {{- name | default: "Name" -}}
+        {{- name | default: "Name" | append: '*' -}}
       </label>
 
       <input
@@ -60,7 +60,7 @@
 
     <div class="form__block form__block--divider-small{% if form.errors.email %} form__block--error{%- endif -%}">
       <label class="form__label" for="email">
-        {{- email | default: "Email" -}}
+        {{- email | default: "Email" | append: '*' -}}
       </label>
 
       <input
@@ -80,7 +80,7 @@
 
     <div class="form__block form__message{% if form.errors.body %} form__block--error{%- endif -%}">
       <label class="form__label" for="body">
-        {{- message | default: "Message" -}}
+        {{- message | default: "Message" | append: '*' -}}
       </label>
 
       <textarea

@@ -324,7 +324,7 @@
             "button_label": "SEE ALL",
             "button_url": "booqable://products",
             "heading": "Product category highlight",
-            "image": "booqable://assets/image-productss-category-block-background.jpeg",
+            "image": "booqable://assets/image-products-category-block-background.jpeg",
             "overlay_background": "#000000",
             "overlay_color": "#FFFFFF",
             "overlay_opacity": 40,

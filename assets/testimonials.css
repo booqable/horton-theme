@@ -138,7 +138,7 @@
     --stars-margin: 0;
   }
 
-  .testimonials__wrapper .testimonials__top:has(.testimonials__buttons) {
+  .testimonials__wrapper .testimonials__top--left-aligned {
     --content-align: left;
   }
 
@@ -181,7 +181,7 @@
     right: auto;
   }
 
-  .testimonials__top:has(.testimonials__buttons) {
+  .testimonials__top--left-aligned {
     display: grid;
     grid-template-columns: 1fr max-content;
     grid-template-areas:
@@ -190,12 +190,12 @@
       "text .";
   }
 
-  .testimonials__top:has(.testimonials__buttons) .testimonials__title:after,
-  .testimonials__top:has(.testimonials__buttons) .testimonials__title:before {
+  .testimonials__top--left-aligned .testimonials__title:after,
+  .testimonials__top--left-aligned .testimonials__title:before {
     display: none;
   }
 
-  .testimonials__top:has(.testimonials__buttons) .testimonials__buttons {
+  .testimonials__top--left-aligned .testimonials__buttons {
     padding: 0 0 0 var(--gap);
   }
 

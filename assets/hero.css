@@ -18,6 +18,7 @@
 }
 
 .hero__container .hero__wrapper {
+  border-radius: var(--border-radius-block);
   padding-right: var(--horizontal-padding-mobile);
   padding-left: var(--horizontal-padding-mobile);
   overflow: hidden;

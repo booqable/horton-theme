@@ -1,0 +1,693 @@
+{
+  "name": "Home",
+  "sections": {
+    "spacer": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-1",
+        "image": "",
+        "size": "small",
+        "size_mobile": "small"
+      },
+      "disabled": null
+    },
+    "hero": {
+      "type": "hero",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "",
+        "button_primary_url": "booqable://products/",
+        "button_outline_label": "",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-4",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Suspendisse varius enim in eros elementum tristique.",
+        "full_width": false,
+        "height": "medium",
+        "height_mobile": "full",
+        "image": "booqable://assets/image-hero.jpg",
+        "image_mobile": "",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 30,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "small",
+        "show_datepicker": true,
+        "show_overlay": true,
+        "text_position": "middle-left",
+        "text_position_mobile": "bottom-center",
+        "title": "Renting Happiness <br>for Little Angels",
+        "video_url": ""
+      },
+      "disabled": null
+    },
+    "columns_871021": {
+      "type": "columns",
+      "blocks": {
+        "card_894203": {
+          "type": "card",
+          "settings": {
+            "icon": "truck-fast",
+            "description_card": "Free delivery for all orders above $100",
+            "title_card": "Free delivery"
+          },
+          "disabled": null
+        },
+        "card_894204": {
+          "type": "card",
+          "settings": {
+            "icon": "comment",
+            "description_card": "Chat with us if you’ve any questions",
+            "title_card": "Top-Notch support"
+          },
+          "disabled": null
+        },
+        "card_894205": {
+          "type": "card",
+          "settings": {
+            "icon": "handshake",
+            "description_card": "Free delivery for all orders above $100",
+            "title_card": "100% Satisfaction Guarantee!"
+          },
+          "disabled": null
+        },
+        "card_894206": {
+          "type": "card",
+          "settings": {
+            "icon": "exclamation",
+            "description_card": "We know how to do it",
+            "title_card": "20 years of experience"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "card_894203",
+        "card_894204",
+        "card_894205",
+        "card_894206"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "grid": "four",
+        "icon_position": "left",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_borders": false,
+        "show_overlay": false,
+        "spacing": "medium",
+        "spacing_mobile": "medium",
+        "text_position": "center"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "category_712895": {
+          "type": "category",
+          "settings": {
+            "button_label": "SEE ALL",
+            "button_url": "booqable://products",
+            "heading": "Product category highlight",
+            "image": "booqable://assets/image-products-category-block-background.jpeg",
+            "overlay_background": "#000000",
+            "overlay_color": "#FFFFFF",
+            "overlay_opacity": 30,
+            "show_overlay": true
+          },
+          "disabled": null
+        },
+        "product_482071": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_482072": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_482073": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_482074": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "category_712895",
+        "product_482071",
+        "product_482072",
+        "product_482073",
+        "product_482074"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "image_fit": "cover",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_excerpt": false,
+        "show_navigation": true,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "tag": "THIS WEEK",
+        "timer": 5,
+        "title": "Popular products"
+      },
+      "disabled": null
+    },
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection_523830": {
+          "type": "collection",
+          "settings": {
+            "badge_background": "#FF0000",
+            "badge_color": "#FFFFFF",
+            "badge_label": "HOT!",
+            "collection_button_label": "SHOP NOW",
+            "show_collection_description": false
+          },
+          "disabled": null
+        },
+        "collection_523831": {
+          "type": "collection",
+          "settings": {
+            "badge_background": "#1C3C2D",
+            "badge_color": "#FFFFFF",
+            "badge_label": "NEW!",
+            "collection_button_label": "SHOP NOW",
+            "show_collection_description": false
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "collection_523830",
+        "collection_523831"
+      ],
+      "settings": {
+        "button_label": "",
+        "button_url": "booqable://collections",
+        "color_scheme": "set-1",
+        "grid": "two",
+        "overlay_background": "#231C04",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 60,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_button_on_bottom": true,
+        "show_overlay": true,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "text_position_horizontal": "left",
+        "text_position_vertical": "middle",
+        "title": ""
+      },
+      "disabled": null
+    },
+    "products_901789": {
+      "type": "products",
+      "blocks": {
+        "category_909635": {
+          "type": "category",
+          "settings": {
+            "button_label": "SEE ALL",
+            "button_url": "booqable://products",
+            "heading": "Product category highlight",
+            "image": "booqable://assets/image-products-category-block-background-2.jpeg",
+            "overlay_background": "#000000",
+            "overlay_color": "#FFFFFF",
+            "overlay_opacity": 40,
+            "show_overlay": true
+          },
+          "disabled": null
+        },
+        "product_487859": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_487860": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_487861": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        },
+        "product_487862": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "category_909635",
+        "product_487859",
+        "product_487860",
+        "product_487861",
+        "product_487862"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "image_fit": "cover",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_excerpt": false,
+        "show_navigation": true,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "tag": "THIS WEEK",
+        "timer": 5,
+        "title": "New products"
+      },
+      "disabled": null
+    },
+    "about-us": {
+      "type": "about-us",
+      "blocks": {
+        "text_914717": {
+          "type": "text",
+          "settings": {
+            "icon": "warning",
+            "text": "<h6>10+ years of experience</h6><p>World-class service, dedication to your projects, and excellent quality sets us apart from the rest.</p>"
+          },
+          "disabled": null
+        },
+        "text_914718": {
+          "type": "text",
+          "settings": {
+            "icon": "calendar",
+            "text": "<h6>Rent 7 days a week</h6><p>World-class service, dedication to your projects, and excellent quality sets us apart from the rest.</p>"
+          },
+          "disabled": null
+        },
+        "text_914719": {
+          "type": "text",
+          "settings": {
+            "icon": "info",
+            "text": "<h6>10+ years of experience</h6><p>World-class service, dedication to your projects, and excellent quality sets us apart from the rest.</p>"
+          },
+          "disabled": null
+        },
+        "text_914720": {
+          "type": "text",
+          "settings": {
+            "icon": "tag",
+            "text": "<h6>Rent 7 days a week</h6><p>World-class service, dedication to your projects, and excellent quality sets us apart from the rest.</p>"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "text_914717",
+        "text_914718",
+        "text_914719",
+        "text_914720"
+      ],
+      "settings": {
+        "background_image": "",
+        "button_label": "MORE ABOUT US",
+        "button_url": "booqable://root",
+        "color_scheme": "set-1",
+        "description": "World-class service, dedication to your projects, and excellent quality sets us apart from the rest. Get the support you need to grow your business and your brand.",
+        "full_width": false,
+        "image": "",
+        "image_circle": false,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_borders": true,
+        "tag": "WE DO THAT WE LOVE",
+        "title": "About us"
+      },
+      "disabled": null
+    },
+    "logos": {
+      "type": "logos",
+      "blocks": {
+        "logo_914717": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-1-black.png"
+          },
+          "disabled": null
+        },
+        "logo_914718": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-2-black.png"
+          },
+          "disabled": null
+        },
+        "logo_914719": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-3-black.png"
+          },
+          "disabled": null
+        },
+        "logo_914720": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-1-black.png"
+          },
+          "disabled": null
+        },
+        "logo_914721": {
+          "type": "logo",
+          "settings": {
+            "image": "booqable://assets/image-partner-logo-2-black.png"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "logo_914717",
+        "logo_914718",
+        "logo_914719",
+        "logo_914720",
+        "logo_914721"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "full_width": true,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_border": false,
+        "show_title": true,
+        "show_title_mobile": true,
+        "title": "TRUSTED BY:"
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_024704": {
+          "type": "testimonial",
+          "settings": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "name": "Name Surname",
+            "position": "Position, Company name",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024705": {
+          "type": "testimonial",
+          "settings": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "name": "Name Surname",
+            "position": "Position, Company name",
+            "stars": "4"
+          },
+          "disabled": null
+        },
+        "testimonial_024706": {
+          "type": "testimonial",
+          "settings": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "name": "Name Surname",
+            "position": "Position, Company name",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024707": {
+          "type": "testimonial",
+          "settings": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "name": "Name Surname",
+            "position": "Position, Company name",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024708": {
+          "type": "testimonial",
+          "settings": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "name": "Name Surname",
+            "position": "Position, Company name",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024709": {
+          "type": "testimonial",
+          "settings": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "name": "Name Surname",
+            "position": "Position, Company name",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024710": {
+          "type": "testimonial",
+          "settings": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "name": "Name Surname",
+            "position": "Position, Company name",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024711": {
+          "type": "testimonial",
+          "settings": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "name": "Name Surname",
+            "position": "Position, Company name",
+            "stars": "5"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial_024704",
+        "testimonial_024705",
+        "testimonial_024706",
+        "testimonial_024707",
+        "testimonial_024708",
+        "testimonial_024709",
+        "testimonial_024710",
+        "testimonial_024711"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "button_url": "booqable://root",
+        "color_scheme": "set-1",
+        "full_width": true,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_button_on_bottom": false,
+        "show_carousel": false,
+        "show_navigation": true,
+        "show_stars": "below",
+        "tag": "REWIEWS",
+        "timer": 5,
+        "title": "What our customers say"
+      },
+      "disabled": null
+    },
+    "call-to-action": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_label": "GET IN TOUCH",
+        "button_url": "booqable://products",
+        "color_scheme": "set-4",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Free Delivery For Orders Starts From $50",
+        "full_width": false,
+        "image": "booqable://assets/image-cta-1.jpeg",
+        "layout": "column",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": false,
+        "show_overlay": true,
+        "tag": "",
+        "title": "The trusted partner"
+      },
+      "disabled": null
+    },
+    "articles": {
+      "type": "articles",
+      "blocks": {
+        "article_237127": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "heading": "Get the best routes to explore The Netherlands",
+            "image": "booqable://assets/image-article-1.jpeg",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+          },
+          "disabled": null
+        },
+        "article_237128": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "heading": "New in store | The electric offroad bike",
+            "image": "booqable://assets/image-article-2.jpeg",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+          },
+          "disabled": null
+        },
+        "article_237129": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "heading": "Ride safe, have fun 10 tips to ride safe",
+            "image": "booqable://assets/image-article-3.jpeg",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "article_237127",
+        "article_237128",
+        "article_237129"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "button_url": "booqable://root",
+        "color_scheme": "set-1",
+        "description": "",
+        "grid": "three",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "small",
+        "show_button_on_bottom": false,
+        "tag": "NEWS",
+        "title": "What’s going on"
+      },
+      "disabled": null
+    },
+    "columns_354021": {
+      "type": "columns",
+      "blocks": {
+        "card_810203": {
+          "type": "card",
+          "settings": {
+            "icon": "truck-fast",
+            "description_card": "Free delivery for all orders above $100",
+            "title_card": "Free delivery"
+          },
+          "disabled": null
+        },
+        "card_810204": {
+          "type": "card",
+          "settings": {
+            "icon": "comment",
+            "description_card": "Chat with us if you’ve any questions",
+            "title_card": "Top-Notch support"
+          },
+          "disabled": null
+        },
+        "card_810205": {
+          "type": "card",
+          "settings": {
+            "icon": "handshake",
+            "description_card": "Free delivery for all orders above $100",
+            "title_card": "100% Satisfaction Guarantee!"
+          },
+          "disabled": null
+        },
+        "card_810206": {
+          "type": "card",
+          "settings": {
+            "icon": "exclamation",
+            "description_card": "We know how to do it",
+            "title_card": "20 years of experience"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "card_810203",
+        "card_810204",
+        "card_810205",
+        "card_810206"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "grid": "four",
+        "icon_position": "left",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_borders": false,
+        "show_overlay": false,
+        "spacing": "medium",
+        "spacing_mobile": "medium",
+        "text_position": "center"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "spacer",
+    "hero",
+    "columns_871021",
+    "products",
+    "collections",
+    "products_901789",
+    "about-us",
+    "logos",
+    "testimonials",
+    "call-to-action",
+    "articles",
+    "columns_354021"
+  ]
+}

@@ -11,7 +11,7 @@
         "custom_title": "",
         "datepicker_position": "bottom",
         "full_width": true,
-        "image": "",
+        "image": "booqable://assets/image-title-background.png",
         "overlay_background": "#000000",
         "overlay_color": "#FFFFFF",
         "overlay_opacity": 40,

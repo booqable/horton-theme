@@ -69,7 +69,7 @@
   <div class="testimonials__wrapper color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} testimonials__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} testimonials__wrapper--padding-bottom{%- endif -%}" style="{{- variables | escape -}}">
     <div class="testimonials__container container">
       {%- if tag != blank or title != blank -%}
-        <div class="testimonials__top">
+        <div class="testimonials__top{% unless show_button_on_bottom %} testimonials__top--left-aligned{%- endunless -%}">
           {%- if tag != blank -%}
             <strong class="testimonials__tag tagline">{{- tag -}}</strong>
           {%- endif -%}
