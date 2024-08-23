@@ -8,11 +8,11 @@
   {%- assign carousel              = false -%}
   {%- assign color_scheme          = section.settings.color_scheme -%}
   {%- assign full_width            = section.settings.full_width -%}
+  {%- assign heading_centering     = section.settings.heading_centering -%}
   {%- assign padding_bottom        = section.settings.padding_bottom -%}
   {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
   {%- assign padding_top           = section.settings.padding_top -%}
   {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
-  {%- assign show_button_on_bottom = section.settings.show_button_on_bottom -%}
   {%- assign show_carousel         = section.settings.show_carousel -%}
   {%- assign show_navigation       = section.settings.show_navigation -%}
   {%- assign show_stars            = section.settings.show_stars -%}
@@ -67,28 +67,14 @@
   {% comment %} CSS variables end {% endcomment %}
 
   <div class="testimonials__wrapper color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} testimonials__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} testimonials__wrapper--padding-bottom{%- endif -%}" style="{{- variables | escape -}}">
-    <div class="testimonials__container container">
-      {%- if tag != blank or title != blank -%}
-        <div class="testimonials__top{% unless show_button_on_bottom %} testimonials__top--left-aligned{%- endunless -%}">
-          {%- if tag != blank -%}
-            <strong class="testimonials__tag tagline">{{- tag -}}</strong>
-          {%- endif -%}
-
-          {%- if title != blank -%}
-            <h2 class="testimonials__title">{{- title -}}</h2>
-          {%- endif -%}
-
-          {%- unless show_button_on_bottom -%}
-            {%- if button_label != blank and button_url != blank -%}
-              <div class="testimonials__buttons{% unless show_button_on_bottom %} testimonials__buttons--mobile-hidden{%- endunless -%}">
-                <a href="{{ button_url }}" class="testimonials__button button button--outlined button--large">
-                  {{- button_label -}}
-                </a>
-              </div>
-            {%- endif -%}
-          {%- endunless -%}
-        </div>
-      {%- endif -%}
+    <div class="testimonials__container container section-title">
+      {%- render 'section-title',
+          button_label: button_label,
+          button_url: button_url,
+          centering: heading_centering,
+          tag: tag,
+          title: title
+      -%}
 
       <div class="testimonials__list{% if carousel %} carousel carousel__pause{%- endif -%}"{% if carousel %} aria-role="Gallery"{%- endif -%}>
         {%- if carousel -%}
@@ -179,14 +165,6 @@
           {%- endif -%}
         {%- endif -%}
       </div>
-
-      {%- if button_label != blank and button_url != blank -%}
-        <div class="testimonials__buttons{% unless show_button_on_bottom %} testimonials__buttons--desktop-hidden{%- endunless -%}">
-          <a href="{{ button_url }}" class="testimonials__button button button--outlined button--large">
-            {{- button_label -}}
-          </a>
-        </div>
-      {%- endif -%}
     </div>
   </div>
 {%- endif -%}
@@ -286,8 +264,8 @@
       },
       {
         "type": "checkbox",
-        "id": "show_button_on_bottom",
-        "label": "Show the Button below testimonials",
+        "id": "heading_centering",
+        "label": "Show Heading by center",
         "default": false
       },
       {

@@ -1,0 +1,61 @@
+{% comment %}
+
+  This snippet is used for rendering the section title with optional button and text.
+
+  button_label - "string" optional,
+  button_url - "string" optional,
+  centering - boolean optional,
+  tag - "string" optional,
+  text - "string" optional,
+  title - "string" optional
+
+  Usage:
+
+  {%- render 'section-title',
+      button_label: button_label,
+      button_url: button_url,
+      centering: heading_centering,
+      tag: tag,
+      text: description,
+      title: title
+  -%}
+
+{% endcomment %}
+
+{{ "section-title.css" | asset_url | stylesheet_tag }}
+
+{%- if tag != blank or title != blank or button_label != blank and button_url != blank -%}
+  <div class="section-title__top{% unless centering %} section-title__top--left-aligned{%- endunless -%}">
+    {%- if tag != blank -%}
+      <strong class="section-title__tag tagline">{{- tag -}}</strong>
+    {%- endif -%}
+
+    {%- if title != blank -%}
+      <h2 class="section-title__title">{{- title -}}</h2>
+    {%- endif -%}
+
+    {%- unless centering -%}
+      {%- if button_label != blank and button_url != blank -%}
+        <div class="section-title__buttons{% unless centering %} section-title__buttons--mobile-hidden{%- endunless -%}">
+          <a href="{{ button_url }}" class="section-title__button button button--outlined button--large">
+            {{- button_label -}}
+          </a>
+        </div>
+      {%- endif -%}
+    {%- endunless -%}
+
+    {%- if text != blank -%}
+      <div class="section-title__description bq-content rx-content text-medium">
+        {{- text -}}
+      </div>
+    {%- endif -%}
+  </div>
+{%- endif -%}
+
+{%- if button_label != blank and button_url != blank -%}
+  <div class="section-title__buttons{% unless centering %} section-title__buttons--desktop-hidden{%- endunless -%}">
+    <a href="{{ button_url }}" class="section-title__button button button--outlined button--large">
+      {{- button_label -}}
+    </a>
+  </div>
+{%- endif -%}

@@ -73,13 +73,14 @@
         "product_123452"
       ],
       "settings": {
-        "color_scheme": "set-1",
+        "color_scheme": "set-5",
+        "heading_centering": true,
         "image_fit": "cover",
         "padding_bottom": "large",
         "padding_bottom_mobile": "medium",
         "padding_top": "medium",
         "padding_top_mobile": "medium",
-        "show_borders": false,
+        "show_borders": true,
         "show_excerpt": true,
         "show_navigation": true,
         "spacing": "none",
