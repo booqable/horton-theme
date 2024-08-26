@@ -125,7 +125,7 @@ body > * {
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: var(--font-heading);
-  font-weight: var(--font-weight-header);
+  font-weight: var(--font-weight-headers);
   line-height: var(--font-height-md);
   letter-spacing: var(--font-spacing-md);
   margin-bottom: 1.2625rem;
@@ -133,7 +133,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 h1, .h1 {
-  font-size: clamp(40px, calc(var(--font-size-h1) / 2 + 2px), 80px);
+  font-size: clamp(40px, calc(var(--font-size-h1) / 2 + 2px), 90px);
   font-weight: var(--font-weight-h1);
   line-height: var(--font-height-xs);
 }

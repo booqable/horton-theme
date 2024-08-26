@@ -1,0 +1,102 @@
+.section-title:has(.section-title__top),
+.section-title:has(> .section-title__buttons) {
+  --section-title-content-align: center;
+  --section-title-heading-padding-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title:has(.section-title__top) > div:last-child,
+.section-title:has(.section-title__top) > ul:last-child,
+.section-title:has(> .section-title__buttons) > .section-title__buttons + div,
+.section-title:has(> .section-title__buttons) > .section-title__buttons + ul {
+  order: 2;
+}
+
+.section-title__top {
+  order: 1;
+  text-align: var(--section-title-content-align);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title__top:not(:empty) {
+  padding-bottom: var(--section-title-heading-padding-bottom);
+}
+
+.section-title__description {
+  color: var(--color-secondary);
+  padding-bottom: 30px;
+}
+
+.section-title__buttons {
+  order: 3;
+  text-align: var(--section-title-content-align);
+  padding-top: 40px;
+  margin-bottom: calc(-1 * var(--button-margin-bottom));
+}
+
+@media (min-width: 992px) {
+  .section-title:has(.section-title__top),
+  .section-title:has(> .section-title__buttons) {
+    --section-title-heading-padding-bottom: 16px;
+  }
+  .section-title__tag {
+    grid-area: tag;
+  }
+
+  .section-title__description {
+    grid-area: text;
+  }
+
+  .section-title__buttons {
+    grid-area: button;
+  }
+
+  .section-title__title {
+    position: relative;
+    grid-area: title;
+  }
+
+  .section-title__title:after,
+  .section-title__title:before {
+    content: "";
+    background: var(--color-border);
+    height: 1px;
+    width: clamp(50px, 11vw, 200px);
+    right: calc(100% + 16px);
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  .section-title__title:after {
+    left: calc(100% + 16px);
+    right: auto;
+  }
+
+  .section-title__top--left-aligned {
+    --section-title-content-align: left;
+    --gap: 30px;
+
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-template-areas:
+      "tag ."
+      "title button"
+      "text .";
+  }
+
+  .section-title__top--left-aligned .section-title__title:after,
+  .section-title__top--left-aligned .section-title__title:before {
+    display: none;
+  }
+
+  .section-title__top--left-aligned .section-title__buttons {
+    padding: 0 0 0 var(--gap);
+  }
+}

@@ -8,12 +8,12 @@
   {%- assign color_scheme          = section.settings.color_scheme -%}
   {%- assign description           = section.settings.description -%}
   {%- assign grid                  = section.settings.grid -%}
+  {%- assign heading_centering     = section.settings.heading_centering -%}
   {%- assign image_placeholder     = settings.image_placeholder -%}
   {%- assign padding_bottom        = section.settings.padding_bottom -%}
   {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
   {%- assign padding_top           = section.settings.padding_top -%}
   {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
-  {%- assign show_button_on_bottom = section.settings.show_button_on_bottom -%}
   {%- assign tag                   = section.settings.tag -%}
   {%- assign title                 = section.settings.title -%}
 
@@ -70,34 +70,15 @@
   {% comment %} CSS variables end {% endcomment %}
 
   <div class="articles__wrapper color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} articles__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} articles__wrapper--padding-bottom{%- endif -%}" style="{{- variables | escape -}}">
-    <div class="articles__container container">
-      {%- if tag != blank or description != blank or title != blank -%}
-        <div class="articles__top">
-          {%- if tag != blank -%}
-            <strong class="articles__tag tagline">{{- tag -}}</strong>
-          {%- endif -%}
-
-          {%- if title != blank -%}
-            <h2 class="articles__title">{{- title -}}</h2>
-          {%- endif -%}
-
-          {%- unless show_button_on_bottom -%}
-            {%- if button_label != blank and button_url != blank -%}
-              <div class="articles__buttons{% unless show_button_on_bottom %} articles__buttons--mobile-hidden{%- endunless -%}">
-                <a href="{{ button_url }}" class="articles__button button button--outlined button--large">
-                  {{- button_label -}}
-                </a>
-              </div>
-            {%- endif -%}
-          {%- endunless -%}
-
-          {%- if description != blank -%}
-            <div class="articles__description bq-content rx-content text-medium">
-              {{- description -}}
-            </div>
-          {%- endif -%}
-        </div>
-      {%- endif -%}
+    <div class="articles__container container section-title">
+      {%- render 'section-title',
+          button_label: button_label,
+          button_url: button_url,
+          centering: heading_centering,
+          tag: tag,
+          text: description,
+          title: title
+      -%}
 
       <div class="articles__grid">
         {%- for block in blocks -%}
@@ -157,14 +138,6 @@
           </div>
         {%- endfor -%}
       </div>
-
-      {%- if button_label != blank and button_url != blank -%}
-        <div class="articles__buttons{% unless show_button_on_bottom %} articles__buttons--desktop-hidden{%- endunless -%}">
-          <a href="{{ button_url }}" class="articles__button button button--outlined button--large">
-            {{- button_label -}}
-          </a>
-        </div>
-      {%- endif -%}
     </div>
   </div>
 {%- endif -%}
@@ -222,8 +195,8 @@
       },
       {
         "type": "checkbox",
-        "id": "show_button_on_bottom",
-        "label": "Show the Button below articles",
+        "id": "heading_centering",
+        "label": "Show Heading by center",
         "default": true
       },
       {

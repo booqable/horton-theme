@@ -11,7 +11,7 @@
         "custom_title": "Checkout",
         "datepicker_position": "bottom",
         "full_width": true,
-        "image": "booqable://assets/image-title-background.png",
+        "image": "",
         "overlay_background": "#000000",
         "overlay_color": "#FFFFFF",
         "overlay_opacity": 40,
@@ -30,7 +30,7 @@
       "blocks": [],
       "block_order": [],
       "settings": {
-        "color-scheme": "set-5",
+        "color_scheme": "set-5",
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
         "padding_top": "medium",

@@ -1,5 +1,4 @@
 .collections__wrapper {
-  --content-align: center;
   --item-align-items: var(--align-items);
   --item-description-padding: var(--description-padding);
   --item-filling-function: auto-fill;
@@ -7,7 +6,6 @@
   --item-min-height: 250px;
   --item-min-width: 280px;
   --item-padding-md: 32px;
-  --item-padding-xl: 40px;
   --item-text-align: var(--text-align);
   --items-gap: var(--grid-gap-mobile);
 
@@ -29,21 +27,6 @@
 
 .collections__wrapper--padding-bottom {
   padding-bottom: var(--padding-bottom-mobile);
-}
-
-.collections__top {
-  text-align: var(--content-align);
-  padding-bottom: var(--item-padding-md);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.collections__buttons {
-  text-align: var(--content-align);
-  padding-top: var(--item-padding-xl);
-  margin-bottom: calc(-1 * var(--button-margin-bottom));
 }
 
 .collections__list {
@@ -180,53 +163,6 @@
 
   .collections__wrapper--padding-bottom {
     padding-bottom: var(--padding-bottom);
-  }
-
-  .collections__wrapper .collections__top:has(.collections__buttons) {
-    --content-align: left;
-  }
-
-  .collections__buttons {
-    grid-area: button;
-  }
-
-  .collections__title {
-    position: relative;
-    grid-area: title;
-  }
-
-  .collections__title:after,
-  .collections__title:before {
-    content: "";
-    background: var(--color-border);
-    height: 1px;
-    width: clamp(50px, 11vw, 200px);
-    right: calc(100% + 16px);
-    top: 50%;
-    position: absolute;
-    transform: translateY(-50%);
-    z-index: 1;
-  }
-
-  .collections__title:after {
-    left: calc(100% + 16px);
-    right: auto;
-  }
-
-  .collections__top:has(.collections__buttons) {
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    grid-template-areas:
-      "title button";
-  }
-
-  .collections__top:has(.collections__buttons) .collections__title:after,
-  .collections__top:has(.collections__buttons) .collections__title:before {
-    display: none;
-  }
-
-  .collections__top:has(.collections__buttons) .collections__buttons {
-    padding: 0 0 0 var(--item-padding-md);
   }
 }
 

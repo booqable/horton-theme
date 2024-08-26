@@ -328,10 +328,6 @@
     "name": "Styling",
     "settings": [
       {
-        "type": "header",
-        "content": "Corners"
-      },
-      {
         "type": "select",
         "id": "corner_radius",
         "label": "Corner radius",
@@ -407,9 +403,9 @@
         "id": "font_size_h1",
         "label": "Heading 1",
         "min": 40,
-        "max": 80,
+        "max": 90,
         "default": 56,
-        "info": "Min: 40, max: 80"
+        "info": "Min: 40, max: 90"
       },
       {
         "type": "number",
