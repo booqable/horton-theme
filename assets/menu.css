@@ -363,7 +363,7 @@
     --menu-dropdown-right: auto;
     --menu-dropdown-top: -1px;
     --menu-dropdown-transform: translate(0, 0);
-    --menu-dropdown-transition-duration: calc(var(--animation-duration) * 3);
+    --menu-dropdown-transition-duration: calc(var(--animation-duration) * 4);
     --menu-dropdown-transition-timing-function: var(--transition-function-ease-in-out);
     --menu-dropdown-transition-transition-property: max-width;
     --menu-link-padding: 0;
@@ -501,6 +501,10 @@
     max-width: none;
     overflow: inherit;
     pointer-events: all;
+  }
+
+  .menu__dropdown .menu__dropdown .menu__dropdown-wrapper {
+    transform: translate(0, 0);
   }
 
   .menu__dropdown .menu__dropdown .menu__dropdown-list {
