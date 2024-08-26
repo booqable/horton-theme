@@ -1,10 +1,7 @@
 .articles__wrapper {
   --article-min-width: 280px;
-  --content-align: center;
   --indent-xs: 16px;
   --indent-sm: 24px;
-  --indent-md: 32px;
-  --indent-xl: 40px;
   --image-ratio: 1 / 0.84;
 
   position: relative;
@@ -18,25 +15,6 @@
 
 .articles__wrapper--padding-bottom {
   padding-bottom: var(--padding-bottom-mobile);
-}
-
-.articles__top {
-  text-align: var(--content-align);
-  padding-bottom: var(--indent-md);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.articles__description {
-  color: var(--color-secondary);
-}
-
-.articles__buttons {
-  text-align: var(--content-align);
-  padding-top: var(--indent-xl);
-  margin-bottom: calc(-1 * var(--button-margin-bottom));
 }
 
 .articles__grid {
@@ -119,12 +97,7 @@
   .articles__wrapper {
     --indent-xs: 8px;
     --indent-sm: 30px;
-    --indent-md: 16px;
     --image-ratio: 1 / 0.57;
-  }
-
-  .articles__wrapper .articles__top:has(.articles__buttons) {
-    --content-align: left;
   }
 
   .articles__wrapper--padding-top {
@@ -133,60 +106,6 @@
 
   .articles__wrapper--padding-bottom {
     padding-bottom: var(--padding-bottom);
-  }
-
-  .articles__tag {
-    grid-area: tag;
-  }
-
-  .articles__description {
-    padding-bottom: var(--indent-sm);
-    grid-area: text;
-  }
-
-  .articles__buttons {
-    grid-area: button;
-  }
-
-  .articles__title {
-    position: relative;
-    grid-area: title;
-  }
-
-  .articles__title:after,
-  .articles__title:before {
-    content: "";
-    background: var(--color-border);
-    height: 1px;
-    width: clamp(50px, 11vw, 200px);
-    right: calc(100% + 16px);
-    top: 50%;
-    position: absolute;
-    transform: translateY(-50%);
-    z-index: 1;
-  }
-
-  .articles__title:after {
-    left: calc(100% + 16px);
-    right: auto;
-  }
-
-  .articles__top:has(.articles__buttons) {
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    grid-template-areas:
-      "tag ."
-      "title button"
-      "text .";
-  }
-
-  .articles__top:has(.articles__buttons) .articles__title:after,
-  .articles__top:has(.articles__buttons) .articles__title:before {
-    display: none;
-  }
-
-  .articles__top:has(.articles__buttons) .articles__buttons {
-    padding: 0 0 0 var(--indent-sm);
   }
 }
 

@@ -1,0 +1,70 @@
+{
+  "name": "Search",
+  "sections": {
+    "title": {
+      "type": "title",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-1",
+        "custom_description": "",
+        "custom_title": "",
+        "datepicker_position": "bottom",
+        "full_width": true,
+        "image": "booqable://assets/image-title-background.png",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_border": false,
+        "show_datepicker": true,
+        "show_overlay": false
+      },
+      "disabled": null
+    },
+    "search": {
+      "type": "search",
+      "blocks": {
+        "menu": {
+          "type": "menu",
+          "settings": {
+            "heading": "Collections",
+            "menu": "main-menu"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "menu"
+      ],
+      "settings": {
+        "collection": "all-products",
+        "color_scheme": "set-5",
+        "grid": "five",
+        "image_fit": "cover",
+        "limit": 20,
+        "message": "",
+        "mobile_toggler": "Menu",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": false,
+        "show_excerpt": true,
+        "show_navigation": true,
+        "spacing": "none",
+        "spacing_mobile": "none",
+        "sticky_sidebar": true,
+        "timer": 5
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "title",
+    "search"
+  ]
+}

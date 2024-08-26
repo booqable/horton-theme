@@ -133,7 +133,7 @@
     left: 0;
     top: 0;
     height: 100%;
-    width: 50%;
+    width: 70%;
     background: var(--background-accent);
     background: linear-gradient(90.46deg, var(--background-overlay) 50.08%, var(--background-overlay-00) 95.23%);
   }
