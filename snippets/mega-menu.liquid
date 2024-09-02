@@ -1,0 +1,118 @@
+{% comment %}
+
+  This snippet is used for rendering the menu
+
+  menu - object *required,
+  class - "string" *required,
+  hidden_class - "string" optional,
+  count - "string" *required,
+  back_button_label - "string" optional
+
+  Usage:
+
+  {%- render 'mega-menu',
+      menu: your_id,
+      class: your_id,
+      hidden_class: your_id,
+      count: your_id,
+      back_button_label: your_id
+  -%}
+
+{% endcomment %}
+
+{%- for link in menu.items -%}
+  {%- assign link_index = forloop.index -%}
+
+  {%- if link != blank -%}
+    <li class="{{- class -}}__item{% if hidden_class != blank %} {{ class }}__item--{{- hidden_class -}}{% endif %}{% if link.items_count > 0 %} has-dropdown{%- endif -%}">
+      {%- if link.items_count > 0 -%}
+        <input type="checkbox" id="dropdown-{{- class -}}-trigger-{{- count -}}-{{- link_index -}}" style="display: none;">
+        <label for="dropdown-{{- class -}}-trigger-{{- count -}}-{{- link_index -}}" class="{{- class -}}__dropdown-opener">
+          <i class="{{- class -}}__item-icon">
+            {%- render 'icon-arrow-down' -%}
+          </i>
+        </label>
+      {%- endif -%}
+
+      <a href="{{ link.url }}" class="{{- class -}}__link">
+        {{- link.title -}}
+      </a>
+
+      {%- if link.items_count > 0 -%}
+        <div class="{{- class -}}__dropdown" style="display: none;">
+          <div class="{{- class -}}__dropdown-wrapper">
+            <label for="dropdown-{{- class -}}-trigger-{{- count -}}-{{- link_index -}}" class="{{- class -}}__dropdown-opener {{ class -}}__dropdown-back">
+              <i class="{{- class -}}__item-icon">
+                {%- render 'icon-arrow-down' -%}
+              </i>
+
+              {%- if back_button_label != blank -%}
+                {{- back_button_label -}}
+              {%- endif -%}
+            </label>
+
+            <div class="{{- class -}}__dropdown-title">
+              {{- link.title -}}
+            </div>
+
+            <ul class="{{- class -}}__dropdown-list">
+              {%- for childlink in link.items -%}
+                {%- assign childlink_index = forloop.index -%}
+
+                {%- if childlink != blank -%}
+                  <li class="{{- class -}}__dropdown-item">
+                    {%- if childlink.items_count > 0 -%}
+                      <input type="checkbox" id="dropdown-child{{- class -}}-trigger-{{- count -}}-{{- link_index -}}-{{- childlink_index -}}" style="display: none;">
+                      <label for="dropdown-child{{- class -}}-trigger-{{- count -}}-{{- link_index -}}-{{- childlink_index -}}" class="{{- class -}}__dropdown-opener">
+                        <i class="{{- class -}}__item-icon">
+                          {%- render 'icon-arrow-down' -%}
+                        </i>
+                      </label>
+                    {%- endif -%}
+
+                    <a href="{{ childlink.url }}" class="{{- class -}}__dropdown-link">
+                      {{- childlink.title -}}
+                    </a>
+
+                    {%- if childlink.items_count > 0 -%}
+                      <div class="{{- class -}}__dropdown">
+                        <div class="{{- class -}}__dropdown-wrapper">
+
+                          <label for="dropdown-child{{- class -}}-trigger-{{- count -}}-{{- link_index -}}-{{- childlink_index -}}" class="{{- class -}}__dropdown-opener {{ class -}}__dropdown-back">
+                            <i class="{{- class -}}__item-icon">
+                              {%- render 'icon-arrow-down' -%}
+                            </i>
+
+                            {%- if back_button_label != blank -%}
+                              {{- back_button_label -}}
+                            {%- endif -%}
+                          </label>
+
+                          <div class="{{- class -}}__dropdown-title">
+                            {{- childlink.title -}}
+                          </div>
+
+                          <ul class="{{- class -}}__dropdown-list">
+                            {%- for grandchildlink in childlink.items -%}
+                              {%- if grandchildlink != blank -%}
+                                <li class="{{- class -}}__dropdown-item">
+                                  <a href="{{ grandchildlink.url }}" class="{{- class -}}__dropdown-link">
+                                    {{- grandchildlink.title -}}
+                                  </a>
+                                </li>
+                              {%- endif -%}
+                            {%- endfor -%}
+                          </ul>
+                        </div>
+                      </div>
+                    {%- endif -%}
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          </div>
+        </div>
+      {%- endif -%}
+    </li>
+  {%- endif -%}
+{%- endfor -%}

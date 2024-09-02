@@ -1,25 +1,44 @@
 {{ "header.css" | asset_url | stylesheet_tag }}
-{{ "menu.css" | asset_url | stylesheet_tag }}
 
 {%- assign app                            = section.blocks | where: "type", "app" | first -%}
 {%- assign color_scheme                   = section.settings.color_scheme -%}
 {%- assign custom_title                   = section.settings.custom_title -%}
+{%- assign icon_style                     = settings.icon_style -%}
 {%- assign logo                           = section.settings.logo -%}
 {%- assign menu_main                      = section.settings.menu_main -%}
-{%- assign menu_additional                = section.settings.menu_additional -%}
+{%- assign menu_secondary                 = section.settings.menu_secondary -%}
+{%- assign menu_third                     = section.settings.menu_third -%}
 {%- assign menu_back_mobile               = section.settings.menu_back_mobile -%}
 {%- assign menu_message_mobile            = section.settings.menu_message_mobile -%}
 {%- assign menu_message_mobile_icon       = section.settings.menu_message_mobile_icon -%}
-{%- assign menu_message_mobile_icon_style = settings.icon_style -%}
 {%- assign menu_opener_label              = section.settings.menu_opener_label -%}
 {%- assign menu_opener_mobile             = section.settings.menu_opener_mobile -%}
 {%- assign padding_bottom                 = section.settings.padding_bottom -%}
 {%- assign padding_bottom_mobile          = section.settings.padding_bottom_mobile -%}
 {%- assign padding_top                    = section.settings.padding_top -%}
 {%- assign padding_top_mobile             = section.settings.padding_top_mobile -%}
+{%- assign search_label                   = section.settings.search_label -%}
 {%- assign search_placeholder             = section.settings.search_placeholder -%}
 {%- assign show_search                    = section.settings.show_search -%}
+{%- assign show_support                   = section.settings.show_support -%}
 {%- assign sticky_header                  = section.settings.sticky_header -%}
+{%- assign support_icon_opener            = section.settings.support_icon_opener -%}
+
+{%- if menu_main != blank or menu_secondary != blank or menu_third != blank -%}
+  {{ "menu.css" | asset_url | stylesheet_tag }}
+{%- endif -%}
+
+{%- if show_search -%}
+  {{ "search-form.css" | asset_url | stylesheet_tag }}
+{%- endif -%}
+
+{%- if show_support -%}
+  {{ "support.css" | asset_url | stylesheet_tag }}
+{%- endif -%}
+
+{%- if app != blank -%}
+  {{ "app.css" | asset_url | stylesheet_tag }}
+{%- endif -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
@@ -83,14 +102,59 @@
   {%- endif -%}
 {%- endcapture -%}
 
-{%- if menu_additional != blank -%}
+{%- if show_support -%}
+  {%- capture header_icons -%}
+    <div class="header__support support">
+      {%- if support_icon_opener != "empty" -%}
+        <input type="checkbox" id="support-opener" style="display: none">
+        <label for="support-opener" class="header__support-opener support__opener">
+          {%- render 'icon',
+              icon: support_icon_opener,
+              style: icon_style
+          -%}
+        </label>
+      {%- endif -%}
+
+      <div class="header__support-wrapper support__wrapper"{% if support_icon_opener != "empty" %} style="display: none"{%- endif -%}>
+        {%- for block in section.blocks -%}
+          {%- assign block_index   = forloop.index -%}
+          {%- assign support_icon  = block.settings.support_icon -%}
+          {%- assign support_label = block.settings.support_label -%}
+          {%- assign support_url   = block.settings.support_url -%}
+
+          {%- if block_index > 2 and support_icon_opener == "empty" -%}
+            {%- break -%}
+          {%- endif -%}
+
+          <div class="support__item">
+            {%- if support_icon != "empty" and support_label != blank -%}
+              <i class="support__icon">
+                {%- render 'icon',
+                    icon: support_icon,
+                    style: icon_style
+                -%}
+              </i>
+            {%- endif -%}
+            {%- if support_label != blank -%}
+              <a href="{{ support_url }}" class="support__link">
+                {{- support_label -}}
+              </a>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  {%- endcapture -%}
+{%- endif -%}
+
+{%- if menu_third != blank -%}
   {%- capture header_menu_small -%}
-    <nav class="header__extra-menu extra-menu">
-      <ul class="extra-menu__list">
-        {%- for link in menu_additional.items -%}
+    <nav class="header__menu-third menu-third">
+      <ul class="menu-third__list">
+        {%- for link in menu_third.items -%}
           {%- if link != blank -%}
-            <li class="extra-menu__item">
-              <a href="{{ link.url }}" class="extra-menu__link">
+            <li class="menu-third__item">
+              <a href="{{ link.url }}" class="menu-third__link">
                 {{- link.title -}}
               </a>
             </li>
@@ -121,6 +185,15 @@
               {%- render 'mega-menu',
                   menu: menu_main,
                   class: "menu",
+                  count: "1",
+                  back_button_label: menu_back_mobile
+              -%}
+
+              {%- render 'mega-menu',
+                  menu: menu_secondary,
+                  class: "menu",
+                  hidden_class: "desktop-hidden",
+                  count: "2",
                   back_button_label: menu_back_mobile
               -%}
             </ul>
@@ -134,14 +207,33 @@
             </div>
           {%- endif -%}
 
+          {{- header_icons -}}
+
           {%- if menu_message_mobile != blank -%}
             <div class="menu__message">
-              {%- render 'icon', icon: menu_message_mobile_icon, style: menu_message_mobile_icon_style -%}
+              {%- render 'icon', icon: menu_message_mobile_icon, style: icon_style -%}
 
               <div class="menu__message-text">{{- menu_message_mobile -}}</div>
             </div>
           {%- endif -%}
         </div>
+      </div>
+    </div>
+  {%- endcapture -%}
+{%- endif -%}
+
+{%- if menu_secondary != blank -%}
+  {%- capture header_menu_secondary -%}
+    <div class="header__menu-secondary menu-secondary header__menu-secondary--mobile-hidden">
+      <div class="header__nav-secondary menu-secondary__nav">
+        <nav class="menu-secondary__wrapper">
+          <ul class="menu-secondary__list">
+            {%- render 'mega-menu',
+                menu: menu_secondary,
+                class: "menu-secondary"
+            -%}
+          </ul>
+        </nav>
       </div>
     </div>
   {%- endcapture -%}
@@ -176,6 +268,11 @@
         <form id="search" action="{{ routes.search_url }}" role="search">
           <div class="header__search-input-wrapper">
             <button class="header__search-submit" type="submit">
+              {%- if search_label != blank -%}
+                <span class="header__search-label{% if search_label != blank %} button button--primary{%- endif -%}">
+                  {{- search_label -}}
+                </span>
+              {%- endif -%}
               <i class="header__search-icon">
                 {%- render 'icon-search' -%}
               </i>
@@ -197,6 +294,8 @@
 
         {{- header_menu_small -}}
 
+        {{- header_menu_secondary -}}
+
         <div class="header__logo-wrapper">
           <a href="{{ routes.root_url }}" class="header__logo">
             {{- header_logo -}}
@@ -204,6 +303,8 @@
         </div>
 
         {{- header_search -}}
+
+        {{- header_icons -}}
 
         {{- header_cart_button -}}
 
@@ -233,6 +334,12 @@
         "content": "General settings"
       },
       {
+        "type": "checkbox",
+        "id": "sticky_header",
+        "default": true,
+        "label": "Stick to top"
+      },
+      {
         "type": "image_picker",
         "id": "logo",
         "label": "Logo"
@@ -250,20 +357,27 @@
         "default": "set-1"
       },
       {
+        "type": "header",
+        "content": "Menus"
+      },
+      {
         "type": "menu",
         "id": "menu_main",
         "label": "General menu"
       },
       {
         "type": "menu",
-        "id": "menu_additional",
+        "id": "menu_secondary",
+        "label": "Secondary menu"
+      },
+      {
+        "type": "menu",
+        "id": "menu_third",
         "label": "Small menu"
       },
       {
-        "type": "checkbox",
-        "id": "sticky_header",
-        "default": true,
-        "label": "Stick to top"
+        "type": "header",
+        "content": "Search"
       },
       {
         "type": "checkbox",
@@ -274,8 +388,64 @@
       {
         "type": "text",
         "id": "search_placeholder",
-        "label": "Search placeholder",
+        "label": "Placeholder",
+        "default": "What are you looking for?"
+      },
+      {
+        "type": "text",
+        "id": "search_label",
+        "label": "Button label",
         "default": "Search"
+      },
+      {
+        "type": "header",
+        "content": "Support"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_support",
+        "default": true,
+        "label": "Show support"
+      },
+      {
+        "type": "select",
+        "id": "support_icon_opener",
+        "label": "Opener icon",
+        "options": [
+          {
+            "value": "empty",
+            "label": "No icon"
+          },
+          {
+            "value": "comment",
+            "label": "Comment"
+          },
+          {
+            "value": "envelope",
+            "label": "Envelope"
+          },
+          {
+            "value": "fax",
+            "label": "Fax"
+          },
+          {
+            "value": "headset",
+            "label": "Headset"
+          },
+          {
+            "value": "info",
+            "label": "Info"
+          },
+          {
+            "value": "phone",
+            "label": "Phone"
+          }
+        ],
+        "default": "headset"
+      },
+      {
+        "type": "paragraph",
+        "content": "Other information can be added with blocks"
       },
       {
         "type": "header",
@@ -463,6 +633,53 @@
       }
     ],
     "blocks": [
+      {
+        "type": "info",
+        "name": "Info",
+        "limit": 8,
+        "settings": [
+          {
+            "type": "select",
+            "id": "support_icon",
+            "label": "Icon",
+            "options": [
+              {
+                "value": "empty",
+                "label": "No icon"
+              },
+              {
+                "value": "comment",
+                "label": "Comment"
+              },
+              {
+                "value": "envelope",
+                "label": "Envelope"
+              },
+              {
+                "value": "fax",
+                "label": "Fax"
+              },
+              {
+                "value": "phone",
+                "label": "Phone"
+              }
+            ],
+            "default": "phone"
+          },
+          {
+            "type": "text",
+            "id": "support_label",
+            "label": "Label",
+            "default": "+1 755 302 8549"
+          },
+          {
+            "type": "url",
+            "id": "support_url",
+            "label": "Link",
+            "default": "tel:+17553028549"
+          }
+        ]
+      },
       {
         "type": "@app"
       }
