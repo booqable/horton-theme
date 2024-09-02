@@ -1,5 +1,4 @@
 {{ "header.css" | asset_url | stylesheet_tag }}
-{{ "menu.css" | asset_url | stylesheet_tag }}
 
 {%- assign app                            = section.blocks | where: "type", "app" | first -%}
 {%- assign color_scheme                   = section.settings.color_scheme -%}
@@ -20,6 +19,18 @@
 {%- assign search_placeholder             = section.settings.search_placeholder -%}
 {%- assign show_search                    = section.settings.show_search -%}
 {%- assign sticky_header                  = section.settings.sticky_header -%}
+
+{%- if menu_main != blank or menu_additional != blank -%}
+  {{ "menu.css" | asset_url | stylesheet_tag }}
+{%- endif -%}
+
+{%- if show_search -%}
+  {{ "search-form.css" | asset_url | stylesheet_tag }}
+{%- endif -%}
+
+{%- if app != blank -%}
+  {{ "app.css" | asset_url | stylesheet_tag }}
+{%- endif -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
@@ -166,26 +177,10 @@
 
 {%- if show_search -%}
   {%- capture header_search -%}
-    <div class="header__search">
-      <input type="checkbox" id="search-opener" style="display: none">
-      <label for="search-opener" class="header__search-opener">
-        {%- render 'icon-search' -%}
-      </label>
-
-      <div class="header__search-wrapper" style="display: none">
-        <form id="search" action="{{ routes.search_url }}" role="search">
-          <div class="header__search-input-wrapper">
-            <button class="header__search-submit" type="submit">
-              <i class="header__search-icon">
-                {%- render 'icon-search' -%}
-              </i>
-            </button>
-            <input type="search" name="q" class="header__search-input" placeholder="{{- search_placeholder -}}">
-            <span class="header__search-reset"></span>
-          </div>
-        </form>
-      </div>
-    </div>
+    {%- render 'search-form',
+        routes: routes,
+        search_placeholder: search_placeholder
+    -%}
   {%- endcapture -%}
 {%- endif -%}
 
