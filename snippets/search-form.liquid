@@ -1,0 +1,43 @@
+{% comment %}
+
+  This snippet is used for rendering the search form in the header.
+
+  search_button_label - "string" *reqiured,
+  search_placeholder - "string" optional,
+  routes - {object} *required
+
+  Usage:
+
+  {%- render 'search-form',
+      routes: routes,
+      search_button_label: your_id,
+      search_placeholder: your_id
+  -%}
+
+{% endcomment %}
+
+<div class="header__search search-form">
+  <input type="checkbox" id="search-opener" style="display: none">
+  <label for="search-opener" class="search-form__opener">
+    {%- render 'icon-search' -%}
+  </label>
+
+  <div class="search-form__wrapper" style="display: none">
+    <form id="search" action="{{ routes.search_url }}" role="search">
+      <div class="search-form__input-wrapper">
+        <button class="search-form__submit" type="submit">
+          {%- if search_button_label != blank -%}
+            <span class="search-form__label{% if search_button_label != blank %} button button--primary{%- endif -%}">
+              {{- search_button_label -}}
+            </span>
+          {%- endif -%}
+          <i class="search-form__icon">
+            {%- render 'icon-search' -%}
+          </i>
+        </button>
+        <input type="search" name="q" class="search-form__input" placeholder="{{- search_placeholder -}}">
+        <span class="search-form__reset"></span>
+      </div>
+    </form>
+  </div>
+</div>

@@ -3,11 +3,11 @@ class Search {
     this.search = search;
 
     this.selector = {
-      search: ".header__search",
+      search: ".search-form",
       searchForm: "#search",
       searchOpener: "#search-opener",
-      searchInput: ".header__search-input",
-      searchReset: ".header__search-reset"
+      searchInput: ".search-form__input",
+      searchReset: ".search-form__reset"
     }
 
     this.classes = {
@@ -118,7 +118,7 @@ class Search {
   }
 }
 
-const initSearch = new Search(document.querySelector('.header__search'));
+const initSearch = new Search(document.querySelector('.search-form'));
 
 document.addEventListener("readystatechange", (e) => {
   if (e.target.readyState === "complete") initSearch.init();
