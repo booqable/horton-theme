@@ -252,7 +252,7 @@
 
   .search-form__input {
     background: var(--color-border);
-    padding-left: 11px;
+    padding-left: 20px;
   }
 
   .search-form__input-wrapper.filled .search-form__input {

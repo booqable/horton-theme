@@ -29,18 +29,17 @@
   text-align: center;
 }
 
-.top-bar__main-message a {
+.top-bar__main-message.bq-content a,
+.top-bar__info-message.bq-content a {
+  text-decoration: underline;
   color: inherit;
-  text-decoration: none;
   font-size: inherit;
 }
 
-.top-bar__main-message a:hover {
+.top-bar__main-message.bq-content a:hover,
+.top-bar__info-message.bq-content a:hover {
+  text-decoration: none;
   color: inherit;
-}
-
-.top-bar__info .icon i {
-  color: var(--color-outline);
 }
 
 .top-bar__info,
@@ -69,8 +68,8 @@
     padding: 0;
   }
 
-  .top-bar__info-message {
-    padding-left: 10px;
+  .top-bar__info-item .icon {
+    margin-right: 4px;
   }
 
   .top-bar__info,
