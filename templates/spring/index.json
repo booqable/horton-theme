@@ -52,8 +52,8 @@
           "type": "card",
           "settings": {
             "icon": "truck-fast",
-            "description_card": "Free delivery for all orders above $100",
-            "title_card": "Free delivery"
+            "description": "Free delivery for all orders above $100",
+            "title": "Free delivery"
           },
           "disabled": null
         },
@@ -61,8 +61,8 @@
           "type": "card",
           "settings": {
             "icon": "comment",
-            "description_card": "Chat with us if you’ve any questions",
-            "title_card": "Top-Notch support"
+            "description": "Chat with us if you’ve any questions",
+            "title": "Top-Notch support"
           },
           "disabled": null
         },
@@ -70,8 +70,8 @@
           "type": "card",
           "settings": {
             "icon": "handshake",
-            "description_card": "Free delivery for all orders above $100",
-            "title_card": "100% Satisfaction Guarantee!"
+            "description": "Free delivery for all orders above $100",
+            "title": "100% Satisfaction Guarantee!"
           },
           "disabled": null
         },
@@ -79,8 +79,8 @@
           "type": "card",
           "settings": {
             "icon": "exclamation",
-            "description_card": "We know how to do it",
-            "title_card": "20 years of experience"
+            "description": "We know how to do it",
+            "title": "20 years of experience"
           },
           "disabled": null
         }
@@ -273,9 +273,9 @@
           "settings": {
             "button_label": "SEE MORE",
             "button_url": "booqable://root",
-            "description_deco": "",
+            "description": "",
             "image": "booqable://assets/image-columns-1.jpg",
-            "title_deco": "Extra card"
+            "title": "Extra card"
           },
           "disabled": null
         },
@@ -284,9 +284,9 @@
           "settings": {
             "button_label": "SEE MORE",
             "button_url": "booqable://root",
-            "description_deco": "",
+            "description": "",
             "image": "booqable://assets/image-columns-2.jpg",
-            "title_deco": "Extra card"
+            "title": "Extra card"
           },
           "disabled": null
         },
@@ -295,9 +295,9 @@
           "settings": {
             "button_label": "SEE MORE",
             "button_url": "booqable://root",
-            "description_deco": "",
+            "description": "",
             "image": "booqable://assets/image-columns-3.jpg",
-            "title_deco": "Extra card"
+            "title": "Extra card"
           },
           "disabled": null
         }
@@ -528,9 +528,9 @@
             "article_btn": "Read more",
             "article_btn_url": "booqable://root",
             "article_tag": "Category",
+            "article_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
             "heading": "Get your garden ready for the summer",
-            "image": "booqable://assets/image-article-1.jpeg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+            "image": "booqable://assets/image-article-1.jpeg"
           },
           "disabled": null
         },
@@ -540,9 +540,9 @@
             "article_btn": "Read more",
             "article_btn_url": "booqable://root",
             "article_tag": "Category",
+            "article_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
             "heading": "How to choose the best tools for the job",
-            "image": "booqable://assets/image-article-2.jpeg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+            "image": "booqable://assets/image-article-2.jpeg"
           },
           "disabled": null
         },
@@ -552,9 +552,9 @@
             "article_btn": "Read more",
             "article_btn_url": "booqable://root",
             "article_tag": "Category",
+            "article_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
             "heading": "Before you start, read this",
-            "image": "booqable://assets/image-article-3.jpeg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+            "image": "booqable://assets/image-article-3.jpeg"
           },
           "disabled": null
         }
@@ -613,8 +613,8 @@
           "type": "card",
           "settings": {
             "icon": "truck-fast",
-            "description_card": "Free delivery for all orders above $100",
-            "title_card": "Free delivery"
+            "description": "Free delivery for all orders above $100",
+            "title": "Free delivery"
           },
           "disabled": null
         },
@@ -622,8 +622,8 @@
           "type": "card",
           "settings": {
             "icon": "comment",
-            "description_card": "Chat with us if you’ve any questions",
-            "title_card": "Top-Notch support"
+            "description": "Chat with us if you’ve any questions",
+            "title": "Top-Notch support"
           },
           "disabled": null
         },
@@ -631,8 +631,8 @@
           "type": "card",
           "settings": {
             "icon": "handshake",
-            "description_card": "Free delivery for all orders above $100",
-            "title_card": "100% Satisfaction Guarantee!"
+            "description": "Free delivery for all orders above $100",
+            "title": "100% Satisfaction Guarantee!"
           },
           "disabled": null
         },
@@ -640,8 +640,8 @@
           "type": "card",
           "settings": {
             "icon": "exclamation",
-            "description_card": "We know how to do it",
-            "title_card": "20 years of experience"
+            "description": "We know how to do it",
+            "title": "20 years of experience"
           },
           "disabled": null
         }

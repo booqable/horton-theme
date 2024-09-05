@@ -85,9 +85,9 @@
           {%- assign article_btn     = block.settings.article_btn -%}
           {%- assign article_btn_url = block.settings.article_btn_url -%}
           {%- assign article_tag     = block.settings.article_tag -%}
+          {%- assign article_text    = block.settings.article_text -%}
           {%- assign heading         = block.settings.heading -%}
           {%- assign image           = block.settings.image -%}
-          {%- assign text            = block.settings.text -%}
 
           {%- if image != blank -%}
             {%- assign image = image -%}
@@ -111,7 +111,7 @@
               {%- endif -%}
             </div>
 
-            {%- if article_tag != blank or heading != blank or text != blank or article_btn != blank and article_btn_url != blank -%}
+            {%- if article_tag != blank or heading != blank or article_text != blank or article_btn != blank and article_btn_url != blank -%}
               <div class="article__text-area">
                 {%- if article_tag != blank -%}
                   <strong class="article__tag tagline">{{- article_tag -}}</strong>
@@ -121,8 +121,8 @@
                   <h3 class="article__heading h5">{{- heading -}}</h3>
                 {%- endif -%}
 
-                {%- if text != blank -%}
-                  <div class="article__text bq-content rx-content">{{- text -}}</div>
+                {%- if article_text != blank -%}
+                  <div class="article__text bq-content rx-content">{{- article_text -}}</div>
                 {%- endif -%}
 
                 {%- if article_btn != blank and article_btn_url != blank -%}
@@ -324,7 +324,7 @@
           },
           {
             "type": "contentEditor",
-            "id": "text",
+            "id": "article_text",
             "label": "Description",
             "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
           },

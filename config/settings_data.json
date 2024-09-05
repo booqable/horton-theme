@@ -113,27 +113,27 @@
             "info_894203": {
               "type": "info",
               "settings": {
-                "support_icon": "phone",
-                "support_label": "+1 555 302 8549",
-                "support_url": "tel:+15553028549"
+                "heading": "+1 555 302 8549",
+                "icon": "phone",
+                "url": "tel:+15553028549"
               },
               "disabled": null
             },
             "info_894204": {
               "type": "info",
               "settings": {
-                "support_icon": "comment",
-                "support_label": "Chat with us",
-                "support_url": "support-url.example"
+                "heading": "Chat with us",
+                "icon": "comment",
+                "url": "support-url.example"
               },
               "disabled": null
             },
             "info_894205": {
               "type": "info",
               "settings": {
-                "support_icon": "envelope",
-                "support_label": "info@example.com",
-                "support_url": "mailto:info@example.com"
+                "heading": "info@example.com",
+                "icon": "envelope",
+                "url": "mailto:info@example.com"
               },
               "disabled": null
             }

@@ -264,9 +264,9 @@
           "settings": {
             "button_label": "SEE MORE",
             "button_url": "booqable://root",
-            "description_deco": "",
+            "description": "",
             "image": "booqable://assets/image-columns-1.png",
-            "title_deco": "Extra card"
+            "title": "Extra card"
           },
           "disabled": null
         },
@@ -275,9 +275,9 @@
           "settings": {
             "button_label": "SEE MORE",
             "button_url": "booqable://root",
-            "description_deco": "",
+            "description": "",
             "image": "booqable://assets/image-columns-2.png",
-            "title_deco": "Extra card"
+            "title": "Extra card"
           },
           "disabled": null
         },
@@ -286,9 +286,9 @@
           "settings": {
             "button_label": "SEE MORE",
             "button_url": "booqable://root",
-            "description_deco": "",
+            "description": "",
             "image": "booqable://assets/image-columns-3.png",
-            "title_deco": "Extra card"
+            "title": "Extra card"
           },
           "disabled": null
         }
@@ -510,9 +510,9 @@
             "article_btn": "Read more",
             "article_btn_url": "booqable://root",
             "article_tag": "Category",
+            "article_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
             "heading": "A Guide On The Maid Of Honor’s Duties",
-            "image": "booqable://assets/image-article-1.jpg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+            "image": "booqable://assets/image-article-1.jpg"
           },
           "disabled": null
         },
@@ -522,9 +522,9 @@
             "article_btn": "Read more",
             "article_btn_url": "booqable://root",
             "article_tag": "Category",
+            "article_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
             "heading": "The Wedding Favor Ideas Guide",
-            "image": "booqable://assets/image-article-2.jpg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+            "image": "booqable://assets/image-article-2.jpg"
           },
           "disabled": null
         },
@@ -534,9 +534,9 @@
             "article_btn": "Read more",
             "article_btn_url": "booqable://root",
             "article_tag": "Category",
+            "article_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
             "heading": "The Wedding Order Of Events Guide",
-            "image": "booqable://assets/image-article-3.jpg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+            "image": "booqable://assets/image-article-3.jpg"
           },
           "disabled": null
         }
@@ -594,36 +594,36 @@
         "card_401203": {
           "type": "card",
           "settings": {
+            "description": "Free delivery for all orders above $100",
             "icon": "truck-fast",
-            "description_card": "Free delivery for all orders above $100",
-            "title_card": "Free delivery"
+            "title": "Free delivery"
           },
           "disabled": null
         },
         "card_401204": {
           "type": "card",
           "settings": {
+            "description": "Chat with us if you’ve any questions",
             "icon": "comment",
-            "description_card": "Chat with us if you’ve any questions",
-            "title_card": "Top-Notch support"
+            "title": "Top-Notch support"
           },
           "disabled": null
         },
         "card_401205": {
           "type": "card",
           "settings": {
+            "description": "Free delivery for all orders above $100",
             "icon": "handshake",
-            "description_card": "Free delivery for all orders above $100",
-            "title_card": "100% Satisfaction Guarantee!"
+            "title": "100% Satisfaction Guarantee!"
           },
           "disabled": null
         },
         "card_401206": {
           "type": "card",
           "settings": {
+            "description": "We know how to do it",
             "icon": "exclamation",
-            "description_card": "We know how to do it",
-            "title_card": "20 years of experience"
+            "title": "20 years of experience"
           },
           "disabled": null
         }

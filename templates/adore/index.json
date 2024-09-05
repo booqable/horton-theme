@@ -51,36 +51,36 @@
         "card_894203": {
           "type": "card",
           "settings": {
+            "description": "Free delivery for all orders above $100",
             "icon": "truck-fast",
-            "description_card": "Free delivery for all orders above $100",
-            "title_card": "Free delivery"
+            "title": "Free delivery"
           },
           "disabled": null
         },
         "card_894204": {
           "type": "card",
           "settings": {
+            "description": "Chat with us if you’ve any questions",
             "icon": "comment",
-            "description_card": "Chat with us if you’ve any questions",
-            "title_card": "Top-Notch support"
+            "title": "Top-Notch support"
           },
           "disabled": null
         },
         "card_894205": {
           "type": "card",
           "settings": {
+            "description": "Free delivery for all orders above $100",
             "icon": "handshake",
-            "description_card": "Free delivery for all orders above $100",
-            "title_card": "100% Satisfaction Guarantee!"
+            "title": "100% Satisfaction Guarantee!"
           },
           "disabled": null
         },
         "card_894206": {
           "type": "card",
           "settings": {
+            "description": "We know how to do it",
             "icon": "exclamation",
-            "description_card": "We know how to do it",
-            "title_card": "20 years of experience"
+            "title": "20 years of experience"
           },
           "disabled": null
         }
@@ -560,9 +560,9 @@
             "article_btn": "Read more",
             "article_btn_url": "booqable://root",
             "article_tag": "Category",
+            "article_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
             "heading": "Get the best routes to explore The Netherlands",
-            "image": "booqable://assets/image-article-1.jpeg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+            "image": "booqable://assets/image-article-1.jpeg"
           },
           "disabled": null
         },
@@ -572,9 +572,9 @@
             "article_btn": "Read more",
             "article_btn_url": "booqable://root",
             "article_tag": "Category",
+            "article_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
             "heading": "New in store | The electric offroad bike",
-            "image": "booqable://assets/image-article-2.jpeg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+            "image": "booqable://assets/image-article-2.jpeg"
           },
           "disabled": null
         },
@@ -584,9 +584,9 @@
             "article_btn": "Read more",
             "article_btn_url": "booqable://root",
             "article_tag": "Category",
+            "article_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
             "heading": "Ride safe, have fun 10 tips to ride safe",
-            "image": "booqable://assets/image-article-3.jpeg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+            "image": "booqable://assets/image-article-3.jpeg"
           },
           "disabled": null
         }
@@ -618,8 +618,8 @@
         "card_810203": {
           "type": "card",
           "settings": {
+            "description": "Free delivery for all orders above $100",
             "icon": "truck-fast",
-            "description_card": "Free delivery for all orders above $100",
             "title_card": "Free delivery"
           },
           "disabled": null
@@ -627,8 +627,8 @@
         "card_810204": {
           "type": "card",
           "settings": {
+            "description": "Chat with us if you’ve any questions",
             "icon": "comment",
-            "description_card": "Chat with us if you’ve any questions",
             "title_card": "Top-Notch support"
           },
           "disabled": null
@@ -636,8 +636,8 @@
         "card_810205": {
           "type": "card",
           "settings": {
+            "description": "Free delivery for all orders above $100",
             "icon": "handshake",
-            "description_card": "Free delivery for all orders above $100",
             "title_card": "100% Satisfaction Guarantee!"
           },
           "disabled": null
@@ -645,8 +645,8 @@
         "card_810206": {
           "type": "card",
           "settings": {
+            "description": "We know how to do it",
             "icon": "exclamation",
-            "description_card": "We know how to do it",
             "title_card": "20 years of experience"
           },
           "disabled": null
