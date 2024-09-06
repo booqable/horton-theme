@@ -135,13 +135,13 @@ header:has(.app-mobile) .header__app:has(.app-desktop) {
 
 @media (min-width: 1100px) {
   .header__inner:has(.header__menu),
-  .header__inner:has(.header__menu-second),
+  .header__inner:has(.header__menu-secondary),
   .header__inner:has(.header__menu-third) {
     position: relative;
   }
 
   .header__inner:has(.header__menu):after,
-  .header__inner:has(.header__menu-second):after,
+  .header__inner:has(.header__menu-secondary):after,
   .header__inner:has(.header__menu-third):after {
     --header-icon-height: 48px;
 
@@ -155,7 +155,7 @@ header:has(.app-mobile) .header__app:has(.app-desktop) {
     transform: translate(0, 50%);
   }
 
-  .header__inner:has(.header__menu-second):not(:has(.header__menu)):after,
+  .header__inner:has(.header__menu-secondary):not(:has(.header__menu)):after,
   .header__inner:has(.header__menu-third):not(:has(.header__menu:last-child)):after {
     --header-icon-height: 18px;
   }

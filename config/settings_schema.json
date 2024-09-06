@@ -14,8 +14,8 @@
         "label": "Duration",
         "min": 0,
         "max": 10,
-        "default": 0.2,
-        "info": "Unit is seconds. Leave blank to use default duration of 0.2s. Min: 0, max: 10"
+        "default": 0.3,
+        "info": "Unit is seconds. Leave blank to use default duration of 0.3s. Min: 0, max: 10"
       }
     ]
   },
