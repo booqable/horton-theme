@@ -42,9 +42,9 @@
             "background_accent": "#FFFFFF",
             "background": "#E6A4D3",
             "color_accent": "#231C04",
-            "color_accent_outline": "#948C93",
+            "color_accent_outline": "#FFFFFF",
             "color_primary": "#231C04",
-            "color_secondary": "#948C93"
+            "color_secondary": "#FFFFFF"
           }
         },
         "set-5": {
