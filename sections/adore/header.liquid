@@ -224,7 +224,7 @@
 
 {%- if menu_secondary != blank -%}
   {%- capture header_menu_secondary -%}
-    <div class="header__menu-secondary menu-secondary header__menu-secondary--mobile-hidden">
+    <div class="header__menu-secondary menu-secondary header__menu-secondary--mobile-hidden" data-timeout-delay="{{- settings.animation_duration -}}">
       <div class="header__nav-secondary menu-secondary__nav">
         <nav class="menu-secondary__wrapper">
           <ul class="menu-secondary__list">
@@ -300,6 +300,11 @@
     header.classList.add('header-sticky')
   {% endif %}
 </script>
+
+{%- if menu_secondary != blank -%}
+  <script src="{{ "secondary-menu.js" | asset_url }}" defer></script>
+{%- endif -%}
+
 
 {% schema %}
   {

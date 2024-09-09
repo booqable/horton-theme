@@ -13,7 +13,6 @@
 {%- assign padding_bottom_mobile   = section.settings.padding_bottom_mobile -%}
 {%- assign padding_top             = section.settings.padding_top -%}
 {%- assign padding_top_mobile      = section.settings.padding_top_mobile -%}
-{%- assign page_title              = page_title | split: " | " | first | remove: ":"-%}
 {%- assign show_border             = section.settings.show_border -%}
 {%- assign show_datepicker         = section.settings.show_datepicker -%}
 {%- assign show_overlay            = section.settings.show_overlay -%}
@@ -84,7 +83,7 @@
           <div class="title__content{% if show_overlay %} title__content--color{%- endif -%}">
             <div class="title__text-area">
               <h2 class="title__heading">
-                {{- custom_title | default: collection.title | default: page_title -}}
+                {{- custom_title | default: collection.title -}}
                 {% unless section_preview %}
                   {%- if custom_title != blank and template == "search" and query != blank -%}
                     : {{ query }}

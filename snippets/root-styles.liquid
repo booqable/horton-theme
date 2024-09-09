@@ -23,7 +23,11 @@
   {%- endfor -%}
 
   :root {
-    --animation-duration:     {{ settings.animation_duration | append: "s" | default: "0.4s" }};
+    {% if settings.animation_duration == "0" or settings.animation_duration == blank %}
+      --animation-duration:   0.3s;
+    {% else %}
+      --animation-duration:   {{ settings.animation_duration | append: "s" }};
+    {% endif %}
     --font-body:              "{{ settings.font_body.family | default: Montserrat }}", {{ settings.font_body.fallback_families | default: sans-serif }};
     --font-heading:           "{{ settings.font_heading.family | default: Marcellus }}", {{ settings.font_heading.fallback_families | default: sans-serif }};
     --font-tagline:           "{{ settings.font_tagline.family | default: Montserrat }}", {{ settings.font_tagline.fallback_families | default: sans-serif }};
