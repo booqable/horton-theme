@@ -117,27 +117,27 @@
 
       <div class="header__support-wrapper support__wrapper"{% if support_icon_opener != "empty" %} style="display: none"{%- endif -%}>
         {%- for block in section.blocks -%}
-          {%- assign block_index   = forloop.index -%}
-          {%- assign support_icon  = block.settings.support_icon -%}
-          {%- assign support_label = block.settings.support_label -%}
-          {%- assign support_url   = block.settings.support_url -%}
+          {%- assign block_index = forloop.index -%}
+          {%- assign heading     = block.settings.heading -%}
+          {%- assign icon        = block.settings.icon -%}
+          {%- assign url         = block.settings.url -%}
 
           {%- if block_index > 2 and support_icon_opener == "empty" -%}
             {%- break -%}
           {%- endif -%}
 
           <div class="support__item">
-            {%- if support_icon != "empty" and support_label != blank -%}
+            {%- if icon != "empty" and heading != blank -%}
               <i class="support__icon">
                 {%- render 'icon',
-                    icon: support_icon,
+                    icon: icon,
                     style: icon_style
                 -%}
               </i>
             {%- endif -%}
-            {%- if support_label != blank -%}
-              <a href="{{ support_url }}" class="support__link">
-                {{- support_label -}}
+            {%- if heading != blank -%}
+              <a href="{{ url }}" class="support__link">
+                {{- heading -}}
               </a>
             {%- endif -%}
           </div>
@@ -625,7 +625,7 @@
         "settings": [
           {
             "type": "select",
-            "id": "support_icon",
+            "id": "icon",
             "label": "Icon",
             "options": [
               {
@@ -653,13 +653,13 @@
           },
           {
             "type": "text",
-            "id": "support_label",
+            "id": "heading",
             "label": "Label",
             "default": "+1 755 302 8549"
           },
           {
             "type": "url",
-            "id": "support_url",
+            "id": "url",
             "label": "Link",
             "default": "tel:+17553028549"
           }

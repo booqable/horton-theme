@@ -123,18 +123,18 @@
 
           {%- case type -%}
             {%- when 'card' -%}
-              {%- assign description   = block.settings.description_card -%}
-              {%- assign card          = true -%}
-              {%- assign icon          = block.settings.icon -%}
-              {%- assign title         = block.settings.title_card -%}
+              {%- assign card         = true -%}
+              {%- assign description  = block.settings.description -%}
+              {%- assign icon         = block.settings.icon -%}
+              {%- assign title        = block.settings.title -%}
 
             {%- when 'deco' -%}
               {%- assign button_label = block.settings.button_label -%}
               {%- assign button_url   = block.settings.button_url -%}
               {%- assign deco         = true -%}
-              {%- assign description  = block.settings.description_deco -%}
+              {%- assign description  = block.settings.description -%}
               {%- assign image        = block.settings.image -%}
-              {%- assign title        = block.settings.title_deco -%}
+              {%- assign title        = block.settings.title -%}
 
               {%- if image != blank -%}
                 {%- assign image = image -%}
@@ -460,13 +460,13 @@
         "settings": [
           {
             "type": "text",
-            "id": "title_card",
+            "id": "title",
             "label": "Title",
             "default": "Medium size title here"
           },
           {
             "type": "text",
-            "id": "description_card",
+            "id": "description",
             "label": "Description",
             "default": "Lorem ipsum dolor sit amet"
           },
@@ -558,13 +558,13 @@
         "settings": [
           {
             "type": "text",
-            "id": "title_deco",
+            "id": "title",
             "label": "Title",
             "default": "Title here"
           },
           {
             "type": "text",
-            "id": "description_deco",
+            "id": "description",
             "label": "Description",
             "default": "Lorem ipsum dolor sit amet"
           },
