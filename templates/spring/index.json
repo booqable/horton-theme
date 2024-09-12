@@ -23,11 +23,11 @@
         "button_outline_label": "",
         "button_outline_url": "booqable://root/",
         "color_scheme": "set-2",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Suspendisse varius enim in eros elementum tristique.",
+        "description": "<p>Transform your garden with ease – rent the right tools</p><p>for every job, without the commitment of buying</p>",
         "full_width": false,
         "height": "medium",
         "height_mobile": "full",
-        "image": "booqable://assets/image-hero.jpg",
+        "image": "booqable://assets/image-hero.webp",
         "image_mobile": "",
         "overlay_background": "#F5FAFA",
         "overlay_color": "#2F4044",
@@ -478,9 +478,9 @@
         "testimonial_024704": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "I’ve always loved gardening but didn’t want to invest in expensive equipment. Renting from this company was the perfect solution. Their tools are top-notch, and the service is incredibly convenient. My garden has never looked better!",
+            "name": "John Mitchell",
+            "position": "Portland",
             "stars": "5"
           },
           "disabled": null
@@ -488,9 +488,9 @@
         "testimonial_024706": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "As someone new to gardening, I didn’t know what tools I’d need for different tasks. The team was super helpful in recommending the right tools, and the rental process was quick and easy. I’ll definitely be using them again!",
+            "name": "Emily Rodriguez",
+            "position": "Austin",
             "stars": "4"
           },
           "disabled": null
@@ -528,7 +528,7 @@
             "article_btn": "Read more",
             "article_btn_url": "booqable://root",
             "article_tag": "Category",
-            "article_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+            "article_text": "This guide will help you create a healthy, blooming garden that thrives in the heat.",
             "heading": "Get your garden ready for the summer",
             "image": "booqable://assets/image-article-1.jpeg"
           },
@@ -540,7 +540,7 @@
             "article_btn": "Read more",
             "article_btn_url": "booqable://root",
             "article_tag": "Category",
-            "article_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+            "article_text": "Learn what to look for in terms of quality, ergonomics, and purpose so you can work more efficiently.",
             "heading": "How to choose the best tools for the job",
             "image": "booqable://assets/image-article-2.jpeg"
           },
@@ -552,7 +552,7 @@
             "article_btn": "Read more",
             "article_btn_url": "booqable://root",
             "article_tag": "Category",
-            "article_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+            "article_text": "Proper planning will save you time and effort in the long run, ensuring a successful and rewarding gardening experience.",
             "heading": "Before you start, read this",
             "image": "booqable://assets/image-article-3.jpeg"
           },
@@ -588,9 +588,9 @@
         "button_label": "GET IN TOUCH",
         "button_url": "booqable://root",
         "color_scheme": "set-2",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Free Delivery For Orders Starts From $50",
+        "description": "Your go-to partner for all things gardening – providing high-quality tools and expert support to help you cultivate a beautiful, thriving garden year-round",
         "full_width": false,
-        "image": "booqable://assets/image-cta-2.jpg",
+        "image": "booqable://assets/image-cta-2.webp",
         "layout": "column",
         "overlay_background": "#000000",
         "overlay_color": "#FFFFFF",

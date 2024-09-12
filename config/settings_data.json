@@ -215,7 +215,7 @@
             "menu_799458"
           ],
           "settings": {
-            "additional_info": "Lorem ipsum dolor sit amet consectetur. Aliquet vel turpis tortor sapien. Pulvinar id eget vitae ac enim. Odio in tellus semper eget interdum a lectus. Commodo enim interdum tincidunt dictum fermentum consectetur nisi.",
+            "additional_info": "We are dedicated to making travel easier for families by offering high-quality baby gear rentals delivered directly to your destination.",
             "bottom_menu": "bottom-menu",
             "bottom_text": "{{ \"now\" | date: \"%Y\" }} {{ shop.name }}. All right reserved.",
             "color_scheme": "set-2",
@@ -414,7 +414,7 @@
             "menu_799458"
           ],
           "settings": {
-            "additional_info": "Lorem ipsum dolor sit amet consectetur. Aliquet vel turpis tortor sapien. Pulvinar id eget vitae ac enim. Odio in tellus semper eget interdum a lectus. Commodo enim interdum tincidunt dictum fermentum consectetur nisi.",
+            "additional_info": "From elegant weddings to lively corporate events, our diverse range of products and exceptional customer service ensures your vision comes to life.",
             "bottom_menu": "bottom-menu",
             "bottom_text": "{{ \"now\" | date: \"%Y\" }} {{ shop.name }}. All right reserved.",
             "color_scheme": "set-1",
@@ -613,7 +613,7 @@
             "menu_789458"
           ],
           "settings": {
-            "additional_info": "Lorem ipsum dolor sit amet consectetur. Aliquet vel turpis tortor sapien. Pulvinar id eget vitae ac enim. Odio in tellus semper eget interdum a lectus. Commodo enim interdum tincidunt dictum fermentum consectetur nisi.",
+            "additional_info": "We are a dedicated garden tool rental company committed to making gardening accessible and enjoyable for everyone.",
             "bottom_menu": "bottom-menu",
             "bottom_text": "{{ \"now\" | date: \"%Y\" }} {{ shop.name }}. All right reserved.",
             "color_scheme": "set-2",

@@ -25,6 +25,7 @@
 }
 
 .testimonials__blockquote {
+  height: 100%;
   display: flex;
   flex-direction: column;
   border-radius: var(--border-radius-block);
@@ -33,6 +34,7 @@
 }
 
 .testimonials__quote {
+  flex-grow: 1;
   padding-bottom: 17px;
 }
 
