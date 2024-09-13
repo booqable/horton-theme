@@ -11,7 +11,7 @@
         "button_outline_label": "",
         "button_outline_url": "booqable://root/",
         "color_scheme": "set-4",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Suspendisse varius enim in eros elementum tristique.",
+        "description": "<p>Elevate your event experience with premier rentals with</p><p>tailored solutions for weddings, parties, and corporate events</p>",
         "full_width": true,
         "height": "medium",
         "height_mobile": "full",
@@ -19,7 +19,7 @@
         "image_mobile": "booqable://assets/image-hero-mobile.jpeg",
         "overlay_background": "#F5FAFA",
         "overlay_color": "#2F4044",
-        "overlay_opacity": 100,
+        "overlay_opacity": 75,
         "padding_bottom": "medium",
         "padding_bottom_mobile": "small",
         "padding_top": "medium",
@@ -214,7 +214,7 @@
         "button_label": "GET IN TOUCH",
         "button_url": "booqable://root",
         "color_scheme": "set-3",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        "description": "Reserve the perfect rentals for your event today and make your vision a reality—book now!",
         "full_width": false,
         "image": "booqable://assets/image-cta-1.jpg",
         "layout": "column",
@@ -373,9 +373,9 @@
         "testimonial_023494": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "We rented everything we needed for our wedding, and it was flawless! The team was so helpful in recommending the right pieces.",
+            "name": "Emily Thompson",
+            "position": "Los Angeles",
             "stars": "5"
           },
           "disabled": null
@@ -383,9 +383,9 @@
         "testimonial_023495": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "For our corporate event, we wanted something that really stood out. The rentals were top-notch, and the service was exceptional.",
+            "name": "James Martinez",
+            "position": "Austin",
             "stars": "5"
           },
           "disabled": null
@@ -393,9 +393,9 @@
         "testimonial_023496": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "From the initial inquiry to the day of our party, the customer service was excellent. The quality of the rentals exceeded our expectations.",
+            "name": "Sophia Davis",
+            "position": "Miami",
             "stars": "4"
           },
           "disabled": null
@@ -403,9 +403,9 @@
         "testimonial_023497": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "I couldn’t be happier with the rentals for our anniversary celebration. The furniture and decor added such a classy touch, and the delivery was seamless.",
+            "name": "Michael Nguyen",
+            "position": "Seattle",
             "stars": "5"
           },
           "disabled": null
@@ -413,9 +413,9 @@
         "testimonial_023498": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "Our family reunion was a hit, thanks to the amazing rentals! Everything was in perfect condition, and they made the whole process so easy.",
+            "name": "Wilson",
+            "position": "New York",
             "stars": "4"
           },
           "disabled": null
@@ -456,7 +456,7 @@
             "article_btn": "Read more",
             "article_btn_url": "booqable://root",
             "article_tag": "Category",
-            "article_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+            "article_text": "Tips to ensure the Maid of Honor fulfills her role with confidence and grace, making the wedding experience smoother for the bride.",
             "heading": "A Guide On The Maid Of Honor’s Duties",
             "image": "booqable://assets/image-article-1.jpg"
           },
@@ -468,7 +468,7 @@
             "article_btn": "Read more",
             "article_btn_url": "booqable://root",
             "article_tag": "Category",
-            "article_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+            "article_text": "From personalized keepsakes to eco-friendly and edible options, the post provides inspiration for favors.",
             "heading": "The Wedding Favor Ideas Guide",
             "image": "booqable://assets/image-article-2.jpg"
           },
@@ -480,7 +480,7 @@
             "article_btn": "Read more",
             "article_btn_url": "booqable://root",
             "article_tag": "Category",
-            "article_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+            "article_text": "Ensuring couples understand how to plan a smooth and well-organized event that flows seamlessly from one special moment to the next.",
             "heading": "The Wedding Order Of Events Guide",
             "image": "booqable://assets/image-article-3.jpg"
           },
@@ -496,7 +496,7 @@
         "button_label": "SEE ALL",
         "button_url": "booqable://root",
         "color_scheme": "set-1",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "description": "Everything you need to know for your next big event!",
         "grid": "three",
         "heading_centering": true,
         "padding_bottom": "medium",
@@ -516,7 +516,7 @@
         "button_label": "GET IN TOUCH",
         "button_url": "booqable://root",
         "color_scheme": "set-3",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Free Delivery For Orders Starts From $50",
+        "description": "Transform your event into an unforgettable experience—explore our rental options and reserve today!",
         "full_width": false,
         "image": "booqable://assets/image-cta-2.jpg",
         "layout": "column",

@@ -23,7 +23,7 @@
         "button_outline_label": "",
         "button_outline_url": "booqable://root/",
         "color_scheme": "set-4",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Suspendisse varius enim in eros elementum tristique.",
+        "description": "<p>Making travel easier and more affordable with convenient</p><p>baby gear rentals delivered to your destination</p>",
         "full_width": false,
         "height": "medium",
         "height_mobile": "full",
@@ -370,9 +370,9 @@
         "testimonial_024704": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "The baby stroller we rented was clean and in perfect condition. It made our trip so much easier!",
+            "name": "Sarah Williams",
+            "position": "New York",
             "stars": "5"
           },
           "disabled": null
@@ -380,9 +380,9 @@
         "testimonial_024705": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "Such a relief to not have to lug around a car seat. The rental was seamless and hassle-free!",
+            "name": "David Thompson",
+            "position": "Los Angeles",
             "stars": "4"
           },
           "disabled": null
@@ -390,9 +390,9 @@
         "testimonial_024706": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "The crib we rented was perfect for our Airbnb stay. It felt just like home for our little one.",
+            "name": "Emily Johnson",
+            "position": "Miami",
             "stars": "5"
           },
           "disabled": null
@@ -400,9 +400,9 @@
         "testimonial_024707": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "Fantastic service! Everything arrived on time, and the equipment was top-notch quality.",
+            "name": "Jessica Martinez",
+            "position": "Austin",
             "stars": "5"
           },
           "disabled": null
@@ -410,9 +410,9 @@
         "testimonial_024708": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "I was worried about traveling with a toddler, but renting gear from here made everything stress-free.",
+            "name": "Mark Taylor",
+            "position": "Chicago",
             "stars": "5"
           },
           "disabled": null
@@ -420,9 +420,9 @@
         "testimonial_024709": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "Super convenient! We didn’t have to worry about bringing a bulky stroller on our trip.",
+            "name": "Ashley Brown",
+            "position": "Orlando",
             "stars": "5"
           },
           "disabled": null
@@ -430,9 +430,9 @@
         "testimonial_024710": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "The high chair we rented was perfect for our vacation rental. Great service and very clean equipment.",
+            "name": "Michael Davis",
+            "position": "Seattle",
             "stars": "5"
           },
           "disabled": null
@@ -440,9 +440,9 @@
         "testimonial_024711": {
           "type": "testimonial",
           "settings": {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-            "name": "Name Surname",
-            "position": "Position, Company name",
+            "description": "We loved how easy it was to pick up and return the gear. It saved us so much time and effort!",
+            "name": "Lauren Miller",
+            "position": "San Diego",
             "stars": "5"
           },
           "disabled": null
@@ -485,7 +485,7 @@
         "button_label": "GET IN TOUCH",
         "button_url": "booqable://products",
         "color_scheme": "set-4",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Free Delivery For Orders Starts From $50",
+        "description": "Reserve your baby gear now for a hassle-free trip – easy booking, delivery, and peace of mind guaranteed!",
         "full_width": false,
         "image": "booqable://assets/image-cta-1.jpeg",
         "layout": "column",
@@ -512,8 +512,8 @@
             "article_btn": "Read more",
             "article_btn_url": "booqable://root",
             "article_tag": "Category",
-            "article_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
-            "heading": "Get the best routes to explore The Netherlands",
+            "article_text": "Discover practical tips and expert advice on how to travel smoothly with your little one. From packing light to choosing the right baby gear.",
+            "heading": "Essential tips for stress-free adventures",
             "image": "booqable://assets/image-article-1.jpeg"
           },
           "disabled": null
@@ -524,8 +524,8 @@
             "article_btn": "Read more",
             "article_btn_url": "booqable://root",
             "article_tag": "Category",
-            "article_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
-            "heading": "New in store | The electric offroad bike",
+            "article_text": "We break down the top five essentials every parent needs for a comfortable and convenient vacation, from portable cribs to travel-friendly strollers.",
+            "heading": "Top 5 baby gear must-haves for your next family vacation",
             "image": "booqable://assets/image-article-2.jpeg"
           },
           "disabled": null
@@ -536,8 +536,8 @@
             "article_btn": "Read more",
             "article_btn_url": "booqable://root",
             "article_tag": "Category",
-            "article_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
-            "heading": "Ride safe, have fun 10 tips to ride safe",
+            "article_text": "Save space, reduce stress, and enjoy more flexibility on your trips by renting everything from car seats to high chairs at your destination.",
+            "heading": "Why renting baby gear is a game-changer for traveling parents",
             "image": "booqable://assets/image-article-3.jpeg"
           },
           "disabled": null
@@ -572,7 +572,7 @@
           "settings": {
             "description": "Free delivery for all orders above $100",
             "icon": "truck-fast",
-            "title_card": "Free delivery"
+            "title": "Free delivery"
           },
           "disabled": null
         },
@@ -581,7 +581,7 @@
           "settings": {
             "description": "Chat with us if you’ve any questions",
             "icon": "comment",
-            "title_card": "Top-Notch support"
+            "title": "Top-Notch support"
           },
           "disabled": null
         },
@@ -590,7 +590,7 @@
           "settings": {
             "description": "Free delivery for all orders above $100",
             "icon": "handshake",
-            "title_card": "100% Satisfaction Guarantee!"
+            "title": "100% Satisfaction Guarantee!"
           },
           "disabled": null
         },
@@ -599,7 +599,7 @@
           "settings": {
             "description": "We know how to do it",
             "icon": "exclamation",
-            "title_card": "20 years of experience"
+            "title": "20 years of experience"
           },
           "disabled": null
         }
