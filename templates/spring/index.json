@@ -27,7 +27,7 @@
         "full_width": false,
         "height": "medium",
         "height_mobile": "full",
-        "image": "booqable://assets/image-hero.jpg",
+        "image": "booqable://assets/image-hero.webm",
         "image_mobile": "",
         "overlay_background": "#F5FAFA",
         "overlay_color": "#2F4044",
@@ -178,35 +178,6 @@
     "products": {
       "type": "products",
       "blocks": {
-        "category_712895": {
-          "type": "category",
-          "settings": {
-            "button_label": "SEE ALL",
-            "button_url": "booqable://products",
-            "heading": "Product category highlight",
-            "image": "booqable://assets/image-products-category-block-background.jpg",
-            "overlay_background": "#000000",
-            "overlay_color": "#FFFFFF",
-            "overlay_opacity": 30,
-            "show_overlay": true
-          },
-          "disabled": null
-        },
-        "product_482071": {
-          "type": "product",
-          "settings": {},
-          "disabled": null
-        },
-        "product_482072": {
-          "type": "product",
-          "settings": {},
-          "disabled": null
-        },
-        "product_482073": {
-          "type": "product",
-          "settings": {},
-          "disabled": null
-        },
         "product_482074": {
           "type": "product",
           "settings": {},
@@ -214,23 +185,28 @@
         }
       },
       "block_order": [
-        "category_712895",
-        "product_482071",
-        "product_482072",
-        "product_482073",
         "product_482074"
       ],
       "settings": {
+        "button_label": "SEE ALL",
         "color_scheme": "set-1",
+        "collection": "all-products",
+        "heading": "",
         "heading_centering": true,
+        "image": "",
         "image_fit": "cover",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 30,
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
         "padding_top": "medium",
         "padding_top_mobile": "medium",
         "show_borders": true,
+        "show_description": false,
         "show_excerpt": false,
         "show_navigation": true,
+        "show_overlay": true,
         "spacing": "large",
         "spacing_mobile": "medium",
         "tag": "THIS WEEK",
@@ -328,58 +304,34 @@
     "products_901789": {
       "type": "products",
       "blocks": {
-        "category_909635": {
-          "type": "category",
-          "settings": {
-            "button_label": "SEE ALL",
-            "button_url": "booqable://products",
-            "heading": "Product category highlight",
-            "image": "booqable://assets/image-products-category-block-background-2.jpeg",
-            "overlay_background": "#000000",
-            "overlay_color": "#FFFFFF",
-            "overlay_opacity": 30,
-            "show_overlay": true
-          },
-          "disabled": null
-        },
         "product_487859": {
-          "type": "product",
-          "settings": {},
-          "disabled": null
-        },
-        "product_487860": {
-          "type": "product",
-          "settings": {},
-          "disabled": null
-        },
-        "product_487861": {
-          "type": "product",
-          "settings": {},
-          "disabled": null
-        },
-        "product_487862": {
           "type": "product",
           "settings": {},
           "disabled": null
         }
       },
       "block_order": [
-        "category_909635",
-        "product_487859",
-        "product_487860",
-        "product_487861",
-        "product_487862"
+        "product_487859"
       ],
       "settings": {
+        "button_label": "SEE ALL",
         "color_scheme": "set-3",
+        "collection": "all-products",
+        "heading": "",
         "heading_centering": true,
+        "image": "",
         "image_fit": "cover",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 30,
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
         "padding_top": "medium",
         "padding_top_mobile": "medium",
         "show_borders": true,
+        "show_description": false,
         "show_excerpt": false,
+        "show_overlay": true,
         "show_navigation": true,
         "spacing": "large",
         "spacing_mobile": "medium",

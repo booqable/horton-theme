@@ -1,55 +1,57 @@
 {%- assign blocks             = section.blocks -%}
 {%- assign button_label       = "" -%}
 {%- assign button_url         = "" -%}
-{%- assign category           = false -%}
+{%- assign category_block     = false -%}
 {%- assign collection         = section.settings.collection -%}
+{%- assign description        = "" -%}
+{%- assign first_product      = "" -%}
 {%- assign heading            = "" -%}
 {%- assign image              = "" -%}
 {%- assign image_placeholder  = settings.image_placeholder -%}
 {%- assign overlay_background = "" -%}
 {%- assign overlay_color      = "" -%}
 {%- assign overlay_opacity    = "" -%}
+{%- assign show_description   = "" -%}
 {%- assign show_overlay       = "" -%}
 {%- assign size               = "" -%}
 
-{%- for block in blocks -%}
-  {%- case block.type -%}
-    {%- when "category" -%}
-      {%- assign button_label       = block.settings.button_label -%}
-      {%- assign button_url         = block.settings.button_url -%}
-      {%- assign category           = true -%}
-      {%- assign heading            = block.settings.heading -%}
-      {%- assign image              = block.settings.image -%}
-      {%- assign overlay_background = block.settings.overlay_background -%}
-      {%- assign overlay_color      = block.settings.overlay_color -%}
-      {%- assign overlay_opacity    = block.settings.overlay_opacity -%}
-      {%- assign show_overlay       = block.settings.show_overlay -%}
-
-      {%- if image != blank -%}
-        {%- assign image = image -%}
-      {%- elsif image_placeholder != blank -%}
-        {%- assign image = image_placeholder -%}
-      {%- else -%}
-        {%- assign image = blank -%}
-      {%- endif -%}
-
-      {% comment %} CSS variables start {% endcomment %}
-      {%- capture block_variables -%}
-        {%- if show_overlay -%}
-          --color-overlay: {{- overlay_color -}};
-          --background-overlay: {{- overlay_background -}};
-          --background-overlay-00: {{- overlay_background | append: "00" -}};
-          --opacity-overlay: {{ overlay_opacity | append: "%"}};
-        {%- endif -%}
-      {%- endcapture -%}
-      {% comment %} CSS variables end {% endcomment %}
-  {%- endcase -%}
-{%- endfor -%}
-
 {%- if collection != blank -%}
-  {%- assign items         = collection.items -%}
-  {%- assign items_type    = "collection" -%}
-  {%- assign size          = collection.items_count -%}
+  {%- assign button_label       = section.settings.button_label -%}
+  {%- assign button_url         = collection.url -%}
+  {%- assign category_block     = true -%}
+  {%- assign description        = collection.description | truncatewords: 16, " ..."   -%}
+  {%- assign first_product      = collection.products | first -%}
+  {%- assign heading            = section.settings.heading | default: collection.name -%}
+  {%- assign image              = section.settings.image | default: collection.image -%}
+  {%- assign items              = collection.items -%}
+  {%- assign items_type         = "collection" -%}
+  {%- assign overlay_background = section.settings.overlay_background -%}
+  {%- assign overlay_color      = section.settings.overlay_color -%}
+  {%- assign overlay_opacity    = section.settings.overlay_opacity -%}
+  {%- assign show_description   = section.settings.show_description -%}
+  {%- assign show_overlay       = section.settings.show_overlay -%}
+  {%- assign size               = collection.items_count -%}
+
+  {%- if image != blank -%}
+    {%- assign image = image -%}
+  {%- elsif first_product and first_product.images.first != empty -%}
+    {%- assign image = first_product.images.first -%}
+  {%- elsif image_placeholder != blank -%}
+    {%- assign image = image_placeholder -%}
+  {%- else -%}
+    {%- assign image = blank -%}
+  {%- endif -%}
+
+  {% comment %} CSS variables start {% endcomment %}
+  {%- capture block_variables -%}
+    {%- if show_overlay -%}
+      --color-overlay: {{- overlay_color -}};
+      --background-overlay: {{- overlay_background -}};
+      --background-overlay-00: {{- overlay_background | append: "00" -}};
+      --opacity-overlay: {{ overlay_opacity | append: "%"}};
+    {%- endif -%}
+  {%- endcapture -%}
+  {% comment %} CSS variables end {% endcomment %}
 
 {%- else -%}
   {%- assign items         = blocks -%}
@@ -186,7 +188,7 @@
           title: title
       -%}
 
-    {%- if category -%}
+    {%- if category_block -%}
       <div class="products__content">
     {%- endif -%}
         <div class="products__list{% if carousel %} carousel carousel__pause{%- endif -%}"{% if carousel %} aria-role="Gallery"{%- endif -%}>
@@ -199,11 +201,7 @@
               {%- for item in items -%}
                 {% case items_type %}
                   {% when "blocks" %}
-                    {%- if item.type != "product" -%}
-                      {%- continue -%}
-                    {%- else -%}
-                      {% assign product = item.settings.product %}
-                    {%- endif -%}
+                    {% assign product = item.settings.product %}
                   {% when "collection" %}
                     {% assign product = item %}
                 {% endcase %}
@@ -242,39 +240,47 @@
             {%- endif -%}
           {%- endif -%}
         </div>
-    {%- if category -%}
-        <div class="products__category-block"{% if show_overlay %} style="{{- block_variables | escape -}}"{%- endif -%}>
-          {%- if heading != blank or button_label != blank and button_url != blank -%}
-            <div class="products__category-content">
-              {%- if heading != blank -%}
-                <h4 class="products__category-heading">
-                  {{- heading -}}
-                </h4>
-              {%- endif -%}
+    {%- if category_block -%}
+        {% unless section_preview %}
+          <div class="products__category-block"{% if show_overlay %} style="{{- block_variables | escape -}}"{%- endif -%}>
+            {%- if heading != blank or button_label != blank and button_url != blank -%}
+              <div class="products__category-content">
+                {%- if heading != blank -%}
+                  <h4 class="products__category-heading">
+                    {{- heading -}}
+                  </h4>
+                {%- endif -%}
 
-              {%- if button_label != blank and button_url != blank -%}
-                <div class="products__category-buttons">
-                  <a href="{{ button_url }}" class="products__category-button button button--primary button--small">
-                    {{- button_label -}}
-                  </a>
-                </div>
-              {%- endif -%}
-            </div>
-          {%- endif -%}
+                {%- if description != blank and show_description -%}
+                  <div class="products__category-description">
+                    {{- description -}}
+                  </div>
+                {%- endif -%}
 
-          {%- if image != blank -%}
-            <div class="products__category-background-wrapper{% if show_overlay %} products__category-background-wrapper--overlay{%- endif -%}">
-              {%- render 'image',
-                  image: image,
-                  loading: 'lazy',
-                  class: 'products__category-background',
-                  size: 'flexible'
-                -%}
-            </div>
-          {%- else -%}
-            {%- render 'image-placeholder', dimension: "500x550" -%}
-          {%- endif -%}
-        </div>
+                {%- if button_label != blank and button_url != blank -%}
+                  <div class="products__category-buttons">
+                    <a href="{{ button_url }}" class="products__category-button button button--primary button--small">
+                      {{- button_label -}}
+                    </a>
+                  </div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+
+            {%- if image != blank -%}
+              <div class="products__category-background-wrapper{% if show_overlay %} products__category-background-wrapper--overlay{%- endif -%}">
+                {%- render 'image',
+                    image: image,
+                    loading: 'lazy',
+                    class: 'products__category-background',
+                    size: 'flexible'
+                  -%}
+              </div>
+            {%- else -%}
+              {%- render 'image-placeholder', dimension: "500x550" -%}
+            {%- endif -%}
+          </div>
+        {% endunless %}
       </div>
     {%- endif -%}
     </div>
@@ -344,12 +350,62 @@
       },
       {
         "type": "paragraph",
-        "content": "When you select a collection, any product blocks will be ignored"
+        "content": "When collection is chosen, any product blocks will be ignored"
       },
       {
         "type": "collection",
         "id": "collection",
-        "label": "Collection"
+        "label": "Collection",
+        "default": "all-products"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Custom block title",
+        "default": "Product category highlight"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_description",
+        "label": "Show collection description",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button label",
+        "default": "Button"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Background image"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_overlay",
+        "label": "Show overlay",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "overlay_color",
+        "label": "Color",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "color",
+        "id": "overlay_background",
+        "label": "Background color",
+        "default": "#000000"
+      },
+      {
+        "type": "number",
+        "id": "overlay_opacity",
+        "label": "Background percentage",
+        "min": 0,
+        "max": 100,
+        "default": 40
       },
       {
         "type": "header",
@@ -377,7 +433,7 @@
       {
         "type": "checkbox",
         "id": "heading_centering",
-        "label": "Show Heading by center",
+        "label": "Center Heading",
         "default": false
       },
       {
@@ -515,66 +571,6 @@
     ],
     "max_blocks": 16,
     "blocks": [
-      {
-        "type": "category",
-        "name": "Category",
-        "limit": 1,
-        "settings": [
-          {
-            "type": "text",
-            "id": "heading",
-            "label": "Block title",
-            "default": "Product category highlight"
-          },
-          {
-            "type": "text",
-            "id": "button_label",
-            "label": "Button label",
-            "default": "Button"
-          },
-          {
-            "type": "url",
-            "id": "button_url",
-            "label": "Button url",
-            "default": "booqable://products"
-          },
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Background image"
-          },
-          {
-            "type": "header",
-            "content": "Overlay"
-          },
-          {
-            "type": "checkbox",
-            "id": "show_overlay",
-            "label": "Show overlay",
-            "default": true
-          },
-          {
-            "type": "color",
-            "id": "overlay_color",
-            "label": "Color",
-            "default": "#FFFFFF"
-          },
-          {
-            "type": "color",
-            "id": "overlay_background",
-            "label": "Background color",
-            "default": "#000000"
-          },
-          {
-            "type": "number",
-            "id": "overlay_opacity",
-            "label": "Background percentage",
-            "min": 0,
-            "max": 100,
-            "default": 40
-          }
-        ]
-      },
       {
         "type": "product",
         "name": "Product",
