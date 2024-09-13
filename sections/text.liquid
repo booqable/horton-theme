@@ -1,0 +1,231 @@
+{{ "text.css" | asset_url | stylesheet_tag }}
+
+{%- assign title                 = section.settings.title -%}
+{%- assign text                  = section.settings.text -%}
+{%- assign color_scheme          = section.settings.color_scheme -%}
+{%- assign align                 = section.settings.align -%}
+{%- assign padding_top           = section.settings.padding_top -%}
+{%- assign padding_bottom        = section.settings.padding_bottom -%}
+{%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
+{%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+
+{% comment %} CSS variables start {% endcomment %}
+{%- capture variables -%}
+  {%- case padding_top -%}
+    {%- when 'small' -%}
+      --padding-top: 24px;
+    {%- when 'medium' -%}
+      --padding-top: 60px;
+    {%- when 'large' -%}
+      --padding-top: 120px;
+  {%- endcase -%}
+
+  {%- case padding_bottom -%}
+    {%- when 'small' -%}
+      --padding-bottom: 24px;
+    {%- when 'medium' -%}
+      --padding-bottom: 60px;
+    {%- when 'large' -%}
+      --padding-bottom: 120px;
+  {%- endcase -%}
+
+  {%- case padding_top_mobile -%}
+    {%- when 'small' -%}
+      --padding-top-mobile: 16px;
+    {%- when 'medium' -%}
+      --padding-top-mobile: 40px;
+    {%- when 'large' -%}
+      --padding-top-mobile: 60px;
+  {%- endcase -%}
+
+  {%- case padding_bottom_mobile -%}
+    {%- when 'small' -%}
+      --padding-bottom-mobile: 16px;
+    {%- when 'medium' -%}
+      --padding-bottom-mobile: 40px;
+    {%- when 'large' -%}
+      --padding-bottom-mobile: 60px;
+  {%- endcase -%}
+
+  {%- case align -%}
+    {%- when 'left' -%}
+      --text-align: left;
+    {%- when 'center' -%}
+      --text-align: center;
+    {%- when 'right' -%}
+      --text-align: right;
+  {%- endcase -%}
+{%- endcapture -%}
+{% comment %} CSS variables end {% endcomment %}
+
+<div class="text__wrapper color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} text__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} text__wrapper--padding-bottom{%- endif -%}"
+     id="text-{{- section.key -}}"
+     style="{{- variables | escape -}}"
+>
+  <div class="text__container container">
+    {%- if title != blank -%}
+      <h2 class="text__title h4">{{- title -}}</h2>
+    {%- endif -%}
+
+    {%- if text != blank -%}
+      <div class="text__content bq-content rx-content">{{- text -}}</div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Text",
+    "description": "Add the section with text in various styles",
+    "tag": "section",
+    "class": "text",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General settings"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Lorem ipsum dolor sit amet"
+      },
+      {
+        "type": "contentEditor",
+        "id": "text",
+        "label": "Text",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "set-1"
+      },
+      {
+        "type": "select",
+        "id": "align",
+        "label": "Alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
+      },
+      {
+        "type": "header",
+        "content": "Desktop settings"
+      },
+      {
+        "type": "select",
+        "id": "padding_top",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "large"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "large"
+      },
+      {
+        "type": "header",
+        "content": "Mobile settings"
+      },
+      {
+        "type": "select",
+        "id": "padding_top_mobile",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom_mobile",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      }
+    ]
+  }
+{% endschema %}
