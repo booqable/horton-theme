@@ -67,6 +67,10 @@
   padding-bottom: 0;
 }
 
+.hero__description.bq-content p + p {
+  margin: 0;
+}
+
 .hero__buttons {
   margin: 32px -8px calc(-1 * var(--button-margin-bottom));
 }
