@@ -38,6 +38,10 @@
   padding-bottom: 17px;
 }
 
+.testimonials__quote p {
+  display: inline;
+}
+
 .testimonials__cite {
   display: flex;
   flex-direction: column;
