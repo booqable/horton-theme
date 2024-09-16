@@ -1,0 +1,18 @@
+.cookie-notice-preferences__inner {
+  background: var(--background-primary);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-block);
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cookie-notice-preferences__inner--preview {
+  margin-top: 16px;
+}
+
+.cookie-notice-preferences__inner button {
+  margin: 0;
+}
