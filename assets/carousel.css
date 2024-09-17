@@ -60,7 +60,7 @@
 
 .carousel__navigation {
   position: absolute;
-  top: calc(100% + (var(--buttons-indent) - var(--button-width)));
+  top: calc(100% + (var(--buttons-indent) - var(--button-height)));
   left: 50%;
   display: flex;
   transform: translateX(-50%);

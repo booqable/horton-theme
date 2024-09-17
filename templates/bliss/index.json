@@ -169,59 +169,36 @@
     "products": {
       "type": "products",
       "blocks": {
-        "category_981245": {
-          "type": "category",
-          "settings": {
-            "button_label": "SEE ALL",
-            "button_url": "booqable://products",
-            "heading": "Product category highlight",
-            "image": "booqable://assets/image-placeholder.png",
-            "overlay_background": "#000000",
-            "overlay_color": "#FFFFFF",
-            "overlay_opacity": 40,
-            "show_overlay": false
-          },
-          "disabled": null
-        },
         "product_481051": {
-          "type": "product",
-          "settings": {},
-          "disabled": null
-        },
-        "product_481052": {
-          "type": "product",
-          "settings": {},
-          "disabled": null
-        },
-        "product_481053": {
-          "type": "product",
-          "settings": {},
-          "disabled": null
-        },
-        "product_481054": {
           "type": "product",
           "settings": {},
           "disabled": null
         }
       },
       "block_order": [
-        "category_981245",
-        "product_481051",
-        "product_481052",
-        "product_481053",
-        "product_481054"
+        "product_481051"
       ],
       "settings": {
+        "button_label": "SEE ALL",
         "color_scheme": "set-1",
+        "collection": "all-products",
+        "collection_empty_message": "It seems this collection has no products yet",
+        "heading": "",
         "heading_centering": true,
+        "image": "",
         "image_fit": "cover",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
         "padding_top": "medium",
         "padding_top_mobile": "medium",
         "show_borders": false,
+        "show_description": false,
         "show_excerpt": true,
         "show_navigation": true,
+        "show_overlay": true,
         "spacing": "none",
         "spacing_mobile": "medium",
         "tag": "THIS WEEK",
@@ -319,40 +296,6 @@
     "products_967435": {
       "type": "products",
       "blocks": {
-        "category_981241": {
-          "type": "category",
-          "settings": {
-            "button_label": "SEE ALL",
-            "button_url": "booqable://products",
-            "heading": "Product category highlight",
-            "image": "booqable://assets/image-products-category-block-background.jpeg",
-            "overlay_background": "#000000",
-            "overlay_color": "#FFFFFF",
-            "overlay_opacity": 40,
-            "show_overlay": true
-          },
-          "disabled": null
-        },
-        "product_481011": {
-          "type": "product",
-          "settings": {},
-          "disabled": null
-        },
-        "product_481012": {
-          "type": "product",
-          "settings": {},
-          "disabled": null
-        },
-        "product_481013": {
-          "type": "product",
-          "settings": {},
-          "disabled": null
-        },
-        "product_481014": {
-          "type": "product",
-          "settings": {},
-          "disabled": null
-        },
         "product_481015": {
           "type": "product",
           "settings": {},
@@ -360,23 +303,28 @@
         }
       },
       "block_order": [
-        "category_981241",
-        "product_481011",
-        "product_481012",
-        "product_481013",
-        "product_481014",
         "product_481015"
       ],
       "settings": {
+        "button_label": "SEE ALL",
         "color_scheme": "set-1",
+        "collection": "all-products",
+        "collection_empty_message": "It seems this collection has no products yet",
+        "heading": "",
         "heading_centering": true,
+        "image": "",
         "image_fit": "cover",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
         "padding_top": "medium",
         "padding_top_mobile": "medium",
         "show_borders": false,
+        "show_description": false,
         "show_excerpt": true,
+        "show_overlay": true,
         "show_navigation": true,
         "spacing": "none",
         "spacing_mobile": "medium",
