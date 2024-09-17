@@ -42,6 +42,15 @@
   border-right-color: transparent;
 }
 
+.products__list:has(:only-child) {
+  border: none;
+}
+
+.products__list--empty {
+  width: 100%;
+  padding: 20px;
+}
+
 .products__content {
   --block-max-width: 506px;
   --block-min-width: calc(300px + var(--grid-gap));

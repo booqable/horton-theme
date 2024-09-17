@@ -76,6 +76,7 @@
         "button_label": "",
         "color_scheme": "set-5",
         "collection": "",
+        "collection_empty_message": "It seems this collection has no products yet",
         "heading": "",
         "heading_centering": true,
         "image": "",
