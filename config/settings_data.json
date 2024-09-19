@@ -110,8 +110,8 @@
         "header": {
           "type": "header",
           "blocks": {
-            "info_894203": {
-              "type": "info",
+            "url_894203": {
+              "type": "url",
               "settings": {
                 "heading": "+1 555 302 8549",
                 "icon": "phone",
@@ -119,29 +119,29 @@
               },
               "disabled": null
             },
-            "info_894204": {
-              "type": "info",
-              "settings": {
-                "heading": "Chat with us",
-                "icon": "comment",
-                "url": "support-url.example"
-              },
-              "disabled": null
-            },
-            "info_894205": {
-              "type": "info",
+            "url_894205": {
+              "type": "url",
               "settings": {
                 "heading": "info@example.com",
                 "icon": "envelope",
                 "url": "mailto:info@example.com"
               },
               "disabled": null
+            },
+            "url_894204": {
+              "type": "url",
+              "settings": {
+                "heading": "How does it work",
+                "icon": "info",
+                "url": "support-url.example"
+              },
+              "disabled": null
             }
           },
           "block_order": [
-            "info_894203",
-            "info_894204",
-            "info_894205"
+            "url_894203",
+            "url_894205",
+            "url_894204"
           ],
           "settings": {
             "color_scheme": "set-1",
@@ -159,12 +159,11 @@
             "padding_bottom_mobile": "small",
             "padding_top": "large",
             "padding_top_mobile": "small",
+            "quick_menu_icon_opener": "headset",
             "search_label": "SEARCH",
             "search_placeholder": "Search for products",
             "show_search": true,
-            "show_support": true,
-            "sticky_header": true,
-            "support_icon_opener": "headset"
+            "sticky_header": true
           },
           "disabled": null
         },

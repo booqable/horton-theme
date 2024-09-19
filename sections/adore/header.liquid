@@ -17,12 +17,12 @@
 {%- assign padding_bottom_mobile          = section.settings.padding_bottom_mobile -%}
 {%- assign padding_top                    = section.settings.padding_top -%}
 {%- assign padding_top_mobile             = section.settings.padding_top_mobile -%}
+{%- assign quick_menu                     = section.blocks | where: "type", "url" | first -%}
+{%- assign quick_menu_icon_opener         = section.settings.quick_menu_icon_opener -%}
 {%- assign search_label                   = section.settings.search_label -%}
 {%- assign search_placeholder             = section.settings.search_placeholder -%}
 {%- assign show_search                    = section.settings.show_search -%}
-{%- assign show_support                   = section.settings.show_support -%}
 {%- assign sticky_header                  = section.settings.sticky_header -%}
-{%- assign support_icon_opener            = section.settings.support_icon_opener -%}
 
 {%- if menu_main != blank or menu_secondary != blank or menu_third != blank -%}
   {{ "menu.css" | asset_url | stylesheet_tag }}
@@ -32,8 +32,8 @@
   {{ "search-form.css" | asset_url | stylesheet_tag }}
 {%- endif -%}
 
-{%- if show_support -%}
-  {{ "support.css" | asset_url | stylesheet_tag }}
+{%- if quick_menu -%}
+  {{ "quick-menu.css" | asset_url | stylesheet_tag }}
 {%- endif -%}
 
 {%- if app != blank -%}
@@ -102,45 +102,43 @@
   {%- endif -%}
 {%- endcapture -%}
 
-{%- if show_support -%}
+{%- if quick_menu -%}
   {%- capture header_icons -%}
-    <div class="header__support support">
-      {%- if support_icon_opener != "empty" -%}
-        <input type="checkbox" id="support-opener" style="display: none">
-        <label for="support-opener" class="header__support-opener support__opener">
+    <div class="header__quick-menu quick-menu">
+      {%- if quick_menu_icon_opener != "empty" -%}
+        <input type="checkbox" id="quick-menu-opener" style="display: none">
+        <label for="quick-menu-opener" class="header__quick-menu-opener quick-menu__opener">
           {%- render 'icon',
-              icon: support_icon_opener,
+              icon: quick_menu_icon_opener,
               style: icon_style
           -%}
         </label>
       {%- endif -%}
 
-      <div class="header__support-wrapper support__wrapper"{% if support_icon_opener != "empty" %} style="display: none"{%- endif -%}>
+      <div class="header__quick-menu-wrapper quick-menu__wrapper" style="display: none">
         {%- for block in section.blocks -%}
-          {%- assign block_index = forloop.index -%}
-          {%- assign heading     = block.settings.heading -%}
-          {%- assign icon        = block.settings.icon -%}
-          {%- assign url         = block.settings.url -%}
+          {%- case block.type -%}
+            {%- when "url" -%}
+              {%- assign heading     = block.settings.heading -%}
+              {%- assign icon        = block.settings.icon -%}
+              {%- assign url         = block.settings.url -%}
 
-          {%- if block_index > 2 and support_icon_opener == "empty" -%}
-            {%- break -%}
-          {%- endif -%}
-
-          <div class="support__item">
-            {%- if icon != "empty" and heading != blank -%}
-              <i class="support__icon">
-                {%- render 'icon',
-                    icon: icon,
-                    style: icon_style
-                -%}
-              </i>
-            {%- endif -%}
-            {%- if heading != blank -%}
-              <a href="{{ url }}" class="support__link">
-                {{- heading -}}
-              </a>
-            {%- endif -%}
-          </div>
+              <div class="quick-menu__item">
+                {%- if icon != "empty" and heading != blank -%}
+                  <i class="quick-menu__icon">
+                    {%- render 'icon',
+                        icon: icon,
+                        style: icon_style
+                    -%}
+                  </i>
+                {%- endif -%}
+                {%- if heading != blank -%}
+                  <a href="{{ url }}" class="quick-menu__link">
+                    {{- heading -}}
+                  </a>
+                {%- endif -%}
+              </div>
+          {%- endcase -%}
         {%- endfor -%}
       </div>
     </div>
@@ -207,7 +205,9 @@
             </div>
           {%- endif -%}
 
-          {{- header_icons -}}
+          {%- unless quick_menu_icon_opener != "empty" -%}
+            {{- header_icons -}}
+          {%- endunless -%}
 
           {%- if menu_message_mobile != blank -%}
             <div class="menu__message">
@@ -384,17 +384,11 @@
       },
       {
         "type": "header",
-        "content": "Support"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_support",
-        "default": true,
-        "label": "Show support"
+        "content": "Quick menu"
       },
       {
         "type": "select",
-        "id": "support_icon_opener",
+        "id": "quick_menu_icon_opener",
         "label": "Opener icon",
         "options": [
           {
@@ -619,8 +613,8 @@
     ],
     "blocks": [
       {
-        "type": "info",
-        "name": "Info",
+        "type": "url",
+        "name": "URL",
         "limit": 8,
         "settings": [
           {
@@ -643,6 +637,10 @@
               {
                 "value": "fax",
                 "label": "Fax"
+              },
+              {
+                "value": "info",
+                "label": "Info"
               },
               {
                 "value": "phone",
