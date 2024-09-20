@@ -124,9 +124,9 @@
 }
 
 .search-form__wrapper {
-  position: absolute;
-  top: calc((var(--header-height) - var(--top-bar-height, 0px)) / 2 + var(--padding-bottom-mobile) + 8px);
-  right: calc(-2 * (var(--header-icon-width) + var(--header-gap-sm)));
+  position: fixed;
+  top: calc(var(--header-height) + var(--header-transform, 0px));
+  right: calc(50% - 100vw / 2 + var(--horizontal-padding) / 2);
 	min-width: calc(100vw - var(--horizontal-padding-mobile) * 2);
   padding: 0;
   margin: 0;
@@ -135,20 +135,8 @@
 	opacity: 0;
 	transition-duration: var(--animation-duration);
 	transition-timing-function: var(--transition-function-ease-in-out);
-	transition-property: visibility, opacity;
+	transition-property: visibility, opacity, top;
   display: block !important;
-}
-
-.search-form:last-child .search-form__wrapper {
-  right: 7px;
-}
-
-.search-form:nth-last-child(2) .search-form__wrapper {
-  right: calc(-1 * (var(--header-icon-width) + var(--header-gap-sm)) + 7px);
-}
-
-.search-form:nth-last-child(2):has(+ .header__menu) .search-form__wrapper {
-  right: calc(-1 * (var(--header-icon-width) + var(--header-gap-sm)));
 }
 
 .search-form__input-wrapper.filled .search-form__reset,
@@ -160,19 +148,6 @@
 
 .search-form #search-opener:checked ~ .search-form__opener g {
   stroke: var(--color-outline);
-}
-
-.header__content-inner .search-form:last-child,
-.header__content-inner.header__mobile-menu-opener-left .search-form:nth-last-child(2) {
-  margin-right: -7px;
-}
-
-.header__mobile-menu-opener-left .search-form__wrapper {
-  right: calc(-1 * (var(--header-icon-width) + var(--header-gap-sm) - 7px));
-}
-
-.header__mobile-menu-opener-left .search-form:nth-last-child(2) .search-form__wrapper {
-  right: 7px;
 }
 
 .loaded .search-form__wrapper {
@@ -196,16 +171,11 @@
 }
 
 @media (min-width: 1100px) {
-  .search-form,
-  .header__mobile-menu-opener-left .search-form {
+  .search-form {
     justify-content: flex-end;
     grid-column: 2;
     grid-row: 1;
     container: search / inline-size;
-  }
-
-  .header__content-inner.header__mobile-menu-opener-right .search-form:nth-last-child(2) {
-    margin-right: -7px;
   }
 
   .search-form__wrapper {
