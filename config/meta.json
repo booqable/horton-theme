@@ -13,6 +13,13 @@
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/bliss_preview.png",
     "version": 1
   },
+  "moment": {
+    "detail_url": "https://booqable.com/themes/moment/",
+    "market": "Event / Party",
+    "preview_url": "https://moment.booqable.store/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/moment_preview.png",
+    "version": 1
+  },
   "spring": {
     "detail_url": "https://booqable.com/themes/spring/",
     "market": "Tools / Construction",
