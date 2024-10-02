@@ -329,10 +329,6 @@ header:has(.app-mobile) .header__app:has(.app-desktop) {
     justify-content: flex-end;
   }
 
-  .header__content-inner:not(:has(.header__cart)) .header__quick-menu-wrapper:not(:has(.header__quick-menu-opener)) {
-    text-align: right;
-  }
-
   .header__menu .header__quick-menu {
     display: none;
   }

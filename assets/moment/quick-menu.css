@@ -118,12 +118,17 @@
   }
 
   .quick-menu__wrapper {
-    display: block !important;
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .quick-menu__item:not(:empty) {
+    white-space: nowrap;
   }
 
   .quick-menu__item:first-child,
   .quick-menu__item:nth-child(2) {
-    display: block;
+    display: flex;
   }
 }
 
