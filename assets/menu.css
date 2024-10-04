@@ -39,6 +39,7 @@
   align-items: center;
   position: var(--menu-opener-position);
   cursor: pointer;
+  line-height: var(--font-height-xs);
   border-style: solid;
   border-width: 1px;
   transition: all var(--animation-duration) var(--transition-function-ease-in-out);

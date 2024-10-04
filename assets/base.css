@@ -321,7 +321,7 @@ img {
   font-size: var(--font-size-regular);
   letter-spacing: var(--font-spacing-lg);
   font-weight: var(--font-weight-semibold);
-  line-height: var(--font-height-sm);
+  line-height: var(--font-height-xs);
   color: currentColor;
   border: 1px solid transparent;
   border-radius: var(--border-radius-button);

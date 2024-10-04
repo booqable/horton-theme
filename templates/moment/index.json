@@ -1,0 +1,595 @@
+{
+  "name": "Home",
+  "sections": {
+    "spacer": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-1",
+        "image": "",
+        "size": "small",
+        "size_mobile": "small"
+      },
+      "disabled": null
+    },
+    "hero": {
+      "type": "hero",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "",
+        "button_primary_url": "booqable://products/",
+        "button_outline_label": "",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-4",
+        "description": "<p>Stylish event decor for every budget – transform </p><p>your event without breaking the bank!</p>",
+        "full_width": false,
+        "height": "medium",
+        "height_mobile": "full",
+        "image": "booqable://assets/image-hero.jpeg",
+        "image_mobile": "",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity":30,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "small",
+        "show_datepicker": true,
+        "show_overlay": true,
+        "text_position": "middle-left",
+        "text_position_mobile": "bottom-center",
+        "title": "Magical Moments, With <br>Our Rental Collection",
+        "video_url": ""
+      },
+      "disabled": null
+    },
+    "columns_871021": {
+      "type": "columns",
+      "blocks": {
+        "card_894203": {
+          "type": "card",
+          "settings": {
+            "description": "Free delivery for all orders above $100",
+            "icon": "truck-fast",
+            "title": "Free delivery"
+          },
+          "disabled": null
+        },
+        "card_894204": {
+          "type": "card",
+          "settings": {
+            "description": "Chat with us if you’ve any questions",
+            "icon": "comment",
+            "title": "Top-Notch support"
+          },
+          "disabled": null
+        },
+        "card_894205": {
+          "type": "card",
+          "settings": {
+            "description": "Free delivery for all orders above $100",
+            "icon": "handshake",
+            "title": "100% Satisfaction Guarantee!"
+          },
+          "disabled": null
+        },
+        "card_894206": {
+          "type": "card",
+          "settings": {
+            "description": "We know how to do it",
+            "icon": "exclamation",
+            "title": "20 years of experience"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "card_894203",
+        "card_894204",
+        "card_894205",
+        "card_894206"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "grid": "four",
+        "icon_position": "top",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity":40,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_borders": false,
+        "show_overlay": false,
+        "spacing": "medium",
+        "spacing_mobile": "medium",
+        "text_position": "center"
+      },
+      "disabled": null
+    },
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection_523830": {
+          "type": "collection",
+          "settings": {
+            "badge_background": "#000000",
+            "badge_color": "#FFFFFF",
+            "badge_label": "HOT!",
+            "collection_button_label": "SHOP NOW",
+            "show_collection_description": false
+          },
+          "disabled": null
+        },
+        "collection_523831": {
+          "type": "collection",
+          "settings": {
+            "badge_background": "#000000",
+            "badge_color": "#FFFFFF",
+            "badge_label": "NEW!",
+            "collection_button_label": "SHOP NOW",
+            "show_collection_description": false
+          },
+          "disabled": null
+        },
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "collection_button_label": "SEE MORE",
+            "show_collection_description": false,
+            "badge_label": "NEW!",
+            "badge_color": "#000000",
+            "badge_background": "#FFFFFF"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "collection_523830",
+        "collection_523831",
+        "collection"
+      ],
+      "settings": {
+        "button_label": "",
+        "button_url": "booqable://collections",
+        "color_scheme": "set-4",
+        "grid": "three",
+        "heading_centering": true,
+        "overlay_background": "#231C04",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 60,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": true,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "text_position_horizontal": "left",
+        "text_position_vertical": "middle",
+        "title": ""
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product_482071": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_482071"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "color_scheme": "set-1",
+        "collection": "all-products",
+        "collection_empty_message": "It seems this collection has no products yet",
+        "heading": "",
+        "heading_centering": true,
+        "image": "",
+        "image_fit": "cover",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_description": false,
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_overlay": true,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "tag": "THIS WEEK",
+        "timer": 5,
+        "title": "Popular products"
+      },
+      "disabled": null
+    },
+    "call-to-action": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_label": "SEE OUR PRODUCTS",
+        "button_url": "booqable://products",
+        "color_scheme": "set-4",
+        "description": "<p>$10 gift card</p>\n<p>Special offer for renting  party supplies</p>",
+        "full_width": false,
+        "image": "booqable://assets/image-cta-1.jpeg",
+        "layout": "row",
+        "overlay_background": "#E4C8A5",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity":40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": false,
+        "show_overlay": true,
+        "tag": "",
+        "title": "WIN"
+      },
+      "disabled": false
+    },
+    "columns": {
+      "type": "columns",
+      "blocks": {
+        "deco": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description": "",
+            "image": "booqable://assets/image-cta-2.png",
+            "title": "Title here"
+          },
+          "disabled": null
+        },
+        "deco_783911": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description": "",
+            "image": "booqable://assets/image-cta-3.png",
+            "title": "Title here"
+          },
+          "disabled": null
+        },
+        "deco_306673": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description": "",
+            "image": "booqable://assets/image-cta-4.png",
+            "title": "Title here"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "deco",
+        "deco_783911",
+        "deco_306673"
+      ],
+      "settings": {
+        "color_scheme": "set-4",
+        "grid": "three",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": "0",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": true,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "text_position": "center"
+      },
+      "disabled": null
+    },
+    "products_901789": {
+      "type": "products",
+      "blocks": {
+        "product_487862": {
+        "type": "product",
+        "settings": {},
+        "disabled": null
+        }
+      },
+      "block_order": [
+        "product_487862"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "color_scheme": "set-1",
+        "collection": "all-products",
+        "collection_empty_message": "It seems this collection has no products yet",
+        "heading": "",
+        "heading_centering": true,
+        "image": "",
+        "image_fit": "cover",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_description": false,
+        "show_excerpt": false,
+        "show_overlay": true,
+        "show_navigation": true,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "tag": "THIS WEEK",
+        "timer": 5,
+        "title": "New products"
+      },
+      "disabled": null
+    },
+    "about-us_572034": {
+      "type": "about-us",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "background_image": "",
+        "button_label": "MORE ABOUT US",
+        "button_url": "booqable://root",
+        "color_scheme": "set-3",
+        "description": "<p><span data-metadata=\"\"></span><span data-buffer=\"\"></span>Our passion for producing amazing wedding experiences has taken us on a fantastic path, where we have perfected the art of translating treasured fantasies into a reality of elegance. element symbolises the pinnacle of luxury, where love and beauty are harmoniously intertwined.</p>",
+        "full_width": true,
+        "image": "booqable://assets/image-about-us-avatar.jpeg",
+        "image_circle": false,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": false,
+        "tag": "MEET THE TEAM",
+        "title": "Our story"
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_024704": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>I was blown away by the quality and affordability of the decor. They made my event look stunning without going over budget. Highly recommend!</p>",
+            "name": "Sarah Williams",
+            "position": "New York",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024705": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>The rental process was so easy, and the decor transformed our venue into something magical. We couldn’t have asked for better service!</p>",
+            "name": "David Thompson",
+            "position": "Los Angeles",
+            "stars": "4"
+          },
+          "disabled": null
+        },
+        "testimonial_024706": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>This company truly understands how to deliver beautiful decor at a price that works for any budget. They were professional, helpful, and exceeded all our expectations!</p>",
+            "name": "Emily Johnson",
+            "position": "Miami",
+            "stars": "5"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial_024704",
+        "testimonial_024705",
+        "testimonial_024706"
+      ],
+      "settings": {
+        "button_label": "",
+        "button_url": "booqable://root",
+        "color_scheme": "set-1",
+        "full_width": true,
+        "heading_centering": true,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_carousel": true,
+        "show_navigation": true,
+        "show_stars": "below",
+        "tag": "REWIEWS",
+        "timer": 5,
+        "title": "What our customers say"
+      },
+      "disabled": null
+    },
+    "articles": {
+      "type": "articles",
+      "blocks": {
+        "article_237127": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "article_text": "<p>Transform your outdoor space into the perfect party venue with these simple tips for decor, seating, and ambiance.</p>",
+            "heading": "How to get your garden party ready",
+            "image": "booqable://assets/image-articles-1.jpeg"
+          },
+          "disabled": null
+        },
+        "article_237128": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "article_text": "<p>Save yourself from last-minute stress with a step-by-step guide to planning and organizing a flawless event.</p>",
+            "heading": "Get organised before you give your big party",
+            "image": "booqable://assets/image-articles-2.jpeg"
+          },
+          "disabled": null
+        },
+        "article_237129": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "article_text": "<p>Avoid common event planning pitfalls by reading this essential guide before you begin your preparations.</p>",
+            "heading": "Before you start, read this",
+            "image": "booqable://assets/image-articles-3.jpeg"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "article_237127",
+        "article_237128",
+        "article_237129"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "button_url": "booqable://root",
+        "color_scheme": "set-1",
+        "description": "",
+        "grid": "three",
+        "heading_centering": true,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "small",
+        "tag": "NEWS",
+        "title": "What’s going on"
+      },
+      "disabled": null
+    },
+    "call-to-action_585590": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_label": "GET IN TOUCH",
+        "button_url": "booqable://root",
+        "color_scheme": "set-4",
+        "description": "<p>Your reliable partner for affordable, stress-free event decor solutions.</p>",
+        "full_width": false,
+        "image": "booqable://assets/image-cta-5.jpeg",
+        "layout": "column",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": false,
+        "show_overlay": true,
+        "tag": "",
+        "title": "The trusted partner"
+      },
+      "disabled": null
+    },
+    "columns_354021": {
+      "type": "columns",
+      "blocks": {
+        "card_810203": {
+          "type": "card",
+          "settings": {
+            "description": "Free delivery for all orders above $100",
+            "icon": "truck-fast",
+            "title": "Free delivery"
+          },
+          "disabled": null
+        },
+        "card_810204": {
+          "type": "card",
+          "settings": {
+            "description": "Chat with us if you’ve any questions",
+            "icon": "comment",
+            "title": "Top-Notch support"
+          },
+          "disabled": null
+        },
+        "card_810205": {
+          "type": "card",
+          "settings": {
+            "description": "Free delivery for all orders above $100",
+            "icon": "handshake",
+            "title": "100% Satisfaction Guarantee!"
+          },
+          "disabled": null
+        },
+        "card_810206": {
+          "type": "card",
+          "settings": {
+            "description": "We know how to do it",
+            "icon": "exclamation",
+            "title": "20 years of experience"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "card_810203",
+        "card_810204",
+        "card_810205",
+        "card_810206"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "grid": "four",
+        "icon_position": "top",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity":40,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_borders": false,
+        "show_overlay": false,
+        "spacing": "medium",
+        "spacing_mobile": "medium",
+        "text_position": "center"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "spacer",
+    "hero",
+    "columns_871021",
+    "collections",
+    "products",
+    "call-to-action",
+    "columns",
+    "products_901789",
+    "about-us_572034",
+    "testimonials",
+    "articles",
+    "call-to-action_585590",
+    "columns_354021"
+  ]
+}

@@ -75,7 +75,7 @@
 }
 
 .product-card__price-info {
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-headers);
   padding-top: 16px;
   flex-grow: 1;
   display: flex;
