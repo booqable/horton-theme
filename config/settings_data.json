@@ -86,12 +86,12 @@
       "font_weight_h2": "700",
       "font_weight_h3": "700",
       "font_weight_headers": "700",
-      "font_weight_light": 300,
-      "font_weight_regular": 400,
-      "font_weight_medium": 500,
-      "font_weight_semibold": 600,
-      "font_weight_bold": 700,
-      "font_weight_extrabold": 800,
+      "font_weight_light": "300",
+      "font_weight_regular": "400",
+      "font_weight_medium": "500",
+      "font_weight_semibold": "600",
+      "font_weight_bold": "700",
+      "font_weight_extrabold": "800",
       "icon_style": "outline",
       "image_placeholder": "booqable://assets/image-placeholder.png",
       "sections": {
@@ -326,12 +326,12 @@
       "font_weight_h2": "400",
       "font_weight_h3": "400",
       "font_weight_headers": "400",
-      "font_weight_light": 300,
-      "font_weight_regular": 400,
-      "font_weight_medium": 500,
-      "font_weight_semibold": 600,
-      "font_weight_bold": 700,
-      "font_weight_extrabold": 800,
+      "font_weight_light": "300",
+      "font_weight_regular": "400",
+      "font_weight_medium": "500",
+      "font_weight_semibold": "600",
+      "font_weight_bold": "700",
+      "font_weight_extrabold": "800",
       "icon_style": "outline",
       "image_placeholder": "booqable://assets/image-placeholder.png",
       "sections": {
@@ -531,12 +531,12 @@
       "font_weight_h2": "500",
       "font_weight_h3": "500",
       "font_weight_headers": "500",
-      "font_weight_light": 300,
-      "font_weight_regular": 400,
-      "font_weight_medium": 500,
-      "font_weight_semibold": 600,
-      "font_weight_bold": 700,
-      "font_weight_extrabold": 800,
+      "font_weight_light": "300",
+      "font_weight_regular": "400",
+      "font_weight_medium": "500",
+      "font_weight_semibold": "600",
+      "font_weight_bold": "700",
+      "font_weight_extrabold": "800",
       "icon_style": "outline",
       "image_placeholder": "booqable://assets/image-placeholder.webp",
       "sections": {
@@ -737,12 +737,12 @@
       "font_weight_h2": "700",
       "font_weight_h3": "700",
       "font_weight_headers": "700",
-      "font_weight_light": 300,
-      "font_weight_regular": 400,
-      "font_weight_medium": 500,
-      "font_weight_semibold": 600,
-      "font_weight_bold": 700,
-      "font_weight_extrabold": 800,
+      "font_weight_light": "300",
+      "font_weight_regular": "400",
+      "font_weight_medium": "500",
+      "font_weight_semibold": "600",
+      "font_weight_bold": "700",
+      "font_weight_extrabold": "800",
       "icon_style": "outline",
       "image_placeholder": "booqable://assets/image-placeholder.png",
       "sections": {
@@ -892,6 +892,418 @@
       "social_spacing": "md",
       "use_focal_images": true
     },
+    "motion": {
+      "animation_duration": 0.3,
+      "color_schemes": {
+        "set-1": {
+          "type": "color_scheme",
+          "settings": {
+            "background": "#FFFFFF",
+            "background_accent": "#131313",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#131313",
+            "color_primary": "#0E0702",
+            "color_secondary": "#868C8D"
+          }
+        },
+        "set-2": {
+          "type": "color_scheme",
+          "settings": {
+            "background": "#131313",
+            "background_accent": "#FFFFFF",
+            "color_accent": "#2F4044",
+            "color_accent_outline": "#FFFFFF",
+            "color_primary": "#FFFFFF",
+            "color_secondary": "#BCC6C9"
+          }
+        },
+        "set-3": {
+          "type": "color_scheme",
+          "settings": {
+            "background": "#FFFFFF",
+            "background_accent": "#FFFFFF",
+            "color_accent": "#131313",
+            "color_accent_outline": "#D39A80",
+            "color_primary": "#2F4044",
+            "color_secondary": "#BCC6C9"
+          }
+        },
+        "set-4": {
+          "type": "color_scheme",
+          "settings": {
+            "background": "#D39A80",
+            "background_accent": "#FFFFFF",
+            "color_accent": "#2F4044",
+            "color_accent_outline": "#2F4044",
+            "color_primary": "#2F4044",
+            "color_secondary": "#EBEBEB"
+          }
+        },
+        "set-5": {
+          "type": "color_scheme",
+          "settings": {
+            "background": "#EEEDEB",
+            "background_accent": "#131313",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#131313",
+            "color_primary": "#545649",
+            "color_secondary": "#545649"
+          }
+        }
+      },
+      "corner_radius": "square",
+      "font_body": "roboto",
+      "font_heading": "roboto",
+      "font_height_xs": 1,
+      "font_height_sm": 1.2,
+      "font_height_md": 1.3333,
+      "font_height_lg": 1.4,
+      "font_height_xl": 1.5,
+      "font_size_h1": 80,
+      "font_size_h2": 64,
+      "font_size_h3": 56,
+      "font_size_h4": 32,
+      "font_size_h5": 24,
+      "font_size_h6": 20,
+      "font_size_large": 18,
+      "font_size_regular": 16,
+      "font_size_tagline": 18,
+      "font_spacing_xs": -0.04,
+      "font_spacing_sm": -0.03,
+      "font_spacing_md": -0.02,
+      "font_spacing_lg": 0.07,
+      "font_spacing_xl": 0.1,
+      "font_tagline": "roboto",
+      "font_weight_h1": "400",
+      "font_weight_h2": "400",
+      "font_weight_h3": "400",
+      "font_weight_headers": "400",
+      "font_weight_light": "300",
+      "font_weight_regular": "400",
+      "font_weight_medium": "500",
+      "font_weight_semibold": "600",
+      "font_weight_bold": "700",
+      "font_weight_extrabold": "800",
+      "icon_style": "outline",
+      "image_placeholder": "booqable://assets/image-placeholder.png",
+      "sections": {
+        "top-bar": {
+          "type": "top-bar",
+          "blocks": {},
+          "block_order": [],
+          "settings": {
+            "bar_message": "<p>Get 15% off with code <b>CAMERA</b>&nbsp;at checkout</p>",
+            "bar_message_secondary": "Call Us 24/7 <a href=\"tel:+15553028549\">+1 555 302 8549</a>",
+            "bar_message_secondary_icon": "phone",
+            "bar_message_third": "Mon - Fri: 10:00 - 18:00",
+            "bar_message_third_icon": "clock",
+            "color_scheme": "set-5",
+            "padding_bottom": "large",
+            "padding_bottom_mobile": "small",
+            "padding_top": "large",
+            "padding_top_mobile": "small",
+            "show_bar": true
+          },
+          "disabled": null
+        },
+        "header": {
+          "type": "header",
+          "blocks": {},
+          "block_order": [],
+          "settings": {
+            "color_scheme": "set-5",
+            "custom_title": "{{ shop.name }}",
+            "logo": "booqable://assets/image-store-logo.png",
+            "menu_main": "main-menu",
+            "menu_additional": "additional-menu",
+            "menu_back_mobile": "Back",
+            "menu_message_mobile": "Mon - Fri: 10:00 - 18:00",
+            "menu_message_mobile_icon": "clock",
+            "menu_opener_label": "Collections",
+            "menu_opener_mobile": "right",
+            "padding_bottom": "large",
+            "padding_bottom_mobile": "small",
+            "padding_top": "large",
+            "padding_top_mobile": "small",
+            "search_placeholder": "What are you looking for?",
+            "show_search": true,
+            "sticky_header": true
+          },
+          "disabled": null
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "menu_799455": {
+              "type": "menu",
+              "settings": {
+                "heading": "Column One",
+                "menu": "main-menu",
+                "menu_align": "left"
+              },
+              "disabled": null
+            },
+            "menu_799456": {
+              "type": "menu",
+              "settings": {
+                "heading": "Column Two",
+                "menu": "main-menu",
+                "menu_align": "left"
+              },
+              "disabled": null
+            },
+            "menu_799457": {
+              "type": "menu",
+              "settings": {
+                "heading": "Column Three",
+                "menu": "main-menu",
+                "menu_align": "left"
+              },
+              "disabled": null
+            },
+            "menu_799458": {
+              "type": "menu",
+              "settings": {
+                "heading": "Column Four",
+                "menu": "main-menu",
+                "menu_align": "left"
+              },
+              "disabled": null
+            }
+          },
+          "block_order": [
+            "menu_799455",
+            "menu_799456",
+            "menu_799457",
+            "menu_799458"
+          ],
+          "settings": {
+            "additional_info": "<p>Our camera rental service provides photographers and videographers with access to high-quality cameras, lenses, and equipment at affordable rates. </p>",
+            "bottom_menu": "bottom-menu",
+            "bottom_text": "{{ \"now\" | date: \"%Y\" }} {{ shop.name }}. All right reserved.",
+            "color_scheme": "set-2",
+            "custom_title": "{{ shop.name }}",
+            "logo": "booqable://assets/image-store-logo-white.png",
+            "padding_bottom": "small",
+            "padding_bottom_mobile": "small",
+            "padding_top": "large",
+            "padding_top_mobile": "small",
+            "privacy_policy_label": "Privacy policy",
+            "show_payments": true
+          },
+          "disabled": null
+        }
+      },
+      "social_size": "lg",
+      "social_spacing": "md",
+      "use_focal_images": true
+    },
+    "scenic": {
+      "animation_duration": 0.3,
+      "color_schemes": {
+        "set-1": {
+          "type": "color_scheme",
+          "settings": {
+            "background": "#FFFFFF",
+            "background_accent": "#1A66BF",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#1A66BF",
+            "color_primary": "#1C3C2D",
+            "color_secondary": "#6B7470"
+          }
+        },
+        "set-2": {
+          "type": "color_scheme",
+          "settings": {
+            "background": "#051629",
+            "background_accent": "#1A66BF",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#1A66BF",
+            "color_primary": "#FFFFFF",
+            "color_secondary": "#F7FAF7"
+          }
+        },
+        "set-3": {
+          "type": "color_scheme",
+          "settings": {
+            "background": "#F0F3F5",
+            "background_accent": "#1A66BF",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#1A66BF",
+            "color_primary": "#131313",
+            "color_secondary": "#6B7470"
+          }
+        },
+        "set-4": {
+          "type": "color_scheme",
+          "settings": {
+            "background": "#FFFFFF",
+            "background_accent": "#FFFFFF",
+            "color_accent": "#131313",
+            "color_accent_outline": "#FFFFFF",
+            "color_primary": "#FFFFFF",
+            "color_secondary": "#6B7470"
+          }
+        },
+        "set-5": {
+          "type": "color_scheme",
+          "settings": {
+            "background": "#1A66BF",
+            "background_accent": "#1C3C2D",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#7C9E39",
+            "color_primary": "#FFFFFF",
+            "color_secondary": "#FFFFFF"
+          }
+        }
+      },
+      "corner_radius": "rounded",
+      "font_body": "manrope",
+      "font_heading": "manrope",
+      "font_height_xs": 1,
+      "font_height_sm": 1.2,
+      "font_height_md": 1.3333,
+      "font_height_lg": 1.4,
+      "font_height_xl": 1.5,
+      "font_size_h1": 84,
+      "font_size_h2": 64,
+      "font_size_h3": 44,
+      "font_size_h4": 32,
+      "font_size_h5": 24,
+      "font_size_h6": 20,
+      "font_size_large": 18,
+      "font_size_regular": 16,
+      "font_size_tagline": 18,
+      "font_spacing_xs": -0.03,
+      "font_spacing_sm": -0.02,
+      "font_spacing_md": -0.01,
+      "font_spacing_lg": 0.07,
+      "font_spacing_xl": 0.1,
+      "font_tagline": "manrope",
+      "font_weight_h1": "500",
+      "font_weight_h2": "500",
+      "font_weight_h3": "500",
+      "font_weight_headers": "500",
+      "font_weight_light": "300",
+      "font_weight_regular": "400",
+      "font_weight_medium": "500",
+      "font_weight_semibold": "600",
+      "font_weight_bold": "700",
+      "font_weight_extrabold": "800",
+      "icon_style": "outline",
+      "image_placeholder": "booqable://assets/image-placeholder.webp",
+      "sections": {
+        "top-bar": {
+          "type": "top-bar",
+          "blocks": {},
+          "block_order": [],
+          "settings": {
+            "bar_message": "<p>Get 15% off with code <b>CYCLERENT</b> at checkout</p>",
+            "bar_message_secondary": "Call Us 24/7 <a href=\"tel:+15553028549\">+1 555 302 8549</a>",
+            "bar_message_secondary_icon": "phone",
+            "bar_message_third": "Mon - Fri: 10:00 - 18:00",
+            "bar_message_third_icon": "clock",
+            "color_scheme": "set-5",
+            "padding_bottom": "large",
+            "padding_bottom_mobile": "small",
+            "padding_top": "large",
+            "padding_top_mobile": "small",
+            "show_bar": true
+          },
+          "disabled": null
+        },
+        "header": {
+          "type": "header",
+          "blocks": {},
+          "block_order": [],
+          "settings": {
+            "color_scheme": "set-1",
+            "custom_title": "{{ shop.name }}",
+            "logo": "booqable://assets/image-store-logo.png",
+            "menu_main": "main-menu",
+            "menu_additional": "additional-menu",
+            "menu_back_mobile": "Back",
+            "menu_message_mobile": "Mon - Fri: 10:00 - 18:00",
+            "menu_message_mobile_icon": "clock",
+            "menu_opener_label": "Collections",
+            "menu_opener_mobile": "right",
+            "padding_bottom": "large",
+            "padding_bottom_mobile": "small",
+            "padding_top": "large",
+            "padding_top_mobile": "small",
+            "search_placeholder": "What are you looking for?",
+            "show_search": true,
+            "sticky_header": true
+          },
+          "disabled": null
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "menu_789455": {
+              "type": "menu",
+              "settings": {
+                "heading": "Column One",
+                "menu": "main-menu",
+                "menu_align": "left"
+              },
+              "disabled": null
+            },
+            "menu_789456": {
+              "type": "menu",
+              "settings": {
+                "heading": "Column Two",
+                "menu": "main-menu",
+                "menu_align": "left"
+              },
+              "disabled": null
+            },
+            "menu_789457": {
+              "type": "menu",
+              "settings": {
+                "heading": "Column Three",
+                "menu": "main-menu",
+                "menu_align": "left"
+              },
+              "disabled": null
+            },
+            "menu_789458": {
+              "type": "menu",
+              "settings": {
+                "heading": "Column Four",
+                "menu": "main-menu",
+                "menu_align": "left"
+              },
+              "disabled": null
+            }
+          },
+          "block_order": [
+            "menu_789455",
+            "menu_789456",
+            "menu_789457",
+            "menu_789458"
+          ],
+          "settings": {
+            "additional_info": "<p>We provide convenient and affordable bike rentals for all types of riders, offering a simple way to explore cities, parks, and scenic routes at your own pace.</p>",
+            "bottom_menu": "bottom-menu",
+            "bottom_text": "{{ \"now\" | date: \"%Y\" }} {{ shop.name }}. All right reserved.",
+            "color_scheme": "set-2",
+            "custom_title": "{{ shop.name }}",
+            "logo": "booqable://assets/image-store-logo-white.png",
+            "padding_bottom": "small",
+            "padding_bottom_mobile": "small",
+            "padding_top": "large",
+            "padding_top_mobile": "small",
+            "privacy_policy_label": "Privacy policy",
+            "show_payments": true
+          },
+          "disabled": null
+        }
+      },
+      "social_size": "lg",
+      "social_spacing": "md",
+      "use_focal_images": true
+    },
     "shine": {
       "animation_duration": 0.3,
       "color_schemes": {
@@ -978,14 +1390,14 @@
       "font_weight_h2": "600",
       "font_weight_h3": "600",
       "font_weight_headers": "600",
-      "font_weight_light": 300,
-      "font_weight_regular": 400,
-      "font_weight_medium": 500,
-      "font_weight_semibold": 600,
-      "font_weight_bold": 700,
-      "font_weight_extrabold": 800,
+      "font_weight_light": "300",
+      "font_weight_regular": "400",
+      "font_weight_medium": "500",
+      "font_weight_semibold": "600",
+      "font_weight_bold": "700",
+      "font_weight_extrabold": "800",
       "icon_style": "outline",
-      "image_placeholder": "booqable://assets/image-placeholder.jpg",
+      "image_placeholder": "booqable://assets/image-placeholder.png",
       "sections": {
         "top-bar": {
           "type": "top-bar",
@@ -1219,12 +1631,12 @@
       "font_weight_h2": "500",
       "font_weight_h3": "500",
       "font_weight_headers": "500",
-      "font_weight_light": 300,
-      "font_weight_regular": 400,
-      "font_weight_medium": 500,
-      "font_weight_semibold": 600,
-      "font_weight_bold": 700,
-      "font_weight_extrabold": 800,
+      "font_weight_light": "300",
+      "font_weight_regular": "400",
+      "font_weight_medium": "500",
+      "font_weight_semibold": "600",
+      "font_weight_bold": "700",
+      "font_weight_extrabold": "800",
       "icon_style": "outline",
       "image_placeholder": "booqable://assets/image-placeholder.png",
       "sections": {
