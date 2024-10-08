@@ -34,6 +34,13 @@
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/motion_preview.png",
     "version": "beta"
   },
+  "raw": {
+    "detail_url": "https://booqable.com/themes/raw/",
+    "market": "Sports / Activies",
+    "preview_url": "https://raw.booqable.store/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/raw_preview.png",
+    "version": "beta"
+  },
   "scenic": {
     "detail_url": "https://booqable.com/themes/scenic/",
     "market": "Bikes / Scooters",

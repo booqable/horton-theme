@@ -1,0 +1,579 @@
+ {
+  "name": "Home",
+  "sections": {
+    "spacer": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order":[],
+      "settings": {
+        "color_scheme": "set-1",
+        "image": "",
+        "size": "small",
+        "size_mobile": "small"
+      },
+      "disabled": null
+    },
+    "hero": {
+      "type": "hero",
+      "blocks": {},
+      "block_order":[],
+      "settings": {
+        "button_primary_label": "",
+        "button_primary_url": "booqable://products/",
+        "button_outline_label": "",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-5",
+        "description": "<p>Transform your garden with ease – rent the right tools</p><p>for every job, without the commitment of buying</p>",
+        "full_width": false,
+        "height": "medium",
+        "height_mobile": "full",
+        "image": "booqable://assets/image-hero.jpeg",
+        "image_mobile": "",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 30,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "small",
+        "show_datepicker": true,
+        "show_overlay": false,
+        "text_position": "middle-left",
+        "text_position_mobile": "bottom-center",
+        "title": "ESSENTIAL <br>EQUIPMENT FOR <br>EVERY ADVENTURE",
+        "video_url": ""
+      },
+      "disabled": null
+    },
+    "columns_871021": {
+      "type": "columns",
+      "blocks": {
+        "card_894203": {
+          "type": "card",
+          "settings": {
+            "description": "Free delivery for all orders above $100",
+            "icon": "truck-fast",
+            "title": "FREE DELIVERY"
+          },
+          "disabled": null
+        },
+        "card_894204": {
+          "type": "card",
+          "settings": {
+            "description": "Chat with us if you’ve any questions",
+            "icon": "comment",
+            "title": "TOP-NOTCH SUPPORT"
+          },
+          "disabled": null
+        },
+        "card_894205": {
+          "type": "card",
+          "settings": {
+            "description": "Free delivery for all orders above $100",
+            "icon": "handshake",
+            "title": "100% SATISFACTION GUARANTEE!"
+          },
+          "disabled": null
+        },
+        "card_894206": {
+          "type": "card",
+          "settings": {
+            "description": "We know how to do it",
+            "icon": "exclamation",
+            "title": "20 YEARS OF EXPERIENCE"
+          },
+          "disabled": null
+        }
+      },
+      "block_order":[
+        "card_894203",
+        "card_894204",
+        "card_894205",
+        "card_894206"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "grid": "four",
+        "icon_position": "top",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_borders": false,
+        "show_overlay": false,
+        "spacing": "medium",
+        "spacing_mobile": "medium",
+        "text_position": "center"
+      },
+      "disabled": null
+    },
+    "columns": {
+      "type": "columns",
+      "blocks": {
+        "deco": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description": "Lorem ipsum dolor sit amet",
+            "image": "booqable://assets/image-columns-deco-1.png",
+            "title": "Title here"
+          },
+          "disabled": null
+        },
+        "deco_924745": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description": "Lorem ipsum dolor sit amet",
+            "image": "booqable://assets/image-columns-deco-2.png",
+            "title": "Title here"
+          },
+          "disabled": null
+        },
+        "deco_664164": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description": "Lorem ipsum dolor sit amet",
+            "image": "booqable://assets/image-columns-deco-3.png",
+            "title": "Title here"
+          },
+          "disabled": null
+        }
+      },
+      "block_order":[
+        "deco",
+        "deco_924745",
+        "deco_664164"
+      ],
+      "settings": {
+        "color_scheme": "set-3",
+        "grid": "three",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": false,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "text_position": "left"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product_482074": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order":[
+        "product_482074"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "color_scheme": "set-1",
+        "collection": "all-products",
+        "collection_empty_message": "It seems this collection has no products yet",
+        "heading": "",
+        "heading_centering": true,
+        "image": "",
+        "image_fit": "cover",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 30,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_description": false,
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_overlay": true,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "tag": "THIS WEEK",
+        "timer": 5,
+        "title": "POPULAR PRODUCTS"
+      },
+      "disabled": null
+    },
+    "call-to-action": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order":[],
+      "settings": {
+        "button_label": "SEE OUR PRODUCTS",
+        "button_url": "booqable://products",
+        "color_scheme": "set-1",
+        "description": "<p>$10 gift card</p><p>Special offer for renting gardening tools</p>",
+        "full_width": false,
+        "image": "booqable://assets/image-cta-1.jpeg",
+        "layout": "row",
+        "overlay_background": "#AFC05C",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": "0",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": true,
+        "tag": "",
+        "title": "WIN"
+      },
+      "disabled": null
+    },
+    "columns_618084": {
+      "type": "columns",
+      "blocks": {
+        "deco_911203": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description": "",
+            "image": "booqable://assets/image-columns-deco-4.png",
+            "title": "Extra card"
+          },
+          "disabled": null
+        },
+        "deco_911204": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description": "",
+            "image": "booqable://assets/image-columns-deco-4.png",
+            "title": "Extra card"
+          },
+          "disabled": null
+        },
+        "deco_911205": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description": "",
+            "image": "booqable://assets/image-columns-deco-4.png",
+            "title": "Extra card"
+          },
+          "disabled": null
+        }
+      },
+      "block_order":[
+        "deco_911203",
+        "deco_911204",
+        "deco_911205"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "grid": "three",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": false,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "text_position": "center"
+      },
+      "disabled": null
+    },
+    "products_901789": {
+      "type": "products",
+      "blocks": {
+        "product_487859": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order":[
+        "product_487859"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "color_scheme": "set-3",
+        "collection": "all-products",
+        "collection_empty_message": "It seems this collection has no products yet",
+        "heading": "",
+        "heading_centering": true,
+        "image": "",
+        "image_fit": "cover",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 30,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_description": false,
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_overlay": true,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "tag": "THIS WEEK",
+        "timer": 5,
+        "title": "NEW PRODUCTS"
+      },
+      "disabled": null
+    },
+    "about-us": {
+      "type": "about-us",
+      "blocks": {},
+      "block_order":[],
+      "settings": {
+        "background_image": "booqable://assets/image-about-us-background.png",
+        "button_label": "MORE ABOUT US",
+        "button_url": "booqable://root",
+        "color_scheme": "set-4",
+        "description": "<p>We specialize in providing top-quality outdoor adventure equipment rentals to help you explore the great outdoors with ease and confidence. Whether you’re hiking, camping, kayaking, or backpacking, our well-maintained gear and expert advice will ensure you’re fully prepared for your next adventure. From tents to trekking poles, kayaks to cooking gear, we offer a wide range of options to fit your needs, so you can focus on the thrill of the journey, not the logistics.</p>",
+        "full_width": false,
+        "image": "booqable://assets/image-about-us-avatar.png",
+        "image_circle": false,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_borders": false,
+        "tag": "MEET OUR TEAM",
+        "title": "OUR STORY"
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_024704": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>From the quality of the tents to the reliability of the backpacks, every piece of equipment was top-notch and well-maintained. The staff were incredibly knowledgeable, helping me pick out exactly what I needed for my weekend hike.</p>",
+            "name": "John Mitchell",
+            "position": "Portland",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024706": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>I was planning a last-minute kayaking trip, and they had everything I needed – from the kayak itself to life vests and dry bags. The rental process was simple and affordable, and the gear was in perfect condition.</p>",
+            "name": "Emily Rodriguez",
+            "position": "Austin",
+            "stars": "4"
+          },
+          "disabled": null
+        }
+      },
+      "block_order":[
+        "testimonial_024704",
+        "testimonial_024706"
+      ],
+      "settings": {
+        "button_label": "",
+        "button_url": "booqable://root",
+        "color_scheme": "set-1",
+        "full_width": true,
+        "heading_centering": true,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_carousel": true,
+        "show_navigation": true,
+        "show_stars": "above",
+        "tag": "REWIEWS",
+        "timer": 5,
+        "title": "WHAT OUR CUSTOMERS SAY"
+      },
+      "disabled": false
+    },
+    "articles": {
+      "type": "articles",
+      "blocks": {
+        "article_237127": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "article_text": "<p>Discover which backpacking items are essential and which you can leave behind for a lighter, smarter journey.</p>",
+            "heading": "The Ultimate Guide to Backpacking",
+            "image": "booqable://assets/image-articles-1.jpeg"
+          },
+          "disabled": null
+        },
+        "article_237128": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "article_text": "<p>A step-by-step guide on responsibly collecting and preparing firewood to ensure a warm and safe campfire experience.</p>",
+            "heading": "How to Safely Gather Firewood for Your Outdoor Adventures",
+            "image": "booqable://assets/image-articles-2.jpeg"
+          },
+          "disabled": null
+        },
+        "article_237129": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "article_text": "<p>A quick guide to the must-have camping gear for a comfortable and safe adventure.</p>",
+            "heading": "Top 5 Essential Gear Items for Your Next Camping Trip",
+            "image": "booqable://assets/image-articles-3.jpeg"
+          },
+          "disabled": null
+        }
+      },
+      "block_order":[
+        "article_237127",
+        "article_237128",
+        "article_237129"
+      ],
+      "settings": {
+        "button_label": "MORE BLOG",
+        "button_url": "booqable://root",
+        "color_scheme": "set-1",
+        "description": "",
+        "grid": "three",
+        "heading_centering": true,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "tag": "NEWS",
+        "title": "WHAT'S GOING ON"
+      },
+      "disabled": null
+    },
+    "call-to-action_971814": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order":[],
+      "settings": {
+        "button_label": "GET IN TOUCH",
+        "button_url": "booqable://root",
+        "color_scheme": "set-2",
+        "description": "<p>Rent high-quality outdoor equipment and make your adventure unforgettable. Explore, experience, and enjoy the great outdoors with confidence—reserve your gear now!</p>",
+        "full_width": false,
+        "image": "booqable://assets/image-cta-2.jpeg",
+        "layout": "column",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": true,
+        "tag": "",
+        "title": "GEAR UP FOR YOUR NEXT ADVENTURE TODAY!"
+      },
+      "disabled": null
+    },
+    "columns_354021": {
+      "type": "columns",
+      "blocks": {
+        "card_810203": {
+          "type": "card",
+          "settings": {
+            "description": "Free delivery for all orders above $100",
+            "icon": "truck-fast",
+            "title": "FREE DELIVERY"
+          },
+          "disabled": null
+        },
+        "card_810204": {
+          "type": "card",
+          "settings": {
+            "description": "Chat with us if you’ve any questions",
+            "icon": "comment",
+            "title": "TOP-NOTCH SUPPORT"
+          },
+          "disabled": null
+        },
+        "card_810205": {
+          "type": "card",
+          "settings": {
+            "description": "Free delivery for all orders above $100",
+            "icon": "handshake",
+            "title": "100% SATISFACTION GUARANTEE"
+          },
+          "disabled": null
+        },
+        "card_810206": {
+          "type": "card",
+          "settings": {
+            "description": "We know how to do it",
+            "icon": "exclamation",
+            "title": "20 YEARS OF EXPERIENCE"
+          },
+          "disabled": null
+        }
+      },
+      "block_order":[
+        "card_810203",
+        "card_810204",
+        "card_810205",
+        "card_810206"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "grid": "four",
+        "icon_position": "top",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_borders": false,
+        "show_overlay": false,
+        "spacing": "medium",
+        "spacing_mobile": "medium",
+        "text_position": "center"
+      },
+      "disabled": null
+    }
+  },
+  "order":[
+    "spacer",
+    "hero",
+    "columns_871021",
+    "columns",
+    "products",
+    "call-to-action",
+    "columns_618084",
+    "products_901789",
+    "about-us",
+    "testimonials",
+    "articles",
+    "call-to-action_971814",
+    "columns_354021"
+  ]
+}
