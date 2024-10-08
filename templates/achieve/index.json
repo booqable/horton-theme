@@ -1,0 +1,511 @@
+{
+  "name": "Home",
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_primary_label": "",
+        "button_primary_url": "booqable://products/",
+        "button_outline_label": "",
+        "button_outline_url": "booqable://root/",
+        "color_scheme": "set-1",
+        "description": "<p>Transform your home into a personal gym with top-tier fitness</p><p> equipment rentals — no long-term commitment, just results.</p>",
+        "full_width": true,
+        "height": "medium",
+        "height_mobile": "full",
+        "image": "booqable://assets/image-hero.png",
+        "image_mobile": "",
+        "overlay_background": "#131313",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 75,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "small",
+        "show_datepicker": true,
+        "show_overlay": true,
+        "text_position": "middle-left",
+        "text_position_mobile": "bottom-center",
+        "title": "Gear Up for Your <br>Workout Goals",
+        "video_url": ""
+      },
+      "disabled": null
+    },
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection_517830": {
+          "type": "collection",
+          "settings": {
+            "badge_background": "#FF0000",
+            "badge_color": "#FFFFFF",
+            "badge_label": "",
+            "collection_button_label": "",
+            "show_collection_description": false
+          },
+          "disabled": null
+        },
+        "collection_517831": {
+          "type": "collection",
+          "settings": {
+            "badge_background": "#FF0000",
+            "badge_color": "#FFFFFF",
+            "badge_label": "",
+            "collection_button_label": "",
+            "show_collection_description": false
+          },
+          "disabled": null
+        },
+        "collection_517832": {
+          "type": "collection",
+          "settings": {
+            "badge_background": "#FF0000",
+            "badge_color": "#FFFFFF",
+            "badge_label": "",
+            "collection_button_label": "",
+            "show_collection_description": false
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "collection_517830",
+        "collection_517831",
+        "collection_517832"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "button_url": "booqable://collections",
+        "color_scheme": "set-1",
+        "grid": "three",
+        "heading_centering": false,
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": true,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "text_position_horizontal": "center",
+        "text_position_vertical": "middle",
+        "title": "Collections"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product_481051": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_481051"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "color_scheme": "set-1",
+        "collection": "all-products",
+        "collection_empty_message": "It seems this collection has no products yet",
+        "heading": "",
+        "heading_centering": false,
+        "image": "",
+        "image_fit": "cover",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": false,
+        "show_description": false,
+        "show_excerpt": true,
+        "show_navigation": true,
+        "show_overlay": true,
+        "spacing": "none",
+        "spacing_mobile": "medium",
+        "tag": "THIS WEEK",
+        "timer": 5,
+        "title": "Popular products"
+      },
+      "disabled": null
+    },
+    "columns_653474": {
+      "type": "columns",
+      "blocks": {
+        "deco_401203": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description": "",
+            "image": "booqable://assets/image-columns-deco-1.png",
+            "title": "Extra card"
+          },
+          "disabled": null
+        },
+        "deco_401204": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description": "",
+            "image": "booqable://assets/image-columns-deco-2.png",
+            "title": "Extra card"
+          },
+          "disabled": null
+        },
+        "deco_401205": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description": "",
+            "image": "booqable://assets/image-columns-deco-3.png",
+            "title": "Extra card"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "deco_401203",
+        "deco_401204",
+        "deco_401205"
+      ],
+      "settings": {
+        "color_scheme": "set-3",
+        "grid": "three",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": false,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "text_position": "left"
+      },
+      "disabled": null
+    },
+    "products_967435": {
+      "type": "products",
+      "blocks": {
+        "product_481015": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_481015"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "color_scheme": "set-1",
+        "collection": "all-products",
+        "collection_empty_message": "It seems this collection has no products yet",
+        "heading": "",
+        "heading_centering": false,
+        "image": "",
+        "image_fit": "cover",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": false,
+        "show_description": false,
+        "show_excerpt": true,
+        "show_navigation": true,
+        "show_overlay": true,
+        "spacing": "none",
+        "spacing_mobile": "medium",
+        "tag": "THIS WEEK",
+        "timer": 5,
+        "title": "New products"
+      },
+      "disabled": null
+    },
+    "about-us": {
+      "type": "about-us",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "background_image": "",
+        "button_label": "MORE ABOUT US",
+        "button_url": "booqable://root",
+        "color_scheme": "set-1",
+        "description": "<p>We offer a convenient and flexible fitness equipment rental service, providing top-quality machines and gear to help you create the perfect home gym without the commitment of purchasing. Whether you’re looking to stay fit, test out new equipment, or need a short-term solution, we make it easy with affordable rates, hassle-free delivery, and a wide selection of fitness tools to meet your workout needs.</p>",
+        "full_width": false,
+        "image": "booqable://assets/image-about-us-avatar.png",
+        "image_circle": false,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_borders": true,
+        "tag": "MEET OUR TEAM",
+        "title": "Our story"
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_023494": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>As a busy professional, I didn’t have time to get to the gym, but their high-quality treadmill and weights allowed me to work out from home.</p>",
+            "name": "Emily Thompson",
+            "position": "Los Angeles",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_023495": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>The flexibility of short-term rentals was perfect for me while testing different machines before committing to a gym membership. </p>",
+            "name": "James Martinez",
+            "position": "Austin",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_023496": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>When gyms were closed, I rented a home gym setup from them, and it was a seamless experience from start to finish.</p>",
+            "name": "Sophia Davis",
+            "position": "Miami",
+            "stars": "4"
+          },
+          "disabled": null
+        },
+        "testimonial_023497": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>Not only was the equipment top-tier, but their flexible rental periods and affordable pricing were perfect for my business.</p>",
+            "name": "Michael Nguyen",
+            "position": "Seattle",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_023498": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>The rental process was smooth, and the equipment was in excellent condition. It was delivered and set up without any issues.</p>",
+            "name": "Wilson",
+            "position": "New York",
+            "stars": "4"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial_023494",
+        "testimonial_023495",
+        "testimonial_023496",
+        "testimonial_023497",
+        "testimonial_023498"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "button_url": "booqable://root",
+        "color_scheme": "set-1",
+        "full_width": false,
+        "heading_centering": false,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_carousel": true,
+        "show_navigation": true,
+        "show_stars": "below",
+        "tag": "REVIEWS",
+        "timer": 5,
+        "title": "What our customers say"
+      },
+      "disabled": null
+    },
+    "articles": {
+      "type": "articles",
+      "blocks": {
+        "article_234987": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "article_text": "<p>This post explores the benefits of renting fitness equipment over buying, including cost savings, flexibility, and access to high-end gear without long-term commitment.</p>",
+            "heading": "Why Renting Fitness Equipment is a Smart Choice for Your Home Gym",
+            "image": "booqable://assets/image-articles-1.jpeg"
+          },
+          "disabled": null
+        },
+        "article_234988": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "article_text": "<p>Learn about the essential fitness machines that can help you achieve a full-body workout from home, and how renting makes them more accessible and convenient.</p>",
+            "heading": "Top 5 Fitness Machines You Should Consider Renting",
+            "image": "booqable://assets/image-articles-2.jpeg"
+          },
+          "disabled": null
+        },
+        "article_234989": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "article_text": "<p>Discover how renting gym equipment allows for greater workout flexibility, helping you maintain consistency in your fitness goals no matter your schedule or space constraints.</p>",
+            "heading": "How Renting Fitness Equipment Can Help You Stay Consistent",
+            "image": "booqable://assets/image-articles-3.jpeg"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "article_234987",
+        "article_234988",
+        "article_234989"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "button_url": "booqable://root",
+        "color_scheme": "set-1",
+        "description": "Everything you need to know for your next big event!",
+        "grid": "three",
+        "heading_centering": false,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "small",
+        "tag": "NEWS",
+        "title": "What’s going on"
+      },
+      "disabled": null
+    },
+    "call-to-action_975014": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_label": "GET IN TOUCH",
+        "button_url": "booqable://root",
+        "color_scheme": "set-3",
+        "description": "<p>Rent premium fitness equipment today and enjoy the flexibility of working out from home without the high cost or hassle of ownership.</p>",
+        "full_width": false,
+        "image": "booqable://assets/image-cta-1.jpeg",
+        "layout": "column",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": true,
+        "tag": "",
+        "title": "Get Fit Without the Commitment!"
+      },
+      "disabled": null
+    },
+    "columns_872621": {
+      "type": "columns",
+      "blocks": {
+        "card_401203": {
+          "type": "card",
+          "settings": {
+            "description": "Free delivery for all orders above $100",
+            "icon": "truck-fast",
+            "title": "Free delivery"
+          },
+          "disabled": null
+        },
+        "card_401204": {
+          "type": "card",
+          "settings": {
+            "description": "Chat with us if you’ve any questions",
+            "icon": "comment",
+            "title": "Top-Notch support"
+          },
+          "disabled": null
+        },
+        "card_401205": {
+          "type": "card",
+          "settings": {
+            "description": "Free delivery for all orders above $100",
+            "icon": "handshake",
+            "title": "100% Satisfaction Guarantee!"
+          },
+          "disabled": null
+        },
+        "card_401206": {
+          "type": "card",
+          "settings": {
+            "description": "We know how to do it",
+            "icon": "exclamation",
+            "title": "20 years of experience"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "card_401203",
+        "card_401204",
+        "card_401205",
+        "card_401206"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "grid": "four",
+        "icon_position": "top",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_borders": false,
+        "show_overlay": true,
+        "spacing": "medium",
+        "spacing_mobile": "medium",
+        "text_position": "center"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "hero",
+    "collections",
+    "products",
+    "columns_653474",
+    "products_967435",
+    "about-us",
+    "testimonials",
+    "articles",
+    "call-to-action_975014",
+    "columns_872621"
+  ]
+}
