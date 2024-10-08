@@ -25,21 +25,21 @@
     "market": "AV / Camera",
     "preview_url": "https://crisp.booqable.store/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/crisp_preview.png",
-    "version": "beta"
+    "version": 1
   },
   "moment": {
     "detail_url": "https://booqable.com/themes/moment/",
     "market": "Event / Party",
     "preview_url": "https://moment.booqable.store/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/moment_preview.png",
-    "version": "beta"
+    "version": 1
   },
   "motion": {
     "detail_url": "https://booqable.com/themes/motion/",
     "market": "AV / Camera",
     "preview_url": "https://motion.booqable.store/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/motion_preview.png",
-    "version": "beta"
+    "version": 1
   },
   "raw": {
     "detail_url": "https://booqable.com/themes/raw/",
@@ -53,14 +53,14 @@
     "market": "Bikes / Scooters",
     "preview_url": "https://scenic.booqable.store/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/scenic_preview.png",
-    "version": "beta"
+    "version": 1
   },
   "shine": {
     "detail_url": "https://booqable.com/themes/shine/",
     "market": "AV / Camera",
     "preview_url": "https://shine.booqable.store/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/shine_preview.png",
-    "version": "beta"
+    "version": 1
   },
   "spring": {
     "detail_url": "https://booqable.com/themes/spring/",
