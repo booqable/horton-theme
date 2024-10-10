@@ -1,0 +1,511 @@
+{
+  "name": "Home",
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_outline_label": "",
+        "button_outline_url": "booqable://root/",
+        "button_primary_label": "",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-2",
+        "description": "<p>Dependable trailer rentals tailored for every professional </p>\n<p>need, ensuring you’re equipped for anything.</p>",
+        "full_width": true,
+        "height": "medium",
+        "height_mobile": "full",
+        "image": "booqable://assets/image-hero.jpeg",
+        "image_mobile": "",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "small",
+        "show_datepicker": true,
+        "show_overlay": true,
+        "text_position": "middle-left",
+        "text_position_mobile": "bottom-center",
+        "title": "Trailer Rentals for <br>Every Journey",
+        "video_url": ""
+      },
+      "disabled": null
+    },
+    "collections": {
+      "type": "collections",
+      "blocks": {
+        "collection_517830": {
+          "type": "collection",
+          "settings": {
+            "badge_background": "#FF0000",
+            "badge_color": "#FFFFFF",
+            "badge_label": "",
+            "collection_button_label": "",
+            "show_collection_description": false
+          },
+          "disabled": null
+        },
+        "collection_517831": {
+          "type": "collection",
+          "settings": {
+            "badge_background": "#FF0000",
+            "badge_color": "#FFFFFF",
+            "badge_label": "",
+            "collection_button_label": "",
+            "show_collection_description": false
+          },
+          "disabled": null
+        },
+        "collection_517832": {
+          "type": "collection",
+          "settings": {
+            "badge_background": "#FF0000",
+            "badge_color": "#FFFFFF",
+            "badge_label": "",
+            "collection_button_label": "",
+            "show_collection_description": false
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "collection_517830",
+        "collection_517831",
+        "collection_517832"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "button_url": "booqable://collections",
+        "color_scheme": "set-1",
+        "grid": "three",
+        "heading_centering": false,
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": true,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "text_position_horizontal": "center",
+        "text_position_vertical": "middle",
+        "title": "Collections"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product_481051": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_481051"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "collection": "all-products",
+        "collection_empty_message": "It seems this collection has no products yet",
+        "color_scheme": "set-1",
+        "heading": "",
+        "heading_centering": false,
+        "image": "",
+        "image_fit": "cover",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": false,
+        "show_description": false,
+        "show_excerpt": true,
+        "show_navigation": true,
+        "show_overlay": true,
+        "spacing": "none",
+        "spacing_mobile": "medium",
+        "tag": "THIS WEEK",
+        "timer": 5,
+        "title": "Popular products"
+      },
+      "disabled": null
+    },
+    "columns_653474": {
+      "type": "columns",
+      "blocks": {
+        "deco_401203": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description": "",
+            "image": "booqable://assets/image-columns-deco-1.jpg",
+            "title": "Extra card"
+          },
+          "disabled": null
+        },
+        "deco_401204": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description": "",
+            "image": "booqable://assets/image-columns-deco-2.jpg",
+            "title": "Extra card"
+          },
+          "disabled": null
+        },
+        "deco_401205": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description": "",
+            "image": "booqable://assets/image-columns-deco-3.jpg",
+            "title": "Extra card"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "deco_401203",
+        "deco_401204",
+        "deco_401205"
+      ],
+      "settings": {
+        "color_scheme": "set-4",
+        "grid": "three",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": true,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "text_position": "left"
+      },
+      "disabled": null
+    },
+    "products_967435": {
+      "type": "products",
+      "blocks": {
+        "product_481015": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_481015"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "color_scheme": "set-1",
+        "collection": "all-products",
+        "collection_empty_message": "It seems this collection has no products yet",
+        "heading": "",
+        "heading_centering": false,
+        "image": "",
+        "image_fit": "cover",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": false,
+        "show_description": false,
+        "show_excerpt": true,
+        "show_navigation": true,
+        "show_overlay": true,
+        "spacing": "none",
+        "spacing_mobile": "medium",
+        "tag": "THIS WEEK",
+        "timer": 5,
+        "title": "New products"
+      },
+      "disabled": null
+    },
+    "about-us": {
+      "type": "about-us",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "background_image": "",
+        "button_label": "MORE ABOUT US",
+        "button_url": "booqable://root",
+        "color_scheme": "set-3",
+        "description": "<p>At our trailer rental business, we provide a diverse fleet of high-quality trailers designed to meet the demands of professionals and businesses. Whether you need a durable cargo trailer for transporting goods or a specialized trailer for unique projects, we offer reliable solutions to ensure your operations run smoothly. With flexible rental options and exceptional customer service, we’re committed to supporting your success, every step of the way.</p>",
+        "full_width": false,
+        "image": "booqable://assets/image-about-us-avatar.jpg",
+        "image_circle": false,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_borders": true,
+        "tag": "MEET OUR TEAM",
+        "title": "Our story"
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_023494": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>The service  was outstanding! The trailer was in excellent condition and perfect for our moving needs. I couldn’t have asked for a smoother experience.</p>",
+            "name": "Emily Thompson",
+            "position": "Los Angeles",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_023495": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>Renting a trailer from these guys was a game-changer for our project. The staff was knowledgeable and helped us choose the right trailer for our job. Highly recommend!</p>",
+            "name": "James Martinez",
+            "position": "Austin",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_023496": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>I’ve rented trailers from various companies, but this rental business stands out for their professionalism and customer service. The rental process was seamless, and I’ll definitely be back.</p>",
+            "name": "Sophia Davis",
+            "position": "Miami",
+            "stars": "4"
+          },
+          "disabled": null
+        },
+        "testimonial_023497": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>As a small business owner, I appreciate the flexibility that they offer. The pricing is fair, and the trailers are well-maintained. It’s become my go-to rental place!</p>",
+            "name": "Michael Nguyen",
+            "position": "Seattle",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_023498": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>From start to finish, my experience with they were top-notch. They provided exactly what I needed and made sure I felt confident using the trailer. Excellent service!</p>",
+            "name": "Wilson",
+            "position": "New York",
+            "stars": "4"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial_023494",
+        "testimonial_023495",
+        "testimonial_023496",
+        "testimonial_023497",
+        "testimonial_023498"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "button_url": "booqable://root",
+        "color_scheme": "set-1",
+        "full_width": false,
+        "heading_centering": false,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_carousel": true,
+        "show_navigation": true,
+        "show_stars": "below",
+        "tag": "REVIEWS",
+        "timer": 5,
+        "title": "What our customers say"
+      },
+      "disabled": null
+    },
+    "articles": {
+      "type": "articles",
+      "blocks": {
+        "article_234987": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "article_text": "<p>Explore essential factors to consider when selecting a trailer, including size, type, and capacity, to ensure it meets your specific professional requirements.</p>",
+            "heading": "Choosing the Right Trailer for Your Business Needs",
+            "image": "booqable://assets/image-articles-1.jpeg"
+          },
+          "disabled": null
+        },
+        "article_234988": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "article_text": "<p>Discover practical strategies and best practices for efficiently loading and unloading your trailer, helping you save time and reduce the risk of damage.</p>",
+            "heading": "Maximizing Efficiency: Tips for Loading and Unloading Trailers",
+            "image": "booqable://assets/image-articles-2.jpeg"
+          },
+          "disabled": null
+        },
+        "article_234989": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "article_text": "<p>Weigh the pros and cons of renting versus purchasing trailers, highlighting cost-effectiveness, maintenance concerns, and flexibility for businesses.</p>",
+            "heading": "The Benefits of Renting vs. Buying Trailers for Your Business",
+            "image": "booqable://assets/image-articles-3.jpeg"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "article_234987",
+        "article_234988",
+        "article_234989"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "button_url": "booqable://root",
+        "color_scheme": "set-1",
+        "description": "",
+        "grid": "three",
+        "heading_centering": false,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "small",
+        "tag": "NEWS",
+        "title": "What’s going on"
+      },
+      "disabled": null
+    },
+    "call-to-action_975014": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_label": "GET IN TOUCH",
+        "button_url": "booqable://root",
+        "color_scheme": "set-4",
+        "description": "<p>Explore our extensive selection of professional-grade trailers, ready to tackle any project you have in mind.</p>",
+        "full_width": false,
+        "image": "booqable://assets/image-cta-1.jpg",
+        "layout": "column",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": true,
+        "tag": "",
+        "title": "Get Your Trailer Today!"
+      },
+      "disabled": null
+    },
+    "columns_872621": {
+      "type": "columns",
+      "blocks": {
+        "card_401203": {
+          "type": "card",
+          "settings": {
+            "description": "Free delivery for all orders above $100",
+            "icon": "truck-fast",
+            "title": "Free delivery"
+          },
+          "disabled": null
+        },
+        "card_401204": {
+          "type": "card",
+          "settings": {
+            "description": "Chat with us if you’ve any questions",
+            "icon": "comment",
+            "title": "Top-Notch support"
+          },
+          "disabled": null
+        },
+        "card_401205": {
+          "type": "card",
+          "settings": {
+            "description": "Free delivery for all orders above $100",
+            "icon": "handshake",
+            "title": "100% Satisfaction Guarantee!"
+          },
+          "disabled": null
+        },
+        "card_401206": {
+          "type": "card",
+          "settings": {
+            "description": "We know how to do it",
+            "icon": "exclamation",
+            "title": "20 years of experience"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "card_401203",
+        "card_401204",
+        "card_401205",
+        "card_401206"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "grid": "four",
+        "icon_position": "top",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_borders": false,
+        "show_overlay": true,
+        "spacing": "medium",
+        "spacing_mobile": "medium",
+        "text_position": "center"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "hero",
+    "collections",
+    "products",
+    "columns_653474",
+    "products_967435",
+    "about-us",
+    "testimonials",
+    "articles",
+    "call-to-action_975014",
+    "columns_872621"
+  ]
+}
