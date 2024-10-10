@@ -41,12 +41,26 @@
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/motion_preview.png",
     "version": 1
   },
+  "place": {
+    "detail_url": "https://booqable.com/themes/place/",
+    "market": "Tools / Construction",
+    "preview_url": "https://place.booqable.store/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/place_preview.png",
+    "version": "beta"
+  },
   "raw": {
     "detail_url": "https://booqable.com/themes/raw/",
     "market": "Sports / Activies",
     "preview_url": "https://raw.booqable.store/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/raw_preview.png",
     "version": 1
+  },
+  "route": {
+    "detail_url": "https://booqable.com/themes/route/",
+    "market": "Tools / Construction",
+    "preview_url": "https://route.booqable.store/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/route_preview.png",
+    "version": "beta"
   },
   "scenic": {
     "detail_url": "https://booqable.com/themes/scenic/",
