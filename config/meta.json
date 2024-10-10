@@ -4,7 +4,7 @@
     "market": "Sports / Activities",
     "preview_url": "https://achieve.booqable.store/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/achieve_preview.png",
-    "version": "beta"
+    "version": 1
   },
   "adore": {
     "detail_url": "https://booqable.com/themes/adore/",
