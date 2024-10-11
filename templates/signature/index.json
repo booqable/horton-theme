@@ -159,7 +159,7 @@
             "button_label": "SEE MORE",
             "button_url": "booqable://root",
             "description": "",
-            "image": "booqable://assets/image-columns-deco-2.png",
+            "image": "booqable://assets/image-columns-deco-2.jpg",
             "title": "Extra card"
           },
           "disabled": null
@@ -170,7 +170,7 @@
             "button_label": "SEE MORE",
             "button_url": "booqable://root",
             "description": "",
-            "image": "booqable://assets/image-columns-deco-3.png",
+            "image": "booqable://assets/image-columns-deco-3.jpg",
             "title": "Extra card"
           },
           "disabled": null
