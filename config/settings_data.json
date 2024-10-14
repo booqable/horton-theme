@@ -1304,6 +1304,247 @@
       "social_spacing": "md",
       "use_focal_images": true
     },
+    "navigate": {
+      "animation_duration": 0.3,
+      "color_schemes": {
+        "set-1": {
+          "type": "color_scheme",
+          "settings": {
+            "background": "#FFFFFF",
+            "background_accent": "#1CA7C5",
+            "color_accent": "#FFFFFF",
+            "color_accent_outline": "#1CA7C5",
+            "color_primary": "#231C04",
+            "color_secondary": "#948C93"
+          }
+        },
+        "set-2": {
+          "type": "color_scheme",
+          "settings": {
+            "background": "#040E20",
+            "background_accent": "#1CA7C5",
+            "color_accent": "#231C04",
+            "color_accent_outline": "#1CA7C5",
+            "color_primary": "#FFFFFF",
+            "color_secondary": "#B0ACAF"
+          }
+        },
+        "set-3": {
+          "type": "color_scheme",
+          "settings": {
+            "background": "#FFFFFF",
+            "background_accent": "#FFFFFF",
+            "color_accent": "#131313",
+            "color_accent_outline": "#1CA7C5",
+            "color_primary": "#131313",
+            "color_secondary": "#948C93"
+          }
+        },
+        "set-4": {
+          "type": "color_scheme",
+          "settings": {
+            "background": "#FFFFFF",
+            "background_accent": "#F7F6F2",
+            "color_accent": "#231C04",
+            "color_accent_outline": "#F7F6F2",
+            "color_primary": "#231C04",
+            "color_secondary": "#231C04"
+          }
+        },
+        "set-5": {
+          "type": "color_scheme",
+          "settings": {
+            "background": "#1CA7C5",
+            "background_accent": "#E6A4D3",
+            "color_accent": "#231C04",
+            "color_accent_outline": "#E6A4D3",
+            "color_primary": "#FFFFFF",
+            "color_secondary": "#FFFFFF"
+          }
+        }
+      },
+      "corner_radius": "fully_round",
+      "font_body": "inter",
+      "font_heading": "darker-grotesque",
+      "font_height_xs": 1,
+      "font_height_sm": 1.2,
+      "font_height_md": 1.3333,
+      "font_height_lg": 1.4,
+      "font_height_xl": 1.5,
+      "font_size_h1": 84,
+      "font_size_h2": 64,
+      "font_size_h3": 44,
+      "font_size_h4": 32,
+      "font_size_h5": 24,
+      "font_size_h6": 20,
+      "font_size_large": 18,
+      "font_size_regular": 16,
+      "font_size_tagline": 18,
+      "font_spacing_xs": -0.04,
+      "font_spacing_sm": -0.03,
+      "font_spacing_md": -0.02,
+      "font_spacing_lg": 0.07,
+      "font_spacing_xl": 0.1,
+      "font_weight_h1": "700",
+      "font_weight_h2": "700",
+      "font_weight_h3": "700",
+      "font_weight_headers": "700",
+      "font_weight_light": "300",
+      "font_weight_regular": "400",
+      "font_weight_medium": "500",
+      "font_weight_semibold": "600",
+      "font_weight_bold": "700",
+      "font_weight_extrabold": "800",
+      "font_tagline": "inter",
+      "icon_style": "outline",
+      "image_placeholder": "booqable://assets/image-placeholder.png",
+      "sections": {
+        "top-bar": {
+          "type": "top-bar",
+          "blocks": {},
+          "block_order": [],
+          "settings": {
+            "bar_message": "<p>Get 15% off with code <b>WAVERENT</b> at checkout</p>",
+            "bar_message_secondary": "Call Us 24/7 <a href=\"tel:+15553028549\">+1 555 302 8549</a>",
+            "bar_message_secondary_icon": "phone",
+            "bar_message_third": "Mon - Fri: 10:00 - 18:00",
+            "bar_message_third_icon": "clock",
+            "color_scheme": "set-5",
+            "padding_bottom": "large",
+            "padding_bottom_mobile": "small",
+            "padding_top": "large",
+            "padding_top_mobile": "small",
+            "show_bar": true
+          },
+          "disabled": null
+        },
+        "header": {
+          "type": "header",
+          "blocks": {
+            "url_894203": {
+              "type": "url",
+              "settings": {
+                "heading": "+1 555 302 8549",
+                "icon": "phone",
+                "url": "tel:+15553028549"
+              },
+              "disabled": null
+            },
+            "url_894205": {
+              "type": "url",
+              "settings": {
+                "heading": "info@example.com",
+                "icon": "envelope",
+                "url": "mailto:info@example.com"
+              },
+              "disabled": null
+            },
+            "url_894204": {
+              "type": "url",
+              "settings": {
+                "heading": "How does it work",
+                "icon": "info",
+                "url": "support-url.example"
+              },
+              "disabled": null
+            }
+          },
+          "block_order": [
+            "url_894203",
+            "url_894205",
+            "url_894204"
+          ],
+          "settings": {
+            "color_scheme": "set-1",
+            "custom_title": "{{ shop.name }}",
+            "logo": "booqable://assets/image-store-logo.png",
+            "menu_back_mobile": "Back",
+            "menu_main": "main-menu",
+            "menu_message_mobile": "Mon - Fri: 10:00 - 18:00",
+            "menu_message_mobile_icon": "clock",
+            "menu_opener_label": "Collections",
+            "menu_opener_mobile": "right",
+            "menu_secondary": "main-menu",
+            "menu_third": "additional-menu",
+            "padding_bottom": "large",
+            "padding_bottom_mobile": "small",
+            "padding_top": "large",
+            "padding_top_mobile": "small",
+            "quick_menu_icon_opener": "headset",
+            "search_label": "SEARCH",
+            "search_placeholder": "Search for products",
+            "show_search": true,
+            "sticky_header": true
+          },
+          "disabled": null
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "menu_799455": {
+              "type": "menu",
+              "settings": {
+                "heading": "Column One",
+                "menu": "main-menu",
+                "menu_align": "left"
+              },
+              "disabled": null
+            },
+            "menu_799456": {
+              "type": "menu",
+              "settings": {
+                "heading": "Column Two",
+                "menu": "main-menu",
+                "menu_align": "left"
+              },
+              "disabled": null
+            },
+            "menu_799457": {
+              "type": "menu",
+              "settings": {
+                "heading": "Column Three",
+                "menu": "main-menu",
+                "menu_align": "left"
+              },
+              "disabled": null
+            },
+            "menu_799458": {
+              "type": "menu",
+              "settings": {
+                "heading": "Column Four",
+                "menu": "main-menu",
+                "menu_align": "left"
+              },
+              "disabled": null
+            }
+          },
+          "block_order": [
+            "menu_799455",
+            "menu_799456",
+            "menu_799457",
+            "menu_799458"
+          ],
+          "settings": {
+            "additional_info": "<p>Our luxury boat rental service offers an exclusive selection of premium yachts and boats, providing a first-class experience on the water. </p>",
+            "bottom_menu": "bottom-menu",
+            "bottom_text": "{{ \"now\" | date: \"%Y\" }} {{ shop.name }}. All right reserved.",
+            "color_scheme": "set-2",
+            "custom_title": "{{ shop.name }}",
+            "logo": "booqable://assets/image-store-logo-white.png",
+            "padding_bottom": "small",
+            "padding_bottom_mobile": "small",
+            "padding_top": "large",
+            "padding_top_mobile": "small",
+            "privacy_policy_label": "Privacy policy",
+            "show_payments": true
+          },
+          "disabled": null
+        }
+      },
+      "social_size": "lg",
+      "social_spacing": "md",
+      "use_focal_images": true
+    },
     "place": {
       "animation_duration": 0.3,
       "color_schemes": {
