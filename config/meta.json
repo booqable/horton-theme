@@ -88,7 +88,7 @@
     "market": "Clothing",
     "preview_url": "https://signature.booqable.store/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/signature_preview.png",
-    "version": "beta"
+    "version": 1
   },
   "spring": {
     "detail_url": "https://booqable.com/themes/spring/",
