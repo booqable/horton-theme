@@ -94,7 +94,7 @@
       "settings": {
         "color_scheme": "set-1",
         "grid": "four",
-        "icon_position": "left",
+        "icon_position": "top",
         "overlay_background": "#000000",
         "overlay_color": "#FFFFFF",
         "overlay_opacity": 40,
@@ -550,7 +550,7 @@
       "settings": {
         "color_scheme": "set-1",
         "grid": "four",
-        "icon_position": "left",
+        "icon_position": "top",
         "overlay_background": "#000000",
         "overlay_color": "#FFFFFF",
         "overlay_opacity": 40,
