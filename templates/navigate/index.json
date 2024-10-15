@@ -1,0 +1,582 @@
+{
+  "name": "Home",
+  "sections": {
+    "spacer": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-1",
+        "image": "",
+        "size": "small",
+        "size_mobile": "small"
+      },
+      "disabled": null
+    },
+    "hero": {
+      "type": "hero",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_outline_label": "",
+        "button_outline_url": "booqable://root/",
+        "button_primary_label": "",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-4",
+        "description": "<p>Indulge in a world of luxury and adventure on the open water, with our exclusive selection</p><p> of boats designed to offer you an unforgettable, first-class experience</p>",
+        "full_width": false,
+        "height": "medium",
+        "height_mobile": "full",
+        "image": "booqable://assets/image-hero.jpg",
+        "image_mobile": "",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 30,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "small",
+        "show_datepicker": true,
+        "show_overlay": true,
+        "text_position": "middle-left",
+        "text_position_mobile": "bottom-center",
+        "title": "Where Cruising <br>Meets Rental",
+        "video_url": ""
+      },
+      "disabled": null
+    },
+    "columns_871021": {
+      "type": "columns",
+      "blocks": {
+        "card_894203": {
+          "type": "card",
+          "settings": {
+            "description": "Free delivery for all orders above $100",
+            "icon": "truck-fast",
+            "title": "Free delivery"
+          },
+          "disabled": null
+        },
+        "card_894204": {
+          "type": "card",
+          "settings": {
+            "description": "Chat with us if you’ve any questions",
+            "icon": "comment",
+            "title": "Top-Notch support"
+          },
+          "disabled": null
+        },
+        "card_894205": {
+          "type": "card",
+          "settings": {
+            "description": "Free delivery for all orders above $100",
+            "icon": "handshake",
+            "title": "100% Satisfaction Guarantee!"
+          },
+          "disabled": null
+        },
+        "card_894206": {
+          "type": "card",
+          "settings": {
+            "description": "We know how to do it",
+            "icon": "exclamation",
+            "title": "20 years of experience"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "card_894203",
+        "card_894204",
+        "card_894205",
+        "card_894206"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "grid": "four",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_borders": false,
+        "show_overlay": false,
+        "spacing": "medium",
+        "spacing_mobile": "medium",
+        "text_position": "center"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product_482071": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_482071"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "color_scheme": "set-1",
+        "collection": "all-products",
+        "collection_empty_message": "It seems this collection has no products yet",
+        "heading": "",
+        "heading_centering": false,
+        "image": "",
+        "image_fit": "cover",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_description": false,
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_overlay": true,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "tag": "THIS WEEK",
+        "timer": 5,
+        "title": "Popular products"
+      },
+      "disabled": null
+    },
+    "columns": {
+      "type": "columns",
+      "blocks": {
+        "deco": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description": "",
+            "image": "booqable://assets/image-columns-deco-1.jpg",
+            "title": "Title here"
+          },
+          "disabled": null
+        },
+        "deco_362950": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description": "",
+            "image": "booqable://assets/image-columns-deco-2.jpg",
+            "title": "Title here"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "deco",
+        "deco_362950"
+      ],
+      "settings": {
+        "color_scheme": "set-3",
+        "grid": "two",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": false,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "text_position": "left"
+      },
+      "disabled": null
+    },
+    "products_901789": {
+      "type": "products",
+      "blocks": {
+        "product_487862": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_487862"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "color_scheme": "set-1",
+        "collection": "all-products",
+        "collection_empty_message": "It seems this collection has no products yet",
+        "heading": "",
+        "heading_centering": false,
+        "image": "",
+        "image_fit": "cover",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_description": false,
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_overlay": true,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "tag": "THIS WEEK",
+        "timer": 5,
+        "title": "New products"
+      },
+      "disabled": null
+    },
+    "about-us": {
+      "type": "about-us",
+      "blocks": {
+        "text_914717": {
+          "type": "text",
+          "settings": {
+            "icon": "warning",
+            "text": "<h6>10+ years of experience</h6><p>World-class service, dedication to your projects, and excellent quality sets us apart from the rest.</p>"
+          },
+          "disabled": null
+        },
+        "text_914718": {
+          "type": "text",
+          "settings": {
+            "icon": "calendar",
+            "text": "<h6>Rent 7 days a week</h6><p>World-class service, dedication to your projects, and excellent quality sets us apart from the rest.</p>"
+          },
+          "disabled": null
+        },
+        "text_914719": {
+          "type": "text",
+          "settings": {
+            "icon": "info",
+            "text": "<h6>10+ years of experience</h6><p>World-class service, dedication to your projects, and excellent quality sets us apart from the rest.</p>"
+          },
+          "disabled": null
+        },
+        "text_914720": {
+          "type": "text",
+          "settings": {
+            "icon": "tag",
+            "text": "<h6>Rent 7 days a week</h6><p>World-class service, dedication to your projects, and excellent quality sets us apart from the rest.</p>"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "text_914717",
+        "text_914718",
+        "text_914719",
+        "text_914720"
+      ],
+      "settings": {
+        "background_image": "",
+        "button_label": "MORE ABOUT US",
+        "button_url": "booqable://root",
+        "color_scheme": "set-4",
+        "description": "<p>Our luxury boat rental service offers an exclusive selection of premium yachts and boats, providing a first-class experience on the water. Whether you’re looking for a serene coastal getaway or an adventurous ocean voyage, we deliver personalized, top-tier service, ensuring every detail of your journey is tailored to perfection. </p>",
+        "full_width": false,
+        "image": "",
+        "image_circle": false,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_borders": true,
+        "tag": "WE DO THAT WE LOVE",
+        "title": "About us"
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_024704": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>From start to finish, the entire experience was seamless. The boat was immaculate, and the staff went above and beyond.</p>",
+            "name": "Sarah Williams",
+            "position": "New York",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024705": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>The crew was professional, the service was exceptional, and the luxury onboard made our weekend unforgettable.</p>",
+            "name": "David Thompson",
+            "position": "Los Angeles",
+            "stars": "4"
+          },
+          "disabled": null
+        },
+        "testimonial_024706": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>The boat was stunning, and the attention to detail in every aspect made us feel like VIPs from the moment we arrived.</p>",
+            "name": "Emily Johnson",
+            "position": "Miami",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024707": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>The yacht was beautifully maintained, and the personalized service made our anniversary truly special.</p>",
+            "name": "Jessica Martinez",
+            "position": "Austin",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024708": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>The boat was breathtaking, and the crew’s dedication to making us feel comfortable and pampered made this a once-in-a-lifetime adventure.</p>",
+            "name": "Mark Taylor",
+            "position": "Chicago",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024709": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>The elegance of the yacht, combined with the impeccable service, made it an unforgettable journey. Highly recommended!</p>",
+            "name": "Ashley Brown",
+            "position": "Orlando",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024710": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>The yacht was pure luxury, and the entire team ensured our experience was nothing short of extraordinary.</p>",
+            "name": "Michael Davis",
+            "position": "Seattle",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024711": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>The boat was luxurious, spacious, and equipped with everything we needed for a perfect day out on the water.&nbsp;</p>",
+            "name": "Lauren Miller",
+            "position": "San Diego",
+            "stars": "5"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial_024704",
+        "testimonial_024705",
+        "testimonial_024706",
+        "testimonial_024707",
+        "testimonial_024708",
+        "testimonial_024709",
+        "testimonial_024710",
+        "testimonial_024711"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "button_url": "booqable://root",
+        "color_scheme": "set-1",
+        "full_width": true,
+        "heading_centering": false,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_carousel": false,
+        "show_navigation": true,
+        "show_stars": "below",
+        "tag": "REWIEWS",
+        "timer": 5,
+        "title": "What our customers say"
+      },
+      "disabled": null
+    },
+    "call-to-action": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_label": "GET IN TOUCH",
+        "button_url": "booqable://products",
+        "color_scheme": "set-3",
+        "description": "<p>Discover the freedom of the open water with our premium fleet, offering unparalleled comfort, elegance, and a tailored experience for every adventure.</p>",
+        "full_width": false,
+        "image": "booqable://assets/image-cta-1.jpeg",
+        "layout": "column",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": false,
+        "show_overlay": true,
+        "tag": "",
+        "title": "Book your luxury boat rental today and set sail in style"
+      },
+      "disabled": null
+    },
+    "articles": {
+      "type": "articles",
+      "blocks": {
+        "article_237127": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "article_text": "<p>Discover the best ways to experience Florida’s stunning coastlines, hidden gems, and vibrant marine life through a boating adventure.</p>",
+            "heading": "Explore Florida by Boat",
+            "image": "booqable://assets/image-articles-1.jpeg"
+          },
+          "disabled": null
+        },
+        "article_237128": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "article_text": "<p>Learn the top spots and tips for witnessing breathtaking Miami sunsets from both land and sea.</p>",
+            "heading": "How to Catch the Perfect Sunset in Miami",
+            "image": "booqable://assets/image-articles-2.jpeg"
+          },
+          "disabled": null
+        },
+        "article_237129": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "article_text": "<p>Essential advice to help you prepare for a safe, enjoyable, and hassle-free boating experience in international waters.</p>",
+            "heading": "10 Tips Before You Hit International Waters",
+            "image": "booqable://assets/image-articles-3.jpeg"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "article_237127",
+        "article_237128",
+        "article_237129"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "button_url": "booqable://root",
+        "color_scheme": "set-1",
+        "description": "",
+        "grid": "three",
+        "heading_centering": false,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "small",
+        "tag": "NEWS",
+        "title": "What’s going on"
+      },
+      "disabled": null
+    },
+    "columns_354021": {
+      "type": "columns",
+      "blocks": {
+        "card_810203": {
+          "type": "card",
+          "settings": {
+            "description": "Free delivery for all orders above $100",
+            "icon": "truck-fast",
+            "title": "Free delivery"
+          },
+          "disabled": null
+        },
+        "card_810204": {
+          "type": "card",
+          "settings": {
+            "description": "Chat with us if you’ve any questions",
+            "icon": "comment",
+            "title": "Top-Notch support"
+          },
+          "disabled": null
+        },
+        "card_810205": {
+          "type": "card",
+          "settings": {
+            "description": "Free delivery for all orders above $100",
+            "icon": "handshake",
+            "title": "100% Satisfaction Guarantee!"
+          },
+          "disabled": null
+        },
+        "card_810206": {
+          "type": "card",
+          "settings": {
+            "description": "We know how to do it",
+            "icon": "exclamation",
+            "title": "20 years of experience"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "card_810203",
+        "card_810204",
+        "card_810205",
+        "card_810206"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "grid": "four",
+        "icon_position": "left",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_borders": false,
+        "show_overlay": false,
+        "spacing": "medium",
+        "spacing_mobile": "medium",
+        "text_position": "center"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "spacer",
+    "hero",
+    "columns_871021",
+    "products",
+    "columns",
+    "products_901789",
+    "about-us",
+    "testimonials",
+    "call-to-action",
+    "articles",
+    "columns_354021"
+  ]
+}
