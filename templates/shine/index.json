@@ -18,10 +18,10 @@
       "blocks": {},
       "block_order": [],
       "settings": {
-        "button_primary_label": "",
-        "button_primary_url": "booqable://products/",
         "button_outline_label": "",
         "button_outline_url": "booqable://root/",
+        "button_primary_label": "",
+        "button_primary_url": "booqable://products/",
         "color_scheme": "set-4",
         "description": "<p>Professional lighting rentals for every production – reliable equipment, </p><p>expert support, and seamless service to bring your vision to life.</p>",
         "full_width": false,
