@@ -22,12 +22,12 @@
         "button_outline_url": "booqable://root/",
         "button_primary_label": "",
         "button_primary_url": "booqable://products/",
-        "color_scheme": "set-2",
-        "description": "<p>Transform your garden with ease – rent the right tools</p><p>for every job, without the commitment of buying</p>",
+        "color_scheme": "set-4",
+        "description": "<p>Stylish furniture, flexible rentals – redesign your </p><p>space effortlessly, one room at a time.</p>",
         "full_width": false,
         "height": "medium",
         "height_mobile": "full",
-        "image": "booqable://assets/image-hero.webp",
+        "image": "booqable://assets/image-hero.jpeg",
         "image_mobile": "",
         "overlay_background": "#000000",
         "overlay_color": "#FFFFFF",
@@ -40,7 +40,7 @@
         "show_overlay": true,
         "text_position": "middle-left",
         "text_position_mobile": "bottom-center",
-        "title": "Improve your garden. <br>Rent your tools.",
+        "title": "Furniture Haven<br>Rent Your Style",
         "video_url": ""
       },
       "disabled": null
@@ -51,8 +51,8 @@
         "card_894203": {
           "type": "card",
           "settings": {
-            "icon": "truck-fast",
             "description": "Free delivery for all orders above $100",
+            "icon": "truck-fast",
             "title": "Free delivery"
           },
           "disabled": null
@@ -60,8 +60,8 @@
         "card_894204": {
           "type": "card",
           "settings": {
-            "icon": "comment",
             "description": "Chat with us if you’ve any questions",
+            "icon": "comment",
             "title": "Top-Notch support"
           },
           "disabled": null
@@ -69,8 +69,8 @@
         "card_894205": {
           "type": "card",
           "settings": {
-            "icon": "handshake",
             "description": "Free delivery for all orders above $100",
+            "icon": "handshake",
             "title": "100% Satisfaction Guarantee!"
           },
           "disabled": null
@@ -78,8 +78,8 @@
         "card_894206": {
           "type": "card",
           "settings": {
-            "icon": "exclamation",
             "description": "We know how to do it",
+            "icon": "exclamation",
             "title": "20 years of experience"
           },
           "disabled": null
@@ -110,82 +110,17 @@
       },
       "disabled": null
     },
-    "collections": {
-      "type": "collections",
-      "blocks": {
-        "collection_523830": {
-          "type": "collection",
-          "settings": {
-            "badge_background": "#FF0000",
-            "badge_color": "#FFFFFF",
-            "badge_label": "HOT!",
-            "collection_button_label": "SHOP NOW",
-            "show_collection_description": false
-          },
-          "disabled": null
-        },
-        "collection_523831": {
-          "type": "collection",
-          "settings": {
-            "badge_background": "#1C3C2D",
-            "badge_color": "#FFFFFF",
-            "badge_label": "NEW!",
-            "collection_button_label": "SHOP NOW",
-            "show_collection_description": false
-          },
-          "disabled": null
-        },
-        "collection_523832": {
-          "type": "collection",
-          "settings": {
-            "badge_background": "#FFFFFF",
-            "badge_color": "#1C3C2D",
-            "badge_label": "MOST POPULAR",
-            "collection_button_label": "SHOP NOW",
-            "show_collection_description": false
-          },
-          "disabled": null
-        }
-      },
-      "block_order": [
-        "collection_523830",
-        "collection_523831",
-        "collection_523832"
-      ],
-      "settings": {
-        "button_label": "",
-        "button_url": "booqable://collections",
-        "color_scheme": "set-3",
-        "grid": "three",
-        "heading_centering": false,
-        "overlay_background": "#1C3C2D",
-        "overlay_color": "#FFFFFF",
-        "overlay_opacity": 40,
-        "padding_bottom": "medium",
-        "padding_bottom_mobile": "medium",
-        "padding_top": "medium",
-        "padding_top_mobile": "medium",
-        "show_borders": true,
-        "show_overlay": true,
-        "spacing": "large",
-        "spacing_mobile": "medium",
-        "text_position_horizontal": "left",
-        "text_position_vertical": "stretch",
-        "title": ""
-      },
-      "disabled": null
-    },
     "products": {
       "type": "products",
       "blocks": {
-        "product_482074": {
+        "product_482071": {
           "type": "product",
           "settings": {},
           "disabled": null
         }
       },
       "block_order": [
-        "product_482074"
+        "product_482071"
       ],
       "settings": {
         "button_label": "SEE ALL",
@@ -193,12 +128,12 @@
         "collection": "all-products",
         "collection_empty_message": "It seems this collection has no products yet",
         "heading": "",
-        "heading_centering": true,
+        "heading_centering": false,
         "image": "",
         "image_fit": "cover",
         "overlay_background": "#000000",
         "overlay_color": "#FFFFFF",
-        "overlay_opacity": 30,
+        "overlay_opacity": 40,
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
         "padding_top": "medium",
@@ -216,86 +151,48 @@
       },
       "disabled": null
     },
-    "call-to-action": {
-      "type": "call-to-action",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "button_label": "SEE OUR PRODUCTS",
-        "button_url": "booqable://products",
-        "color_scheme": "set-2",
-        "description": "<p>$10 gift card</p><p>Special offer for renting gardening tools</p>",
-        "full_width": false,
-        "image": "booqable://assets/image-cta-1.jpg",
-        "layout": "row",
-        "overlay_background": "#1C3C2D",
-        "overlay_color": "#FFFFFF",
-        "overlay_opacity": 70,
-        "padding_bottom": "medium",
-        "padding_bottom_mobile": "medium",
-        "padding_top": "medium",
-        "padding_top_mobile": "medium",
-        "show_borders": true,
-        "show_overlay": true,
-        "tag": "",
-        "title": "WIN"
-      },
-      "disabled": null
-    },
-    "columns_618084": {
+    "columns": {
       "type": "columns",
       "blocks": {
-        "deco_911203": {
+        "deco": {
           "type": "deco",
           "settings": {
             "button_label": "SEE MORE",
             "button_url": "booqable://root",
             "description": "",
-            "image": "booqable://assets/image-columns-1.jpg",
-            "title": "Extra card"
+            "image": "booqable://assets/image-columns-deco-1.jpg",
+            "title": "Title here"
           },
           "disabled": null
         },
-        "deco_911204": {
+        "deco_945221": {
           "type": "deco",
           "settings": {
             "button_label": "SEE MORE",
             "button_url": "booqable://root",
             "description": "",
-            "image": "booqable://assets/image-columns-2.jpg",
-            "title": "Extra card"
-          },
-          "disabled": null
-        },
-        "deco_911205": {
-          "type": "deco",
-          "settings": {
-            "button_label": "SEE MORE",
-            "button_url": "booqable://root",
-            "description": "",
-            "image": "booqable://assets/image-columns-3.jpg",
-            "title": "Extra card"
+            "image": "booqable://assets/image-columns-deco-2.jpg",
+            "title": "Title here"
           },
           "disabled": null
         }
       },
       "block_order": [
-        "deco_911203",
-        "deco_911204",
-        "deco_911205"
+        "deco",
+        "deco_945221"
       ],
       "settings": {
-        "color_scheme": "set-1",
-        "grid": "three",
+        "color_scheme": "set-4",
+        "grid": "two",
         "overlay_background": "#000000",
         "overlay_color": "#FFFFFF",
         "overlay_opacity": 40,
-        "padding_bottom": "small",
+        "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
-        "padding_top": "small",
+        "padding_top": "medium",
         "padding_top_mobile": "medium",
         "show_borders": true,
-        "show_overlay": true,
+        "show_overlay": false,
         "spacing": "large",
         "spacing_mobile": "medium",
         "text_position": "left"
@@ -305,27 +202,27 @@
     "products_901789": {
       "type": "products",
       "blocks": {
-        "product_487859": {
+        "product_487862": {
           "type": "product",
           "settings": {},
           "disabled": null
         }
       },
       "block_order": [
-        "product_487859"
+        "product_487862"
       ],
       "settings": {
         "button_label": "SEE ALL",
-        "color_scheme": "set-3",
+        "color_scheme": "set-1",
         "collection": "all-products",
         "collection_empty_message": "It seems this collection has no products yet",
         "heading": "",
-        "heading_centering": true,
+        "heading_centering": false,
         "image": "",
         "image_fit": "cover",
         "overlay_background": "#000000",
         "overlay_color": "#FFFFFF",
-        "overlay_opacity": 30,
+        "overlay_opacity": 40,
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
         "padding_top": "medium",
@@ -345,84 +242,62 @@
     },
     "about-us": {
       "type": "about-us",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "background_image": "",
-        "button_label": "MORE ABOUT US",
-        "button_url": "booqable://root",
-        "color_scheme": "set-5",
-        "description": "Our passion for producing amazing wedding experiences has taken us on a fantastic path, where we have perfected the art of translating treasured fantasies into a reality of elegance. element symbolises the pinnacle of luxury, where love and beauty are harmoniously intertwined.",
-        "full_width": false,
-        "image": "booqable://assets/image-about-us.jpg",
-        "image_circle": false,
-        "padding_bottom": "small",
-        "padding_bottom_mobile": "small",
-        "padding_top": "small",
-        "padding_top_mobile": "small",
-        "show_borders": false,
-        "tag": "MEET OUR TEAM",
-        "title": "Our story"
-      },
-      "disabled": null
-    },
-    "logos": {
-      "type": "logos",
       "blocks": {
-        "logo_914717": {
-          "type": "logo",
+        "text_914717": {
+          "type": "text",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-1-black.png"
+            "icon": "warning",
+            "text": "<h6>10+ years of experience</h6><p>World-class service, dedication to your projects, and excellent quality sets us apart from the rest.</p>"
           },
           "disabled": null
         },
-        "logo_914718": {
-          "type": "logo",
+        "text_914718": {
+          "type": "text",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-2-black.png"
+            "icon": "calendar",
+            "text": "<h6>Rent 7 days a week</h6><p>World-class service, dedication to your projects, and excellent quality sets us apart from the rest.</p>"
           },
           "disabled": null
         },
-        "logo_914719": {
-          "type": "logo",
+        "text_914719": {
+          "type": "text",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-3-black.png"
+            "icon": "info",
+            "text": "<h6>10+ years of experience</h6><p>World-class service, dedication to your projects, and excellent quality sets us apart from the rest.</p>"
           },
           "disabled": null
         },
-        "logo_914720": {
-          "type": "logo",
+        "text_914720": {
+          "type": "text",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-1-black.png"
-          },
-          "disabled": null
-        },
-        "logo_914721": {
-          "type": "logo",
-          "settings": {
-            "image": "booqable://assets/image-partner-logo-2-black.png"
+            "icon": "tag",
+            "text": "<h6>Rent 7 days a week</h6><p>World-class service, dedication to your projects, and excellent quality sets us apart from the rest.</p>"
           },
           "disabled": null
         }
       },
       "block_order": [
-        "logo_914717",
-        "logo_914718",
-        "logo_914719",
-        "logo_914720",
-        "logo_914721"
+        "text_914717",
+        "text_914718",
+        "text_914719",
+        "text_914720"
       ],
       "settings": {
-        "color_scheme": "set-1",
-        "full_width": true,
+        "background_image": "",
+        "button_label": "MORE ABOUT US",
+        "button_url": "booqable://root",
+        "color_scheme": "set-3",
+        "description": "World-class service, dedication to your projects, and excellent quality sets us apart from the rest. Get the support you need to grow your business and your brand.",
+        "full_width": false,
+        "image": "",
+        "image_circle": false,
         "padding_bottom": "small",
         "padding_bottom_mobile": "small",
         "padding_top": "small",
         "padding_top_mobile": "small",
-        "show_border": false,
-        "show_title": true,
-        "show_title_mobile": true,
-        "title": "TRUSTED BY:"
+        "show_borders": true,
+        "tag": "WE DO THAT WE LOVE",
+        "title": "About us"
       },
       "disabled": null
     },
@@ -432,44 +307,136 @@
         "testimonial_024704": {
           "type": "testimonial",
           "settings": {
-            "description": "I’ve always loved gardening but didn’t want to invest in expensive equipment. Renting from this company was the perfect solution. Their tools are top-notch, and the service is incredibly convenient. My garden has never looked better!",
-            "name": "John Mitchell",
-            "position": "Portland",
+            "description": "<p>Renting furniture was the best decision! I was able to furnish my apartment with high-quality pieces without the upfront cost. </p>",
+            "name": "Sarah Williams",
+            "position": "New York",
             "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024705": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>The flexibility is amazing! I moved for a short-term job, and being able to rent stylish, modern furniture made my temporary home feel permanent.</p>",
+            "name": "David Thompson",
+            "position": "Los Angeles",
+            "stars": "4"
           },
           "disabled": null
         },
         "testimonial_024706": {
           "type": "testimonial",
           "settings": {
-            "description": "As someone new to gardening, I didn’t know what tools I’d need for different tasks. The team was super helpful in recommending the right tools, and the rental process was quick and easy. I’ll definitely be using them again!",
-            "name": "Emily Rodriguez",
+            "description": "<p>I love how easy it was to customize my rental package. When my style changed, swapping out furniture was super simple.</p>",
+            "name": "Emily Johnson",
+            "position": "Miami",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024707": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>This service made it so easy to furnish my new office space! The furniture is sleek, comfortable, and has made a great impression on clients.</p>",
+            "name": "Jessica Martinez",
             "position": "Austin",
-            "stars": "4"
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024708": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>Renting instead of buying was a game-changer during our renovation. It saved us money and time, plus we didn’t have to settle for anything.</p>",
+            "name": "Mark Taylor",
+            "position": "Chicago",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024709": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>The convenience and quality exceeded my expectations. Their customer service is top-notch, and I couldn’t be happier with  my home.</p>",
+            "name": "Ashley Brown",
+            "position": "Orlando",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024710": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p> This site made it possible to have a fully furnished apartment without the stress of buying and moving heavy items.</p>",
+            "name": "Michael Davis",
+            "position": "Seattle",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024711": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>I’ve rented furniture for two years now, and the experience has been seamless. The quality is fantastic, and the delivery  is always professional.</p>",
+            "name": "Lauren Miller",
+            "position": "San Diego",
+            "stars": "5"
           },
           "disabled": null
         }
       },
       "block_order": [
         "testimonial_024704",
-        "testimonial_024706"
+        "testimonial_024705",
+        "testimonial_024706",
+        "testimonial_024707",
+        "testimonial_024708",
+        "testimonial_024709",
+        "testimonial_024710",
+        "testimonial_024711"
       ],
       "settings": {
-        "button_label": "",
+        "button_label": "SEE ALL",
         "button_url": "booqable://root",
         "color_scheme": "set-1",
         "full_width": true,
-        "heading_centering": true,
+        "heading_centering": false,
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
         "padding_top": "medium",
         "padding_top_mobile": "medium",
-        "show_carousel": true,
+        "show_carousel": false,
         "show_navigation": true,
-        "show_stars": "above",
+        "show_stars": "below",
         "tag": "REWIEWS",
         "timer": 5,
         "title": "What our customers say"
+      },
+      "disabled": null
+    },
+    "call-to-action": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_label": "GET IN TOUCH",
+        "button_url": "booqable://products",
+        "color_scheme": "set-4",
+        "description": "<p>Discover flexible furniture rentals that fit your style and budget. Start designing your dream space with just a few clicks!</p>",
+        "full_width": false,
+        "image": "booqable://assets/image-cta-1.jpeg",
+        "layout": "column",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": false,
+        "show_overlay": true,
+        "tag": "",
+        "title": "Furnish your space today"
       },
       "disabled": null
     },
@@ -482,9 +449,9 @@
             "article_btn": "Read more",
             "article_btn_url": "booqable://root",
             "article_tag": "Category",
-            "article_text": "This guide will help you create a healthy, blooming garden that thrives in the heat.",
-            "heading": "Get your garden ready for the summer",
-            "image": "booqable://assets/image-article-1.jpeg"
+            "article_text": "<p>Renting furniture offers flexibility, cost savings, and convenience—perfect for anyone who values freedom and style without the commitment of ownership.</p>",
+            "heading": "Why Renting Furniture is the Smart Choice for Modern Living",
+            "image": "booqable://assets/image-articles-1.jpeg"
           },
           "disabled": null
         },
@@ -494,9 +461,9 @@
             "article_btn": "Read more",
             "article_btn_url": "booqable://root",
             "article_tag": "Category",
-            "article_text": "Learn what to look for in terms of quality, ergonomics, and purpose so you can work more efficiently.",
-            "heading": "How to choose the best tools for the job",
-            "image": "booqable://assets/image-article-2.jpeg"
+            "article_text": "<p>Learn creative ways to transform any rental space into a beautifully curated home with easy design tips that make your rented furniture shine.</p>",
+            "heading": "How to Style a Rental Space: 5 Tips for a Designer Look",
+            "image": "booqable://assets/image-articles-2.jpeg"
           },
           "disabled": null
         },
@@ -506,9 +473,9 @@
             "article_btn": "Read more",
             "article_btn_url": "booqable://root",
             "article_tag": "Category",
-            "article_text": "Proper planning will save you time and effort in the long run, ensuring a successful and rewarding gardening experience.",
-            "heading": "Before you start, read this",
-            "image": "booqable://assets/image-article-3.jpeg"
+            "article_text": "<p>From affordability to adaptability, renting furniture for your home office can help you create a productive and stylish workspace without the long-term investment.</p>",
+            "heading": "Top 7 Benefits of Renting Furniture for Your Home Office",
+            "image": "booqable://assets/image-articles-3.jpeg"
           },
           "disabled": null
         }
@@ -519,44 +486,18 @@
         "article_237129"
       ],
       "settings": {
-        "button_label": "MORE BLOG",
+        "button_label": "SEE ALL",
         "button_url": "booqable://root",
         "color_scheme": "set-1",
         "description": "",
         "grid": "three",
-        "heading_centering": true,
+        "heading_centering": false,
         "padding_bottom": "medium",
         "padding_bottom_mobile": "small",
-        "padding_top": "small",
+        "padding_top": "medium",
         "padding_top_mobile": "small",
         "tag": "NEWS",
         "title": "What’s going on"
-      },
-      "disabled": null
-    },
-    "call-to-action_971814": {
-      "type": "call-to-action",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "button_label": "GET IN TOUCH",
-        "button_url": "booqable://root",
-        "color_scheme": "set-2",
-        "description": "Your go-to partner for all things gardening – providing high-quality tools and expert support to help you cultivate a beautiful, thriving garden year-round",
-        "full_width": false,
-        "image": "booqable://assets/image-cta-2.webp",
-        "layout": "column",
-        "overlay_background": "#000000",
-        "overlay_color": "#FFFFFF",
-        "overlay_opacity": 40,
-        "padding_bottom": "medium",
-        "padding_bottom_mobile": "medium",
-        "padding_top": "medium",
-        "padding_top_mobile": "medium",
-        "show_borders": true,
-        "show_overlay": true,
-        "tag": "",
-        "title": "The trusted partner for gardening"
       },
       "disabled": null
     },
@@ -566,8 +507,8 @@
         "card_810203": {
           "type": "card",
           "settings": {
-            "icon": "truck-fast",
             "description": "Free delivery for all orders above $100",
+            "icon": "truck-fast",
             "title": "Free delivery"
           },
           "disabled": null
@@ -575,8 +516,8 @@
         "card_810204": {
           "type": "card",
           "settings": {
-            "icon": "comment",
             "description": "Chat with us if you’ve any questions",
+            "icon": "comment",
             "title": "Top-Notch support"
           },
           "disabled": null
@@ -584,8 +525,8 @@
         "card_810205": {
           "type": "card",
           "settings": {
-            "icon": "handshake",
             "description": "Free delivery for all orders above $100",
+            "icon": "handshake",
             "title": "100% Satisfaction Guarantee!"
           },
           "disabled": null
@@ -593,8 +534,8 @@
         "card_810206": {
           "type": "card",
           "settings": {
-            "icon": "exclamation",
             "description": "We know how to do it",
+            "icon": "exclamation",
             "title": "20 years of experience"
           },
           "disabled": null
@@ -630,16 +571,13 @@
     "spacer",
     "hero",
     "columns_871021",
-    "collections",
     "products",
-    "call-to-action",
-    "columns_618084",
+    "columns",
     "products_901789",
     "about-us",
-    "logos",
     "testimonials",
+    "call-to-action",
     "articles",
-    "call-to-action_971814",
     "columns_354021"
   ]
 }

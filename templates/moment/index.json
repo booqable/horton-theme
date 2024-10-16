@@ -18,10 +18,10 @@
       "blocks": {},
       "block_order": [],
       "settings": {
-        "button_primary_label": "",
-        "button_primary_url": "booqable://products/",
         "button_outline_label": "",
         "button_outline_url": "booqable://root/",
+        "button_primary_label": "",
+        "button_primary_url": "booqable://products/",
         "color_scheme": "set-4",
         "description": "<p>Stylish event decor for every budget – transform </p><p>your event without breaking the bank!</p>",
         "full_width": false,
@@ -306,9 +306,9 @@
       "type": "products",
       "blocks": {
         "product_487862": {
-        "type": "product",
-        "settings": {},
-        "disabled": null
+          "type": "product",
+          "settings": {},
+          "disabled": null
         }
       },
       "block_order": [
@@ -333,8 +333,8 @@
         "show_borders": true,
         "show_description": false,
         "show_excerpt": false,
-        "show_overlay": true,
         "show_navigation": true,
+        "show_overlay": true,
         "spacing": "large",
         "spacing_mobile": "medium",
         "tag": "THIS WEEK",
@@ -352,7 +352,7 @@
         "button_label": "MORE ABOUT US",
         "button_url": "booqable://root",
         "color_scheme": "set-3",
-        "description": "<p><span data-metadata=\"\"></span><span data-buffer=\"\"></span>Our passion for producing amazing wedding experiences has taken us on a fantastic path, where we have perfected the art of translating treasured fantasies into a reality of elegance. element symbolises the pinnacle of luxury, where love and beauty are harmoniously intertwined.</p>",
+        "description": "<p>Our passion for producing amazing wedding experiences has taken us on a fantastic path, where we have perfected the art of translating treasured fantasies into a reality of elegance. element symbolises the pinnacle of luxury, where love and beauty are harmoniously intertwined.</p>",
         "full_width": true,
         "image": "booqable://assets/image-about-us-avatar.jpeg",
         "image_circle": false,

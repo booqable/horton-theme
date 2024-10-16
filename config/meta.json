@@ -90,6 +90,13 @@
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/signature_preview.png",
     "version": 1
   },
+  "space": {
+    "detail_url": "https://booqable.com/themes/space/",
+    "market": "House / Storage",
+    "preview_url": "https://space.booqable.store/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/space_preview.png",
+    "version": "beta"
+  },
   "spring": {
     "detail_url": "https://booqable.com/themes/spring/",
     "market": "Tools / Construction",
