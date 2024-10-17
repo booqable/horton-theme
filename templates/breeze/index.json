@@ -1,18 +1,6 @@
 {
   "name": "Home",
   "sections": {
-    "spacer": {
-      "type": "spacer",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "color_scheme": "set-1",
-        "image": "",
-        "size": "small",
-        "size_mobile": "small"
-      },
-      "disabled": null
-    },
     "hero": {
       "type": "hero",
       "blocks": {},
@@ -22,14 +10,14 @@
         "button_outline_url": "booqable://root/",
         "button_primary_label": "",
         "button_primary_url": "booqable://products/",
-        "color_scheme": "set-3",
-        "description": "<p>Safe, affordable, and high-quality scaffolding </p><p>solutions delivered to your site</p>",
-        "full_width": false,
+        "color_scheme": "set-1",
+        "description": "<p>Modern kitchen appliances on your terms—rent, relax, and </p><p>enjoy convenience without the commitment.</p>",
+        "full_width": true,
         "height": "medium",
         "height_mobile": "full",
         "image": "booqable://assets/image-hero.jpg",
         "image_mobile": "",
-        "overlay_background": "#000000",
+        "overlay_background": "#131313",
         "overlay_color": "#FFFFFF",
         "overlay_opacity": 40,
         "padding_bottom": "medium",
@@ -40,127 +28,168 @@
         "show_overlay": true,
         "text_position": "middle-left",
         "text_position_mobile": "bottom-center",
-        "title": "RELIABLE SCAFFOLDING <br>RENTALS FOR ANY PROJECT",
+        "title": "Rent your home <br>equipment easy",
         "video_url": ""
       },
       "disabled": null
     },
-    "columns_871021": {
-      "type": "columns",
+    "collections": {
+      "type": "collections",
       "blocks": {
-        "card_894203": {
-          "type": "card",
+        "collection_517830": {
+          "type": "collection",
           "settings": {
-            "description": "Free delivery for all orders above $100",
-            "icon": "truck-fast",
-            "title": "FREE DELIVERY"
+            "badge_background": "#FF0000",
+            "badge_color": "#FFFFFF",
+            "badge_label": "",
+            "collection_button_label": "",
+            "show_collection_description": false
           },
           "disabled": null
         },
-        "card_894204": {
-          "type": "card",
+        "collection_517831": {
+          "type": "collection",
           "settings": {
-            "description": "Chat with us if you’ve any questions",
-            "icon": "comment",
-            "title": "TOP-NOTCH SUPPORT"
+            "badge_background": "#FF0000",
+            "badge_color": "#FFFFFF",
+            "badge_label": "",
+            "collection_button_label": "",
+            "show_collection_description": false
           },
           "disabled": null
         },
-        "card_894205": {
-          "type": "card",
+        "collection_517832": {
+          "type": "collection",
           "settings": {
-            "description": "Free delivery for all orders above $100",
-            "icon": "handshake",
-            "title": "100% SATISFACTION GUARANTEE"
-          },
-          "disabled": null
-        },
-        "card_894206": {
-          "type": "card",
-          "settings": {
-            "description": "We know how to do it",
-            "icon": "exclamation",
-            "title": "20 YEARS OF EXPERIENCE"
+            "badge_background": "#FF0000",
+            "badge_color": "#FFFFFF",
+            "badge_label": "",
+            "collection_button_label": "",
+            "show_collection_description": false
           },
           "disabled": null
         }
       },
       "block_order": [
-        "card_894203",
-        "card_894204",
-        "card_894205",
-        "card_894206"
+        "collection_517830",
+        "collection_517831",
+        "collection_517832"
       ],
       "settings": {
+        "button_label": "SEE ALL",
+        "button_url": "booqable://collections",
         "color_scheme": "set-1",
-        "grid": "four",
-        "icon_position": "top",
+        "grid": "three",
+        "heading_centering": false,
         "overlay_background": "#000000",
         "overlay_color": "#FFFFFF",
         "overlay_opacity": 40,
-        "padding_bottom": "small",
-        "padding_bottom_mobile": "small",
-        "padding_top": "small",
-        "padding_top_mobile": "small",
-        "show_borders": false,
-        "show_overlay": false,
-        "spacing": "medium",
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": true,
+        "spacing": "large",
         "spacing_mobile": "medium",
-        "text_position": "center"
+        "text_position_horizontal": "center",
+        "text_position_vertical": "middle",
+        "title": "Collections"
       },
       "disabled": null
     },
-    "columns": {
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product_481051": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_481051"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "color_scheme": "set-1",
+        "collection": "all-products",
+        "collection_empty_message": "It seems this collection has no products yet",
+        "heading": "",
+        "heading_centering": false,
+        "image": "",
+        "image_fit": "cover",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": false,
+        "show_description": false,
+        "show_excerpt": true,
+        "show_navigation": true,
+        "show_overlay": true,
+        "spacing": "none",
+        "spacing_mobile": "medium",
+        "tag": "THIS WEEK",
+        "timer": 5,
+        "title": "Popular products"
+      },
+      "disabled": null
+    },
+    "columns_653474": {
       "type": "columns",
       "blocks": {
-        "deco": {
+        "deco_401203": {
           "type": "deco",
           "settings": {
             "button_label": "SEE MORE",
             "button_url": "booqable://root",
-            "description": "Lorem ipsum dolor sit amet",
+            "description": "",
             "image": "booqable://assets/image-columns-deco-1.jpg",
-            "title": "Title here"
+            "title": "Extra card"
           },
           "disabled": null
         },
-        "deco_302066": {
+        "deco_401204": {
           "type": "deco",
           "settings": {
             "button_label": "SEE MORE",
             "button_url": "booqable://root",
-            "description": "Lorem ipsum dolor sit amet",
+            "description": "",
             "image": "booqable://assets/image-columns-deco-2.jpg",
-            "title": "Title here"
+            "title": "Extra card"
           },
           "disabled": null
         },
-        "deco_845300": {
+        "deco_401205": {
           "type": "deco",
           "settings": {
             "button_label": "SEE MORE",
             "button_url": "booqable://root",
-            "description": "Lorem ipsum dolor sit amet",
+            "description": "",
             "image": "booqable://assets/image-columns-deco-3.jpg",
-            "title": "Title here"
+            "title": "Extra card"
           },
           "disabled": null
         }
       },
       "block_order": [
-        "deco",
-        "deco_302066",
-        "deco_845300"
+        "deco_401203",
+        "deco_401204",
+        "deco_401205"
       ],
       "settings": {
-        "color_scheme": "set-2",
+        "color_scheme": "set-1",
         "grid": "three",
         "overlay_background": "#000000",
         "overlay_color": "#FFFFFF",
-        "overlay_opacity": 10,
-        "padding_bottom": "medium",
+        "overlay_opacity": 20,
+        "padding_bottom": "small",
         "padding_bottom_mobile": "medium",
-        "padding_top": "medium",
+        "padding_top": "small",
         "padding_top_mobile": "medium",
         "show_borders": true,
         "show_overlay": true,
@@ -170,17 +199,17 @@
       },
       "disabled": null
     },
-    "products": {
+    "products_967435": {
       "type": "products",
       "blocks": {
-        "product_482074": {
+        "product_481015": {
           "type": "product",
           "settings": {},
           "disabled": null
         }
       },
       "block_order": [
-        "product_482074"
+        "product_481015"
       ],
       "settings": {
         "button_label": "SEE ALL",
@@ -188,153 +217,26 @@
         "collection": "all-products",
         "collection_empty_message": "It seems this collection has no products yet",
         "heading": "",
-        "heading_centering": true,
+        "heading_centering": false,
         "image": "",
         "image_fit": "cover",
         "overlay_background": "#000000",
-        "overlay_color": "#FFFFFF",
-        "overlay_opacity": 30,
-        "padding_bottom": "medium",
-        "padding_bottom_mobile": "medium",
-        "padding_top": "medium",
-        "padding_top_mobile": "medium",
-        "show_borders": true,
-        "show_description": false,
-        "show_excerpt": false,
-        "show_navigation": true,
-        "show_overlay": true,
-        "spacing": "large",
-        "spacing_mobile": "medium",
-        "tag": "THIS WEEK",
-        "timer": 5,
-        "title": "POPULAR PRODUCTS"
-      },
-      "disabled": null
-    },
-    "call-to-action": {
-      "type": "call-to-action",
-      "blocks": {},
-      "block_order": [],
-      "settings": {
-        "button_label": "SEE OUR PRODUCTS",
-        "button_url": "booqable://products",
-        "color_scheme": "set-5",
-        "description": "<p><b>$10 gift card</b></p>\n<p>Special offer for renting scaffolding</p>",
-        "full_width": false,
-        "image": "booqable://assets/image-hero.jpg",
-        "layout": "row",
-        "overlay_background": "#DF6827",
         "overlay_color": "#FFFFFF",
         "overlay_opacity": 40,
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
         "padding_top": "medium",
         "padding_top_mobile": "medium",
-        "show_borders": true,
-        "show_overlay": true,
-        "tag": "",
-        "title": "WIN"
-      },
-      "disabled": null
-    },
-    "columns_618084": {
-      "type": "columns",
-      "blocks": {
-        "deco_911203": {
-          "type": "deco",
-          "settings": {
-            "button_label": "SEE MORE",
-            "button_url": "booqable://root",
-            "description": "",
-            "image": "booqable://assets/image-columns-deco-4.jpg",
-            "title": "Extra card"
-          },
-          "disabled": null
-        },
-        "deco_911204": {
-          "type": "deco",
-          "settings": {
-            "button_label": "SEE MORE",
-            "button_url": "booqable://root",
-            "description": "",
-            "image": "booqable://assets/image-columns-deco-5.jpg",
-            "title": "Extra card"
-          },
-          "disabled": null
-        },
-        "deco_911205": {
-          "type": "deco",
-          "settings": {
-            "button_label": "SEE MORE",
-            "button_url": "booqable://root",
-            "description": "",
-            "image": "booqable://assets/image-columns-deco-6.jpg",
-            "title": "Extra card"
-          },
-          "disabled": null
-        }
-      },
-      "block_order": [
-        "deco_911203",
-        "deco_911204",
-        "deco_911205"
-      ],
-      "settings": {
-        "color_scheme": "set-1",
-        "grid": "three",
-        "overlay_background": "#000000",
-        "overlay_color": "#FFFFFF",
-        "overlay_opacity": 10,
-        "padding_bottom": "small",
-        "padding_bottom_mobile": "medium",
-        "padding_top": "small",
-        "padding_top_mobile": "medium",
-        "show_borders": true,
-        "show_overlay": true,
-        "spacing": "large",
-        "spacing_mobile": "medium",
-        "text_position": "center"
-      },
-      "disabled": null
-    },
-    "products_901789": {
-      "type": "products",
-      "blocks": {
-        "product_487859": {
-          "type": "product",
-          "settings": {},
-          "disabled": null
-        }
-      },
-      "block_order": [
-        "product_487859"
-      ],
-      "settings": {
-        "button_label": "SEE ALL",
-        "color_scheme": "set-1",
-        "collection": "all-products",
-        "collection_empty_message": "It seems this collection has no products yet",
-        "heading": "",
-        "heading_centering": true,
-        "image": "",
-        "image_fit": "cover",
-        "overlay_background": "#000000",
-        "overlay_color": "#FFFFFF",
-        "overlay_opacity": 30,
-        "padding_bottom": "medium",
-        "padding_bottom_mobile": "medium",
-        "padding_top": "medium",
-        "padding_top_mobile": "medium",
-        "show_borders": true,
+        "show_borders": false,
         "show_description": false,
-        "show_excerpt": false,
+        "show_excerpt": true,
         "show_navigation": true,
         "show_overlay": true,
-        "spacing": "large",
+        "spacing": "none",
         "spacing_mobile": "medium",
         "tag": "THIS WEEK",
         "timer": 5,
-        "title": "NEW PRODUCTS"
+        "title": "New products"
       },
       "disabled": null
     },
@@ -346,8 +248,8 @@
         "background_image": "",
         "button_label": "MORE ABOUT US",
         "button_url": "booqable://root",
-        "color_scheme": "set-4",
-        "description": "<p>We provide top-quality scaffolding rentals for construction projects of all sizes. With a focus on safety, reliability, and affordability, we offer a wide range of scaffolding solutions, expertly delivered and set up at your site. Whether you’re working on residential, commercial, or industrial projects, our team is committed to ensuring you have the equipment you need to get the job done efficiently and safely.</p>",
+        "color_scheme": "set-1",
+        "description": "<p>Our kitchen appliance rental service provides flexible and affordable access to essential home appliances, including washing machines, dishwashers, and refrigerators. Whether you’re a renter, in a temporary living situation, or simply looking to upgrade without the high upfront costs, we offer a wide range of modern appliances to meet your needs—all with easy terms, quick delivery, and hassle-free returns. </p>",
         "full_width": false,
         "image": "booqable://assets/image-about-us-avatar.jpg",
         "image_circle": false,
@@ -355,121 +257,154 @@
         "padding_bottom_mobile": "small",
         "padding_top": "small",
         "padding_top_mobile": "small",
-        "show_borders": false,
+        "show_borders": true,
         "tag": "MEET OUR TEAM",
-        "title": "OUR STORY"
+        "title": "Our story"
       },
       "disabled": null
     },
     "testimonials": {
       "type": "testimonials",
       "blocks": {
-        "testimonial_024704": {
+        "testimonial_023494": {
           "type": "testimonial",
           "settings": {
-            "description": "<p>I’ve been using their scaffolding services for over two years, and I couldn’t be happier. The equipment is always in top condition, delivered on time, and set up quickly. Their team is professional and ensures everything meets safety standards.</p>",
-            "name": "John Mitchell",
-            "position": "Portland",
+            "description": "<p>Absolutely amazing service! Renting a dishwasher has made my life so much easier, and I didn’t have to worry about a huge upfront cost. </p>",
+            "name": "Emily Thompson",
+            "position": "Los Angeles",
             "stars": "5"
           },
           "disabled": null
         },
-        "testimonial_024706": {
+        "testimonial_023495": {
           "type": "testimonial",
           "settings": {
-            "description": "<p>Their scaffolding rentals made my home renovation projects so much easier. The pricing is affordable, and the service is outstanding. The crew is reliable, and they went above and beyond to accommodate my schedule.</p>",
-            "name": "Emily Rodriguez",
+            "description": "<p>I needed a washing machine for my apartment temporarily, and the rental option was perfect. The delivery was fast and returning it was  as easy.</p>",
+            "name": "James Martinez",
             "position": "Austin",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_023496": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>The flexibility of renting my kitchen appliances made moving into a new home so much simpler. I got the exact washing machine I wanted.</p>",
+            "name": "Sophia Davis",
+            "position": "Miami",
+            "stars": "4"
+          },
+          "disabled": null
+        },
+        "testimonial_023497": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>As someone living in a rental property, buying expensive appliances didn’t make sense. Renting  allowed me  without the long-term commitment.</p>",
+            "name": "Michael Nguyen",
+            "position": "Seattle",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_023498": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>I love the idea of trying high-end appliances before deciding to buy, and this rental service was perfect for that.&nbsp;<b></b>Highly recommend for anyone in this situation!</p>",
+            "name": "Wilson",
+            "position": "New York",
             "stars": "4"
           },
           "disabled": null
         }
       },
       "block_order": [
-        "testimonial_024704",
-        "testimonial_024706"
+        "testimonial_023494",
+        "testimonial_023495",
+        "testimonial_023496",
+        "testimonial_023497",
+        "testimonial_023498"
       ],
       "settings": {
-        "button_label": "",
+        "button_label": "SEE ALL",
         "button_url": "booqable://root",
-        "color_scheme": "set-1",
-        "full_width": true,
-        "heading_centering": true,
+        "color_scheme": "set-3",
+        "full_width": false,
+        "heading_centering": false,
         "padding_bottom": "medium",
         "padding_bottom_mobile": "medium",
         "padding_top": "medium",
         "padding_top_mobile": "medium",
         "show_carousel": true,
         "show_navigation": true,
-        "show_stars": "above",
-        "tag": "REWIEWS",
+        "show_stars": "below",
+        "tag": "REVIEWS",
         "timer": 5,
-        "title": "WHAT OUR CUSTOMERS SAY"
+        "title": "What our customers say"
       },
       "disabled": null
     },
     "articles": {
       "type": "articles",
       "blocks": {
-        "article_237127": {
+        "article_234987": {
           "type": "article",
           "settings": {
             "article_btn": "Read more",
             "article_btn_url": "booqable://root",
             "article_tag": "Category",
-            "article_text": "<p>Discover the different types of scaffolding and how to select the best option based on your construction needs.</p>",
-            "heading": "Choosing the Right Scaffolding for Your Project",
+            "article_text": "<p>Find out how renting washing machines, dishwashers, and other kitchen appliances allows you to enjoy modern convenience without the high upfront costs.</p>",
+            "heading": "The Smart Way to Upgrade Without Breaking the Bank",
             "image": "booqable://assets/image-articles-1.jpeg"
           },
           "disabled": null
         },
-        "article_237128": {
+        "article_234988": {
           "type": "article",
           "settings": {
             "article_btn": "Read more",
             "article_btn_url": "booqable://root",
             "article_tag": "Category",
-            "article_text": "<p>Learn essential safety practices to ensure your team stays secure while using scaffolding on any project.</p>",
-            "heading": "5 Safety Tips for Working with Scaffolding ",
+            "article_text": "<p>Renting essential home appliances like washing machines and dishwashers can be a flexible and affordable solution for renters, students, and anyone in a temporary living space.</p>",
+            "heading": "Renting Kitchen Appliances is Perfect for Temporary Living Situations",
             "image": "booqable://assets/image-articles-2.jpeg"
           },
           "disabled": null
         },
-        "article_237129": {
+        "article_234989": {
           "type": "article",
           "settings": {
             "article_btn": "Read more",
             "article_btn_url": "booqable://root",
             "article_tag": "Category",
-            "article_text": "<p>Explore the advantages of renting scaffolding equipment, from cost savings to flexibility for short-term and long-term projects.</p>",
-            "heading": "The Benefits of Renting Scaffolding vs. Buying",
+            "article_text": "<p>Discover how renting home kitchen appliances like dishwashers and fridges helps you avoid repair hassles and upgrade easily whenever your needs change.</p>",
+            "heading": "How Renting Kitchen Essentials Can Save You Time and Stress",
             "image": "booqable://assets/image-articles-3.jpeg"
           },
           "disabled": null
         }
       },
       "block_order": [
-        "article_237127",
-        "article_237128",
-        "article_237129"
+        "article_234987",
+        "article_234988",
+        "article_234989"
       ],
       "settings": {
-        "button_label": "MORE BLOG",
+        "button_label": "SEE ALL",
         "button_url": "booqable://root",
         "color_scheme": "set-1",
         "description": "",
         "grid": "three",
-        "heading_centering": true,
+        "heading_centering": false,
         "padding_bottom": "medium",
         "padding_bottom_mobile": "small",
-        "padding_top": "small",
+        "padding_top": "medium",
         "padding_top_mobile": "small",
         "tag": "NEWS",
-        "title": "WHAT'S GOING ON"
+        "title": "What’s going on"
       },
       "disabled": null
     },
-    "call-to-action_971814": {
+    "call-to-action_975014": {
       "type": "call-to-action",
       "blocks": {},
       "block_order": [],
@@ -477,9 +412,9 @@
         "button_label": "GET IN TOUCH",
         "button_url": "booqable://root",
         "color_scheme": "set-2",
-        "description": "<p>Start your project with safe, reliable scaffolding—delivered and installed by our expert team.</p>",
+        "description": "<p>Flexible, affordable rentals for washing machines, dishwashers, and more—enjoy top-of-the-line appliances without the commitment. Start renting now!</p>",
         "full_width": false,
-        "image": "booqable://assets/image-cta-1.jpg",
+        "image": "booqable://assets/image-cta-1.jpeg",
         "layout": "column",
         "overlay_background": "#000000",
         "overlay_color": "#FFFFFF",
@@ -491,60 +426,60 @@
         "show_borders": true,
         "show_overlay": true,
         "tag": "",
-        "title": "Get a Free Quote Today!​"
+        "title": "Upgrade Your Kitchen with Easy Appliance Rentals!"
       },
       "disabled": null
     },
-    "columns_354021": {
+    "columns_872621": {
       "type": "columns",
       "blocks": {
-        "card_810203": {
+        "card_401203": {
           "type": "card",
           "settings": {
             "description": "Free delivery for all orders above $100",
             "icon": "truck-fast",
-            "title": "FREE DELIVERY"
+            "title": "Free delivery"
           },
           "disabled": null
         },
-        "card_810204": {
+        "card_401204": {
           "type": "card",
           "settings": {
             "description": "Chat with us if you’ve any questions",
             "icon": "comment",
-            "title": "TOP-NOTCH SUPPORT"
+            "title": "Top-Notch support"
           },
           "disabled": null
         },
-        "card_810205": {
+        "card_401205": {
           "type": "card",
           "settings": {
             "description": "Free delivery for all orders above $100",
             "icon": "handshake",
-            "title": "100% SATISFACTION GUARANTEE"
+            "title": "100% Satisfaction Guarantee!"
           },
           "disabled": null
         },
-        "card_810206": {
+        "card_401206": {
           "type": "card",
           "settings": {
             "description": "We know how to do it",
             "icon": "exclamation",
-            "title": "20 YEARS OF EXPERIENCE"
+            "title": "20 years of experience"
           },
           "disabled": null
         }
       },
       "block_order": [
-        "card_810203",
-        "card_810204",
-        "card_810205",
-        "card_810206"
+        "card_401203",
+        "card_401204",
+        "card_401205",
+        "card_401206"
       ],
       "settings": {
-        "color_scheme": "set-1",
+        "color_scheme": "set-4",
         "grid": "four",
-        "icon_position": "top",
+        "icon_position": "left",
         "overlay_background": "#000000",
         "overlay_color": "#FFFFFF",
         "overlay_opacity": 40,
@@ -553,7 +488,7 @@
         "padding_top": "small",
         "padding_top_mobile": "small",
         "show_borders": false,
-        "show_overlay": false,
+        "show_overlay": true,
         "spacing": "medium",
         "spacing_mobile": "medium",
         "text_position": "center"
@@ -562,18 +497,15 @@
     }
   },
   "order": [
-    "spacer",
     "hero",
-    "columns_871021",
-    "columns",
+    "collections",
     "products",
-    "call-to-action",
-    "columns_618084",
-    "products_901789",
+    "columns_653474",
+    "products_967435",
     "about-us",
     "testimonials",
     "articles",
-    "call-to-action_971814",
-    "columns_354021"
+    "call-to-action_975014",
+    "columns_872621"
   ]
 }

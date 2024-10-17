@@ -20,6 +20,13 @@
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/bliss_preview.png",
     "version": 1
   },
+  "breeze": {
+    "detail_url": "https://booqable.com/themes/breeze/",
+    "market": "House / Storage",
+    "preview_url": "https://breeze.booqable.store/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/breeze_preview.png",
+    "version": "beta"
+  },
   "crisp": {
     "detail_url": "https://booqable.com/themes/crisp/",
     "market": "AV / Camera",
