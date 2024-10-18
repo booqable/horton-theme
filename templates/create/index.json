@@ -1,0 +1,583 @@
+{
+  "name": "Home",
+  "sections": {
+    "spacer": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-1",
+        "image": "",
+        "size": "small",
+        "size_mobile": "small"
+      },
+      "disabled": null
+    },
+    "hero": {
+      "type": "hero",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_outline_label": "",
+        "button_outline_url": "booqable://root/",
+        "button_primary_label": "",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-1",
+        "description": "<p>Empowering your academic journey with easy, free access to the technology you need </p><p>— borrow laptops, tablets, cameras, and more to support your success.</p>",
+        "full_width": false,
+        "height": "medium",
+        "height_mobile": "full",
+        "image": "booqable://assets/image-hero.jpeg",
+        "image_mobile": "",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "small",
+        "show_datepicker": true,
+        "show_overlay": true,
+        "text_position": "middle-left",
+        "text_position_mobile": "bottom-center",
+        "title": "Where Technology <br>Meets Rental",
+        "video_url": ""
+      },
+      "disabled": null
+    },
+    "columns_871021": {
+      "type": "columns",
+      "blocks": {
+        "card_894203": {
+          "type": "card",
+          "settings": {
+            "description": "Free delivery for all orders above $100",
+            "icon": "truck-fast",
+            "title": "Free delivery"
+          },
+          "disabled": null
+        },
+        "card_894204": {
+          "type": "card",
+          "settings": {
+            "description": "Chat with us if you’ve any questions",
+            "icon": "comment",
+            "title": "Top-Notch support"
+          },
+          "disabled": null
+        },
+        "card_894205": {
+          "type": "card",
+          "settings": {
+            "description": "Free delivery for all orders above $100",
+            "icon": "handshake",
+            "title": "100% Satisfaction Guarantee!"
+          },
+          "disabled": null
+        },
+        "card_894206": {
+          "type": "card",
+          "settings": {
+            "description": "We know how to do it",
+            "icon": "heart",
+            "title": "20 years of experience"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "card_894203",
+        "card_894204",
+        "card_894205",
+        "card_894206"
+      ],
+      "settings": {
+        "color_scheme": "set-3",
+        "grid": "four",
+        "icon_position": "top",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_borders": false,
+        "show_overlay": false,
+        "spacing": "medium",
+        "spacing_mobile": "medium",
+        "text_position": "center"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product_482071": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_482071"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "collection": "all-products",
+        "collection_empty_message": "It seems this collection has no products yet",
+        "color_scheme": "set-1",
+        "heading": "",
+        "heading_centering": false,
+        "image": "",
+        "image_fit": "cover",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_description": false,
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_overlay": true,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "tag": "THIS WEEK",
+        "timer": 5,
+        "title": "Popular products"
+      },
+      "disabled": null
+    },
+    "columns": {
+      "type": "columns",
+      "blocks": {
+        "deco": {
+          "type": "deco",
+          "settings": {
+            "title": "Title here",
+            "description": "",
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "image": "booqable://assets/image-columns-deco-1.jpg"
+          },
+          "disabled": null
+        },
+        "deco_569165": {
+          "type": "deco",
+          "settings": {
+            "title": "Title here",
+            "description": "",
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "image": "booqable://assets/image-columns-deco-2.jpg"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "deco",
+        "deco_569165"
+      ],
+      "settings": {
+        "color_scheme": "set-3",
+        "grid": "two",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": false,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "text_position": "left"
+      },
+      "disabled": null
+    },
+    "products_901789": {
+      "type": "products",
+      "blocks": {
+        "product_487862": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_487862"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "collection": "all-products",
+        "collection_empty_message": "It seems this collection has no products yet",
+        "color_scheme": "set-1",
+        "heading": "",
+        "heading_centering": false,
+        "image": "",
+        "image_fit": "cover",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_description": false,
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_overlay": true,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "tag": "THIS WEEK",
+        "timer": 5,
+        "title": "New products"
+      },
+      "disabled": null
+    },
+    "about-us": {
+      "type": "about-us",
+      "blocks": {
+        "text_914717": {
+          "type": "text",
+          "settings": {
+            "icon": "warning",
+            "text": "<h6>10+ years of experience</h6><p>World-class service, dedication to your projects, and excellent quality sets us apart from the rest.</p>"
+          },
+          "disabled": null
+        },
+        "text_914718": {
+          "type": "text",
+          "settings": {
+            "icon": "calendar",
+            "text": "<h6>Rent 7 days a week</h6><p>World-class service, dedication to your projects, and excellent quality sets us apart from the rest.</p>"
+          },
+          "disabled": null
+        },
+        "text_914719": {
+          "type": "text",
+          "settings": {
+            "icon": "info",
+            "text": "<h6>10+ years of experience</h6><p>World-class service, dedication to your projects, and excellent quality sets us apart from the rest.</p>"
+          },
+          "disabled": null
+        },
+        "text_914720": {
+          "type": "text",
+          "settings": {
+            "icon": "tag",
+            "text": "<h6>Rent 7 days a week</h6><p>World-class service, dedication to your projects, and excellent quality sets us apart from the rest.</p>"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "text_914717",
+        "text_914718",
+        "text_914719",
+        "text_914720"
+      ],
+      "settings": {
+        "background_image": "",
+        "button_label": "MORE ABOUT US",
+        "button_url": "booqable://root",
+        "color_scheme": "set-4",
+        "description": "World-class service, dedication to your projects, and excellent quality sets us apart from the rest. Get the support you need to grow your business and your brand.",
+        "full_width": false,
+        "image": "",
+        "image_circle": false,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_borders": true,
+        "tag": "WE DO THAT WE LOVE",
+        "title": "About us"
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_024704": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>The tech lending program has been a lifesaver! I borrowed a laptop during finals week when mine broke, and it made all the difference in completing my assignments on time.</p>",
+            "name": "Sarah Williams",
+            "position": "New York",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024705": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>I love how easy it is to reserve equipment online. I’ve borrowed a tablet for note-taking in lectures, and it made my learning experience so much smoother.</p>",
+            "name": "David Thompson",
+            "position": "Los Angeles",
+            "stars": "4"
+          },
+          "disabled": null
+        },
+        "testimonial_024706": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>As a film student, having access to cameras and audio gear for my projects has been incredible. It’s allowed me to produce high-quality work without the cost burden.</p>",
+            "name": "Emily Johnson",
+            "position": "Miami",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024707": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>I didn’t have to worry about buying expensive software, as I borrowed a laptop preloaded with everything I needed. It’s such a great service for students.</p>",
+            "name": "Jessica Martinez",
+            "position": "Austin",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024708": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>The staff was so helpful in getting me the right tech for my presentation. Borrowing the projector helped me deliver a seamless, professional presentation for my class.</p>",
+            "name": "Mark Taylor",
+            "position": "Chicago",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024709": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>I’ve borrowed a VR headset for a research project, and it was such an incredible resource that I wouldn’t have been able to afford otherwise.</p>",
+            "name": "Ashley Brown",
+            "position": "Orlando",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024710": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>Having access to a high-performance laptop from the lending library has been amazing for my graphic design assignments. No more lag or slow rendering times!</p>",
+            "name": "Michael Davis",
+            "position": "Seattle",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024711": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>I was able to borrow a Wi-Fi hotspot for my field trip, which helped me stay connected and complete my assignments while on the go. Truly a game-changer!</p>",
+            "name": "Lauren Miller",
+            "position": "San Diego",
+            "stars": "5"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial_024704",
+        "testimonial_024705",
+        "testimonial_024706",
+        "testimonial_024707",
+        "testimonial_024708",
+        "testimonial_024709",
+        "testimonial_024710",
+        "testimonial_024711"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "button_url": "booqable://root",
+        "color_scheme": "set-1",
+        "full_width": true,
+        "heading_centering": false,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_carousel": false,
+        "show_navigation": true,
+        "show_stars": "below",
+        "tag": "REWIEWS",
+        "timer": 5,
+        "title": "What our customers say"
+      },
+      "disabled": null
+    },
+    "call-to-action": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_label": "GET IN TOUCH",
+        "button_url": "booqable://products",
+        "color_scheme": "set-4",
+        "description": "<p>Borrow laptops, tablets, and more from our extensive collection — free and easy access for all students, anytime you need it.</p>",
+        "full_width": false,
+        "image": "booqable://assets/image-cta-1.jpeg",
+        "layout": "column",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": false,
+        "show_overlay": true,
+        "tag": "",
+        "title": "Get the tech you need today"
+      },
+      "disabled": null
+    },
+    "articles": {
+      "type": "articles",
+      "blocks": {
+        "article_237127": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "article_text": "<p>Discover the most popular tech tools available for lending, helping you excel in your studies without the hefty price tag.</p>",
+            "heading": "Top 5 Tech Gadgets You Can Borrow From Our University Library",
+            "image": "booqable://assets/image-articles-1.jpeg"
+          },
+          "disabled": null
+        },
+        "article_237128": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "article_text": "<p>Learn how taking advantage of our tech lending program can help you cut down on expenses and maximize your budget during university life.</p>",
+            "heading": "How Borrowing Technology Can Save You Money as a Student",
+            "image": "booqable://assets/image-articles-2.jpeg"
+          },
+          "disabled": null
+        },
+        "article_237129": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "article_text": "<p>Get a simple, step-by-step walkthrough on how to request and borrow the latest tech gear from our library, ensuring you have everything you need for success.</p>",
+            "heading": "A Step-by-Step Guide to Borrowing Tech Equipment from Campus",
+            "image": "booqable://assets/image-articles-3.jpeg"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "article_237127",
+        "article_237128",
+        "article_237129"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "button_url": "booqable://root",
+        "color_scheme": "set-1",
+        "description": "",
+        "grid": "three",
+        "heading_centering": false,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "small",
+        "tag": "NEWS",
+        "title": "What’s going on"
+      },
+      "disabled": null
+    },
+    "columns_354021": {
+      "type": "columns",
+      "blocks": {
+        "card_810203": {
+          "type": "card",
+          "settings": {
+            "description": "Free delivery for all orders above $100",
+            "icon": "truck-fast",
+            "title": "Free delivery"
+          },
+          "disabled": null
+        },
+        "card_810204": {
+          "type": "card",
+          "settings": {
+            "description": "Chat with us if you’ve any questions",
+            "icon": "comment",
+            "title": "Top-Notch support"
+          },
+          "disabled": null
+        },
+        "card_810205": {
+          "type": "card",
+          "settings": {
+            "description": "Free delivery for all orders above $100",
+            "icon": "handshake",
+            "title": "100% Satisfaction Guarantee!"
+          },
+          "disabled": null
+        },
+        "card_810206": {
+          "type": "card",
+          "settings": {
+            "description": "We know how to do it",
+            "icon": "heart",
+            "title": "20 years of experience"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "card_810203",
+        "card_810204",
+        "card_810205",
+        "card_810206"
+      ],
+      "settings": {
+        "color_scheme": "set-3",
+        "grid": "four",
+        "icon_position": "top",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_borders": false,
+        "show_overlay": false,
+        "spacing": "medium",
+        "spacing_mobile": "medium",
+        "text_position": "center"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "spacer",
+    "hero",
+    "columns_871021",
+    "products",
+    "columns",
+    "products_901789",
+    "about-us",
+    "testimonials",
+    "call-to-action",
+    "articles",
+    "columns_354021"
+  ]
+}
