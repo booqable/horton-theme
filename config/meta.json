@@ -32,7 +32,7 @@
     "market": "Technology / IT",
     "preview_url": "https://create.booqable.store/",
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/create_preview.png",
-    "version": "beta"
+    "version": 1
   },
   "crisp": {
     "detail_url": "https://booqable.com/themes/crisp/",
