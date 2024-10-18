@@ -27,6 +27,13 @@
     "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/breeze_preview.png",
     "version": 1
   },
+  "create": {
+    "detail_url": "https://booqable.com/themes/create/",
+    "market": "Technology / IT",
+    "preview_url": "https://create.booqable.store/",
+    "remote_preview_image_url": "https://booqable-files.s3.amazonaws.com/create_preview.png",
+    "version": "beta"
+  },
   "crisp": {
     "detail_url": "https://booqable.com/themes/crisp/",
     "market": "AV / Camera",
