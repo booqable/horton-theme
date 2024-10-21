@@ -1,0 +1,579 @@
+{
+  "name": "Home",
+  "sections": {
+    "spacer": {
+      "type": "spacer",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_scheme": "set-1",
+        "image": "",
+        "size": "small",
+        "size_mobile": "small"
+      },
+      "disabled": null
+    },
+    "hero": {
+      "type": "hero",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_outline_label": "",
+        "button_outline_url": "booqable://root/",
+        "button_primary_label": "",
+        "button_primary_url": "booqable://products/",
+        "color_scheme": "set-2",
+        "description": "<p>Reliable medical equipment rentals delivered fast—ensuring comfort</p><p> and quality care at home when you need it most.</p>",
+        "full_width": false,
+        "height": "medium",
+        "height_mobile": "full",
+        "image": "booqable://assets/image-hero.jpg",
+        "image_mobile": "",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 30,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "small",
+        "padding_top": "medium",
+        "padding_top_mobile": "small",
+        "show_datepicker": true,
+        "show_overlay": true,
+        "text_position": "middle-left",
+        "text_position_mobile": "bottom-center",
+        "title": "Medical Equipment <br>Rental Made Easy",
+        "video_url": ""
+      },
+      "disabled": null
+    },
+    "columns_871021": {
+      "type": "columns",
+      "blocks": {
+        "card_894203": {
+          "type": "card",
+          "settings": {
+            "description": "Free delivery for all orders above $100",
+            "icon": "truck-fast",
+            "title": "Free delivery"
+          },
+          "disabled": null
+        },
+        "card_894204": {
+          "type": "card",
+          "settings": {
+            "description": "Chat with us if you’ve any questions",
+            "icon": "comment",
+            "title": "Top-Notch support"
+          },
+          "disabled": null
+        },
+        "card_894205": {
+          "type": "card",
+          "settings": {
+            "description": "Free delivery for all orders above $100",
+            "icon": "handshake",
+            "title": "100% Satisfaction Guarantee!"
+          },
+          "disabled": null
+        },
+        "card_894206": {
+          "type": "card",
+          "settings": {
+            "description": "We know how to do it",
+            "icon": "exclamation",
+            "title": "20 years of experience"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "card_894203",
+        "card_894204",
+        "card_894205",
+        "card_894206"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "grid": "four",
+        "icon_position": "left",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_borders": false,
+        "show_overlay": false,
+        "spacing": "medium",
+        "spacing_mobile": "medium",
+        "text_position": "center"
+      },
+      "disabled": null
+    },
+    "columns": {
+      "type": "columns",
+      "blocks": {
+        "deco": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description": "",
+            "image": "booqable://assets/image-columns-deco-1.jpg",
+            "title": "Title here"
+          },
+          "disabled": null
+        },
+        "deco_304080": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description": "",
+            "image": "booqable://assets/image-columns-deco-2.jpg",
+            "title": "Title here"
+          },
+          "disabled": null
+        },
+        "deco_780494": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description": "",
+            "image": "booqable://assets/image-columns-deco-3.jpg",
+            "title": "Title here"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "deco",
+        "deco_304080",
+        "deco_780494"
+      ],
+      "settings": {
+        "color_scheme": "set-3",
+        "grid": "three",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 10,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": true,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "text_position": "left"
+      },
+      "disabled": null
+    },
+    "products": {
+      "type": "products",
+      "blocks": {
+        "product_482074": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_482074"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "collection": "all-products",
+        "collection_empty_message": "It seems this collection has no products yet",
+        "color_scheme": "set-3",
+        "heading": "",
+        "heading_centering": true,
+        "image": "",
+        "image_fit": "cover",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 30,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_description": false,
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_overlay": true,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "tag": "THIS WEEK",
+        "timer": 5,
+        "title": "Popular products"
+      },
+      "disabled": null
+    },
+    "call-to-action": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_label": "SEE OUR PRODUCTS",
+        "button_url": "booqable://products",
+        "color_scheme": "set-3",
+        "description": "",
+        "full_width": false,
+        "image": "booqable://assets/image-cta-1.jpg",
+        "layout": "row",
+        "overlay_background": "#C5E0F5",
+        "overlay_color": "#131313",
+        "overlay_opacity": 30,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": true,
+        "tag": "",
+        "title": "Explore all our products"
+      },
+      "disabled": null
+    },
+    "columns_618084": {
+      "type": "columns",
+      "blocks": {
+        "deco_911203": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description": "",
+            "image": "booqable://assets/image-columns-deco-4.jpg",
+            "title": "Extra card"
+          },
+          "disabled": null
+        },
+        "deco_911204": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description": "",
+            "image": "booqable://assets/image-columns-deco-5.jpg",
+            "title": "Extra card"
+          },
+          "disabled": null
+        },
+        "deco_911205": {
+          "type": "deco",
+          "settings": {
+            "button_label": "SEE MORE",
+            "button_url": "booqable://root",
+            "description": "",
+            "image": "booqable://assets/image-columns-deco-6.jpg",
+            "title": "Extra card"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "deco_911203",
+        "deco_911204",
+        "deco_911205"
+      ],
+      "settings": {
+        "color_scheme": "set-3",
+        "grid": "three",
+        "overlay_background": "#000000",
+        "overlay_color": "#000000",
+        "overlay_opacity": 10,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "small",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": true,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "text_position": "center"
+      },
+      "disabled": null
+    },
+    "products_901789": {
+      "type": "products",
+      "blocks": {
+        "product_487859": {
+          "type": "product",
+          "settings": {},
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "product_487859"
+      ],
+      "settings": {
+        "button_label": "SEE ALL",
+        "collection": "all-products",
+        "collection_empty_message": "It seems this collection has no products yet",
+        "color_scheme": "set-3",
+        "heading": "",
+        "heading_centering": true,
+        "image": "",
+        "image_fit": "cover",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 30,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_description": false,
+        "show_excerpt": false,
+        "show_navigation": true,
+        "show_overlay": true,
+        "spacing": "large",
+        "spacing_mobile": "medium",
+        "tag": "THIS WEEK",
+        "timer": 5,
+        "title": "New products"
+      },
+      "disabled": null
+    },
+    "about-us": {
+      "type": "about-us",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "background_image": "",
+        "button_label": "MORE ABOUT US",
+        "button_url": "booqable://root",
+        "color_scheme": "set-4",
+        "description": "<p>Our medical equipment rental business provides high-quality, reliable medical devices for short-term or long-term needs, including hospital beds, mobility aids, oxygen equipment, and more. We offer flexible rental plans, professional customer support, and prompt delivery.</p>",
+        "full_width": false,
+        "image": "booqable://assets/image-about-us-avatar.jpg",
+        "image_circle": false,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_borders": false,
+        "tag": "MEET OUR TEAM",
+        "title": "Our story"
+      },
+      "disabled": null
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_024704": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>Renting from this company was a game-changer for my father’s recovery after surgery. The hospital bed and walker were delivered quickly, and the team even helped us set everything up.</p>",
+            "name": "John Mitchell",
+            "position": "Portland",
+            "stars": "5"
+          },
+          "disabled": null
+        },
+        "testimonial_024706": {
+          "type": "testimonial",
+          "settings": {
+            "description": "<p>The rental process was straightforward, and the quality of the equipment was excellent. Highly recommend for anyone needing temporary medical supplies!</p>",
+            "name": "Emily Rodriguez",
+            "position": "Austin",
+            "stars": "4"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "testimonial_024704",
+        "testimonial_024706"
+      ],
+      "settings": {
+        "button_label": "",
+        "button_url": "booqable://root",
+        "color_scheme": "set-1",
+        "full_width": true,
+        "heading_centering": true,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_carousel": true,
+        "show_navigation": true,
+        "show_stars": "above",
+        "tag": "REWIEWS",
+        "timer": 5,
+        "title": "What our customers say"
+      },
+      "disabled": null
+    },
+    "articles": {
+      "type": "articles",
+      "blocks": {
+        "article_237127": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "article_text": "<p>Learn how renting medical equipment can save you money, provide flexibility, and ensure access to the latest technology, especially during recovery or temporary care situations.</p>",
+            "heading": "Why Renting Medical Equipment is a Smart Choice for Patients and Caregivers",
+            "image": "booqable://assets/image-articles-1.jpeg"
+          },
+          "disabled": null
+        },
+        "article_237128": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "article_text": "<p>Discover the most commonly rented medical devices for home care, including hospital beds and mobility aids, and how they can significantly enhance patient comfort and recovery.</p>",
+            "heading": "Top 5 Medical Devices You Can Rent for Home Care and How They Improve Recovery",
+            "image": "booqable://assets/image-articles-2.jpeg"
+          },
+          "disabled": null
+        },
+        "article_237129": {
+          "type": "article",
+          "settings": {
+            "article_btn": "Read more",
+            "article_btn_url": "booqable://root",
+            "article_tag": "Category",
+            "article_text": "<p>A step-by-step guide on the process of renting medical equipment, from assessing your needs to selecting a rental company, ensuring a smooth and stress-free experience.</p>",
+            "heading": "A Complete Guide to Renting Medical Equipment: What to Expect and How to Get Started",
+            "image": "booqable://assets/image-articles-3.jpeg"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "article_237127",
+        "article_237128",
+        "article_237129"
+      ],
+      "settings": {
+        "button_label": "MORE BLOG",
+        "button_url": "booqable://root",
+        "color_scheme": "set-1",
+        "description": "",
+        "grid": "three",
+        "heading_centering": true,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "tag": "NEWS",
+        "title": "What’s going on"
+      },
+      "disabled": null
+    },
+    "call-to-action_971814": {
+      "type": "call-to-action",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "button_label": "GET IN TOUCH",
+        "button_url": "booqable://root",
+        "color_scheme": "set-3",
+        "description": "<p>Affordable, flexible rental options delivered straight to your door, helping you or your loved one recover comfortably at home.</p>",
+        "full_width": false,
+        "image": "booqable://assets/image-cta-2.jpeg",
+        "layout": "column",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "medium",
+        "padding_bottom_mobile": "medium",
+        "padding_top": "medium",
+        "padding_top_mobile": "medium",
+        "show_borders": true,
+        "show_overlay": true,
+        "tag": "",
+        "title": "Get the medical equipment you need"
+      },
+      "disabled": null
+    },
+    "columns_354021": {
+      "type": "columns",
+      "blocks": {
+        "card_810203": {
+          "type": "card",
+          "settings": {
+            "description": "Free delivery for all orders above $100",
+            "icon": "truck-fast",
+            "title": "Free delivery"
+          },
+          "disabled": null
+        },
+        "card_810204": {
+          "type": "card",
+          "settings": {
+            "description": "Chat with us if you’ve any questions",
+            "icon": "comment",
+            "title": "Top-Notch support"
+          },
+          "disabled": null
+        },
+        "card_810205": {
+          "type": "card",
+          "settings": {
+            "description": "Free delivery for all orders above $100",
+            "icon": "handshake",
+            "title": "100% Satisfaction Guarantee!"
+          },
+          "disabled": null
+        },
+        "card_810206": {
+          "type": "card",
+          "settings": {
+            "description": "We know how to do it",
+            "icon": "exclamation",
+            "title": "20 years of experience"
+          },
+          "disabled": null
+        }
+      },
+      "block_order": [
+        "card_810203",
+        "card_810204",
+        "card_810205",
+        "card_810206"
+      ],
+      "settings": {
+        "color_scheme": "set-1",
+        "grid": "four",
+        "icon_position": "left",
+        "overlay_background": "#000000",
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 40,
+        "padding_bottom": "small",
+        "padding_bottom_mobile": "small",
+        "padding_top": "small",
+        "padding_top_mobile": "small",
+        "show_borders": false,
+        "show_overlay": false,
+        "spacing": "medium",
+        "spacing_mobile": "medium",
+        "text_position": "center"
+      },
+      "disabled": null
+    }
+  },
+  "order": [
+    "spacer",
+    "hero",
+    "columns_871021",
+    "columns",
+    "products",
+    "call-to-action",
+    "columns_618084",
+    "products_901789",
+    "about-us",
+    "testimonials",
+    "articles",
+    "call-to-action_971814",
+    "columns_354021"
+  ]
+}
