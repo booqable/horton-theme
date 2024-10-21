@@ -25,6 +25,7 @@
         "color_scheme": "set-3",
         "description": "<p>Safe, affordable, and high-quality scaffolding </p><p>solutions delivered to your site</p>",
         "full_width": false,
+        "full_width_content": true,
         "height": "medium",
         "height_mobile": "full",
         "image": "booqable://assets/image-hero.jpg",

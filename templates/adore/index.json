@@ -25,6 +25,7 @@
         "color_scheme": "set-4",
         "description": "<p>Making travel easier and more affordable with convenient</p><p>baby gear rentals delivered to your destination</p>",
         "full_width": false,
+        "full_width_content": true,
         "height": "medium",
         "height_mobile": "full",
         "image": "booqable://assets/image-hero.jpg",

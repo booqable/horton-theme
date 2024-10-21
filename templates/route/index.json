@@ -13,6 +13,7 @@
         "color_scheme": "set-2",
         "description": "<p>Dependable trailer rentals tailored for every professional </p>\n<p>need, ensuring you’re equipped for anything.</p>",
         "full_width": true,
+        "full_width_content": true,
         "height": "medium",
         "height_mobile": "full",
         "image": "booqable://assets/image-hero.jpeg",

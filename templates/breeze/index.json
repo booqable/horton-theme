@@ -13,6 +13,7 @@
         "color_scheme": "set-1",
         "description": "<p>Modern kitchen appliances on your terms—rent, relax, and </p><p>enjoy convenience without the commitment.</p>",
         "full_width": true,
+        "full_width_content": true,
         "height": "medium",
         "height_mobile": "full",
         "image": "booqable://assets/image-hero.jpg",

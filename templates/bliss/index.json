@@ -11,8 +11,9 @@
         "button_primary_label": "",
         "button_primary_url": "booqable://products/",
         "color_scheme": "set-4",
-        "description": "<p>Elevate your event experience with premier rentals with</p><p>tailored solutions for weddings, parties, and corporate events</p>",
+        "description": "<p>Elevate your event experience with premier rentals with tailored solutions for weddings, parties, and corporate events</p>",
         "full_width": true,
+        "full_width_content": true,
         "height": "medium",
         "height_mobile": "full",
         "image": "booqable://assets/image-hero.jpg",
@@ -28,7 +29,7 @@
         "show_overlay": true,
         "text_position": "middle-left",
         "text_position_mobile": "bottom-center",
-        "title": "Everything for <br>your day!",
+        "title": "Everything for your day!",
         "video_url": ""
       },
       "disabled": null
