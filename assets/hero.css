@@ -60,7 +60,7 @@
   max-width: 550px;
 }
 
-.hero__text-area--max-width {
+.hero__text-area--full-width {
   max-width: none;
 }
 
@@ -72,7 +72,7 @@
   padding-bottom: 0;
 }
 
-.hero__text-area--max-width .hero__description.bq-content p + p {
+.hero__text-area--full-width .hero__description.bq-content p + p {
   margin: 0;
 }
 

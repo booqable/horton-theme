@@ -290,7 +290,7 @@
       {%- if full_width -%}
         <div class="hero__container container">
       {%- endif -%}
-          <div class="hero__text-area{% if full_width_content %} hero__text-area--max-width{% endif %}{% if show_overlay %} hero__text-area--color{%- endif -%}">
+          <div class="hero__text-area{% if full_width_content %} hero__text-area--full-width{% endif %}{% if show_overlay %} hero__text-area--color{%- endif -%}">
             <div class="hero__content">
               {%- if title != blank -%}
                 <h1 class="hero__title">{{- title -}}</h1>
