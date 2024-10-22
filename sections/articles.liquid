@@ -89,7 +89,7 @@
           {%- assign heading         = block.settings.heading -%}
           {%- assign image           = block.settings.image -%}
 
-          {%- if image != blank -%}
+          {%- if image.url != blank -%}
             {%- assign image = image -%}
           {%- elsif image_placeholder != blank -%}
             {%- assign image = image_placeholder -%}

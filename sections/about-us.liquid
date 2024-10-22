@@ -69,7 +69,7 @@
         <div class="about-us__container container">
       {%- endif -%}
           <div class="about-us__content">
-            {%- if image != blank -%}
+            {%- if image.url != blank -%}
               <div class="about-us__media">
                 <div class="about-us__image-wrapper{% if image_circle %} about-us__image-wrapper--circle{%- endif -%}">
                   {%- render 'image',
@@ -138,7 +138,7 @@
         </div>
       {%- endif -%}
 
-      {%- if background_image != blank -%}
+      {%- if background_image.url != blank -%}
         <div class="about-us__background-wrapper">
           {%- render 'image',
               image: background_image,

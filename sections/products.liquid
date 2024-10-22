@@ -37,7 +37,7 @@
     {%- assign collection_empty = true -%}
   {% endunless %}
 
-  {%- if image != blank -%}
+  {%- if image.url != blank -%}
     {%- assign image = image -%}
   {%- elsif first_product and first_product.images.first != empty -%}
     {%- assign image = first_product.images.first -%}
@@ -277,7 +277,7 @@
               </div>
             {%- endif -%}
 
-            {%- if image != blank -%}
+            {%- if image.url != blank -%}
               <div class="products__category-background-wrapper{% if show_overlay %} products__category-background-wrapper--overlay{%- endif -%}">
                 {%- render 'image',
                     image: image,
