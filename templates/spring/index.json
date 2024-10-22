@@ -25,6 +25,7 @@
         "color_scheme": "set-2",
         "description": "<p>Transform your garden with ease – rent the right tools</p><p>for every job, without the commitment of buying</p>",
         "full_width": false,
+        "full_width_content": true,
         "height": "medium",
         "height_mobile": "full",
         "image": "booqable://assets/image-hero.webp",

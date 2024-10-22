@@ -13,6 +13,7 @@
         "color_scheme": "set-4",
         "description": "<p>Rent high-end clothing and accessories for any occasion, and</p><p> enjoy effortless style with sustainable choices delivered right to your door.</p>",
         "full_width": true,
+        "full_width_content": true,
         "height": "medium",
         "height_mobile": "full",
         "image": "booqable://assets/image-hero.jpg",

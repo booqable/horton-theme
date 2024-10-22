@@ -25,6 +25,7 @@
         "color_scheme": "set-1",
         "description": "<p>Empowering your academic journey with easy, free access to the technology you need </p><p>— borrow laptops, tablets, cameras, and more to support your success.</p>",
         "full_width": false,
+        "full_width_content": true,
         "height": "medium",
         "height_mobile": "full",
         "image": "booqable://assets/image-hero.jpeg",

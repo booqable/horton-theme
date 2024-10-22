@@ -136,7 +136,7 @@
               {%- assign image        = block.settings.image -%}
               {%- assign title        = block.settings.title -%}
 
-              {%- if image != blank -%}
+              {%- if image.url != blank -%}
                 {%- assign image = image -%}
               {%- elsif image_placeholder != blank -%}
                 {%- assign image = image_placeholder -%}
@@ -189,7 +189,7 @@
               {%- endif -%}
             </div>
 
-            {%- if image != blank -%}
+            {%- if image.url != blank -%}
               <div class="columns__image-wrapper">
                 {%- render 'image',
                     image: image,

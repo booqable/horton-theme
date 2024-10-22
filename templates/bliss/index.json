@@ -13,6 +13,7 @@
         "color_scheme": "set-4",
         "description": "<p>Elevate your event experience with premier rentals with</p><p>tailored solutions for weddings, parties, and corporate events</p>",
         "full_width": true,
+        "full_width_content": true,
         "height": "medium",
         "height_mobile": "full",
         "image": "booqable://assets/image-hero.jpg",
