@@ -57,11 +57,6 @@
   align-items: var(--text-align-items-mobile);
   text-align: var(--text-align-mobile);
   margin: 0 var(--margin-right-mobile) 0 var(--margin-left-mobile);
-  max-width: 550px;
-}
-
-.hero__text-area--full-width {
-  max-width: none;
 }
 
 .hero__description:not(:last-child) {
@@ -72,7 +67,7 @@
   padding-bottom: 0;
 }
 
-.hero__text-area--full-width .hero__description.bq-content p + p {
+.hero__description.bq-content p + p {
   margin: 0;
 }
 
