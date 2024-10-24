@@ -27,7 +27,7 @@
 .product-main__title {
   font-size: 44px;
   line-height: var(--font-height-md);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-h2);
   margin-top: var(--margin-top);
   margin-bottom: 8px;
 }
@@ -39,7 +39,7 @@
 .product-main__price bq-product-price {
   font-size: 24px;
   font-family: var(--font-body);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-headers);
 }
 
 .product-main__description {

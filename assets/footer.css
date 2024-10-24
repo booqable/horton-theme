@@ -41,7 +41,7 @@
   font-size: calc(var(--font-size-regular) - 2px);
   display: block;
   padding: 0 0 16px;
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-headers);
   text-align: var(--footer-menu-align);
   color: var(--color-outline);
   letter-spacing: var(--font-spacing-lg);

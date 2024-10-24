@@ -59,7 +59,7 @@
 .product-card__title {
   font-family: var(--font-body);
   font-size: var(--font-size-regular);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-headers);
   line-height: var(--font-height-xl);
   margin: 0;
   flex-grow: 0;
