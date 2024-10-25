@@ -11,6 +11,7 @@
 {%- assign height_mobile           = section.settings.height_mobile -%}
 {%- assign image                   = section.settings.image -%}
 {%- assign image_mobile            = section.settings.image_mobile -%}
+{%- assign limit_content_width     = section.settings.limit_content_width -%}
 {%- assign overlay_background      = section.settings.overlay_background -%}
 {%- assign overlay_color           = section.settings.overlay_color -%}
 {%- assign overlay_opacity         = section.settings.overlay_opacity -%}
@@ -289,7 +290,7 @@
       {%- if full_width -%}
         <div class="hero__container container">
       {%- endif -%}
-          <div class="hero__text-area{% if show_overlay %} hero__text-area--color{%- endif -%}">
+          <div class="hero__text-area{% if limit_content_width %} hero__text-area--max-width{% endif %}{% if show_overlay %} hero__text-area--color{%- endif -%}">
             <div class="hero__content">
               {%- if title != blank -%}
                 <h1 class="hero__title">{{- title -}}</h1>
@@ -419,6 +420,12 @@
         "id": "description",
         "label": "Description",
         "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Suspendisse varius enim in eros elementum tristique."
+      },
+      {
+        "type": "checkbox",
+        "id": "limit_content_width",
+        "label": "Limit content by width",
+        "default": false
       },
       {
         "type": "image_picker",
