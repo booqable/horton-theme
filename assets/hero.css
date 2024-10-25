@@ -59,6 +59,10 @@
   margin: 0 var(--margin-right-mobile) 0 var(--margin-left-mobile);
 }
 
+.hero__text-area--max-width {
+  max-width: 550px;
+}
+
 .hero__description:not(:last-child) {
   padding: 0 0 23px;
 }
@@ -67,7 +71,7 @@
   padding-bottom: 0;
 }
 
-.hero__description.bq-content p + p {
+.hero__text-area:not(.hero__text-area--max-width) .hero__description.bq-content p + p {
   margin: 0;
 }
 
