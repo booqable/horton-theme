@@ -1,0 +1,314 @@
+{{ "text-with-image.css" | asset_url | stylesheet_tag }}
+
+{%- assign button_primary_label   = section.settings.button_primary_label -%}
+{%- assign button_primary_url     = section.settings.button_primary_url -%}
+{%- assign button_secondary_label = section.settings.button_secondary_label -%}
+{%- assign button_secondary_url   = section.settings.button_secondary_url -%}
+{%- assign color_scheme           = section.settings.color_scheme -%}
+{%- assign description            = section.settings.description -%}
+{%- assign full_width             = section.settings.full_width -%}
+{%- assign image                  = section.settings.image -%}
+{%- assign image_position         = section.settings.image_position -%}
+{%- assign padding_bottom         = section.settings.padding_bottom -%}
+{%- assign padding_bottom_mobile  = section.settings.padding_bottom_mobile -%}
+{%- assign padding_top            = section.settings.padding_top -%}
+{%- assign padding_top_mobile     = section.settings.padding_top_mobile -%}
+{%- assign show_borders           = section.settings.show_borders -%}
+{%- assign tag                    = section.settings.tag -%}
+{%- assign title                  = section.settings.title -%}
+
+{% comment %} CSS variables start {% endcomment %}
+{%- capture variables -%}
+  {%- case padding_top -%}
+    {%- when 'small' -%}
+      --padding-top: 32px;
+    {%- when 'medium' -%}
+      --padding-top: 58px;
+    {%- when 'large' -%}
+      --padding-top: 120px;
+  {%- endcase -%}
+
+  {%- case padding_bottom -%}
+    {%- when 'small' -%}
+      --padding-bottom: 32px;
+    {%- when 'medium' -%}
+      --padding-bottom: 58px;
+    {%- when 'large' -%}
+      --padding-bottom: 120px;
+  {%- endcase -%}
+
+  {%- case padding_top_mobile -%}
+    {%- when 'small' -%}
+      --padding-top-mobile: 16px;
+    {%- when 'medium' -%}
+      --padding-top-mobile: 32px;
+    {%- when 'large' -%}
+      --padding-top-mobile: 64px;
+  {%- endcase -%}
+
+  {%- case padding_bottom_mobile -%}
+    {%- when 'small' -%}
+      --padding-bottom-mobile: 16px;
+    {%- when 'medium' -%}
+      --padding-bottom-mobile: 32px;
+    {%- when 'large' -%}
+      --padding-bottom-mobile: 64px;
+  {%- endcase -%}
+
+  {%- case image_position -%}
+    {%- when 'left' -%}
+      --flex-direction: row;
+      --flex-direction-stretched: row-reverse;
+      --gap: 32px;
+      --width-image-stretched: 53.25%;
+      --right: calc(var(--width-image-stretched) - var(--gap));
+      --left: auto;
+    {%- when 'right' -%}
+      --flex-direction: row-reverse;
+      --flex-direction-stretched: row;
+      --gap: 32px;
+      --width-image-stretched: 53.25%;
+      --right: auto;
+      --left: calc(var(--width-image-stretched) - var(--gap));
+  {%- endcase -%}
+{%- endcapture -%}
+{% comment %} CSS variables end {% endcomment %}
+
+<div class="text-image__wrapper{% if full_width %} text-image__wrapper--stretch-image{% endif %} color-{{- color_scheme.id -}}" style="{{- variables | escape -}}">
+  <div class="text-image__container container">
+    <div class="text-image__content{% if show_borders and full_width == false %} text-image__content--with-border{% endif %}{% if padding_top != blank or padding_top_mobile != blank %} text-image__content--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} text-image__content--padding-bottom{%- endif -%}">
+      {%- if image.url != blank -%}
+        <div class="text-image__media">
+          <div class="text-image__image-wrapper">
+            {%- render 'image',
+                image: image,
+                loading: 'lazy',
+                class: 'text-image__image',
+                size: 'flexible'
+            -%}
+          </div>
+        </div>
+      {%- endif -%}
+
+      {%- if tag != blank or title != blank or description != blank or button_primary_label != blank and button_primary_url != blank or button_secondary_label != blank and button_secondary_url != blank -%}
+        <div class="text-image__text-area">
+          {%- if tag != blank -%}
+            <span class="text-image__tag tagline">{{- tag -}}</span>
+          {%- endif -%}
+
+          {%- if title != blank -%}
+            <h2 class="text-image__title">{{- title -}}</h2>
+          {%- endif -%}
+
+          {%- if description != blank -%}
+            <div class="text-image__description bq-content rx-content text-medium">
+              {{- description -}}
+            </div>
+          {%- endif -%}
+
+          {%- if button_primary_label != blank and button_primary_url != blank or button_secondary_label != blank and button_secondary_url != blank -%}
+            <div class="text-image__buttons">
+              {%- if button_primary_label != blank and button_primary_url != blank -%}
+                <a class="text-image__button button button--primary button--large" href="{{ button_primary_url }}">
+                  {{- button_primary_label -}}
+                </a>
+              {%- endif -%}
+              {%- if button_secondary_label != blank and button_secondary_url != blank -%}
+                <a class="text-image__button button button--secondary" href="{{ button_secondary_url }}">
+                  {{- button_secondary_label -}}
+                  {%- render 'icon-arrow-right' -%}
+                </a>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Text with image",
+    "tag": "section",
+    "class": "text-image",
+    "description": "Display text with an image",
+    "blocks": [],
+    "settings": [
+      {
+        "type": "header",
+        "content": "General settings"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "set-1"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image (optional)",
+        "default": "booqable://assets/image-placeholder.png"
+      },
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Stretch the image",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "tag",
+        "label": "Tagline",
+        "default": "TAGLINE"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "contentEditor",
+        "id": "description",
+        "label": "Description",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+      },
+      {
+        "type": "text",
+        "id": "button_primary_label",
+        "label": "Primary button label",
+        "default": "SEE MORE"
+      },
+      {
+        "type": "url",
+        "id": "button_primary_url",
+        "label": "Primary button URL",
+        "default": "booqable://root"
+      },
+      {
+        "type": "text",
+        "id": "button_secondary_label",
+        "label": "Secondary button label",
+        "default": "SEE MORE"
+      },
+      {
+        "type": "url",
+        "id": "button_secondary_url",
+        "label": "Secondary button URL",
+        "default": "booqable://root"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_borders",
+        "label": "Show borders",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Desktop settings"
+      },
+      {
+        "type": "select",
+        "id": "image_position",
+        "label": "Layout",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
+      },
+      {
+        "type": "select",
+        "id": "padding_top",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "header",
+        "content": "Mobile settings"
+      },
+      {
+        "type": "select",
+        "id": "padding_top_mobile",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "small"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom_mobile",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "small"
+      }
+    ]
+  }
+{% endschema %}
