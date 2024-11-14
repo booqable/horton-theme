@@ -1,0 +1,254 @@
+{%- assign blocks = section.blocks -%}
+{%- assign size   = blocks.size -%}
+
+{%- unless size == 0 -%}
+  {{ "image-gallery.css" | asset_url | stylesheet_tag }}
+
+  {%- assign color_scheme          = section.settings.color_scheme -%}
+  {%- assign description           = section.settings.description -%}
+  {%- assign heading_centering     = section.settings.heading_centering -%}
+  {%- assign padding_bottom        = section.settings.padding_bottom -%}
+  {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+  {%- assign padding_top           = section.settings.padding_top -%}
+  {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
+  {%- assign tag                   = section.settings.tag -%}
+  {%- assign title                 = section.settings.title -%}
+
+  {% comment %} CSS variables start {% endcomment %}
+  {%- capture variables -%}
+    {%- case padding_top -%}
+      {%- when 'small' -%}
+        --padding-top: 40px;
+      {%- when 'medium' -%}
+        --padding-top: 80px;
+      {%- when 'large' -%}
+        --padding-top: 120px;
+    {%- endcase -%}
+
+    {%- case padding_bottom -%}
+      {%- when 'small' -%}
+        --padding-bottom: 40px;
+      {%- when 'medium' -%}
+        --padding-bottom: 80px;
+      {%- when 'large' -%}
+        --padding-bottom: 120px;
+    {%- endcase -%}
+
+    {%- case padding_top_mobile -%}
+      {%- when 'small' -%}
+        --padding-top-mobile: 16px;
+      {%- when 'medium' -%}
+        --padding-top-mobile: 32px;
+      {%- when 'large' -%}
+        --padding-top-mobile: 64px;
+    {%- endcase -%}
+
+    {%- case padding_bottom_mobile -%}
+      {%- when 'small' -%}
+        --padding-bottom-mobile: 16px;
+      {%- when 'medium' -%}
+        --padding-bottom-mobile: 32px;
+      {%- when 'large' -%}
+        --padding-bottom-mobile: 64px;
+    {%- endcase -%}
+  {%- endcapture -%}
+  {% comment %} CSS variables end {% endcomment %}
+
+  <div class="image-gallery__wrapper{% if padding_top != blank or padding_top_mobile != blank %} image-gallery__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} image-gallery__wrapper--padding-bottom{% endif %} color-{{- color_scheme.id -}}" style="{{- variables | escape -}}">
+    <div class="image-gallery__container container">
+      {%- render 'section-title',
+          centering: heading_centering,
+          tag: tag,
+          text: description,
+          title: title
+      -%}
+
+      <div class="image-gallery__grid image-gallery__grid--{{- size -}}">
+        {%- assign max_index = size | minus: 1 -%}
+        {%- assign first_block_index = 0 -%}
+
+        {%- for i in (0..max_index) -%}
+          {%- if i | modulo: 2 == 0 and first_block_index < size -%}
+            {%- assign first_block = blocks[first_block_index] -%}
+            {%- assign first_block_image = first_block.settings.image -%}
+            {%- assign second_block_index = first_block_index | plus: 1 -%}
+            {%- assign second_block = blocks[second_block_index] -%}
+            {%- assign second_block_image = second_block.settings.image -%}
+
+            <div class="image-gallery__row">
+              <div class="image-gallery__item image-gallery__item--{{- first_block_index | plus: 1 -}}">
+                {%- render 'image',
+                    image: first_block_image,
+                    loading: 'lazy',
+                    class: 'image-gallery__image',
+                    size: 'flexible'
+                -%}
+              </div>
+
+              {%- if second_block_index < size -%}
+                <div class="image-gallery__item image-gallery__item--{{- second_block_index | plus: 1 -}}">
+                  {%- render 'image',
+                      image: second_block_image,
+                      loading: 'lazy',
+                      class: 'image-gallery__image',
+                      size: 'flexible'
+                  -%}
+                </div>
+              {%- endif -%}
+            </div>
+
+            {%- assign first_block_index = first_block_index | plus: 2 -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+{%- endunless -%}
+
+{% schema %}
+  {
+    "name": "Image gallery",
+    "tag": "section",
+    "class": "image-gallery",
+    "description": "Showcase image gallery",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General settings"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "set-1"
+      },
+      {
+        "type": "text",
+        "id": "tag",
+        "label": "Tagline",
+        "default": "IMPRESSIONS"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Image Gallery"
+      },
+      {
+        "type": "contentEditor",
+        "id": "description",
+        "label": "Description",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      {
+        "type": "header",
+        "content": "Desktop settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "heading_centering",
+        "label": "Center Heading",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "padding_top",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "header",
+        "content": "Mobile settings"
+      },
+      {
+        "type": "select",
+        "id": "padding_top_mobile",
+        "label": "Padding top",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom_mobile",
+        "label": "Padding bottom",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "medium"
+      }
+    ],
+    "max_blocks": 8,
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "default": "booqable://assets/image-placeholder.png"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
