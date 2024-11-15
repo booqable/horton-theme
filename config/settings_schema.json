@@ -189,17 +189,71 @@
     "name": "Images",
     "settings": [
       {
-        "type": "checkbox",
-        "id": "use_focal_images",
-        "label": "Use focal images",
-        "default": true,
-        "info": "Display point focused images for products instead of full sized"
-      },
-      {
         "type": "image_picker",
         "id": "image_placeholder",
         "label": "Image placeholder",
         "info": "This image will be displayed in areas where an image is required but hasn't been uploaded through the designated sections. Examples include product and collection displays, sections with backgrounds, and similar areas"
+      }
+    ]
+  },
+  {
+    "name": "Product card",
+    "settings": [
+      {
+        "type": "color_scheme",
+        "id": "card_color_scheme",
+        "label": "Color scheme",
+        "default": "set-1"
+      },
+      {
+        "type": "header",
+        "content": "Image settings"
+      },
+      {
+        "type": "select",
+        "id": "card_image_fit",
+        "label": "Image fit",
+        "options": [
+          {
+            "value": "cover",
+            "label": "Cover"
+          },
+          {
+            "value": "contain",
+            "label": "Contain"
+          }
+        ],
+        "default": "contain"
+      },
+      {
+        "type": "checkbox",
+        "id": "use_focal_images",
+        "label": "Use focal image",
+        "default": true,
+        "info": "Display point focused image instead of full sized. Works with 'Cover' image fit option together"
+      },
+      {
+        "type": "checkbox",
+        "id": "card_image_background",
+        "label": "Use transparent background",
+        "default": false,
+        "info": "Display gaps above and below image. Works with 'Contain' image fit option together"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_card_borders",
+        "label": "Show borders",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "Text settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_card_excerpt",
+        "label": "Show description excerpt",
+        "default": false
       }
     ]
   },

@@ -6,6 +6,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
+  background: var(--background-primary);
   color: var(--color-secondary);
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-block);
@@ -16,6 +17,10 @@
   overflow: hidden;
   position: relative;
   background: var(--background-primary);
+}
+
+.product-card__vision--white {
+  background: var(--color-white);
 }
 
 .product-card__vision--with-border {
