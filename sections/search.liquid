@@ -4,9 +4,6 @@
 {%- assign collection            = section.settings.collection -%}
 {%- assign color_scheme          = section.settings.color_scheme -%}
 {%- assign grid                  = section.settings.grid -%}
-{%- assign image_fit             = section.settings.image_fit -%}
-{%- assign image_placeholder     = settings.image_placeholder -%}
-{%- assign is_focal              = false -%}
 {%- assign items                 = false -%}
 {%- assign limit                 = section.settings.limit -%}
 {%- assign menu                  = false -%}
@@ -16,17 +13,11 @@
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
 {%- assign padding_top           = section.settings.padding_top -%}
 {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
-{%- assign show_borders          = section.settings.show_borders -%}
-{%- assign show_excerpt          = section.settings.show_excerpt -%}
 {%- assign show_navigation       = section.settings.show_navigation -%}
 {%- assign spacing               = section.settings.spacing -%}
 {%- assign spacing_mobile        = section.settings.spacing_mobile -%}
 {%- assign sticky_sidebar        = section.settings.sticky_sidebar -%}
 {%- assign timer                 = section.settings.timer -%}
-
-{%- if settings.use_focal_images and image_fit == 'cover' -%}
-  {%- assign is_focal = true -%}
-{%- endif -%}
 
 {%- for block in section.blocks -%}
   {%- assign menu = block.settings.menu -%}
@@ -93,13 +84,6 @@
       --padding-bottom-mobile: 90px;
   {%- endcase -%}
 
-  {%- case image_fit -%}
-    {%- when 'cover' -%}
-      --object-fit: cover;
-    {%- when 'contain' -%}
-      --object-fit: contain;
-  {%- endcase -%}
-
   {%- case spacing -%}
     {%- when 'none' -%}
       --grid-gap: 0px;
@@ -151,10 +135,7 @@
             {%- endif -%}
               {%- render 'product-card',
                   product: result,
-                  placeholder: image_placeholder,
-                  border: show_borders,
-                  focal: is_focal,
-                  show_excerpt: show_excerpt
+                  settings: settings
               -%}
             {%- if spacing == "none" or spacing_mobile == "none" -%}
               </div>
@@ -193,10 +174,7 @@
                     <div class="carousel__inner">
                       {%- render 'product-card',
                           product: item,
-                          placeholder: image_placeholder,
-                          border: show_borders,
-                          focal: is_focal,
-                          show_excerpt: show_excerpt
+                          settings: settings
                       -%}
                     </div>
                   </div>
@@ -243,34 +221,6 @@
         "id": "color_scheme",
         "label": "Color scheme",
         "default": "set-1"
-      },
-      {
-        "type": "select",
-        "id": "image_fit",
-        "label": "Image fit",
-        "options": [
-          {
-            "value": "cover",
-            "label": "Cover"
-          },
-          {
-            "value": "contain",
-            "label": "Contain"
-          }
-        ],
-        "default": "cover"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_excerpt",
-        "default": true,
-        "label": "Show product description excerpt"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_borders",
-        "label": "Show image borders",
-        "default": true
       },
       {
         "type": "number",

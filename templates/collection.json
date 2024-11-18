@@ -43,7 +43,6 @@
       "settings": {
         "color_scheme": "set-5",
         "grid": "five",
-        "image_fit": "cover",
         "limit": 20,
         "message": "Sorry, there are no products in this collection yet",
         "mobile_toggler": "Menu",
@@ -51,8 +50,6 @@
         "padding_bottom_mobile": "medium",
         "padding_top": "medium",
         "padding_top_mobile": "medium",
-        "show_borders": true,
-        "show_excerpt": false,
         "spacing": "none",
         "spacing_mobile": "none",
         "sticky_sidebar": true
