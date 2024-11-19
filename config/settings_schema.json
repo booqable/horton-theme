@@ -206,6 +206,13 @@
         "default": "set-1"
       },
       {
+        "type": "checkbox",
+        "id": "use_card_color_scheme",
+        "label": "Use color scheme",
+        "default": false,
+        "info": "Use these colors instead of section ones"
+      },
+      {
         "type": "header",
         "content": "Image settings"
       },
@@ -223,7 +230,7 @@
             "label": "Contain"
           }
         ],
-        "default": "contain"
+        "default": "cover"
       },
       {
         "type": "checkbox",

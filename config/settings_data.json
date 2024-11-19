@@ -209,6 +209,7 @@
       "show_card_excerpt": true,
       "social_size": "lg",
       "social_spacing": "md",
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "adore": {
@@ -454,6 +455,7 @@
       "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "bliss": {
@@ -664,6 +666,7 @@
       "show_card_excerpt": true,
       "social_size": "lg",
       "social_spacing": "md",
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "breeze": {
@@ -875,6 +878,7 @@
       "show_card_excerpt": true,
       "social_size": "lg",
       "social_spacing": "md",
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "care": {
@@ -1086,6 +1090,7 @@
       "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "create": {
@@ -1332,6 +1337,7 @@
       "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "crisp": {
@@ -1543,6 +1549,7 @@
       "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "moment": {
@@ -1789,6 +1796,7 @@
       "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "motion": {
@@ -2000,6 +2008,7 @@
       "show_card_excerpt": true,
       "social_size": "lg",
       "social_spacing": "md",
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "navigate": {
@@ -2246,6 +2255,7 @@
       "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "place": {
@@ -2457,6 +2467,7 @@
       "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "raw": {
@@ -2668,6 +2679,7 @@
       "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "route": {
@@ -2879,6 +2891,7 @@
       "show_card_excerpt": true,
       "social_size": "lg",
       "social_spacing": "md",
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "scenic": {
@@ -3090,6 +3103,7 @@
       "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "shine": {
@@ -3336,6 +3350,7 @@
       "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "signature": {
@@ -3547,6 +3562,7 @@
       "show_card_excerpt": true,
       "social_size": "lg",
       "social_spacing": "md",
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "space": {
@@ -3793,6 +3809,7 @@
       "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
+      "use_card_color_scheme": false,
       "use_focal_images": true
     },
     "spring": {
@@ -4003,6 +4020,7 @@
       "show_card_excerpt": false,
       "social_size": "lg",
       "social_spacing": "md",
+      "use_card_color_scheme": false,
       "use_focal_images": true
     }
   }

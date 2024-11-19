@@ -10,7 +10,8 @@
 
   {%- render 'product-card',
       product: your_id,
-      settings: settings
+      settings: settings,
+      img_size - your_id
   -%}
 
 {% endcomment %}
@@ -29,6 +30,7 @@
 {%- assign show_excerpt = settings.show_card_excerpt -%}
 {%- assign image_bg     = settings.card_image_background -%}
 {%- assign url          = "" -%}
+{%- assign use_colors   = settings.use_card_color_scheme -%}
 {%- assign use_focal    = settings.use_focal_images -%}
 
 {%- if product != blank -%}
@@ -79,7 +81,7 @@
 {%- endcapture -%}
 {% comment %} CSS variables end {% endcomment %}
 
-<div class="product-card color-{{- color_scheme.id -}}" {% if id != blank %}id="{{- id -}}"{% endif %} style="{{- card_variables | escape -}}">
+<div class="product-card{% if use_colors %} color-{{- color_scheme.id -}}{%- endif -%}" {% if id != blank %}id="{{- id -}}"{% endif %} style="{{- card_variables | escape -}}">
   <div class="product-card__vision{% if image_fit == 'contain' %}{% unless image_bg %} product-card__vision--white{% endunless %}{% endif %}{% if border %} product-card__vision--with-border{% endif %}{% unless image.url != blank %} no-image{%- endunless -%}">
     {%- if image.url != blank -%}
       {%- render 'image',
