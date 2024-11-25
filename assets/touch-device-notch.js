@@ -88,7 +88,8 @@ class TouchDevice {
           isLandscape = screen.width > screen.height;
 
     this.doc.setAttribute(this.data.orientation, isLandscape ? this.props.landscape : this.props.portrait);
-    if (hasNotch) this.addClass(this.modifier.notch)
+    if (!hasNotch) return false;
+    if (!this.doc.classList.contains(this.modifier.notch)) this.addClass(this.modifier.notch)
   }
 
   checkDeviceNotch() {

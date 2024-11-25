@@ -191,6 +191,20 @@
   min-width: 500px;
 }
 
+.android-phone[data-orientation="landscape"]:has(.header__menu-secondary, .header__menu-third, .header__quick-menu) .search-form__wrapper,
+.android-phone[data-orientation="landscape"]:has(.header__menu-secondary, .header__menu-third, .header__quick-menu) .header__mobile-menu-opener-left .search-form__wrapper,
+.windows-phone[data-orientation="landscape"]:has(.header__menu-secondary, .header__menu-third, .header__quick-menu) .search-form__wrapper,
+.windows-phone[data-orientation="landscape"]:has(.header__menu-secondary, .header__menu-third, .header__quick-menu) .header__mobile-menu-opener-left .search-form__wrapper,
+.other-mobile[data-orientation="landscape"]:has(.header__menu-secondary, .header__menu-third, .header__quick-menu) .search-form__wrapper,
+.other-mobile[data-orientation="landscape"]:has(.header__menu-secondary, .header__menu-third, .header__quick-menu) .header__mobile-menu-opener-left .search-form__wrapper {
+  right: var(--horizontal-padding-mobile);
+}
+
+.iphone.notch.safari[data-orientation="landscape"]:has(.header__menu-secondary, .header__menu-third, .header__quick-menu) .search-form__wrapper,
+.iphone.notch.safari[data-orientation="landscape"]:has(.header__menu-secondary, .header__menu-third, .header__quick-menu) .header__mobile-menu-opener-left .search-form__wrapper {
+  right: calc(var(--horizontal-padding-mobile) + var(--padding-x-landscape));
+}
+
 @media (min-width: 768px) {
   .search-form__wrapper {
     min-width: 600px;
