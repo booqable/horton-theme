@@ -26,6 +26,10 @@
   --quick-menu-opener-displaying: flex;
 }
 
+.iphone.notch.safari[data-orientation="landscape"]:has(.header__menu-secondary, .header__menu-third, .header__quick-menu) .quick-menu:has(.quick-menu__opener) {
+  --quick-menu-dropdown-right: calc(var(--horizontal-padding-mobile) + var(--padding-x-landscape));
+}
+
 .quick-menu__opener {
   transition: all var(--animation-duration) var(--transition-function-ease-in-out);
   cursor: pointer;

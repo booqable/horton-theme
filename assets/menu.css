@@ -203,7 +203,7 @@
   transition-property: var(--menu-dropdown-transition-transition-property);
 }
 
-.touch[data-orientation='landscape'] .menu__dropdown {
+.iphone.notch.safari[data-orientation='landscape'] .menu__dropdown {
   transform: translateX(calc(100% + var(--horizontal-padding-mobile) + var(--padding-x-landscape)));
 }
 

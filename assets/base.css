@@ -74,7 +74,8 @@ html:has(div[data-tid="Modal"][class*="Container-"]) {
   overflow: hidden;
 }
 
-.touch {
+.iphone,
+.mac {
   -webkit-text-size-adjust: 100%;
 }
 
@@ -410,7 +411,7 @@ img {
   padding: 0 var(--horizontal-padding-mobile);
 }
 
-.touch[data-orientation='landscape'] .container {
+.iphone.notch.safari[data-orientation='landscape'] .container {
   padding-left: calc(var(--padding-x-landscape) + var(--horizontal-padding-mobile));
   padding-right: calc(var(--padding-x-landscape) + var(--horizontal-padding-mobile));
 }

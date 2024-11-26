@@ -158,10 +158,30 @@
   top: calc((var(--header-height) - var(--preview-height) - var(--top-bar-height, 0px)) / 2 + var(--padding-bottom-mobile) + 8px);
 }
 
-.touch[data-orientation='landscape'] .search-form__wrapper,
-.touch[data-orientation='landscape'] .header__mobile-menu-opener-left .search-form__wrapper {
+.iphone[data-orientation="landscape"] .search-form__wrapper,
+.iphone[data-orientation="landscape"] .header__mobile-menu-opener-left .search-form__wrapper,
+.android-phone[data-orientation="landscape"] .search-form__wrapper,
+.android-phone[data-orientation="landscape"] .header__mobile-menu-opener-left .search-form__wrapper,
+.windows-phone[data-orientation="landscape"] .search-form__wrapper,
+.windows-phone[data-orientation="landscape"] .header__mobile-menu-opener-left .search-form__wrapper,
+.other-mobile[data-orientation="landscape"] .search-form__wrapper,
+.other-mobile[data-orientation="landscape"] .header__mobile-menu-opener-left .search-form__wrapper {
   right: 0;
   min-width: 500px;
+}
+
+.android-phone[data-orientation="landscape"]:has(.header__menu-secondary, .header__menu-third, .header__quick-menu) .search-form__wrapper,
+.android-phone[data-orientation="landscape"]:has(.header__menu-secondary, .header__menu-third, .header__quick-menu) .header__mobile-menu-opener-left .search-form__wrapper,
+.windows-phone[data-orientation="landscape"]:has(.header__menu-secondary, .header__menu-third, .header__quick-menu) .search-form__wrapper,
+.windows-phone[data-orientation="landscape"]:has(.header__menu-secondary, .header__menu-third, .header__quick-menu) .header__mobile-menu-opener-left .search-form__wrapper,
+.other-mobile[data-orientation="landscape"]:has(.header__menu-secondary, .header__menu-third, .header__quick-menu) .search-form__wrapper,
+.other-mobile[data-orientation="landscape"]:has(.header__menu-secondary, .header__menu-third, .header__quick-menu) .header__mobile-menu-opener-left .search-form__wrapper {
+  right: var(--horizontal-padding-mobile);
+}
+
+.iphone.notch.safari[data-orientation="landscape"]:has(.header__menu-secondary, .header__menu-third, .header__quick-menu) .search-form__wrapper,
+.iphone.notch.safari[data-orientation="landscape"]:has(.header__menu-secondary, .header__menu-third, .header__quick-menu) .header__mobile-menu-opener-left .search-form__wrapper {
+  right: calc(var(--horizontal-padding-mobile) + var(--padding-x-landscape));
 }
 
 @media (min-width: 768px) {
