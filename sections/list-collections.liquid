@@ -1,5 +1,6 @@
 {{ "collections.css" | asset_url | stylesheet_tag }}
 
+{%- assign button_label          = section.settings.collection_button_label -%}
 {%- assign color_scheme          = section.settings.color_scheme -%}
 {%- assign grid                  = section.settings.grid -%}
 {%- assign image_placeholder     = settings.image_placeholder -%}
@@ -102,6 +103,7 @@
       {%- paginate collections by limit -%}
         {%- if collections.size > 0 -%}
           {%- render 'collections-grid',
+              button_label: button_label,
               items: collections,
               items_type: "collections",
               placeholder: image_placeholder
@@ -131,6 +133,12 @@
         "id": "color_scheme",
         "label": "Color scheme",
         "default": "set-1"
+      },
+      {
+        "type": "text",
+        "id": "collection_button_label",
+        "label": "Button label",
+        "default": "SEE MORE"
       },
       {
         "type": "number",

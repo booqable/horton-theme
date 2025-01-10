@@ -2,13 +2,15 @@
 
   This snippet is used for rendering the list of collections
 
+  button_label - "string" optional
   items - { object } *required
-  items_type - "string" *required,
+  items_type - "string" *required
   placeholder - image optional
 
   Usage:
 
   {%- render 'collections-grid',
+      button_label: "your_string",
       items: your_id,
       items_type: "your_string",
       placeholder: your_id
@@ -16,19 +18,22 @@
 
 {% endcomment %}
 
+{%- assign item_button_label = "" -%}
+
 <ul class="collections__list collection">
   {%- for item in items -%}
     {%- case items_type -%}
       {%- when "blocks" -%}
         {%- assign collection = item.settings.collection -%}
+        {%- assign item_button_label = item.settings.collection_button_label -%}
       {%- when "collections" -%}
         {%- assign collection = item -%}
+        {%- assign item_button_label = button_label -%}
     {%- endcase -%}
 
     {%- assign badge_background = item.settings.badge_background -%}
     {%- assign badge_color      = item.settings.badge_color -%}
     {%- assign badge_label      = item.settings.badge_label -%}
-    {%- assign button_label     = item.settings.collection_button_label -%}
     {%- assign button_url       = "" -%}
     {%- assign description      = "" -%}
     {%- assign id               = item.id -%}
@@ -79,7 +84,7 @@
 
           <div class="collection__buttons">
             <a class="collection__button button button--primary button--large" href="{{ button_url }}">
-              {{- button_label |  default: "SEE MORE" -}}
+              {{- item_button_label |  default: "SEE MORE" -}}
             </a>
           </div>
         </div>
