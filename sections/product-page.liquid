@@ -8,6 +8,7 @@
 {%- assign bundle_items                  = product | bundle_items -%}
 {%- assign color_scheme                  = section.settings.color_scheme -%}
 {%- assign description                   = product.description -%}
+{%- assign description_placement         = section.settings.description_placement -%}
 {%- assign infinity_scroll               = section.settings.infinity_scroll -%}
 {%- assign message_label                 = section.settings.message_label -%}
 {%- assign padding_bottom                = section.settings.padding_bottom -%}
@@ -93,7 +94,7 @@
         <h1 class="product-main__title">{{- title -}}</h1>
         <div class="product-main__price">{{- price -}}</div>
 
-        {%- if description != blank -%}
+        {%- if description != blank and description_placement == "top" -%}
           <div class="product-main__description bq-content rx-content">{{- description -}}</div>
         {%- endif -%}
 
@@ -118,6 +119,10 @@
           <div class="product-main__message">
             <span class="product-main__message-label">{{- message_label -}}</span>
           </div>
+        {%- endif -%}
+
+        {%- if description != blank and description_placement == "bottom" -%}
+          <div class="product-main__description bq-content rx-content">{{- description -}}</div>
         {%- endif -%}
       </div>
     </div>
@@ -151,6 +156,22 @@
         "id": "color_scheme",
         "label": "Color scheme",
         "default": "set-1"
+      },
+      {
+        "type": "select",
+        "id": "description_placement",
+        "label": "Product description placement",
+        "options": [
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "bottom",
+            "label": "Bottom"
+          }
+        ],
+        "default": "top"
       },
       {
         "type": "header",
