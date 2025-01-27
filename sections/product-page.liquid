@@ -15,6 +15,7 @@
 {%- assign padding_bottom_mobile         = section.settings.padding_bottom_mobile -%}
 {%- assign padding_top                   = section.settings.padding_top -%}
 {%- assign padding_top_mobile            = section.settings.padding_top_mobile -%}
+{%- assign period                        = product | product_price_label -%}
 {%- assign price                         = product | product_price -%}
 {%- assign quantity                      = product | product_button -%}
 {%- assign show_breadcrumbs              = section.settings.show_breadcrumbs -%}
@@ -92,7 +93,16 @@
 
       <div class="product-main__info">
         <h1 class="product-main__title">{{- title -}}</h1>
-        <div class="product-main__price">{{- price -}}</div>
+        {%- if price != blank -%}
+          <div class="product-main__price">
+            {{- price -}}
+
+            {%- if period != blank -%}
+              <span class="product-main__price-separator">/</span>
+              {{- period -}}
+            {%- endif -%}
+          </div>
+        {%- endif -%}
 
         {%- if description != blank and description_placement == "top" -%}
           <div class="product-main__description bq-content rx-content">{{- description -}}</div>

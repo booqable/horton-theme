@@ -42,6 +42,10 @@
   font-weight: var(--font-weight-headers);
 }
 
+.product-main__price-separator {
+  margin: 0 5px;
+}
+
 .product-main__description {
   padding: 0 0 25px;
 }
