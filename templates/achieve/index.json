@@ -11,6 +11,7 @@
         "button_primary_label": "",
         "button_primary_url": "booqable://products/",
         "color_scheme": "set-1",
+        "datepicker_size": "short",
         "description": "<p>Transform your home into a personal gym with top-tier fitness</p><p> equipment rentals — no long-term commitment, just results.</p>",
         "full_width": true,
         "height": "medium",

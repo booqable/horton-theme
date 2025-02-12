@@ -23,6 +23,7 @@
         "button_primary_label": "",
         "button_primary_url": "booqable://products/",
         "color_scheme": "set-2",
+        "datepicker_size": "short",
         "description": "<p>Transform your garden with ease – rent the right tools</p><p>for every job, without the commitment of buying</p>",
         "full_width": false,
         "height": "medium",

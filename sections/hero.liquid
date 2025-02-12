@@ -5,6 +5,7 @@
 {%- assign button_outline_label    = section.settings.button_outline_label -%}
 {%- assign button_outline_url      = section.settings.button_outline_url -%}
 {%- assign color_scheme            = section.settings.color_scheme -%}
+{%- assign datepicker_size         = section.settings.datepicker_size -%}
 {%- assign description             = section.settings.description -%}
 {%- assign full_width              = section.settings.full_width -%}
 {%- assign height                  = section.settings.height -%}
@@ -302,7 +303,10 @@
 
               {%- if show_datepicker -%}
                 <div class="hero__date-picker-wrapper">
-                  {%- render 'date-picker', key: section.key -%}
+                  {%- render 'date-picker',
+                      key: section.key,
+                      size: datepicker_size
+                  -%}
                 </div>
               {%- endif -%}
 
@@ -451,10 +455,30 @@
         "default": true
       },
       {
+        "type": "header",
+        "content": "Period picker"
+      },
+      {
         "type": "checkbox",
         "id": "show_datepicker",
         "default": true,
         "label": "Show period picker"
+      },
+      {
+        "type": "select",
+        "id": "datepicker_size",
+        "label": "Size",
+        "options": [
+          {
+            "value": "short",
+            "label": "Short"
+          },
+          {
+            "value": "full",
+            "label": "Full"
+          }
+        ],
+        "default": "short"
       },
       {
         "type": "header",

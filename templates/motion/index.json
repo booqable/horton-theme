@@ -11,6 +11,7 @@
         "button_primary_label": "",
         "button_primary_url": "booqable://products/",
         "color_scheme": "set-2",
+        "datepicker_size": "short",
         "description": "<p>Affordable Camera Rentals for Every Creative Project—</p><p>Capture Your Vision with the Best Gear, When You Need It.</p>",
         "full_width": true,
         "height": "medium",

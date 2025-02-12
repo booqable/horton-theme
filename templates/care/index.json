@@ -23,6 +23,7 @@
         "button_primary_label": "",
         "button_primary_url": "booqable://products/",
         "color_scheme": "set-2",
+        "datepicker_size": "short",
         "description": "<p>Reliable medical equipment rentals delivered fast—ensuring comfort</p><p> and quality care at home when you need it most.</p>",
         "full_width": false,
         "height": "medium",

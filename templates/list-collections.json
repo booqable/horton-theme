@@ -10,6 +10,7 @@
         "custom_description": "Lorem ipsum dolor sit amet.",
         "custom_title": "Collections",
         "datepicker_position": "bottom",
+        "datepicker_size": "short",
         "full_width": true,
         "image": "",
         "overlay_background": "#000000",

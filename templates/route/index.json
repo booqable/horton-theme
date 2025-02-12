@@ -11,6 +11,7 @@
         "button_primary_label": "",
         "button_primary_url": "booqable://products/",
         "color_scheme": "set-2",
+        "datepicker_size": "short",
         "description": "<p>Dependable trailer rentals tailored for every professional </p>\n<p>need, ensuring you’re equipped for anything.</p>",
         "full_width": true,
         "height": "medium",

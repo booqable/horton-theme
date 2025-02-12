@@ -11,6 +11,7 @@
         "button_primary_label": "",
         "button_primary_url": "booqable://products/",
         "color_scheme": "set-1",
+        "datepicker_size": "short",
         "description": "<p>Modern kitchen appliances on your terms—rent, relax, and </p><p>enjoy convenience without the commitment.</p>",
         "full_width": true,
         "height": "medium",

@@ -10,6 +10,7 @@
         "custom_description": "",
         "custom_title": "",
         "datepicker_position": "bottom",
+        "datepicker_size": "short",
         "full_width": true,
         "image": "",
         "overlay_background": "#000000",

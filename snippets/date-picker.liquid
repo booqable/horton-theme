@@ -3,46 +3,75 @@
   This snippet is used for rendering the Date picker
 
   key: section id *required,
-  background: "string" *required
+  size: "string" *required
 
   Usage:
 
   {%- render 'date-picker',
-      key: section.key
+      key: section.key,
+      size: your_id
   -%}
 
 {% endcomment %}
 
 {%- style -%}
-  #section-{{ key }} bq-date-picker {
-    /* Colors */
-    --date-picker-background-color: var(--background-accent);
-    --date-picker-border-color: var(--color-border);
-    --date-picker-icon-color: var(--color-accent);
-    --date-picker-text-color: var(--color-accent);
+  {%- if size == "short" -%}
+    #section-{{ key }} bq-date-picker {
+      /* Colors */
+      --date-picker-background-color: var(--background-accent);
+      --date-picker-border-color: var(--color-border);
+      --date-picker-icon-color: var(--color-accent);
+      --date-picker-text-color: var(--color-accent);
 
-    /* Sizes */
-    --date-picker-border-radius: var(--border-radius-button);
-    --date-picker-text-line-height: var(--font-height-lg);
-    --date-picker-text-size: 14px;
-    --date-picker-text-weight: var(--font-weight-semibold);
-    --date-picker-wrapper-padding: 12px 24px;
-  }
-
-  #section-{{ key }} .date-picker__component {
-    display: flex;
-    justify-content: var(--date-picker-alignment-mobile);
-  }
-
-  @media (min-width: 992px) {
-    #section-{{ key }} .date-picker__component {
-      justify-content: var(--date-picker-alignment);
+      /* Sizes */
+      --date-picker-border-radius: var(--border-radius-button);
+      --date-picker-text-line-height: var(--font-height-lg);
+      --date-picker-text-size: 14px;
+      --date-picker-text-weight: var(--font-weight-semibold);
+      --date-picker-wrapper-padding: 12px 24px;
     }
-  }
+
+    #section-{{ key }} .date-picker__component {
+      display: flex;
+      justify-content: var(--date-picker-alignment-mobile);
+    }
+
+    @media (min-width: 992px) {
+      #section-{{ key }} .date-picker__component {
+        justify-content: var(--date-picker-alignment);
+      }
+    }
+  {%- endif -%}
+
+  {%- if size == "full" -%}
+    #section-{{ key }} bq-date-picker {
+      /* Colors */
+      --date-picker-background-color: var(--background-accent);
+      --date-picker-box-shadow: 0 0 0 1px var(--color-border);
+      --date-picker-cleanstate-background-color: var(--background-accent);
+      --date-picker-cleanstate-text-color: var(--color-accent);
+      --date-picker-error-color: var(--color-red);
+      --date-picker-icon-color: var(--color-accent);
+      --date-picker-placeholder-color: var(--color-border);
+      --date-picker-section-border: 1px solid var(--color-accent-15);
+      --date-picker-text-color: var(--color-accent);
+
+      /* Sizes */
+      --date-picker-alignment: left;
+      --date-picker-border-radius: var(--border-radius-button);
+      --date-picker-cleanstate-alignment: left;
+      --date-picker-cleanstate-padding: 11px 25px;
+      --date-picker-section-padding: 25px;
+      --date-picker-text-line-height: 1.5;
+      --date-picker-text-size: 16px;
+      --date-picker-title-line-height: 1.5;
+      --date-picker-title-size: 16px;
+    }
+  {%- endif -%}
 {%- endstyle -%}
 
 <div class="date-picker__instance">
   <div class="date-picker__component">
-    <bq-date-picker version="next"></bq-date-picker>
+    <bq-date-picker {% if size == "short" %}version="next"{% endif %}></bq-date-picker>
   </div>
 </div>

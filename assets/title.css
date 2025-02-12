@@ -9,6 +9,7 @@
 .title__wrapper {
   --date-picker-translate: 50%;
   --date-picker-positioning: absolute;
+  --indent-x: 36px;
 
   position: relative;
   background: var(--background-primary);
@@ -30,8 +31,12 @@
 
 .title__content {
   text-align: center;
-  padding: 0 36px;
   color: var(--color-secondary);
+}
+
+.title__heading,
+.title__description {
+  padding: 0 var(--indent-x);
 }
 
 .title__content--color {
@@ -68,6 +73,10 @@
 
 .title__wrapper:has(.title__date-picker-wrapper) .title__description {
   margin-bottom: 30px;
+}
+
+.title__wrapper:has(.title__date-picker-wrapper bq-date-picker[version="next"]) .title__date-picker-wrapper {
+  padding: 0 var(--indent-x);
 }
 
 .title__wrapper .title__date-picker-wrapper {

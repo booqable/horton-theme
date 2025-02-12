@@ -4,6 +4,7 @@
 {%- assign custom_description      = section.settings.custom_description -%}
 {%- assign custom_title            = section.settings.custom_title -%}
 {%- assign datepicker_position     = section.settings.datepicker_position -%}
+{%- assign datepicker_size         = section.settings.datepicker_size -%}
 {%- assign full_width              = section.settings.full_width -%}
 {%- assign image                   = section.settings.image -%}
 {%- assign overlay_background      = section.settings.overlay_background -%}
@@ -66,9 +67,16 @@
 {%- if show_datepicker -%}
   {%- capture date_picker -%}
     <div class="title__date-picker-wrapper">
-      <div class="title__container container">
-        {%- render 'date-picker', key: section.key -%}
-      </div>
+      {%- unless datepicker_position == "in_text" -%}
+        <div class="title__container container">
+      {%- endunless -%}
+          {%- render 'date-picker',
+              key: section.key,
+              size: datepicker_size
+          -%}
+      {%- unless datepicker_position == "in_text" -%}
+        </div>
+      {%- endunless -%}
     </div>
   {%- endcapture -%}
 {%- endif -%}
@@ -170,6 +178,22 @@
         "id": "show_datepicker",
         "default": true,
         "label": "Show period picker"
+      },
+      {
+        "type": "select",
+        "id": "datepicker_size",
+        "label": "Size",
+        "options": [
+          {
+            "value": "short",
+            "label": "Short"
+          },
+          {
+            "value": "full",
+            "label": "Full"
+          }
+        ],
+        "default": "short"
       },
       {
         "type": "select",
