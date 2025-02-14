@@ -23,6 +23,7 @@
         "button_primary_label": "",
         "button_primary_url": "booqable://products/",
         "color_scheme": "set-4",
+        "datepicker_size": "short",
         "description": "<p>Indulge in a world of luxury and adventure on the open water, with our exclusive selection</p><p> of boats designed to offer you an unforgettable, first-class experience</p>",
         "full_width": false,
         "height": "medium",

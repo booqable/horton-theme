@@ -23,6 +23,7 @@
         "button_primary_label": "",
         "button_primary_url": "booqable://products/",
         "color_scheme": "set-1",
+        "datepicker_size": "short",
         "description": "<p>Empowering your academic journey with easy, free access to the technology you need </p><p>— borrow laptops, tablets, cameras, and more to support your success.</p>",
         "full_width": false,
         "height": "medium",

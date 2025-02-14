@@ -23,6 +23,7 @@
         "button_primary_label": "",
         "button_primary_url": "booqable://products/",
         "color_scheme": "set-3",
+        "datepicker_size": "short",
         "description": "<p>Safe, affordable, and high-quality scaffolding </p><p>solutions delivered to your site</p>",
         "full_width": false,
         "height": "medium",

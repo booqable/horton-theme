@@ -23,6 +23,7 @@
         "button_primary_label": "",
         "button_primary_url": "booqable://products/",
         "color_scheme": "set-4",
+        "datepicker_size": "short",
         "description": "<p>Stylish event decor for every budget – transform </p><p>your event without breaking the bank!</p>",
         "full_width": false,
         "height": "medium",

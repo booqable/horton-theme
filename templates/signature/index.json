@@ -11,6 +11,7 @@
         "button_primary_label": "",
         "button_primary_url": "booqable://products/",
         "color_scheme": "set-4",
+        "datepicker_size": "short",
         "description": "<p>Rent high-end clothing and accessories for any occasion, and</p><p> enjoy effortless style with sustainable choices delivered right to your door.</p>",
         "full_width": true,
         "height": "medium",

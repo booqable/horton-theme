@@ -23,6 +23,7 @@
         "button_primary_label": "",
         "button_primary_url": "booqable://products/",
         "color_scheme": "set-2",
+        "datepicker_size": "short",
         "description": "<p>Experience unmatched sound clarity and power, tailored specifically for </p><p>theatre productions, with our professional audio rental solutions.</p>",
         "full_width": false,
         "height": "medium",
