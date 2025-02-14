@@ -433,6 +433,11 @@ img {
   }
 }
 
+section:has(.date-picker__instance--bottom) + section [class^="padding-top"] > div,
+section:has(.date-picker__instance--bottom) + section [class*="padding-top"] > div {
+  padding-top: calc(var(--date-picker-height) / 2);
+}
+
 div[data-tid="Modal"][class*="Container-"]:has([class*="DatePickerInput"] > div) [class*="DatePickerInput"] > div,
 div[data-tippy-root]:has([data-tid="Mini cart"] [class*="DetailContainer-"] > [class*="Quantity-"]) [class*="QuantityButton"]:first-child {
   border-top-left-radius: var(--border-radius-block) !important;

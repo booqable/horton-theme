@@ -3,12 +3,14 @@
   This snippet is used for rendering the Date picker
 
   key: section id *required,
+  position: "string" *required
   size: "string" *required
 
   Usage:
 
   {%- render 'date-picker',
       key: section.key,
+      position: your_id,
       size: your_id
   -%}
 
@@ -70,7 +72,7 @@
   {%- endif -%}
 {%- endstyle -%}
 
-<div class="date-picker__instance">
+<div class="date-picker__instance{% if position == "bottom" %} date-picker__instance--bottom{%- endif -%}">
   <div class="date-picker__component">
     <bq-date-picker {% if size == "short" %}version="next"{% endif %}></bq-date-picker>
   </div>

@@ -72,6 +72,7 @@
       {%- endunless -%}
           {%- render 'date-picker',
               key: section.key,
+              position: datepicker_position,
               size: datepicker_size
           -%}
       {%- unless datepicker_position == "in_text" -%}

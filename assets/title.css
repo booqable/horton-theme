@@ -7,8 +7,9 @@
 }
 
 .title__wrapper {
-  --date-picker-translate: 50%;
+  --date-picker-extra-indent: calc(var(--padding-bottom-mobile) + var(--date-picker-height) / 2);
   --date-picker-positioning: absolute;
+  --date-picker-translate: 50%;
   --indent-x: 36px;
 
   position: relative;
@@ -22,6 +23,10 @@
 
 .title__wrapper--padding-bottom {
   padding-bottom: var(--padding-bottom-mobile);
+}
+
+.title:has(.title__wrapper > .title__date-picker-wrapper:last-child) .title__wrapper--padding-bottom {
+  padding-bottom: var(--date-picker-extra-indent);
 }
 
 .title__wrapper .title__container {
@@ -112,7 +117,8 @@
 @media (min-width: 992px) {
   .title__date-picker-wrapper {
     --date-picker-alignment: center;
-  }
+    --date-picker-extra-indent: calc(var(--padding-bottom) + var(--date-picker-height) / 2);
+}
 
   .title__wrapper--padding-top {
     padding-top: var(--padding-top);
