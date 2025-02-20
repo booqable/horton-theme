@@ -7,8 +7,10 @@
 }
 
 .title__wrapper {
-  --date-picker-translate: 50%;
+  --date-picker-extra-indent: calc(var(--padding-bottom-mobile) + var(--date-picker-height) / 2);
   --date-picker-positioning: absolute;
+  --date-picker-translate: 50%;
+  --indent-x: 36px;
 
   position: relative;
   background: var(--background-primary);
@@ -23,6 +25,10 @@
   padding-bottom: var(--padding-bottom-mobile);
 }
 
+.title:has(.title__wrapper > .title__date-picker-wrapper:last-child) .title__wrapper--padding-bottom {
+  padding-bottom: var(--date-picker-extra-indent);
+}
+
 .title__wrapper .title__container {
   position: relative;
   z-index: 1;
@@ -30,8 +36,12 @@
 
 .title__content {
   text-align: center;
-  padding: 0 36px;
   color: var(--color-secondary);
+}
+
+.title__heading,
+.title__description {
+  padding: 0 var(--indent-x);
 }
 
 .title__content--color {
@@ -70,6 +80,10 @@
   margin-bottom: 30px;
 }
 
+.title__wrapper:has(.title__date-picker-wrapper bq-date-picker[version="next"]) .title__date-picker-wrapper {
+  padding: 0 var(--indent-x);
+}
+
 .title__wrapper .title__date-picker-wrapper {
   --date-picker-alignment-mobile: center;
 
@@ -103,7 +117,8 @@
 @media (min-width: 992px) {
   .title__date-picker-wrapper {
     --date-picker-alignment: center;
-  }
+    --date-picker-extra-indent: calc(var(--padding-bottom) + var(--date-picker-height) / 2);
+}
 
   .title__wrapper--padding-top {
     padding-top: var(--padding-top);

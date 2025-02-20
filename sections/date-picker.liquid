@@ -5,6 +5,7 @@
 {%- assign padding_bottom        = section.settings.padding_bottom -%}
 {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
+{%- assign size                  = section.settings.size -%}
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
@@ -50,7 +51,8 @@
   <div class="date-picker__container container{% if padding_top != blank or padding_top_mobile != blank %} date-picker__container--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} date-picker__container--padding-bottom{%- endif -%}">
     <div class="date-picker__inner date-picker">
       {%- render 'date-picker',
-          key: section.key
+          key: section.key,
+          size: size
       -%}
     </div>
   </div>
@@ -72,6 +74,22 @@
         "id": "color_scheme",
         "label": "Color scheme",
         "default": "set-1"
+      },
+      {
+        "type": "select",
+        "id": "size",
+        "label": "Size",
+        "options": [
+          {
+            "value": "short",
+            "label": "Short"
+          },
+          {
+            "value": "full",
+            "label": "Full"
+          }
+        ],
+        "default": "short"
       },
       {
         "type": "header",

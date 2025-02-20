@@ -23,6 +23,7 @@
         "button_primary_label": "",
         "button_primary_url": "booqable://products/",
         "color_scheme": "set-4",
+        "datepicker_size": "short",
         "description": "<p>Making travel easier and more affordable with convenient</p><p>baby gear rentals delivered to your destination</p>",
         "full_width": false,
         "height": "medium",

@@ -11,6 +11,7 @@
         "button_primary_label": "",
         "button_primary_url": "booqable://products/",
         "color_scheme": "set-4",
+        "datepicker_size": "short",
         "description": "<p>Elevate your event experience with premier rentals with</p><p>tailored solutions for weddings, parties, and corporate events</p>",
         "full_width": true,
         "height": "medium",
