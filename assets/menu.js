@@ -34,12 +34,18 @@ class Menu {
     }
 
     this.cssVar = {
-      menuHeight: "--menu-height"
+      menuIndentLeftDesktop: "--menu-indent-left",
+      menuIndentLeftMobile: "--menu-indent-left-mobile",
+      menuIndentRight: "--menu-indent-right",
+      menuHeight: "--menu-height",
+      paddingDesktop: "--horizontal-padding",
+      paddingMobile: "--horizontal-padding-mobile"
     }
 
     this.resizeTimeout = null;
     this.transitionDelay = 0;
     this.screenWidth = 992;
+    this.lastOpenTimeStamp = 0;
   }
 
   init() {
@@ -63,11 +69,13 @@ class Menu {
 
   events() {
     this.menuHeight();
+    this.menuPositioning();
 
     document.addEventListener("click", this.openMenu.bind(this));
     document.addEventListener("click", this.closeMenuInnerDrops.bind(this));
     document.addEventListener("click", this.closeMenuOutside.bind(this));
-    window.addEventListener("resize", this.debounceCalculatingMenuHeight.bind(this));
+    window.addEventListener("resize", this.menuPositioning.bind(this));
+    window.addEventListener("resize", this.debounceFunction.bind(this));
     window.addEventListener("resize", this.preventBlockingScrollingPage.bind(this));
   }
 
@@ -77,7 +85,10 @@ class Menu {
 
     if (!target || target !== this.menuOpener) return false
 
-    if (this.menuOpener && !this.menuOpener.checked) this.stopScrolling()
+    if (this.menuOpener && !this.menuOpener.checked) {
+      this.stopScrolling()
+      this.lastOpenTimeStamp = event.timeStamp
+    }
   }
 
   closeMenu() {
@@ -162,27 +173,45 @@ class Menu {
     elements.forEach(element => element.checked = false)
   }
 
-  // closing menu on click outside the block
+  // closing menu by clicking outside it
   closeMenuOutside(event) {
+    if (!this.menuOpener) return false;
+    if (this.lastOpenTimeStamp && this.lastOpenTimeStamp === event.timeStamp) return false;
+
     const target = event.target,
-          parent = this.menu,
-          element = this.selector.menuOpener.parentElement,
           menuOpened = this.menuOpener.checked;
 
-    if (!target.closest(element) && !parent.contains(target) && menuOpened || target === this.menuOpener && !menuOpened) {
-      this.menuOpener.checked = false
-      this.closeMenu()
+    if (!menuOpened) return false;
 
-      if (window.innerWidth >= this.screenWidth) return false
+    const dropdown = this.menu.querySelector(this.selector.menuItem).parentElement;
 
-      this.scrollToTop(0, 0, this.menuNav)
+    if (dropdown.contains(target)) return;
+
+    const menuLabel = this.menuOpener.parentElement.querySelector(`label[for="${this.menuOpener.id}"]`);
+
+    if (target === this.menuOpener || (menuLabel && menuLabel.contains(target))) {
+      this.closeMenuHelper();
+      return;
     }
+
+    this.closeMenuHelper();
+  }
+
+  closeMenuHelper() {
+    this.menuOpener.checked = false;
+    this.closeMenu();
+
+    if (window.innerWidth >= this.screenWidth) return false;
+    this.scrollToTop(0, 0, this.menuNav);
   }
 
   // add a little delay to ensure layout is stable
-  debounceCalculatingMenuHeight() {
+  debounceFunction() {
     clearTimeout(this.resizeTimeout)
-    this.resizeTimeout = setTimeout(this.menuHeight.bind(this), 200)
+    this.resizeTimeout = setTimeout(() => {
+      this.menuPositioning();
+      this.menuHeight();
+    }, 200)
   }
 
   removeClass() {
@@ -206,6 +235,32 @@ class Menu {
     } else {
       window.scrollTo(scrollOptions)
     }
+  }
+
+  // get the button menu opener position and set CSS variable for menu dropdown positioning
+  menuPositioning() {
+    if (!this.isSticky) return false;
+    if (!this.menuOpener) return false;
+
+    const viewportWidth = window.innerWidth,
+          paddingMobile = parseFloat(getComputedStyle(this.doc).getPropertyValue(this.cssVar.paddingMobile).trim()),
+          paddingDesktop = parseFloat(getComputedStyle(this.doc).getPropertyValue(this.cssVar.paddingDesktop).trim()),
+          containerWidth = parseFloat(window.getComputedStyle(this.menuContainer).maxWidth),
+          menuButtonRect = this.menuOpener.nextElementSibling.getBoundingClientRect(),
+          { left: menuButtonLeft, width: menuButtonWidth } = menuButtonRect,
+          menuItem = this.menu.querySelector(this.selector.menuItem),
+          menuList = menuItem.parentElement,
+          menuListBorderWidth = parseFloat(window.getComputedStyle(menuList).borderRightWidth),
+          menuItemRect = menuItem.getBoundingClientRect(),
+          menuItemWidth = menuItemRect.width + menuListBorderWidth * 2,
+          calcIndentWide = menuButtonLeft - (viewportWidth - containerWidth) / 2 + menuButtonWidth - menuItemWidth,
+          calcIndentNarrow = menuButtonLeft + menuButtonWidth - menuItemWidth;
+
+    const calcIndentRight = viewportWidth >= containerWidth ? calcIndentWide : calcIndentNarrow
+
+    this.setCssVar(this.cssVar.menuIndentRight, calcIndentRight)
+    this.setCssVar(this.cssVar.menuIndentLeftMobile, paddingMobile)
+    this.setCssVar(this.cssVar.menuIndentLeftDesktop, paddingDesktop)
   }
 
   // get mobile menu height and set it as css variable
