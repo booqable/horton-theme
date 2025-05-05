@@ -33,7 +33,7 @@
   --menu-nav-position-top: calc(var(--header-height, 110px) - 1px);
   --menu-nav-position-top-sticky-header: calc(var(--header-height, 110px) - var(--top-bar-height, 0px) - 1px);
   --menu-nav-transform: translateX(100%);
-  --menu-nav-width: 100vw;
+  --menu-nav-width: 100%;
   --menu-nav-z-index: 1;
 }
 
@@ -619,6 +619,17 @@
     max-height: calc(100dvh - var(--header-height, 110px) - var(--header-transform, 0px));
     height: calc(100dvh - var(--header-height, 110px) - var(--header-transform, 0px));
     transition-delay: 0s;
+  }
+}
+
+@media (min-width: 992px) {
+  .menu__nav * {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+
+  .menu__nav *::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
   }
 }
 
