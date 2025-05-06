@@ -457,6 +457,7 @@
   .menu__item {
     padding: 11px 19px;
     border-bottom: 1px solid var(--color-border);
+    position: var(--menu-dropdown-position);
   }
 
   .menu__item--desktop-hidden {

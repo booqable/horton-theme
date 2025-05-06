@@ -7,6 +7,7 @@
 {%- assign menu_main                      = section.settings.menu_main -%}
 {%- assign menu_additional                = section.settings.menu_additional -%}
 {%- assign menu_back_mobile               = section.settings.menu_back_mobile -%}
+{%- assign menu_sub_menu_sticky           = section.settings.menu_sub_menu_sticky -%}
 {%- assign menu_message_mobile            = section.settings.menu_message_mobile -%}
 {%- assign menu_message_mobile_icon       = section.settings.menu_message_mobile_icon -%}
 {%- assign menu_message_mobile_icon_style = settings.icon_style -%}
@@ -34,6 +35,12 @@
 
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
+  {%- if menu_sub_menu_sticky -%}
+    --menu-dropdown-position: static;
+  {%- else -%}
+    --menu-dropdown-position: relative;
+  {%- endif -%}
+
   {%- case padding_top -%}
     {%- when 'small' -%}
       --padding-top: 12px;
@@ -281,6 +288,13 @@
         "id": "menu_opener_label",
         "label": "Menu icon label",
         "default": "Collections"
+      },
+      {
+        "type": "checkbox",
+        "id": "menu_sub_menu_sticky",
+        "default": true,
+        "label": "Sticky sub-menu",
+        "info": "Displays a sub‑menu below the header or beside its parent item"
       },
       {
         "type": "select",
