@@ -46,6 +46,7 @@ class Menu {
     this.transitionDelay = 0;
     this.screenWidth = 992;
     this.lastOpenTimeStamp = 0;
+    this.timeStampThreshold = 10;
   }
 
   init() {
@@ -176,7 +177,7 @@ class Menu {
   // closing menu by clicking outside it
   closeMenuOutside(event) {
     if (!this.menuOpener) return false;
-    if (this.lastOpenTimeStamp && this.lastOpenTimeStamp === event.timeStamp) return false;
+    if (this.lastOpenTimeStamp && (event.timeStamp - this.lastOpenTimeStamp < this.timeStampThreshold)) return false;
 
     const target = event.target,
           menuOpened = this.menuOpener.checked;
