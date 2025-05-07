@@ -176,7 +176,7 @@ class Menu {
   // closing menu by clicking outside it
   closeMenuOutside(event) {
     if (!this.menuOpener) return false;
-    if (this.lastOpenTimeStamp && this.lastOpenTimeStamp === event.timeStamp) return false;
+    if (this.lastOpenTimeStamp && (event.timeStamp - this.lastOpenTimeStamp < 10)) return false;
 
     const target = event.target,
           menuOpened = this.menuOpener.checked;
