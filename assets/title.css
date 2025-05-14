@@ -26,7 +26,7 @@
 }
 
 .title:has(.title__wrapper > .title__date-picker-wrapper:last-child) .title__wrapper--padding-bottom {
-  padding-bottom: var(--date-picker-extra-indent);
+  padding-bottom: var(--date-picker-extra-indent, 50px);
 }
 
 .title__wrapper .title__container {
