@@ -8,19 +8,9 @@
   {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
   {%- assign padding_top           = section.settings.padding_top -%}
   {%- assign padding_top_mobile    = section.settings.padding_top_mobile -%}
-  {%- assign position              = section.settings.position -%}
 
   {% comment %} CSS variables start {% endcomment %}
   {%- capture variables -%}
-    {%- case position -%}
-      {%- when 'left' -%}
-        --justify-content: flex-start;
-      {%- when 'center' -%}
-        --justify-content: center;
-      {%- when 'right' -%}
-        --justify-content: flex-end;
-    {%- endcase -%}
-
     {%- case padding_top -%}
       {%- when 'small' -%}
         --padding-top: 24px;
@@ -83,26 +73,6 @@
         "id": "color_scheme",
         "label": "Color scheme",
         "default": "set-1"
-      },
-      {
-        "type": "select",
-        "id": "position",
-        "label": "Horizontal position",
-        "options": [
-          {
-            "value": "left",
-            "label": "Left"
-          },
-          {
-            "value": "center",
-            "label": "Center"
-          },
-          {
-            "value": "right",
-            "label": "Right"
-          }
-        ],
-        "default": "left"
       },
       {
         "type": "header",

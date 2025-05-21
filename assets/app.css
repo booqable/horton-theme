@@ -11,11 +11,6 @@
   padding-bottom: var(--padding-bottom-mobile);
 }
 
-.app__content {
-  display: flex;
-  justify-content: var(--justify-content);
-}
-
 .accessibe-widget .accessibe-widget__wrapper {
   align-items: center;
 }
