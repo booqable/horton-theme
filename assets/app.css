@@ -1,36 +1,85 @@
-#section-header .app-mobile .weglot-widget {
-  justify-content: flex-start;
+.app__wrapper {
+  color: var(--color-primary);
+  background: var(--background-primary);
 }
 
-#section-header .app-mobile .weglot-widget__wrapper {
-  border-radius: var(--border-radius-badge);
+.app__wrapper--padding-top {
+  padding-top: var(--padding-top-mobile);
+}
+
+.app__wrapper--padding-bottom {
+  padding-bottom: var(--padding-bottom-mobile);
+}
+
+.accessibe-widget {
+  justify-content: flex-start !important;
+}
+
+.accessibe-widget .accessibe-widget__wrapper {
+  align-items: center;
+}
+
+.accessibe-widget .accessibe-widget__label {
+  padding-left: 4px;
+}
+
+.accessibe-widget .accessibe-widget__label,
+.accessibe-widget .accessibe-widget__icon path {
   transition: all var(--animation-duration) var(--transition-function-ease-in-out);
 }
 
-#section-header .app-mobile .weglot-widget__wrapper .weglot-widget__label {
+.accessibe-widget .accessibe-widget__icon,
+.accessibe-widget .accessibe-widget__label {
+  color: var(--color-primary) !important;
+}
+
+.accessibe-widget .accessibe-widget__icon path {
+  fill: var(--color-primary) !important;
+}
+
+.weglot-widget__wrapper .weglot-widget__label {
+  gap: 0px !important;
+}
+
+.weglot-widget__wrapper .weglot-widget__label:has(.weglot-widget__currentlang:not(:empty)) {
+  gap: 5px !important;
+}
+
+.weglot-widget {
+  justify-content: flex-start !important;
+}
+
+.weglot-widget__wrapper {
+  border-color: var(--color-border) !important;
+  border-radius: var(--border-radius-badge) !important;
   transition: all var(--animation-duration) var(--transition-function-ease-in-out);
 }
 
-#section-header .app-mobile .weglot-widget__dropdown {
-  left: 0;
+.weglot-widget__wrapper .weglot-widget__label,
+.weglot-widget__item {
+  transition: all var(--animation-duration) var(--transition-function-ease-in-out);
+}
+
+.weglot-widget__dropdown {
+  left: 0 !important;
   border: 1px solid var(--color-border);
-  border-radius: var(--border-radius-badge);
-  box-shadow: 0 0 8px var(--color-border);
+  border-radius: var(--border-radius-badge) !important;
+  box-shadow: 0 0 8px var(--color-border) !important;
   transition: all var(--animation-duration) var(--transition-function-ease-in-out);
 }
 
-#section-header .app-mobile .weglot-widget__dropdown--up {
-  top: auto;
-  bottom: calc(100% + 11px);
+.weglot-widget__dropdown--up {
+  top: auto !important;
+  bottom: calc(100% + 11px) !important;
 }
 
-#section-header .app-mobile .weglot-widget__dropdown--down {
-  bottom: auto;
-  top: calc(100% + 11px);
+.weglot-widget__dropdown--down {
+  bottom: auto !important;
+  top: calc(100% + 11px) !important;
 }
 
-#section-header .app-mobile .weglot-widget__dropdown:before,
-#section-header .app-mobile .weglot-widget__dropdown:after {
+.weglot-widget__dropdown:before,
+.weglot-widget__dropdown:after {
   content: "";
   position: absolute;
   left: 20px;
@@ -40,72 +89,87 @@
   transition: all var(--animation-duration) var(--transition-function-ease-in-out);
 }
 
-#section-header .app-mobile .weglot-widget__dropdown--up:before,
-#section-header .app-mobile .weglot-widget__dropdown--up:after {
+.weglot-widget__dropdown--up:before,
+.weglot-widget__dropdown--up:after {
   top: 100%;
   border-width: 10px 10px 0 10px;
   border-color: var(--background-primary) transparent transparent transparent;
 }
 
-#section-header .app-mobile .weglot-widget__dropdown--up:before {
+.weglot-widget__dropdown--up:before {
   top: calc(100% + 1px);
   border-color: var(--color-border) transparent transparent transparent;
 }
 
-#section-header .app-mobile .weglot-widget__dropdown--down:before,
-#section-header .app-mobile .weglot-widget__dropdown--down:after {
+.weglot-widget__dropdown--down:before,
+.weglot-widget__dropdown--down:after {
   bottom: 100%;
   border-width: 0 10px 10px 10px;
   border-color: transparent transparent var(--background-primary) transparent;
 }
 
-#section-header .app-mobile .weglot-widget__dropdown--down:before {
+.weglot-widget__dropdown--down:before {
   bottom: calc(100% + 1px);
   border-color: transparent transparent var(--color-border) transparent;
 }
 
-#section-header .app-mobile .weglot-widget__item {
-  transition: all var(--animation-duration) var(--transition-function-ease-in-out);
-}
-
-#section-header .app-mobile .weglot-widget__item span {
+.weglot-widget__item span {
   white-space: nowrap;
 }
 
+.footer__app .weglot-widget__dropdown {
+  left: 50% !important;
+  transform: translate(-50%, 0);
+}
+
 @media (min-width: 992px) {
-  #section-header .header__app [data-short-names="true"] {
-    width: auto;
+  .app__wrapper--padding-top {
+    padding-top: var(--padding-top);
   }
 
-  #section-header .header__app .weglot-widget__label {
-    transition: all var(--animation-duration) var(--transition-function-ease-in-out);
-    color: var(--color-primary);
+  .app__wrapper--padding-bottom {
+    padding-bottom: var(--padding-bottom);
   }
 
-  #section-header .header__app .weglot-widget__wrapper {
-    border-radius: var(--border-radius-badge);
-    padding: 0;
-    border: none;
+  .header__app [data-short-names="true"] {
+    width: auto !important;
   }
 
-  #section-header .header__app .weglot-widget__dropdown {
-    left: 50%;
+  .header__app .accessibe-widget__icon {
+    width: var(--header-icon-width);
+    height: var(--header-icon-height);
+  }
+
+  .header__app .weglot-widget__label {
+    color: var(--color-primary) !important;
+    width: var(--header-icon-width);
+    height: var(--header-icon-height);
+  }
+
+  .header__app .weglot-widget__wrapper {
+    border-radius: var(--border-radius-badge) !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  .header__app .weglot-widget__dropdown {
+    left: 50% !important;
     transform: translate(-50%, 0);
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-badge);
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--border-radius-badge) !important;
     transition: all var(--animation-duration) var(--transition-function-ease-in-out);
     background-color: var(--background-primary) !important;
-    box-shadow: 0 0 8px var(--color-border);
+    box-shadow: 0 0 8px var(--color-border) !important;
   }
 
-  #section-header .header__app .weglot-widget__dropdown--up,
-  #section-header .header__app .weglot-widget__dropdown--down {
-    top: calc(100% + 11px);
-    bottom: auto;
+  .header__app .weglot-widget__dropdown--up,
+  .header__app .weglot-widget__dropdown--down {
+    top: calc(100% + 11px) !important;
+    bottom: auto !important;
   }
 
-  #section-header .header__app .weglot-widget__dropdown:before,
-  #section-header .header__app .weglot-widget__dropdown:after {
+  .header__app .weglot-widget__dropdown:before,
+  .header__app .weglot-widget__dropdown:after {
     content: "";
     position: absolute;
     left: 50%;
@@ -116,68 +180,55 @@
     transition: all var(--animation-duration) var(--transition-function-ease-in-out);
   }
 
-  #section-header .header__app .weglot-widget__dropdown--up:before,
-  #section-header .header__app .weglot-widget__dropdown--up:after,
-  #section-header .header__app .weglot-widget__dropdown--down:before,
-  #section-header .header__app .weglot-widget__dropdown--down:after {
+  .header__app .weglot-widget__dropdown--up:before,
+  .header__app .weglot-widget__dropdown--up:after,
+  .header__app .weglot-widget__dropdown--down:before,
+  .header__app .weglot-widget__dropdown--down:after {
+    top: auto;
     bottom: 100%;
     border-width: 0 10px 10px 10px;
     border-color: transparent transparent var(--background-primary) transparent;
   }
 
-  #section-header .header__app .weglot-widget__dropdown--up:before,
-  #section-header .header__app .weglot-widget__dropdown--down:before {
+  .header__app .weglot-widget__dropdown--up:before,
+  .header__app .weglot-widget__dropdown--down:before {
+    top: auto;
     bottom: calc(100% + 1px);
     border-color: transparent transparent var(--color-border) transparent;
   }
 
-  #section-header .header__app .weglot-widget__item {
+  .header__app .weglot-widget__item {
     transition: all var(--animation-duration) var(--transition-function-ease-in-out);
-    color: var(--color-primary);
+    color: var(--color-primary) !important;
     padding: 5px 8px;
   }
-
 }
 
 @media (hover: hover) {
-  #section-header .app-mobile .weglot-widget__wrapper:hover {
-    border-color: var(--color-outline);
+  .accessibe-widget__wrapper:hover .accessibe-widget__icon path {
+    fill: var(--color-outline) !important;
   }
 
-  #section-header .app-mobile .weglot-widget__wrapper:hover .weglot-widget__label {
-    color: var(--color-outline);
+  .accessibe-widget__wrapper:hover .accessibe-widget__label {
+    color: var(--color-outline) !important;
   }
 
-  #section-header .app-mobile .weglot-widget__dropdown:hover {
-    border-color: var(--color-outline);
+  .weglot-widget__wrapper:hover,
+  .weglot-widget__dropdown:hover {
+    border-color: var(--color-outline) !important;
   }
 
-  #section-header .app-mobile .weglot-widget__dropdown--up:hover:before {
+  .weglot-widget__wrapper:hover .weglot-widget__label,
+  .weglot-widget__item:hover {
+    color: var(--color-outline) !important;
+  }
+
+  .weglot-widget__dropdown--up:hover:before {
     border-color: var(--color-outline) transparent transparent transparent;
   }
 
-  #section-header .app-mobile .weglot-widget__dropdown--down:hover:before {
-    border-color: transparent transparent var(--color-outline) transparent;
-  }
-
-  #section-header .app-mobile .weglot-widget__item:hover {
-    color: var(--color-outline);
-  }
-
-  #section-header .header__app .weglot-widget__item:hover {
-    color: var(--color-outline);
-  }
-
-  #section-header .header__app .weglot-widget__wrapper:hover .weglot-widget__label {
-    color: var(--color-outline);
-  }
-
-  #section-header .header__app .weglot-widget__dropdown:hover {
-    border-color: var(--color-outline);
-  }
-
-  #section-header .header__app .weglot-widget__dropdown--up:hover:before,
-  #section-header .header__app .weglot-widget__dropdown--down:hover:before {
+  .header__app .weglot-widget__dropdown--up:hover:before,
+  .weglot-widget__dropdown--down:hover:before {
     border-color: transparent transparent var(--color-outline) transparent;
   }
 }
