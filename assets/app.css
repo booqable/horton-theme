@@ -11,6 +11,10 @@
   padding-bottom: var(--padding-bottom-mobile);
 }
 
+.accessibe-widget {
+  justify-content: flex-start !important;
+}
+
 .accessibe-widget .accessibe-widget__wrapper {
   align-items: center;
 }
@@ -68,7 +72,6 @@
   top: auto !important;
   bottom: calc(100% + 11px) !important;
 }
-
 
 .weglot-widget__dropdown--down {
   bottom: auto !important;
@@ -132,8 +135,15 @@
     width: auto !important;
   }
 
+  .header__app .accessibe-widget__icon {
+    width: var(--header-icon-width);
+    height: var(--header-icon-height);
+  }
+
   .header__app .weglot-widget__label {
     color: var(--color-primary) !important;
+    width: var(--header-icon-width);
+    height: var(--header-icon-height);
   }
 
   .header__app .weglot-widget__wrapper {
