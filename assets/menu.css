@@ -613,7 +613,7 @@
 
   .header-sticky .menu__list {
     width: var(--menu-nav-width);
-    margin-left: var(--menu-indent-right);
+    margin-left: clamp(0px, var(--menu-indent-right), var(--menu-indent-right));
   }
 
   .header-sticky #mobile-menu-opener:checked ~ .menu__nav {
