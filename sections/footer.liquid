@@ -25,6 +25,10 @@
 {%- assign link_youtube           = settings.social_youtube_link -%}
 {%- assign link_vimeo             = settings.social_vimeo_link -%}
 
+{%- if app != blank -%}
+  {{ "app.css" | asset_url | stylesheet_tag }}
+{%- endif -%}
+
 {% comment %} CSS variables start {% endcomment %}
 {%- capture variables -%}
   {%- case padding_top -%}
