@@ -68,7 +68,8 @@
         {%- assign first_block_index = 0 -%}
 
         {%- for i in (0..max_index) -%}
-          {%- if i | modulo: 2 == 0 and first_block_index < size -%}
+          {%- assign mod_result = i | modulo: 2 -%}
+          {%- if mod_result == 0 and first_block_index < size -%}
             {%- assign first_block = blocks[first_block_index] -%}
             {%- assign first_block_image = first_block.settings.image -%}
             {%- assign second_block_index = first_block_index | plus: 1 -%}
