@@ -11,13 +11,25 @@
   padding-bottom: var(--padding-bottom-mobile);
 }
 
-.app__section-preview {
-  margin: 1rem;
-  border-radius: 8px;
-  background-color: rgba(127, 127, 127, 0.2);
+.app__preview {
+  height: 200px;
+  border-radius: var(--border-radius-block);
+  background-image: repeating-linear-gradient(
+    315deg,
+    var(--background-primary),
+    var(--background-primary) 6px,
+    var(--color-border) 6px,
+    var(--color-border) 7px
+  ) !important;
   display: flex;
-  place-content: center;
-  padding-block: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.spacer__preview span {
+  padding: 8px 12px;
+  background-color: var(--background-primary);
+  color: var(--color-primary);
 }
 
 .accessibe-widget {
