@@ -27,6 +27,7 @@
 }
 
 .spacer__preview span {
+  display: block;
   padding: 8px 12px;
   background-color: var(--background-primary);
   color: var(--color-primary);
