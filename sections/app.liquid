@@ -1,8 +1,8 @@
+{{ "app.css" | asset_url | stylesheet_tag }}
+
 {%- assign app = section.blocks | where: "type", "app" | first -%}
 
 {%- if app != blank -%}
-  {{ "app.css" | asset_url | stylesheet_tag }}
-
   {%- assign color_scheme          = section.settings.color_scheme -%}
   {%- assign padding_bottom        = section.settings.padding_bottom -%}
   {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
@@ -49,12 +49,20 @@
   {%- endcapture -%}
   {% comment %} CSS variables end {% endcomment %}
 
-  <div class="app__wrapper color-{{- color_scheme.id -}}{% if padding_top != blank or padding_top_mobile != blank %} app__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} app__wrapper--padding-bottom{%- endif -%}" style="{{- variables | escape -}}">
-    <div class="app__container container">
-      <div class="app__content">
-        {% render 'app', block: app, section: section %}
+  {%- unless section_preview -%}
+    <div class="app__wrapper color-{{- color_scheme.id -}}{% if padding_top != blank or padding_top_mobile != blank %} app__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} app__wrapper--padding-bottom{%- endif -%}" style="{{- variables | escape -}}">
+      <div class="app__container container">
+        <div class="app__content">
+          {% render 'app', block: app, section: section %}
+        </div>
       </div>
     </div>
+  {%- endunless -%}
+{%- endif -%}
+
+{%- if section_preview -%}
+  <div class="app__section-preview">
+    The contents of this section vary by App.
   </div>
 {%- endif -%}
 
