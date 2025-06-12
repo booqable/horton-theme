@@ -319,7 +319,21 @@
 }
 
 .menu-secondary {
+  --menu-secondary-dropdown-padding-x: var(--horizontal-padding-mobile);
+
   display: none;
+}
+
+.menu-secondary__dropdown-list {
+  max-width: var(--max-width);
+  max-height: calc(100dvh - var(--header-height, 242px));
+  padding: 25px var(--menu-secondary-dropdown-padding-x);
+  margin: 0 auto;
+  overflow-y: auto;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+  align-items: flex-start;
 }
 
 .menu-third {
@@ -347,6 +361,17 @@
 
 .menu__message:has(.menu__message-text) .icon {
   margin-right: 15px;
+}
+
+@media (min-width: 992px) {
+  .menu__nav * {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+
+  .menu__nav *::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
 }
 
 @media (min-width: 1100px) {
@@ -763,17 +788,6 @@
     display: none;
   }
 
-  .menu-secondary__dropdown-list {
-    max-width: var(--max-width);
-    max-height: calc(100dvh - var(--header-height, 242px));
-    padding: 25px var(--horizontal-padding);
-    margin: 0 auto;
-    overflow-y: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
-    align-items: flex-start;
-  }
-
   .menu-secondary__dropdown-link {
     font-size: calc(var(--font-size-regular) + 4px);
     font-weight: var(--font-weight-regular);
@@ -851,17 +865,6 @@
   }
 }
 
-@media (min-width: 992px) {
-  .menu__nav * {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
-  }
-
-  .menu__nav *::-webkit-scrollbar {
-    display: none; /* Safari and Chrome */
-  }
-}
-
 @media (min-width: 1200px) {
   body:has(.menu-third) .menu-third {
     --extra-menu-item-indent: 16px;
@@ -871,8 +874,24 @@
     --menu-opener-padding: 11px 33px;
   }
 
+  .menu-secondary {
+    --menu-secondary-dropdown-padding-x: var(--horizontal-padding);
+  }
+
   .header-sticky .menu__list {
     margin-left: var(--menu-indent-left);
+  }
+}
+
+@media (max-width: 1099px) {
+  .menu__opener {
+    background: none;
+    border-color: var(--color-border);
+  }
+
+  .menu__opener:hover {
+    background: transparent;
+    border-color: var(--color-border);
   }
 }
 
@@ -902,17 +921,5 @@
   .menu-secondary__item.has-dropdown:hover .menu-secondary__dropdown-opener:has(+ .menu-secondary__link) .menu-secondary__item-icon path {
     fill: var(--color-outline);
     stroke: var(--color-outline);
-  }
-}
-
-@media (max-width: 1099px) {
-  .menu__opener {
-    background: none;
-    border-color: var(--color-border);
-  }
-
-  .menu__opener:hover {
-    background: transparent;
-    border-color: var(--color-border);
   }
 }
