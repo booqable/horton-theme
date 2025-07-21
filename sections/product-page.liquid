@@ -23,7 +23,7 @@
 {%- assign show_thumbnails               = section.settings.show_thumbnails -%}
 {%- assign title                         = product.name -%}
 {%- assign variants                      = product.variants -%}
-{%- assign variant_label                 = section.settings.variant_label -%}
+{%- assign variant_label                 = 'store.variant' | user_t | default: section.settings.variant_label -%}
 {%- assign variant_selector              = product | product_variations_select -%}
 
 {% comment %} CSS variables start {% endcomment %}
@@ -149,12 +149,6 @@
       {
         "type": "header",
         "content": "General settings"
-      },
-      {
-        "type": "text",
-        "id": "variant_label",
-        "label": "Variations label",
-        "default": "Variation"
       },
       {
         "type": "text",
