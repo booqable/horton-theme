@@ -28,12 +28,14 @@
   grid-template-rows: max-content 1fr;
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-block);
-  overflow: hidden;
 }
 
 .article__image-wrapper {
   aspect-ratio: var(--image-ratio);
   position: relative;
+  overflow: clip;
+  border-top-left-radius: var(--border-radius-block);  /* fix for flattened articles */
+  border-top-right-radius: var(--border-radius-block); /* on iPhone 11 */
 }
 
 .article__image {
