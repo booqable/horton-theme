@@ -5,6 +5,7 @@
   button_label - "string" optional
   items - { object } *required
   items_type - "string" *required
+  settings - { settings } *required
   placeholder - image optional
 
   Usage:
@@ -13,14 +14,27 @@
       button_label: "your_string",
       items: your_id,
       items_type: "your_string",
+      settings: settings,
       placeholder: your_id
   -%}
 
 {% endcomment %}
 
 {%- assign item_button_label = "" -%}
+{%- assign image_fit         = settings.collection_card_image_fit -%}
 
-<ul class="collections__list collection">
+{% comment %} CSS variables start {% endcomment %}
+{%- capture image_variables -%}
+  {%- case image_fit -%}
+    {%- when 'cover' -%}
+      --object-fit: cover;
+    {%- when 'contain' -%}
+      --object-fit: contain;
+  {%- endcase -%}
+{%- endcapture -%}
+{% comment %} CSS variables end {% endcomment %}
+
+<ul class="collections__list collection"{% if image_fit != blank %} style="{{- image_variables | escape -}}"{%- endif -%}>
   {%- for item in items -%}
     {%- case items_type -%}
       {%- when "blocks" -%}

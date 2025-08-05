@@ -193,28 +193,10 @@
         "id": "image_placeholder",
         "label": "Image placeholder",
         "info": "This image will be displayed in areas where an image is required but hasn't been uploaded through the designated sections. Examples include product and collection displays, sections with backgrounds, and similar areas"
-      }
-    ]
-  },
-  {
-    "name": "Product card",
-    "settings": [
-      {
-        "type": "color_scheme",
-        "id": "card_color_scheme",
-        "label": "Color scheme",
-        "default": "set-1"
-      },
-      {
-        "type": "checkbox",
-        "id": "use_card_color_scheme",
-        "label": "Use color scheme",
-        "default": false,
-        "info": "Use these colors instead of section ones"
       },
       {
         "type": "header",
-        "content": "Image settings"
+        "content": "Product card image settings"
       },
       {
         "type": "select",
@@ -251,6 +233,44 @@
         "id": "show_card_borders",
         "label": "Show borders",
         "default": false
+      },
+      {
+        "type": "header",
+        "content": "Collection image settings"
+      },
+      {
+        "type": "select",
+        "id": "collection_card_image_fit",
+        "label": "Image fit",
+        "options": [
+          {
+            "value": "cover",
+            "label": "Cover"
+          },
+          {
+            "value": "contain",
+            "label": "Contain"
+          }
+        ],
+        "default": "cover"
+      }
+    ]
+  },
+  {
+    "name": "Product card",
+    "settings": [
+      {
+        "type": "color_scheme",
+        "id": "card_color_scheme",
+        "label": "Color scheme",
+        "default": "set-1"
+      },
+      {
+        "type": "checkbox",
+        "id": "use_card_color_scheme",
+        "label": "Use color scheme",
+        "default": false,
+        "info": "Use these colors instead of section ones"
       },
       {
         "type": "header",
