@@ -17,6 +17,7 @@
         "height": "medium",
         "height_mobile": "full",
         "image": "booqable://assets/image-hero.jpg",
+        "image_alt": "",
         "image_mobile": "booqable://assets/image-hero-mobile.jpeg",
         "limit_content_width": false,
         "overlay_background": "#F5FAFA",
@@ -41,42 +42,48 @@
         "logo_964617": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-1-black.png"
+            "image": "booqable://assets/image-partner-logo-1-black.png",
+            "image_alt": ""
           },
           "disabled": null
         },
         "logo_964618": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-2-black.png"
+            "image": "booqable://assets/image-partner-logo-2-black.png",
+            "image_alt": ""
           },
           "disabled": null
         },
         "logo_964619": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-3-black.png"
+            "image": "booqable://assets/image-partner-logo-3-black.png",
+            "image_alt": ""
           },
           "disabled": null
         },
         "logo_964620": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-1-black.png"
+            "image": "booqable://assets/image-partner-logo-1-black.png",
+            "image_alt": ""
           },
           "disabled": null
         },
         "logo_964621": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-2-black.png"
+            "image": "booqable://assets/image-partner-logo-2-black.png",
+            "image_alt": ""
           },
           "disabled": null
         },
         "logo_964622": {
           "type": "logo",
           "settings": {
-            "image": "booqable://assets/image-partner-logo-3-black.png"
+            "image": "booqable://assets/image-partner-logo-3-black.png",
+            "image_alt": ""
           },
           "disabled": null
         }
@@ -188,6 +195,7 @@
         "heading": "",
         "heading_centering": true,
         "image": "",
+        "image_alt": "",
         "overlay_background": "#000000",
         "overlay_color": "#FFFFFF",
         "overlay_opacity": 40,
@@ -217,6 +225,7 @@
         "description": "Reserve the perfect rentals for your event today and make your vision a reality—book now!",
         "full_width": false,
         "image": "booqable://assets/image-cta-1.jpg",
+        "image_alt": "",
         "layout": "column",
         "overlay_background": "#000000",
         "overlay_color": "#FFFFFF",
@@ -242,6 +251,7 @@
             "button_url": "booqable://root",
             "description": "",
             "image": "booqable://assets/image-columns-1.png",
+            "image_alt": "",
             "title": "Extra card"
           },
           "disabled": null
@@ -253,6 +263,7 @@
             "button_url": "booqable://root",
             "description": "",
             "image": "booqable://assets/image-columns-2.png",
+            "image_alt": "",
             "title": "Extra card"
           },
           "disabled": null
@@ -264,6 +275,7 @@
             "button_url": "booqable://root",
             "description": "",
             "image": "booqable://assets/image-columns-3.png",
+            "image_alt": "",
             "title": "Extra card"
           },
           "disabled": null
@@ -312,6 +324,7 @@
         "heading": "",
         "heading_centering": true,
         "image": "",
+        "image_alt": "",
         "overlay_background": "#000000",
         "overlay_color": "#FFFFFF",
         "overlay_opacity": 40,
@@ -337,6 +350,7 @@
       "settings": {
         "color_scheme": "set-1",
         "image": "booqable://assets/image-waved-line-decor.png",
+        "image_alt": "",
         "size": "medium",
         "size_mobile": "medium"
       },
@@ -348,12 +362,14 @@
       "block_order": [],
       "settings": {
         "background_image": "booqable://assets/image-about-us-background.png",
+        "background_image_alt": "",
         "button_label": "MORE ABOUT US",
         "button_url": "booqable://root",
         "color_scheme": "set-3",
         "description": "Our passion for producing amazing wedding experiences has taken us on a fantastic path, where we have perfected the art of translating treasured fantasies into a reality of elegance. element symbolises the pinnacle of luxury, where love and beauty are harmoniously intertwined.",
         "full_width": true,
         "image": "booqable://assets/image-about-us.png",
+        "image_alt": "",
         "image_circle": true,
         "padding_bottom": "small",
         "padding_bottom_mobile": "small",
@@ -456,7 +472,8 @@
             "article_tag": "Category",
             "article_text": "Tips to ensure the Maid of Honor fulfills her role with confidence and grace, making the wedding experience smoother for the bride.",
             "heading": "A Guide On The Maid Of Honor’s Duties",
-            "image": "booqable://assets/image-article-1.jpg"
+            "image": "booqable://assets/image-article-1.jpg",
+            "image_alt": ""
           },
           "disabled": null
         },
@@ -468,7 +485,8 @@
             "article_tag": "Category",
             "article_text": "From personalized keepsakes to eco-friendly and edible options, the post provides inspiration for favors.",
             "heading": "The Wedding Favor Ideas Guide",
-            "image": "booqable://assets/image-article-2.jpg"
+            "image": "booqable://assets/image-article-2.jpg",
+            "image_alt": ""
           },
           "disabled": null
         },
@@ -480,7 +498,8 @@
             "article_tag": "Category",
             "article_text": "Ensuring couples understand how to plan a smooth and well-organized event that flows seamlessly from one special moment to the next.",
             "heading": "The Wedding Order Of Events Guide",
-            "image": "booqable://assets/image-article-3.jpg"
+            "image": "booqable://assets/image-article-3.jpg",
+            "image_alt": ""
           },
           "disabled": null
         }
@@ -517,6 +536,7 @@
         "description": "Transform your event into an unforgettable experience—explore our rental options and reserve today!",
         "full_width": false,
         "image": "booqable://assets/image-cta-2.jpg",
+        "image_alt": "",
         "layout": "column",
         "overlay_background": "#000000",
         "overlay_color": "#FFFFFF",

@@ -51,6 +51,7 @@
 .header__logo-image {
   max-height: 64px;
   max-width: 100%;
+  width: auto;
 }
 
 .header__cart {

@@ -6,6 +6,7 @@
 {%- assign description           = section.settings.description -%}
 {%- assign full_width            = section.settings.full_width -%}
 {%- assign image                 = section.settings.image -%}
+{%- assign image_alt             = section.settings.image_alt -%}
 {%- assign layout                = section.settings.layout -%}
 {%- assign overlay_background    = section.settings.overlay_background -%}
 {%- assign overlay_color         = section.settings.overlay_color -%}
@@ -108,9 +109,9 @@
         <div class="cta__image-wrapper">
           {%- render 'image',
               image: image,
-              loading: 'lazy',
-              class: 'cta__image',
-              size: 'xxl'
+              image_alt: image_alt,
+              image_class: 'cta__image',
+              image_size: 'xxl'
           -%}
         </div>
       {%- endif -%}
@@ -172,6 +173,12 @@
         "id": "image",
         "label": "Background image (optional)",
         "default": "booqable://assets/image-placeholder.png"
+      },
+      {
+        "type": "text",
+        "id": "image_alt",
+        "label": "Alternative text (optional)",
+        "info": "For SEO and Accessibility purposes"
       },
       {
         "type": "checkbox",
