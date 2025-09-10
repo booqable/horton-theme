@@ -1,6 +1,7 @@
 {{ "about-us.css" | asset_url | stylesheet_tag }}
 
 {%- assign background_image      = section.settings.background_image -%}
+{%- assign background_image_alt  = section.settings.background_image_alt -%}
 {%- assign blocks                = false -%}
 {%- assign button_label          = section.settings.button_label -%}
 {%- assign button_url            = section.settings.button_url -%}
@@ -8,6 +9,7 @@
 {%- assign description           = section.settings.description -%}
 {%- assign full_width            = section.settings.full_width -%}
 {%- assign image                 = section.settings.image -%}
+{%- assign image_alt             = section.settings.image_alt -%}
 {%- assign image_circle          = section.settings.image_circle -%}
 {%- assign padding_bottom        = section.settings.padding_bottom -%}
 {%- assign padding_bottom_mobile = section.settings.padding_bottom_mobile -%}
@@ -74,9 +76,9 @@
                 <div class="about-us__image-wrapper{% if image_circle %} about-us__image-wrapper--circle{%- endif -%}">
                   {%- render 'image',
                       image: image,
-                      loading: 'lazy',
-                      class: 'about-us__image',
-                      size: 'flexible'
+                      image_alt: image_alt,
+                      image_class: 'about-us__image',
+                      image_size: 'flexible'
                   -%}
                 </div>
               </div>
@@ -142,9 +144,9 @@
         <div class="about-us__background-wrapper">
           {%- render 'image',
               image: background_image,
-              loading: 'lazy',
-              class: 'about-us__background',
-              size: 'xxl'
+              image_alt: background_image_alt,
+              image_class: 'about-us__background',
+              image_size: 'xxl'
           -%}
         </div>
       {%- endif -%}
@@ -175,6 +177,12 @@
         "id": "image",
         "label": "Image (optional)",
         "default": "booqable://assets/image-placeholder.png"
+      },
+      {
+        "type": "text",
+        "id": "image_alt",
+        "label": "Alternative text (optional)",
+        "info": "For SEO and Accessibility purposes"
       },
       {
         "type": "checkbox",
@@ -228,6 +236,12 @@
         "type": "image_picker",
         "id": "background_image",
         "label": "Image (optional)"
+      },
+      {
+        "type": "text",
+        "id": "background_image_alt",
+        "label": "Alternative text (optional)",
+        "info": "For SEO and Accessibility purposes"
       },
       {
         "type": "header",

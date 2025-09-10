@@ -105,12 +105,12 @@
       </div>
 
       {%- if image.url != blank -%}
-        <div class="collection__image-wrapper">
+        <div class="collection__image-holder">
           {%- render 'image',
             image: image,
-            loading: 'lazy',
-            class: 'collection__image',
-            size: 'flexible'
+            image_alt: name,
+            image_class: 'collection__image',
+            image_size: 'flexible'
           -%}
         </div>
       {%- else -%}

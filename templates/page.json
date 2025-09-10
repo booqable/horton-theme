@@ -13,6 +13,7 @@
         "datepicker_size": "short",
         "full_width": true,
         "image": "",
+        "image_alt": "",
         "overlay_background": "#000000",
         "overlay_color": "#FFFFFF",
         "overlay_opacity": 40,
@@ -33,6 +34,7 @@
       "settings": {
         "color_scheme": "set-1",
         "image": "",
+        "image_alt": "",
         "size": "small",
         "size_mobile": "small"
       },

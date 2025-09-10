@@ -107,10 +107,6 @@
   position: relative;
 }
 
-.hero__vision-wrapper--desktop {
-  display: none;
-}
-
 .hero__vision-wrapper--overlay:after {
   content: "";
   position: absolute;
@@ -166,10 +162,6 @@
 
   .hero__vision-wrapper {
     display: block;
-  }
-
-  .hero__vision-wrapper--mobile {
-    display: none;
   }
 
   .hero__vision-wrapper--overlay:after {

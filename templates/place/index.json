@@ -8,6 +8,7 @@
       "settings": {
         "color_scheme": "set-1",
         "image": "",
+        "image_alt": "",
         "size": "small",
         "size_mobile": "small"
       },
@@ -29,6 +30,7 @@
         "height": "medium",
         "height_mobile": "full",
         "image": "booqable://assets/image-hero.jpg",
+        "image_alt": "",
         "image_mobile": "",
         "limit_content_width": false,
         "overlay_background": "#000000",
@@ -122,6 +124,7 @@
             "button_url": "booqable://root",
             "description": "Lorem ipsum dolor sit amet",
             "image": "booqable://assets/image-columns-deco-1.jpg",
+            "image_alt": "",
             "title": "Title here"
           },
           "disabled": null
@@ -133,6 +136,7 @@
             "button_url": "booqable://root",
             "description": "Lorem ipsum dolor sit amet",
             "image": "booqable://assets/image-columns-deco-2.jpg",
+            "image_alt": "",
             "title": "Title here"
           },
           "disabled": null
@@ -144,6 +148,7 @@
             "button_url": "booqable://root",
             "description": "Lorem ipsum dolor sit amet",
             "image": "booqable://assets/image-columns-deco-3.jpg",
+            "image_alt": "",
             "title": "Title here"
           },
           "disabled": null
@@ -192,6 +197,7 @@
         "heading": "",
         "heading_centering": true,
         "image": "",
+        "image_alt": "",
         "overlay_background": "#000000",
         "overlay_color": "#FFFFFF",
         "overlay_opacity": 30,
@@ -221,6 +227,7 @@
         "description": "<p><b>$10 gift card</b></p>\n<p>Special offer for renting scaffolding</p>",
         "full_width": false,
         "image": "booqable://assets/image-hero.jpg",
+        "image_alt": "",
         "layout": "row",
         "overlay_background": "#DF6827",
         "overlay_color": "#FFFFFF",
@@ -246,6 +253,7 @@
             "button_url": "booqable://root",
             "description": "",
             "image": "booqable://assets/image-columns-deco-4.jpg",
+            "image_alt": "",
             "title": "Extra card"
           },
           "disabled": null
@@ -257,6 +265,7 @@
             "button_url": "booqable://root",
             "description": "",
             "image": "booqable://assets/image-columns-deco-5.jpg",
+            "image_alt": "",
             "title": "Extra card"
           },
           "disabled": null
@@ -268,6 +277,7 @@
             "button_url": "booqable://root",
             "description": "",
             "image": "booqable://assets/image-columns-deco-6.jpg",
+            "image_alt": "",
             "title": "Extra card"
           },
           "disabled": null
@@ -316,6 +326,7 @@
         "heading": "",
         "heading_centering": true,
         "image": "",
+        "image_alt": "",
         "overlay_background": "#000000",
         "overlay_color": "#FFFFFF",
         "overlay_opacity": 30,
@@ -340,12 +351,14 @@
       "block_order": [],
       "settings": {
         "background_image": "",
+        "background_image_alt": "",
         "button_label": "MORE ABOUT US",
         "button_url": "booqable://root",
         "color_scheme": "set-4",
         "description": "<p>We provide top-quality scaffolding rentals for construction projects of all sizes. With a focus on safety, reliability, and affordability, we offer a wide range of scaffolding solutions, expertly delivered and set up at your site. Whether you’re working on residential, commercial, or industrial projects, our team is committed to ensuring you have the equipment you need to get the job done efficiently and safely.</p>",
         "full_width": false,
         "image": "booqable://assets/image-about-us-avatar.jpg",
+        "image_alt": "",
         "image_circle": false,
         "padding_bottom": "small",
         "padding_bottom_mobile": "small",
@@ -415,7 +428,8 @@
             "article_tag": "Category",
             "article_text": "<p>Discover the different types of scaffolding and how to select the best option based on your construction needs.</p>",
             "heading": "Choosing the Right Scaffolding for Your Project",
-            "image": "booqable://assets/image-articles-1.jpeg"
+            "image": "booqable://assets/image-articles-1.jpeg",
+            "image_alt": ""
           },
           "disabled": null
         },
@@ -427,7 +441,8 @@
             "article_tag": "Category",
             "article_text": "<p>Learn essential safety practices to ensure your team stays secure while using scaffolding on any project.</p>",
             "heading": "5 Safety Tips for Working with Scaffolding ",
-            "image": "booqable://assets/image-articles-2.jpeg"
+            "image": "booqable://assets/image-articles-2.jpeg",
+            "image_alt": ""
           },
           "disabled": null
         },
@@ -439,7 +454,8 @@
             "article_tag": "Category",
             "article_text": "<p>Explore the advantages of renting scaffolding equipment, from cost savings to flexibility for short-term and long-term projects.</p>",
             "heading": "The Benefits of Renting Scaffolding vs. Buying",
-            "image": "booqable://assets/image-articles-3.jpeg"
+            "image": "booqable://assets/image-articles-3.jpeg",
+            "image_alt": ""
           },
           "disabled": null
         }
@@ -476,6 +492,7 @@
         "description": "<p>Start your project with safe, reliable scaffolding—delivered and installed by our expert team.</p>",
         "full_width": false,
         "image": "booqable://assets/image-cta-1.jpg",
+        "image_alt": "",
         "layout": "column",
         "overlay_background": "#000000",
         "overlay_color": "#FFFFFF",

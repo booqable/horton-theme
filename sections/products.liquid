@@ -24,6 +24,7 @@
   {%- assign first_product      = collection.products | first -%}
   {%- assign heading            = section.settings.heading | default: collection.name -%}
   {%- assign image              = section.settings.image | default: collection.image -%}
+  {%- assign image_alt          = section.settings.image_alt -%}
   {%- assign items              = collection.items -%}
   {%- assign items_type         = "collection" -%}
   {%- assign overlay_background = section.settings.overlay_background -%}
@@ -80,9 +81,6 @@
 {%- endif -%}
 
 {%- if size > 0 or collection_empty -%}
-  {{ "products.css" | asset_url | stylesheet_tag }}
-  {{ "product-card.css" | asset_url | stylesheet_tag }}
-
   {%- assign carousel                 = false -%}
   {%- assign collection_empty_message = section.settings.collection_empty_message -%}
   {%- assign color_scheme             = section.settings.color_scheme -%}
@@ -263,9 +261,10 @@
               <div class="products__category-background-wrapper{% if show_overlay %} products__category-background-wrapper--overlay{%- endif -%}">
                 {%- render 'image',
                     image: image,
-                    loading: 'lazy',
-                    class: 'products__category-background',
-                    size: 'flexible'
+                    image_alt: image_alt,
+                    image_class: 'products__category-background',
+                    image_size: 'flexible',
+                    use_ratio: false
                   -%}
               </div>
             {%- else -%}
@@ -285,6 +284,26 @@
     "description": "Display individual products or items from a collection in a grid or sliding carousel",
     "tag": "section",
     "class": "products",
+    "css_assets": [
+      {
+        "file": "products.css",
+        "include_if": [
+          "has_collection_or_blocks"
+        ]
+      },
+      {
+        "file": "product-card.css",
+        "include_if": [
+          "has_collection_or_blocks"
+        ]
+      },
+      {
+        "file": "focal-image.css",
+        "include_if": [
+          "has_collection_or_blocks"
+        ]
+      }
+    ],
     "settings": [
       {
         "type": "header",
@@ -349,6 +368,12 @@
         "type": "image_picker",
         "id": "image",
         "label": "Custom collection image"
+      },
+      {
+        "type": "text",
+        "id": "image_alt",
+        "label": "Alternative text (optional)",
+        "info": "For SEO and Accessibility purposes"
       },
       {
         "type": "checkbox",

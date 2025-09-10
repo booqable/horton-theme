@@ -88,6 +88,7 @@
           {%- assign article_text    = block.settings.article_text -%}
           {%- assign heading         = block.settings.heading -%}
           {%- assign image           = block.settings.image -%}
+          {%- assign image_alt       = block.settings.image_alt -%}
 
           {%- if image.url != blank -%}
             {%- assign image = image -%}
@@ -102,9 +103,9 @@
               {%- if image.url != blank -%}
                 {%- render 'image',
                   image: image,
-                  loading: 'lazy',
-                  class: 'article__image',
-                  size: 'flexible'
+                  image_alt: image_alt,
+                  image_class: 'article__image',
+                  image_size: 'flexible'
                 -%}
               {%- else -%}
                 {%- render 'image-placeholder', dimension: "525x300" -%}
@@ -332,6 +333,12 @@
             "type": "image_picker",
             "id": "image",
             "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "image_alt",
+            "label": "Alternative text (optional)",
+            "info": "For SEO and Accessibility purposes"
           },
           {
             "type": "text",
