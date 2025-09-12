@@ -9,6 +9,7 @@
 {%- assign heading            = "" -%}
 {%- assign image              = "" -%}
 {%- assign image_placeholder  = settings.image_placeholder -%}
+{%- assign limit              = 16 -%}
 {%- assign overlay_background = "" -%}
 {%- assign overlay_color      = "" -%}
 {%- assign overlay_opacity    = "" -%}
@@ -27,6 +28,7 @@
   {%- assign image_alt          = section.settings.image_alt -%}
   {%- assign items              = collection.items -%}
   {%- assign items_type         = "collection" -%}
+  {%- assign limit              = 25 -%}
   {%- assign overlay_background = section.settings.overlay_background -%}
   {%- assign overlay_color      = section.settings.overlay_color -%}
   {%- assign overlay_opacity    = section.settings.overlay_opacity -%}
@@ -100,6 +102,8 @@
     {{ "carousel.css" | asset_url | stylesheet_tag }}
 
     {%- assign carousel = true -%}
+
+    {%- assign timer_val = timer | plus: 0 -%}
   {%- endif -%}
 
   {% comment %} CSS variables start {% endcomment %}
@@ -163,6 +167,12 @@
     {%- endcase -%}
   {%- endcapture -%}
 
+  {%- capture slide_variables -%}
+    --slide-width: 328px;
+    --slide-width-mobile: 250px;
+    --slide-width-block: 283px;
+  {%- endcapture -%}
+
   {%- render 'variables-product-availability' -%}
   {% comment %} CSS variables end {% endcomment %}
 
@@ -180,17 +190,16 @@
     {%- if category_block -%}
       <div class="products__content">
     {%- endif -%}
-        <div class="products__list{% if collection_empty %} products__list--empty{% endif %}{% if carousel %} carousel carousel__pause{%- endif -%}"{% if carousel %} aria-role="Gallery"{%- endif -%}>
+        <div class="products__list{% if collection_empty %} products__list--empty{% endif %}{% if carousel %} carousel carousel__pause{% if show_navigation %} carousel--controls{%- endif -%}{%- endif -%}" style="{{- slide_variables | escape -}}"{% if carousel %}{% if timer_val > 0 %} data-carousel-timer="{{- timer_val -}}"{% endif %} aria-label="Carousel"{%- endif -%}>
           {%- if collection_empty -%}
             {{- collection_empty_message -}}
           {%- else -%}
             {%- if carousel -%}
-              <input class="carousel__timer" type="hidden" name="hidden" value="{{- timer -}}" aria-hidden="true">
               <div class="carousel__list">
                 <div class="carousel__wrapper">
             {%- endif -%}
 
-                {%- for item in items -%}
+                {%- for item in items limit: limit -%}
                   {% case items_type %}
                     {% when "blocks" %}
                       {% assign product = item.settings.product %}
@@ -215,18 +224,16 @@
             {%- if carousel -%}
                 </div>
               </div>
-              {%- if show_navigation -%}
-                <div class="carousel__navigation hidden" aria-role="Carousel navigation">
-                  <span class="carousel__btn prev" aria-label="Prev slide">
-                    Previous slide
-                    {%- render 'icon-arrow-right-full' -%}
-                  </span>
-                  <span class="carousel__btn next" aria-label="Next slide">
-                    Next slide
-                    {%- render 'icon-arrow-right-full' -%}
-                  </span>
-                </div>
-              {%- endif -%}
+              <div class="carousel__navigation hidden"{% unless show_navigation %} style="display: none;"{% endunless %} role="navigation" aria-label="Carousel navigation">
+                <span class="carousel__btn prev" aria-label="Prev slide">
+                  Previous slide
+                  {%- render 'icon-arrow-right-full' -%}
+                </span>
+                <span class="carousel__btn next" aria-label="Next slide">
+                  Next slide
+                  {%- render 'icon-arrow-right-full' -%}
+                </span>
+              </div>
             {%- endif -%}
           {%- endif -%}
         </div>

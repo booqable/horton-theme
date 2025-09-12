@@ -89,10 +89,6 @@
   border: none;
 }
 
-.testimonials__list .carousel__wrapper--full-width {
-  --slide-width-mobile: 100%;
-}
-
 .testimonials__list .carousel__wrapper--full-width .testimonials__blockquote {
   border: none;
   text-align: center;
@@ -131,10 +127,6 @@
 
   .testimonials__wrapper--padding-bottom {
     padding-bottom: var(--padding-bottom);
-  }
-
-  .testimonials__list .carousel__wrapper--full-width {
-    --slide-width: 100%;
   }
 
   .testimonials__list .carousel__wrapper--full-width .testimonials__quote {

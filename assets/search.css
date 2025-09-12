@@ -95,6 +95,11 @@
   .search__grid:has(.search__sidebar):has(.search__message) .search__products {
     width: calc(100% - var(--sidebar-min-width) - var(--sidebar-gap));
   }
+
+  .search__grid:has(.search__sidebar) .carousel__item {
+    min-width: var(--slide-width-block);
+    max-width: var(--slide-width-block);
+  }
 }
 
 @media (min-width: 1200px) {
