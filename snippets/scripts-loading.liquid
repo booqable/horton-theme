@@ -19,8 +19,10 @@
 {%- unless scripts or scripts != blank -%}
   {%- assign sections_with_images = 'about-us, articles, call-to-action, collections, collection-page, columns, footer, header, hero, image-gallery, logos, list-collections, product-page, products, spacer, text-with-image, title' | split: ', ' -%}
   {%- assign sections_with_products = 'products, collection-page, search' | split: ', ' -%}
+  {%- assign sections_with_carousel = 'products, search, testimonials' | split: ', ' -%}
   {%- assign script_image_loading = '' -%}
   {%- assign script_focal_image = '' -%}
+  {%- assign script_carousel = '' -%}
 
   {%- for section in sections.all -%}
     {%- for item in sections_with_images -%}
@@ -30,6 +32,17 @@
         {%- unless script_image_loading contains image_loading -%}
           {%- assign script_image_loading = image_loading -%}
           {%- assign scripts = scripts | append: ', ' | append: script_image_loading -%}
+        {%- endunless -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- for item in sections_with_carousel -%}
+      {%- if section.type == item -%}
+        {%- assign carousel = 'js-carousel.js' -%}
+
+        {%- unless script_carousel contains carousel -%}
+          {%- assign script_carousel = carousel -%}
+          {%- assign scripts = scripts | append: ', ' | append: script_carousel -%}
         {%- endunless -%}
       {%- endif -%}
     {%- endfor -%}

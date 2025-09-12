@@ -6,19 +6,7 @@
 
   max-width: 100%;
   position: relative;
-}
-
-.carousel *::-webkit-scrollbar,
-.carousel__wrapper *::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-  display: none;
-}
-
-.carousel,
-.carousel__wrapper {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
+  contain: layout; /* Performance: Reduces the scope of layout recalculations */
 }
 
 .carousel__list {
@@ -31,17 +19,16 @@
 .carousel__wrapper {
   height: 100%;
   width: calc(100% + 2px);
-  overflow-x: scroll;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-snap-stop: always;
-  scroll-padding: 0;
-  scroll-behavior: smooth !important;
   display: flex;
   align-items: stretch;
+  gap: 0;
+  /* Optimize with hardware acceleration while ensuring smooth native scrolling */
+  will-change: transform;
+  transition: transform calc(var(--animation-duration, 200ms) + 200ms) var(--transition-function-ease-in-out);
+  backface-visibility: hidden;
 }
 
-.carousel.controls {
+.carousel--controls {
   margin-bottom: var(--buttons-indent);
 }
 
@@ -54,8 +41,6 @@
   min-width: var(--slide-width-mobile);
   max-width: var(--slide-width-mobile);
   padding: 0;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
 }
 
 .carousel__navigation {

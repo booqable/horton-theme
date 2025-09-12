@@ -24,6 +24,7 @@
     {{ "carousel.css" | asset_url | stylesheet_tag }}
 
     {%- assign carousel = true -%}
+    {%- assign timer_val = timer | plus: 0 -%}
   {%- endif -%}
 
   {% comment %} CSS variables start {% endcomment %}
@@ -64,6 +65,16 @@
         --padding-bottom-mobile: 96px;
     {%- endcase -%}
   {%- endcapture -%}
+
+  {%- capture slide_variables -%}
+    {%- if full_width -%}
+      --slide-width: 100%;
+      --slide-width-mobile: 100%;
+    {%- else -%}
+      --slide-width: 328px;
+      --slide-width-mobile: 280px;
+    {%- endif -%}
+  {%- endcapture -%}
   {% comment %} CSS variables end {% endcomment %}
 
   <div class="testimonials__wrapper color-{{ color_scheme.id }}{% if padding_top != blank or padding_top_mobile != blank %} testimonials__wrapper--padding-top{% endif %}{% if padding_bottom != blank or padding_bottom_mobile != blank %} testimonials__wrapper--padding-bottom{%- endif -%}" style="{{- variables | escape -}}">
@@ -76,9 +87,8 @@
           title: title
       -%}
 
-      <div class="testimonials__list{% if carousel %} carousel carousel__pause{%- endif -%}"{% if carousel %} aria-role="Gallery"{%- endif -%}>
+      <div class="testimonials__list{% if carousel %} carousel carousel__pause{% if show_navigation %} carousel--controls{%- endif -%}{%- endif -%}" style="{{- slide_variables | escape -}}"{% if carousel %}{% if timer_val > 0 %} data-carousel-timer="{{- timer_val -}}"{% endif %} aria-label="Carousel"{%- endif -%}>
         {%- if carousel -%}
-          <input class="carousel__timer" type="hidden" name="hidden" value="{{- timer -}}" aria-hidden="true">
           <div class="carousel__list">
             <div class="carousel__wrapper{% if full_width %} carousel__wrapper--full-width{% endif %}">
         {%- endif -%}
@@ -151,18 +161,16 @@
             </div>
           </div>
 
-          {%- if show_navigation -%}
-            <div class="carousel__navigation hidden" aria-role="Carousel navigation">
-              <span class="carousel__btn prev" aria-label="Prev slide">
-                Previous slide
-                {%- render 'icon-arrow-right-full' -%}
-              </span>
-              <span class="carousel__btn next" aria-label="Next slide">
-                Next slide
-                {%- render 'icon-arrow-right-full' -%}
-              </span>
-            </div>
-          {%- endif -%}
+          <div class="carousel__navigation hidden"{% unless show_navigation %} style="display: none;"{% endunless %} role="navigation" aria-label="Carousel navigation">
+            <span class="carousel__btn prev" aria-label="Prev slide">
+              Previous slide
+              {%- render 'icon-arrow-right-full' -%}
+            </span>
+            <span class="carousel__btn next" aria-label="Next slide">
+              Next slide
+              {%- render 'icon-arrow-right-full' -%}
+            </span>
+          </div>
         {%- endif -%}
       </div>
     </div>

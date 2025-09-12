@@ -165,3 +165,115 @@ Utils.getDimensions = (element) => {
     height: rect.height
   }
 }
+
+// Cached DOM dimensions with automatic invalidation
+Utils.getCachedDimensions = (() => {
+  const cache = new Map()
+  const resizeObserver = new ResizeObserver((entries) => {
+    // Clear cache for resized elements
+    entries.forEach(entry => cache.delete(entry.target))
+  })
+
+  return (element) => {
+    if (!element) return { width: 0, height: 0, offsetWidth: 0, clientWidth: 0 }
+
+    if (cache.has(element)) {
+      return cache.get(element)
+    }
+
+    const dimensions = {
+      width: element.getBoundingClientRect().width,
+      height: element.getBoundingClientRect().height,
+      offsetWidth: element.offsetWidth,
+      clientWidth: element.clientWidth
+    }
+
+    cache.set(element, dimensions)
+    resizeObserver.observe(element)
+
+    return dimensions
+  }
+})()
+
+// Touch device detection
+Utils.isTouchDevice = () => {
+  return (
+    ('ontouchstart' in window) ||
+    (navigator.maxTouchPoints > 0) ||
+    (navigator.msMaxTouchPoints > 0)
+  )
+}
+
+// Cached mobile detection based on viewport width
+Utils.isMobile = (() => {
+  let cachedResult = null
+  let cachedWidth = null
+
+  return (breakpoint = 992) => {
+    const currentWidth = window.innerWidth
+
+    // Return cached result if width hasn't changed
+    if (cachedResult !== null && cachedWidth === currentWidth) {
+      return cachedResult
+    }
+
+    // Update cache
+    cachedWidth = currentWidth
+    cachedResult = currentWidth < breakpoint
+    return cachedResult
+  }
+})()
+
+// Generic memoization utility with TTL and key-based invalidation
+Utils.memoize = (fn, options = {}) => {
+  const cache = new Map()
+  const { ttl = 30000, maxSize = 100 } = options // 30s TTL, max 100 entries
+
+  return (...args) => {
+    const key = JSON.stringify(args)
+    const now = Date.now()
+
+    // Check if cached result exists and is still valid
+    if (cache.has(key)) {
+      const { result, timestamp } = cache.get(key)
+      if (now - timestamp < ttl) {
+        return result
+      }
+      cache.delete(key) // Remove expired entry
+    }
+
+    // Clean up cache if it gets too large
+    if (cache.size >= maxSize) {
+      const oldestKey = cache.keys().next().value
+      cache.delete(oldestKey)
+    }
+
+    // Calculate and cache result
+    const result = fn.apply(this, args)
+    cache.set(key, { result, timestamp: now })
+    return result
+  }
+}
+
+// Batch DOM queries utility - reduces multiple querySelector calls
+Utils.batchQuery = (element, selectors) => {
+  const results = {}
+  const selectorKeys = Object.keys(selectors)
+
+  // Single traversal approach for better performance
+  for (const key of selectorKeys) {
+    const selector = selectors[key]
+    if (Array.isArray(selector)) {
+      // Handle array of selectors
+      results[key] = selector.map(sel => element.querySelector(sel))
+    } else if (selector.endsWith('All')) {
+      // Handle querySelectorAll cases
+      results[key] = element.querySelectorAll(selector.slice(0, -3))
+    } else {
+      // Handle single querySelector cases
+      results[key] = element.querySelector(selector)
+    }
+  }
+
+  return results
+}

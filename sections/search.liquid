@@ -1,7 +1,9 @@
+{%- assign carousel              = false -%}
 {%- assign collection            = section.settings.collection -%}
 {%- assign color_scheme          = section.settings.color_scheme -%}
 {%- assign grid                  = section.settings.grid -%}
 {%- assign items                 = false -%}
+{%- assign items_limit           = 16 -%}
 {%- assign limit                 = section.settings.limit -%}
 {%- assign menu                  = false -%}
 {%- assign message               = section.settings.message -%}
@@ -28,7 +30,9 @@
 {%- if collection != blank -%}
   {{ "carousel.css" | asset_url | stylesheet_tag }}
 
-  {%- assign items = collection.items -%}
+  {%- assign carousel = true -%}
+  {%- assign items    = collection.items -%}
+  {%- assign timer_val = timer | plus: 0 -%}
 {%- endif -%}
 
 {% comment %} CSS variables start {% endcomment %}
@@ -104,6 +108,12 @@
   {%- endcase -%}
 {%- endcapture -%}
 
+{%- capture slide_variables -%}
+  --slide-width: 328px;
+  --slide-width-mobile: 250px;
+  --slide-width-block: 315.2px;
+{%- endcapture -%}
+
 {%- render 'variables-product-availability' -%}
 {% comment %} CSS variables end {% endcomment %}
 
@@ -155,18 +165,17 @@
             {{- message -}}
           {%- else -%}
             <span class="search__message-placeholder">No results found</span>
-            {%- if collection != blank -%}
+            {%- if carousel -%}
               <span class="search__message-placeholder">. Maybe these will interest you...</span>
             {%- endif -%}
           {%- endif -%}
         </div>
 
-        {%- if collection != blank -%}
-          <div class="search__carousel carousel carousel__pause" aria-role="Gallery">
-            <input class="carousel__timer" type="hidden" name="hidden" value="{{- timer -}}" aria-hidden="true">
+        {%- if carousel -%}
+          <div class="search__carousel carousel carousel__pause{% if show_navigation %} carousel--controls{%- endif -%}"{% if timer_val > 0 %} data-carousel-timer="{{- timer_val -}}"{% endif %} style="{{- slide_variables | escape -}}" aria-label="Carousel">
             <div class="carousel__list">
               <div class="carousel__wrapper">
-                {%- for item in items -%}
+                {%- for item in items limit: items_limit -%}
                   <div class="carousel__item">
                     <div class="carousel__inner">
                       {%- render 'product-card',
@@ -179,18 +188,16 @@
               </div>
             </div>
 
-            {%- if show_navigation -%}
-              <div class="carousel__navigation hidden" aria-role="Carousel navigation">
-                <span class="carousel__btn prev" aria-label="Prev slide">
-                  Previous slide
-                  {%- render 'icon-arrow-right-full' -%}
-                </span>
-                <span class="carousel__btn next" aria-label="Next slide">
-                  Next slide
-                  {%- render 'icon-arrow-right-full' -%}
-                </span>
-              </div>
-            {%- endif -%}
+            <div class="carousel__navigation hidden"{% unless show_navigation %} style="display: none;"{% endunless %} role="navigation" aria-label="Carousel navigation">
+              <span class="carousel__btn prev" aria-label="Prev slide">
+                Previous slide
+                {%- render 'icon-arrow-right-full' -%}
+              </span>
+              <span class="carousel__btn next" aria-label="Next slide">
+                Next slide
+                {%- render 'icon-arrow-right-full' -%}
+              </span>
+            </div>
           </div>
         {%- endif -%}
       </div>
