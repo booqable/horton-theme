@@ -45,6 +45,7 @@
         {%- assign item_button_label = button_label -%}
     {%- endcase -%}
 
+    {%- assign alt              = "" -%}
     {%- assign badge_background = item.settings.badge_background -%}
     {%- assign badge_color      = item.settings.badge_color -%}
     {%- assign badge_label      = item.settings.badge_label -%}
@@ -63,8 +64,10 @@
 
       {%- if collection.image -%}
         {%- assign image = collection.image -%}
+        {%- assign alt   = name -%}
       {%- elsif first_product and first_product.images.first != empty -%}
         {%- assign image = first_product.images.first -%}
+        {%- assign alt   = first_product.name -%}
       {%- endif -%}
     {%- else -%}
       {%- assign image = placeholder -%}
@@ -108,7 +111,7 @@
         <div class="collection__image-holder">
           {%- render 'image',
             image: image,
-            image_alt: name,
+            image_alt: alt,
             image_class: 'collection__image',
             image_size: 'flexible'
           -%}
