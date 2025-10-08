@@ -192,7 +192,7 @@
         "type": "image_picker",
         "id": "image_placeholder",
         "label": "Image placeholder",
-        "info": "This image will be displayed in areas where an image is required but hasn't been uploaded through the designated sections. Examples include product and collection displays, sections with backgrounds, and similar areas"
+        "info": "This image will be displayed in areas where an image is required but hasn't been uploaded through the designated sections. Examples include product and collection displays, sections with backgrounds, and similar areas. Recommended: JPEG image, 1280x1280 pixels or larger."
       },
       {
         "type": "header",
