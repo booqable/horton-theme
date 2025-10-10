@@ -390,6 +390,10 @@
     position: relative;
   }
 
+  .menu:has(.menu__opener i:only-child) {
+    --menu-nav-position-left: 0;
+  }
+
   .header-sticky .menu {
     --menu-dropdown-height: auto;
     --menu-dropdown-z-index: 1;

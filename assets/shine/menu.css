@@ -410,6 +410,7 @@
     --menu-nav-overflow-y: inherit;
     --menu-nav-overflow-x: inherit;
     --menu-nav-position: absolute;
+    --menu-nav-position-left: 0;
     --menu-nav-position-top: calc(var(--header-icon-height) + var(--padding-bottom));
     --menu-nav-position-top-sticky-header: var(--menu-nav-position-top);
     --menu-nav-transform: translate(0, 0);
@@ -424,7 +425,6 @@
     --menu-dropdown-z-index: 1;
     --menu-nav-overflow-y: auto;
     --menu-nav-position: fixed;
-    --menu-nav-position-left: 0;
     --menu-nav-position-top: calc(var(--header-height) + var(--header-transform, 0px));
     --menu-nav-transform: translate(0, 100%);
   }
@@ -456,6 +456,10 @@
     position: relative;
     height: 24px;
     width: 18px;
+  }
+
+  .menu__opener:has(i:only-child) {
+    --header-icon-width: clamp(60px, 100%, 86px);
   }
 
   .menu__opener.button--primary span,
