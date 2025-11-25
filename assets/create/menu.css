@@ -459,7 +459,7 @@
   }
 
   .menu__opener:has(i:only-child) {
-    --header-icon-width: clamp(60px, 100%, 86px);
+    --header-icon-width: 60px;
   }
 
   .menu__opener.button--primary span,
@@ -880,6 +880,10 @@
 
   .menu-secondary {
     --menu-secondary-dropdown-padding-x: var(--horizontal-padding);
+  }
+
+  .menu__opener:has(i:only-child) {
+    --header-icon-width: clamp(60px, 100%, 86px);
   }
 
   .header-sticky .menu__list {
