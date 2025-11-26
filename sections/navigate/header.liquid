@@ -1,6 +1,6 @@
 {{ "header.css" | asset_url | stylesheet_tag }}
 
-{%- assign app                            = section.blocks | where: "type", "app" | first -%}
+{%- assign apps                           = section.blocks | where: "type", "app" -%}
 {%- assign color_scheme                   = section.settings.color_scheme -%}
 {%- assign custom_title                   = section.settings.custom_title -%}
 {%- assign icon_style                     = settings.icon_style -%}
@@ -37,7 +37,7 @@
   {{ "quick-menu.css" | asset_url | stylesheet_tag }}
 {%- endif -%}
 
-{%- if app != blank -%}
+{%- if apps.size > 0 -%}
   {{ "app.css" | asset_url | stylesheet_tag }}
 {%- endif -%}
 
@@ -207,11 +207,11 @@
 
           {{- header_menu_small -}}
 
-          {%- if app -%}
+          {%- for app in apps -%}
             <div class="header__app">
               {% render 'app', block: app, section: section, size: "mobile" %}
             </div>
-          {%- endif -%}
+          {%- endfor -%}
 
           {%- unless quick_menu_icon_opener != "empty" -%}
             {{- header_icons -}}
@@ -247,11 +247,13 @@
   {%- endcapture -%}
 {%- endif -%}
 
-{%- if app -%}
+{%- if apps.size > 0 -%}
   {%- capture header_app -%}
-    <div class="header__app header__app--mobile-hidden">
-      {%- render 'app', block: app, section: section, size: "desktop" -%}
-    </div>
+    {%- for app in apps -%}
+      <div class="header__app header__app--mobile-hidden">
+        {%- render 'app', block: app, section: section, size: "desktop" -%}
+      </div>
+    {%- endfor -%}
   {%- endcapture -%}
 {%- endif -%}
 
