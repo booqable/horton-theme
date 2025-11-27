@@ -118,12 +118,12 @@
           {%- endcapture -%}
 
           {%- if carousel -%}
-            <div class="carousel__item">
+            <div id="{{ block.id }}" class="carousel__item">
               <div class="carousel__inner">
           {%- endif -%}
 
           {%- if description != blank -%}
-            <blockquote class="testimonials__blockquote text-large">
+            <blockquote id="{{ block.id }}" class="testimonials__blockquote text-large">
               {%- if show_stars == "above" -%}
                 {{- stars_rendering -}}
               {%- endif -%}
