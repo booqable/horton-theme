@@ -79,7 +79,7 @@
             {%- assign second_block_image_alt = second_block.settings.image_alt -%}
 
             <div class="image-gallery__row">
-              <div class="image-gallery__item image-gallery__item--{{- first_block_index | plus: 1 -}}">
+              <div id="{{ first_block.id }}" class="image-gallery__item image-gallery__item--{{- first_block_index | plus: 1 -}}">
                 {%- render 'image',
                     image: first_block_image,
                     image_alt: first_block_image_alt,
@@ -89,7 +89,7 @@
               </div>
 
               {%- if second_block_index < size -%}
-                <div class="image-gallery__item image-gallery__item--{{- second_block_index | plus: 1 -}}">
+                <div id="{{ second_block.id }}" class="image-gallery__item image-gallery__item--{{- second_block_index | plus: 1 -}}">
                   {%- render 'image',
                       image: second_block_image,
                       image_alt: second_block_image_alt,
