@@ -98,7 +98,7 @@
             {%- assign image = blank -%}
           {%- endif -%}
 
-          <div class="articles__item article">
+          <div id="{{ block.id }}" class="articles__item article">
             <div class="article__image-wrapper">
               {%- if image.url != blank -%}
                 {%- render 'image',
