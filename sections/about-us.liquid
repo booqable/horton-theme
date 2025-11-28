@@ -118,7 +118,7 @@
                   {%- assign icon_style = settings.icon_style -%}
 
                   {%- if text != blank or icon != "empty" -%}
-                    <div class="about-us__block">
+                    <div id="{{ block.id }}" class="about-us__block">
                       {%- if icon != "empty" -%}
                         <div class="about-us__block-icon">
                           {%- render 'icon', icon: icon, style: icon_style -%}
