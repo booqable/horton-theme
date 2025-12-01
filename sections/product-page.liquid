@@ -83,9 +83,14 @@
     <div class="product-main__grid">
       <div class="product-main__gallery">
         {{ product | product_gallery:
-          enable_thumbnails: show_thumbnails,
-          enable_controls: show_controls,
-          infinite_scroll: infinity_scroll
+          image_fit_desktop: section.settings.image_fit_desktop,
+          enable_thumbnails_desktop: section.settings.enable_thumbnails_desktop,
+          infinite_scroll_desktop: section.settings.infinite_scroll_desktop,
+          enable_controls_desktop: section.settings.enable_controls_desktop,
+          image_fit_mobile: section.settings.image_fit_mobile,
+          enable_thumbnails_mobile: section.settings.enable_thumbnails_mobile,
+          infinite_scroll_mobile: section.settings.infinite_scroll_mobile,
+          enable_controls_mobile: section.settings.enable_controls_mobile
         }}
       </div>
 
@@ -224,26 +229,82 @@
       },
       {
         "type": "header",
-        "content": "Carousel"
+        "content": "Desktop Carousel"
       },
       {
-        "type": "checkbox",
-        "id": "show_controls",
-        "default": true,
-        "label": "Show navigation buttons"
+      "type": "select",
+      "id": "image_fit_desktop",
+      "label": "Display images as",
+      "mode": "select",
+      "options": [
+        {
+          "value": "cover",
+          "label": "Square"
+        },
+        {
+          "value": "contain",
+          "label": "Full image"
+        }
+      ],
+      "default": "cover"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_controls_desktop",
+      "label": "Show navigation buttons",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_thumbnails_desktop",
+      "label": "Show thumbnails",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "infinite_scroll_desktop",
+      "label": "Infinity scroll",
+      "default": true
+    },
+      {
+        "type": "header",
+        "content": "Mobile Carousel"
       },
       {
-        "type": "checkbox",
-        "id": "show_thumbnails",
-        "default": true,
-        "label": "Show thumbnails"
-      },
-      {
-        "type": "checkbox",
-        "id": "infinity_scroll",
-        "default": true,
-        "label": "Infinity scroll"
-      },
+      "type": "select",
+      "id": "image_fit_mobile",
+      "label": "Display images as",
+      "mode": "select",
+      "options": [
+        {
+          "value": "cover",
+          "label": "Square"
+        },
+        {
+          "value": "contain",
+          "label": "Full image"
+        }
+      ],
+      "default": "cover"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_controls_mobile",
+      "label": "Show navigation buttons",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_thumbnails_mobile",
+      "label": "Show thumbnails",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "infinite_scroll_mobile",
+      "label": "Infinity scroll",
+      "default": true
+    },
       {
         "type": "header",
         "content": "Desktop settings"
