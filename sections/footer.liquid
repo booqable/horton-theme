@@ -1,7 +1,7 @@
 {{ "footer.css" | asset_url | stylesheet_tag }}
 
 {%- assign additional_info        = section.settings.additional_info -%}
-{%- assign app                    = section.blocks | where: "type", "app" | first -%}
+{%- assign apps                   = section.blocks | where: "type", "app" -%}
 {%- assign bottom_menu            = section.settings.bottom_menu -%}
 {%- assign bottom_text            = section.settings.bottom_text -%}
 {%- assign color_scheme           = section.settings.color_scheme -%}
@@ -25,7 +25,7 @@
 {%- assign link_youtube           = settings.social_youtube_link -%}
 {%- assign link_vimeo             = settings.social_vimeo_link -%}
 
-{%- if app != blank -%}
+{%- if apps.size > 0 -%}
   {{ "app.css" | asset_url | stylesheet_tag }}
 {%- endif -%}
 
@@ -88,11 +88,11 @@
 {%- endcapture -%}
 
 {%- capture footer_app -%}
-  {%- if app -%}
+  {%- for app in apps -%}
     <div class="footer__app">
       {%- render 'app', block: app, section: section -%}
     </div>
-  {%- endif -%}
+  {%- endfor -%}
 {%- endcapture -%}
 
 {%- capture footer_menu -%}
