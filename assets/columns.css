@@ -38,7 +38,6 @@
   flex-direction: column;
   position: relative;
   text-align: var(--text-align);
-  overflow: hidden;
 }
 
 .columns__content {
