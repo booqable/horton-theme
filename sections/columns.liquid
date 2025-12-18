@@ -146,7 +146,7 @@
               {%- endif -%}
           {%- endcase -%}
 
-          <div id="{{ block.id }}" class="columns__item columns__item--{{ type }}{% if show_borders %} columns__item--with-border{% endif %}{% if show_overlay and deco %} columns__item--with-overlay{%- endif -%}">
+          <div id="{{ block.id }}" data-block-key="{{ block.id }}" data-block-name="{{ block.name }}" class="columns__item columns__item--{{ type }}{% if show_borders %} columns__item--with-border{% endif %}{% if show_overlay and deco %} columns__item--with-overlay{%- endif -%}">
             <div class="columns__content{% if icon != "empty" %} columns__content--icon-{{ icon_position }}{%- endif -%}">
               {%- if icon != "empty" -%}
                 <div class="columns__icon-wrapper">

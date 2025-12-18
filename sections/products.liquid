@@ -208,8 +208,10 @@
                   {% endcase %}
 
                   {%- if carousel -%}
-                    <div id="{{ item.id }}" class="carousel__item">
+                    <div id="{{ item.id }}" {% if items_type == 'blocks' %}data-block-key="{{ item.id }}" data-block-name="{{ item.name }}" {% endif %}class="carousel__item">
                       <div class="carousel__inner">
+                  {%- else -%}
+                    {% if items_type == 'blocks' %}<div data-block-key="{{ item.id }}" data-block-name="{{ item.name }}">{% endif %}
                   {%- endif -%}
                         {%- render 'product-card',
                             block_id: item.id,
@@ -219,6 +221,8 @@
                   {%- if carousel -%}
                       </div>
                     </div>
+                  {%- else -%}
+                    {% if items_type == 'blocks' %}</div>{% endif %}
                   {%- endif -%}
                 {%- endfor -%}
 
