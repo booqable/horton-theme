@@ -81,7 +81,6 @@
 
 .testimonials__list.carousel .testimonials__blockquote {
   border: none;
-  border-right: 1px solid var(--color-border);
   border-radius: 0;
 }
 
