@@ -13,7 +13,7 @@
   width: 100%;
   overflow: hidden;
   border-radius: var(--border-radius-block);
-  padding: 12px 0;
+  border: 1px solid var(--color-border);
 }
 
 .carousel__wrapper {
@@ -41,13 +41,10 @@
   min-width: var(--slide-width-mobile);
   max-width: var(--slide-width-mobile);
   padding: 0;
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
-  border-right: 1px solid var(--color-border);
 }
 
-.carousel__item:first-child {
-  border-left: 1px solid var(--color-border);
+.carousel__item .block-frame .block-frame__buttons {
+  transform: translateX(-50%) !important;
 }
 
 .carousel__navigation {
