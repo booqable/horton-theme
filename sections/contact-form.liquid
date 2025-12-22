@@ -85,7 +85,7 @@
             {%- assign block_button_third_label     = block.settings.block_button_third_label -%}
             {%- assign block_button_third_url       = block.settings.block_button_third_url -%}
 
-            <div id="{{ block.id }}" class="contact-form__block">
+            <div id="{{ block.id }}" data-block-key="{{ block.id }}" data-block-name="{{ block.name }}" class="contact-form__block">
               {%- if heading != blank -%}
                 <h5 class="contact-form__heading">{{- heading -}}</h5>
               {%- endif -%}

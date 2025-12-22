@@ -43,6 +43,10 @@
   padding: 0;
 }
 
+.carousel__item .block-frame .block-frame__buttons {
+  transform: translateX(-50%) !important;
+}
+
 .carousel__navigation {
   position: absolute;
   top: calc(100% + (var(--buttons-indent) - var(--button-height)));

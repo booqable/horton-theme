@@ -82,7 +82,7 @@
     {%- endif -%}
     {% comment %} CSS variables end {% endcomment %}
 
-    <li class="collection__item" id="{{- id -}}"{% if badge_label != blank %} style="{{ variables | escape }}"{%- endif -%}>
+    <li class="collection__item" id="{{- id -}}"{% if items_type == "blocks" %} data-block-key="{{- id -}}" data-block-name="{{- item.name -}}"{% endif %}{% if badge_label != blank %} style="{{ variables | escape }}"{%- endif -%}>
       <div class="collection__content">
         {%- if badge_label != blank -%}
           <span class="collection__badge">{{- badge_label -}}</span>
