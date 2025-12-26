@@ -118,12 +118,12 @@
           {%- endcapture -%}
 
           {%- if carousel -%}
-            <div id="{{ block.id }}" data-block-key="{{ block.id }}" data-block-name="{{ block.name }}" class="carousel__item">
+            <div class="carousel__item" id="{{- block.id -}}" data-block-key="{{- block.id -}}" data-block-name="{{- block.name -}}">
               <div class="carousel__inner">
           {%- endif -%}
 
           {%- if description != blank -%}
-            <blockquote {% unless carousel %}id="{{ block.id }}" data-block-key="{{ block.id }}" data-block-name="{{ block.name }}" {% endunless %}class="testimonials__blockquote text-large">
+            <blockquote class="testimonials__blockquote text-large"{% unless carousel %}id="{{- block.id -}}" data-block-key="{{- block.id -}}" data-block-name="{{- block.name -}}"{%- endunless -%}>
               {%- if show_stars == "above" -%}
                 {{- stars_rendering -}}
               {%- endif -%}
